@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>AWS Cloud Practitioner (CLF-C02) Course Outline & Quizzes</title>
+  <meta name="description" content="Master AWS Certified Cloud Practitioner concepts with interactive modules, slide reviews, and checkpoint quizzes.">
+  <meta name="keywords" content="AWS, Cloud Practitioner, CLF-C02, AWS Course, AWS Quiz, Study Guide">
+  <meta name="author" content="4 Corners Academy">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="visualizations/clf_m1_domain_weights.svg">
+</head>
+<body id="clf-course-body">
+
+  <!-- Sticky Navigation -->
+  <header id="main-header">
+    <div class="container nav-wrapper">
+      <a href="../../index.html" class="logo" id="home-logo-link">4 Corners Academy</a>
+      <nav class="nav-links" id="main-nav-menu">
+        <a href="../../index.html" class="active" id="nav-catalog">Catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Course Hero Section -->
+  <section class="hero" id="clf-course-hero" style="padding: 60px 0 40px 0;">
+    <div class="container" style="text-align: left; max-width: 900px;">
+      <div style="display: flex; gap: 8px; margin-bottom: 16px; align-items: center; flex-wrap: wrap;">
+        <span class="badge badge-orange">CLF-C02</span>
+        <span class="badge badge-blue">AWS Foundational</span>
+        <span class="badge badge-muted" id="course-version-badge" style="text-transform: none;">v0.9 beta</span>
+        <span style="font-size: 11px; color: var(--text-muted); margin-left: 4px;">Last Modified: 2026-06-22 by mikeb</span>
+      </div>
+      <h1 style="font-size: 40px; text-align: left; margin-bottom: 16px;">AWS Certified Cloud Practitioner</h1>
+      <p style="text-align: left; max-width: 100%; margin-bottom: 24px;">
+        Prepare for the CLF-C02 exam with a complete outline, custom SVG visualizations, and module-level checkpoint quizzes. Track your progress slide-by-slide.
+      </p>
+      
+      <!-- Progress and CTA Box -->
+      <div id="course-progress-box" style="background-color: var(--bg-card); border: 1px solid var(--border-main); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-size: 13px; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; text-transform: uppercase;">Overall Course Progress</div>
+            <div id="overall-progress-text" style="font-size: 24px; font-weight: 800; font-family: var(--font-title);">0% Completed</div>
+          </div>
+          <div>
+            <a href="viewer.html" class="btn btn-primary" id="course-cta-btn">Start Learning</a>
+          </div>
+        </div>
+        <div class="progress-bar-bg" style="width: 100%; height: 8px; background-color: var(--bg-dark); border-radius: 4px;">
+          <div id="overall-progress-bar" class="progress-bar-fill" style="width: 0%; height: 100%; border-radius: 4px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module list -->
+  <main class="container" style="padding-bottom: 80px; max-width: 900px;" id="modules-list-container">
+    <h2 class="section-title" style="margin-bottom: 32px;">Course Modules</h2>
+    <div id="modules-list" style="display: flex; flex-direction: column; gap: 24px;">
+      <!-- Modules will be injected here dynamically via JS -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="container footer-wrapper">
+      <p id="copyright-text"></p>
+      <div class="footer-links" id="footer-links-container">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Confirmation Modal -->
+  <dialog id="confirm-modal" class="custom-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-icon">⚠️</span>
+        <h3>Reset Progress?</h3>
+      </div>
+      <p>Are you sure you want to reset your training progress? This will delete all completed slide logs and quiz metrics from this device.</p>
+      <div class="modal-actions">
+        <button id="confirm-modal-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="confirm-modal-ok" class="btn btn-primary btn-danger">Reset Everything</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="clf_data.js"></script>
+  <script src="course_home.js"></script>
+</body>
+</html>

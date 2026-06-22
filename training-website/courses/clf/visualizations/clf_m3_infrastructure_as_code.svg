@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header (If provided) -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Infrastructure as Code (IaC)</text>
+  <rect x="60" y="150" width="180" height="150" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">YAML/JSON Template</text>
+  <text x="80" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Infrastructure Defined as Text</text>
+<text x="80" y="240" font-family="monospace" font-size="11" fill="#94A3B8">Type: AWS::EC2::Instance</text>  <rect x="290" y="150" width="200" height="150" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="310" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">AWS CloudFormation</text>
+  <text x="310" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Automated Provisioning Engine</text>
+  <g transform="translate(370,220)">
+    <path d="M 5 15 A 8 8 0 0 1 18 8 A 10 10 0 0 1 36 12 A 7 7 0 0 1 38 22 L 8 22 A 6 6 0 0 1 5 15 Z" fill="none" stroke="url(#cloud-blue)" stroke-width="2"/>
+  </g>  <rect x="550" y="150" width="190" height="150" rx="12" fill="rgba(16,185,129,0.02)" stroke="#10B981" stroke-width="1.5" />
+  <text x="570" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">AWS Resources Created</text>
+  <text x="570" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">VPC, EC2, S3 buckets</text>
+  <g transform="translate(580,230)">
+    <rect x="0" y="0" width="30" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="2"/>
+    <circle cx="5" cy="6" r="1.5" fill="#10B981"/>
+    <line x1="12" y1="6" x2="25" y2="6" stroke="#10B981" stroke-width="2"/>
+    
+    <rect x="0" y="16" width="30" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="2"/>
+    <circle cx="5" cy="22" r="1.5" fill="#10B981"/>
+    <line x1="12" y1="22" x2="25" y2="22" stroke="#10B981" stroke-width="2"/>
+  </g>  <g transform="translate(670,230)">
+    <path d="M 0 8 C 0 2, 24 2, 24 8 C 24 14, 0 14, 0 8 Z" fill="none" stroke="#10B981" stroke-width="2"/>
+    <path d="M 0 8 L 0 16 C 0 22, 24 22, 24 16 L 24 8" fill="none" stroke="#10B981" stroke-width="2"/>
+    <path d="M 0 16 L 0 24 C 0 30, 24 30, 24 24 L 24 16" fill="none" stroke="#10B981" stroke-width="2"/>
+  </g>  <line x1="240" y1="225" x2="290" y2="225" stroke="url(#aws-orange)" stroke-width="2"  />
+  <path d="M 290 225 L 283.0717967697245 229.0 L 283.0717967697245 221.0 Z" fill="url(#aws-orange)" />
+  
+  <line x1="490" y1="225" x2="550" y2="225" stroke="#10B981" stroke-width="2"  />
+  <path d="M 550 225 L 543.0717967697245 229.0 L 543.0717967697245 221.0 Z" fill="#10B981" />
+  
+</svg>

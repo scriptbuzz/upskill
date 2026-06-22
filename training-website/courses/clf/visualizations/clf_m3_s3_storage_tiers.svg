@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header (If provided) -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon S3 Storage Classes</text>
+  <rect x="60" y="130" width="210" height="220" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="165" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">S3 Standard (Hot)</text>
+  <text x="80" y="185" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Frequent access</text>
+  <g transform="translate(140,190)">
+    <path d="M 5 15 A 8 8 0 0 1 18 8 A 10 10 0 0 1 36 12 A 7 7 0 0 1 38 22 L 8 22 A 6 6 0 0 1 5 15 Z" fill="none" stroke="url(#cloud-blue)" stroke-width="2"/>
+  </g><text x="165" y="280" font-family="Inter, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Single-digit ms access</text>  <rect x="290" y="130" width="220" height="220" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="310" y="165" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">S3 Standard-IA (Warm)</text>
+  <text x="310" y="185" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Infrequent access</text>
+  <g transform="translate(370,190)">
+    <path d="M 5 15 A 8 8 0 0 1 18 8 A 10 10 0 0 1 36 12 A 7 7 0 0 1 38 22 L 8 22 A 6 6 0 0 1 5 15 Z" fill="none" stroke="#FF9900" stroke-width="2"/>
+  </g><text x="400" y="280" font-family="Inter, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Miliseconds access + retrieval fee</text>  <rect x="530" y="130" width="210" height="220" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="550" y="165" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">S3 Glacier (Cold)</text>
+  <text x="550" y="185" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Archived backups</text>
+  <g transform="translate(625,190)">
+    <rect x="0" y="10" width="20" height="15" rx="3" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <path d="M 4 10 L 4 6 A 6 6 0 0 1 16 6 L 16 10" fill="none" stroke="#EF4444" stroke-width="2"/>
+  </g><text x="635" y="280" font-family="Inter, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Hours/days retrieval options</text></svg>

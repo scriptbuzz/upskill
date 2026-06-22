@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header (If provided) -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Exam Domain Weights</text>
+
+  <g transform="translate(400, 240)">
+    <!-- Donut Segments (Simulated via SVG stroke-dasharray) -->
+    <!-- Circumference is 2 * pi * r = 2 * 3.14 * 120 = 753.6 -->
+    <!-- Domain 3: 34% (256.2) -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#00A3E0" stroke-width="40" stroke-dasharray="256.2 753.6" stroke-dashoffset="0" />
+    <!-- Domain 2: 30% (226.1) -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#FF9900" stroke-width="40" stroke-dasharray="226.1 753.6" stroke-dashoffset="-256.2" />
+    <!-- Domain 1: 24% (180.9) -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#10B981" stroke-width="40" stroke-dasharray="180.9 753.6" stroke-dashoffset="-482.3" />
+    <!-- Domain 4: 12% (90.4) -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#F59E0B" stroke-width="40" stroke-dasharray="90.4 753.6" stroke-dashoffset="-663.2" />
+    
+    <circle cx="0" cy="0" r="95" fill="#0F172A" />
+    <text x="0" y="8" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#F8FAFC" text-anchor="middle">CLF-C02</text>
+    <text x="0" y="28" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">EXAM DOMAINS</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(80, 150)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#00A3E0" />
+    <text x="25" y="13" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Domain 3: Technology &amp; Services (34%)</text>
+  </g>
+  <g transform="translate(80, 190)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#FF9900" />
+    <text x="25" y="13" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Domain 2: Security &amp; Compliance (30%)</text>
+  </g>
+  <g transform="translate(80, 230)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#10B981" />
+    <text x="25" y="13" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Domain 1: Cloud Concepts (24%)</text>
+  </g>
+  <g transform="translate(80, 270)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#F59E0B" />
+    <text x="25" y="13" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Domain 4: Billing, Pricing &amp; Support (12%)</text>
+  </g>
+</svg>

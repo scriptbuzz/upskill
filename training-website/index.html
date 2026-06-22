@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>4 Corners Academy - AWS Certification Prep Platform</title>
+  <meta name="description" content="Prepare and master your AWS Certification exams with our premium slide course outline catalog, custom architecture diagrams, and interactive checkpoint quizzes.">
+  <meta name="keywords" content="AWS, Cloud Practitioner, CLF-C02, Solutions Architect, SAA-C03, Cloud Training, AWS Quiz, AWS Slides">
+  <meta name="author" content="4 Corners Academy">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Unique element IDs for validation/testing -->
+  <link rel="icon" type="image/svg+xml" href="courses/clf/visualizations/clf_m1_domain_weights.svg">
+</head>
+<body id="landing-page-body">
+
+  <!-- Sticky Navigation -->
+  <header id="main-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo" id="home-logo-link">4 Corners Academy</a>
+      <nav class="nav-links" id="main-nav-menu">
+        <a href="index.html" class="active" id="nav-catalog">Catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-banner">
+    <div class="container">
+      <span class="badge badge-blue" style="margin-bottom: 16px;">Next-Gen Cloud Learning</span>
+      <h1>Master <span>AWS Certifications</span><br>with Interactive Visuals</h1>
+      <p>Ditch boring text guides. Learn cloud architecture using premium vector diagrams, slide-by-slide outlines, and interactive review quizzes designed for maximum retention.</p>
+      <a href="#courses-catalog" class="btn btn-primary" id="hero-cta-btn">Browse Courses</a>
+    </div>
+  </section>
+
+  <!-- Course Catalog Grid -->
+  <main class="container" style="padding-bottom: 80px;" id="courses-catalog">
+    <h2 class="section-title" id="catalog-title">Active Certifications</h2>
+    <div class="courses-grid" id="course-cards-container">
+      
+      <!-- AWS Certified Cloud Practitioner (CLF) -->
+      <article class="course-card" id="course-card-clf">
+        <div class="course-card-header">
+          <span class="badge badge-orange">CLF-C02</span>
+          <span class="badge badge-blue">Active</span>
+        </div>
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <div class="course-metadata" style="font-size: 11px; color: var(--text-muted); margin-top: -4px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span class="badge badge-muted" style="padding: 2px 6px; font-size: 10px; text-transform: none;">v0.9 beta</span>
+          <span>Last Modified: 2026-06-22 by mikeb</span>
+        </div>
+        <p>The foundational entry-point for understanding the AWS Cloud core concepts, billing models, security architecture, and services ecosystem. Fully rephrased and optimized for CLF-C02.</p>
+        
+        <div class="course-stats">
+          <div class="stat-item">
+            <span class="stat-label">Modules</span>
+            <span class="stat-value">5</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Slides</span>
+            <span class="stat-value">75</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Quizzes</span>
+            <span class="stat-value">5</span>
+          </div>
+        </div>
+        
+        <a href="courses/clf/index.html" class="btn btn-primary" style="width: 100%;" id="start-clf-course-btn">Start Learning</a>
+      </article>
+
+
+      <!-- AI Practitioner (AIF) - Coming Soon -->
+      <article class="course-card purple" id="course-card-aif" style="opacity: 0.85;">
+        <div class="course-card-header">
+          <span class="badge badge-purple" style="background-color: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3); text-transform: none;">AIF-C01</span>
+          <span class="badge badge-muted">Coming Soon</span>
+        </div>
+        <h3>AWS Certified AI Practitioner</h3>
+        <p>Gain foundational knowledge of artificial intelligence, machine learning concepts, and generative AI services on AWS. Perfect for builders looking to implement predictive and generative models.</p>
+        
+        <div class="course-stats">
+          <div class="stat-item">
+            <span class="stat-label">Modules</span>
+            <span class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Slides</span>
+            <span class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Quizzes</span>
+            <span class="stat-value">-</span>
+          </div>
+        </div>
+        
+        <button class="btn btn-secondary" style="width: 100%; cursor: not-allowed;" disabled id="notify-aif-btn">Locked</button>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="container footer-wrapper">
+      <p id="copyright-text">Last Modified: 2026-06-22 by mikeb</p>
+      <div class="footer-links" id="footer-links-container">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Confirmation Modal -->
+  <dialog id="confirm-modal" class="custom-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-icon">⚠️</span>
+        <h3>Reset Progress?</h3>
+      </div>
+      <p>Are you sure you want to reset your training progress? This will delete all completed slide logs and quiz metrics from this device.</p>
+      <div class="modal-actions">
+        <button id="confirm-modal-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="confirm-modal-ok" class="btn btn-primary btn-danger">Reset Everything</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

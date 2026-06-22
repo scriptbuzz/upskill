@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header (If provided) -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">High Availability &amp; Failover</text>
+  <rect x="50" y="185" width="120" height="80" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="70" y="220" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">End Users</text>
+  
+  <g transform="translate(95,225)">
+    <circle cx="10" cy="8" r="6" fill="none" stroke="#F8FAFC" stroke-width="2"/>
+    <path d="M 0 22 C 0 16, 20 16, 20 22" fill="none" stroke="#F8FAFC" stroke-width="2"/>
+  </g>  <rect x="230" y="165" width="160" height="120" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="250" y="200" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Load Balancer</text>
+  <text x="250" y="220" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Elastic Load Balancing</text>
+  <rect x="440" y="80" width="320" height="130" rx="12" fill="rgba(16, 185, 129, 0.03)" stroke="#10B981" stroke-width="1.5" />
+  <text x="460" y="115" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Availability Zone A (Primary)</text>
+  <text x="460" y="135" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Active Site</text>
+  <g transform="translate(620,130)">
+    <rect x="0" y="0" width="30" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="2"/>
+    <circle cx="5" cy="6" r="1.5" fill="#10B981"/>
+    <line x1="12" y1="6" x2="25" y2="6" stroke="#10B981" stroke-width="2"/>
+    
+    <rect x="0" y="16" width="30" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="2"/>
+    <circle cx="5" cy="22" r="1.5" fill="#10B981"/>
+    <line x1="12" y1="22" x2="25" y2="22" stroke="#10B981" stroke-width="2"/>
+  </g>  <rect x="440" y="240" width="320" height="130" rx="12" fill="rgba(245, 158, 11, 0.03)" stroke="#F59E0B" stroke-width="1.5" />
+  <text x="460" y="275" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Availability Zone B (Standby)</text>
+  <text x="460" y="295" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Automatic Failover Target</text>
+  <g transform="translate(620,290)">
+    <rect x="0" y="0" width="30" height="12" rx="2" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="5" cy="6" r="1.5" fill="#F59E0B"/>
+    <line x1="12" y1="6" x2="25" y2="6" stroke="#F59E0B" stroke-width="2"/>
+    
+    <rect x="0" y="16" width="30" height="12" rx="2" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="5" cy="22" r="1.5" fill="#F59E0B"/>
+    <line x1="12" y1="22" x2="25" y2="22" stroke="#F59E0B" stroke-width="2"/>
+  </g>  <line x1="170" y1="225" x2="230" y2="225" stroke="url(#aws-orange)" stroke-width="2"  />
+  <path d="M 230 225 L 223.0717967697245 229.0 L 223.0717967697245 221.0 Z" fill="url(#aws-orange)" />
+  
+  <line x1="390" y1="200" x2="440" y2="140" stroke="#10B981" stroke-width="2"  />
+  <path d="M 440 140 L 438.63755749266204 147.88313074953084 L 432.4917872558831 142.76165555221502 Z" fill="#10B981" />
+  <text x="415.0" y="162.0" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Healthy Routing</text>
+  <line x1="390" y1="250" x2="440" y2="305" stroke="#F59E0B" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M 440 305 L 432.37982588213254 302.56423596927317 L 438.2993464693001 297.18285361730267 Z" fill="#F59E0B" />
+  <text x="415.0" y="269.5" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Failover Path</text>
+</svg>
