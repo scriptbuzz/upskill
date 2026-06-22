@@ -11,12 +11,15 @@ Welcome to **4 Corners Academy**, a premium study guide and exam preparation pla
 ├── README.md                        # Project documentation
 ├── training-resources/             # Developer blueprints, outlines, and course assets
 │   └── aws/                         # AWS Certification Tracks
-│       └── aws cloud practitioner/  # CLF-C02 Course resources
-│           ├── clf_resources_guide.md
-│           ├── clf_training_material_outline.md
-│           ├── clf_visualizations_index.md
-│           ├── clf_project_history.md
-│           └── clf_visualizations/
+│       ├── aws cloud practitioner/  # CLF-C02 Course resources
+│       │   ├── clf_resources_guide.md
+│       │   ├── clf_training_material_outline.md
+│       │   ├── clf_visualizations_index.md
+│       │   ├── clf_project_history.md
+│       │   └── clf_visualizations/
+│       └── aws ai practitioner/     # AIF-C01 Course resources
+│           ├── aif_resources_guide.md
+│           └── aif_training_material_outline.md
 └── training-website/               # Platform web codebase (HTML, CSS, JS)
     ├── index.html                   # Main Catalog / Course Dashboard
     ├── css/
