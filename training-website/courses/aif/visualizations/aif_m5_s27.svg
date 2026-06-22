@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Trusted Advisor Five Categories Dashboard</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="50" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="70" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Cost Optimization</text>
   <text x="70" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Scan idle DB instances</text><circle cx="115" cy="290" r="15" fill="#10B981" /><path d="M 108,290 L 113,295 L 122,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="190" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />

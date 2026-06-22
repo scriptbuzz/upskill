@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Model Customization &amp; Adaptation Spectrum</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <line x1="80" y1="280" x2="720" y2="280" stroke="#334155" stroke-width="8" stroke-linecap="round" /><line x1="80" y1="280" x2="380" y2="280" stroke="#00A3E0" stroke-width="8" stroke-linecap="round" /><line x1="380" y1="280" x2="580" y2="280" stroke="#FF9900" stroke-width="8" stroke-linecap="round" /><line x1="580" y1="280" x2="720" y2="280" stroke="#EF4444" stroke-width="8" stroke-linecap="round" /><rect x="60" y="120" width="130" height="90" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="80" y="150" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Prompt Eng</text>
   <text x="80" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Low cost, low effort</text><circle cx="125" cy="280" r="10" fill="#00A3E0" /><rect x="220" y="120" width="130" height="90" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />

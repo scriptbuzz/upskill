@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Traditional Software vs. AI Systems</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="90" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
   <text x="80" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Traditional Software Development</text>
   <text x="80" y="140" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Logic is hardcoded by developers</text><rect x="90" y="160" width="250" height="50" rx="12" fill="rgba(71,85,105,0.2)" stroke="#475569" stroke-width="1.5" />

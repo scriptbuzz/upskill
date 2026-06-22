@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Core AI Capabilities &amp; Business Benefits</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="95" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Pattern Matching</text>
   <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Identify trends and make predictions</text><path d="M 90,195 L 140,165 L 180,185 L 240,150 L 300,160" fill="none" stroke="#00A3E0" stroke-width="2.5" /><circle cx="300" cy="160" r="4" fill="#00A3E0" /><text x="135" y="212" font-family="Inter" font-size="9.5" fill="#94A3B8">e.g., Sales &amp; Demand Forecasting</text><rect x="420" y="95" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />

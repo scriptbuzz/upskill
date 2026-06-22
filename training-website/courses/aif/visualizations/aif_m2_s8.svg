@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">LLM Performance Trade-offs &amp; Metrics</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="110" width="140" height="260" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="80" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Model Accuracy</text>
   <text x="80" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Evaluation scores</text><text x="130" y="220" font-family="Inter" font-size="10.5" fill="#10B981">ROUGE: 0.82</text><text x="130" y="240" font-family="Inter" font-size="10.5" fill="#10B981">BLEU: 0.74</text><text x="130" y="280" font-family="Inter" font-size="9" fill="#94A3B8">Higher parameters =</text><text x="130" y="295" font-family="Inter" font-size="9" fill="#94A3B8">Higher accuracy</text><rect x="220" y="110" width="140" height="260" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />

@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Generative AI Safety Risks &amp; Vulnerabilities</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="110" width="320" height="110" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
   <text x="80" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Hallucinations</text>
   <text x="80" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Factually incorrect or fabricated claims</text><rect x="410" y="110" width="320" height="110" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />

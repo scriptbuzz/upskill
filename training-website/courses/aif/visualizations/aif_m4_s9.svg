@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">SageMaker Clarify: Post-Training Bias Analysis</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="95" width="680" height="280" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
   <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Recall Rates by Demographic Age Group</text>
   <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Measures discrepancy in model predictions</text><rect x="150" y="170" width="160" height="150" rx="3" fill="#10B981" /><text x="230" y="240" font-family="Inter" font-size="20" font-weight="700" fill="#000000" text-anchor="middle">95%</text><text x="230" y="340" font-family="Inter" font-size="12" fill="#F8FAFC" text-anchor="middle">Group A (Age 18-35)</text><rect x="420" y="230" width="160" height="90" rx="3" fill="#FF9900" /><text x="500" y="280" font-family="Inter" font-size="20" font-weight="700" fill="#000000" text-anchor="middle">60%</text><text x="500" y="340" font-family="Inter" font-size="12" fill="#F8FAFC" text-anchor="middle">Group B (Age 55+)</text><line x1="310" y1="200" x2="420" y2="200" stroke="#EF4444" stroke-width="2" stroke-linecap="round" />

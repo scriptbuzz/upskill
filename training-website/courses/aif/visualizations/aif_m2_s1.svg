@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Venn Diagram: AI, ML, DL &amp; GenAI</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="100" y="95" width="600" height="280" rx="12" fill="rgba(71,85,105,0.05)" stroke="#475569" stroke-width="1.5" />
   <text x="120" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Artificial Intelligence (AI)</text>
   <text x="120" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Systems mimicking human intelligence</text><rect x="150" y="150" width="500" height="205" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />

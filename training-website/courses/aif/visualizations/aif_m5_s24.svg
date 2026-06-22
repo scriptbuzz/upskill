@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Regulatory Compliance &amp; Accountability</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="130" width="240" height="180" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
   <text x="80" y="160" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Regulatory Standards</text>
   <text x="80" y="180" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Algorithmic Accountability Act</text><line x1="120" y1="210" x2="240" y2="210" stroke="#FF9900" stroke-width="3" /><line x1="180" y1="170" x2="180" y2="250" stroke="#FF9900" stroke-width="3" /><circle cx="180" cy="170" r="4" fill="#FF9900" /><path d="M 120,210 L 120,240 M 240,210 L 240,240" fill="none" stroke="#FF9900" stroke-width="1.5" /><line x1="300" y1="220" x2="410" y2="220" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />

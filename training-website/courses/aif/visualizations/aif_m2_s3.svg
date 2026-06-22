@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Transformer Attention Mechanisms</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 
   <!-- Attention connections between client -> developer --><path d="M 240,165 Q 430,220 660,165" fill="none" stroke="#FF9900" stroke-width="4.5" opacity="0.8" filter="url(#glow-orange)" /><text x="450" y="215" font-family="Inter" font-size="10.5" font-weight="700" fill="#FF9900" text-anchor="middle">Strong Attention Weight (0.92)</text><path d="M 240,165 Q 300,190 380,165" fill="none" stroke="#00A3E0" stroke-width="2" opacity="0.6" /><path d="M 380,165 Q 510,190 660,165" fill="none" stroke="#00A3E0" stroke-width="2" opacity="0.6" /><rect x="50" y="110" width="110" height="50" rx="12" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" />
   <text x="70" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">The</text><rect x="170" y="110" width="110" height="50" rx="12" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" />

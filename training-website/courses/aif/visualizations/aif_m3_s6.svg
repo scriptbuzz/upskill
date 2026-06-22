@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Bedrock Agents Architecture</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="40" y="165" width="140" height="90" rx="12" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" />
   <text x="60" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">User / App</text>
   <text x="60" y="215" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Asks Agent to run task</text>

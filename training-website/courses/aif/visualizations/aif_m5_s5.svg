@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon SageMaker Role Manager Wizard</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="95" width="240" height="280" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Job Profiles (Role Manager)</text>
   <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Predefined persona baselines</text><rect x="80" y="150" width="200" height="45" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />

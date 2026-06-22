@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">4-Step Circular Governance Strategy</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="120" y="100" width="190" height="80" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="140" y="130" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. Map Scope</text>
   <text x="140" y="150" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Determine Scope 1-5 matrix</text><line x1="310" y1="140" x2="490" y2="140" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />

@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Retrieval-Augmented Generation (RAG) Flow</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="40" y="160" width="120" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. User Query</text>
   <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Client prompts model</text>

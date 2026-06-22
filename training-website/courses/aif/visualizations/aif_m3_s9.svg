@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Prompt Engineering Techniques Comparison</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="50" y="95" width="210" height="290" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
   <text x="70" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Zero-Shot Prompting</text>
   <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Model gets task with no examples</text><rect x="70" y="170" width="170" height="80" rx="12" fill="rgba(239,68,68,0.05)" stroke="#EF4444" stroke-width="1.5" />

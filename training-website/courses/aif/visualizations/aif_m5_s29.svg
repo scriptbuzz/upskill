@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Glue DataBrew Data Preparation Factory</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="160" width="140" height="100" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
   <text x="80" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Raw Data (S3)</text>
   <text x="80" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Null cells, raw formats</text><line x1="200" y1="210" x2="280" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />

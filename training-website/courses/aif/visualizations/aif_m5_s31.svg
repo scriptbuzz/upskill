@@ -56,7 +56,6 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Generative AI Security Scoping Matrix</text>
-  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
 <rect x="60" y="260" width="130" height="130" rx="4" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="80" y="290" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Scope 1 (Consumer App)</text>
   <text x="80" y="310" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Basic employee use guidelines</text><circle cx="85" cy="355" r="12" fill="#10B981" /><text x="85" y="359" font-family="Inter" font-size="10.5" font-weight="700" fill="#000000" text-anchor="middle">1</text><rect x="195" y="215" width="130" height="130" rx="4" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
