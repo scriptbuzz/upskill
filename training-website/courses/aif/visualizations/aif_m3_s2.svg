@@ -57,17 +57,17 @@
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Tuning Outputs: Inference Parameters</text>
   <rect x="60" y="160" width="150" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Ingest</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Data stream S3</text>
+  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Ingest Data</text>
+  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
   <rect x="250" y="160" width="150" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="270" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Inference</text>
-  <text x="270" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">FM Model Run</text>
+  <text x="270" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Process Mod</text>
+  <text x="270" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
   <rect x="440" y="160" width="150" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="460" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Guardrail</text>
-  <text x="460" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Bedrock Safety</text>
+  <text x="460" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Guardrails </text>
+  <text x="460" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
   <rect x="630" y="160" width="110" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="650" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Response</text>
-  <text x="650" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Secure API</text>
+  <text x="650" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Secure Outp</text>
+  <text x="650" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Secure Exit</text>
   <line x1="210" y1="215" x2="250" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
   <path d="M 250 215 L 243.0717967697245 219.0 L 243.0717967697245 211.0 Z" fill="url(#aws-orange)" />
   
@@ -81,5 +81,4 @@
   <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
   <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Model Pipeline Architecture</text>
   <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A conceptual "word choice tree" showing how lowering Temperature/Top P prunes away branches to leave only...</text>
-  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Implementing private connectivity, safe user prompts, and low-latency response delivery.</text>
 </svg>
