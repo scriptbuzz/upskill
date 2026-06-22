@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Data Encryption in Transit</text>
+  <rect x="60" y="160" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Input / Ingest</text>
+  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Raw Data Stream</text>
+  <rect x="270" y="160" width="160" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="290" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Processing</text>
+  <text x="290" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Model Inference</text>
+  <rect x="480" y="160" width="160" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="500" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Evaluation</text>
+  <text x="500" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Safety Guardrails</text>
+  <rect x="690" y="160" width="80" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="710" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Output</text>
+  <text x="710" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Response</text>
+  <line x1="220" y1="215" x2="270" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
+  <path d="M 270 215 L 263.0717967697245 219.0 L 263.0717967697245 211.0 Z" fill="url(#aws-orange)" />
+  
+  <line x1="430" y1="215" x2="480" y2="215" stroke="#00A3E0" stroke-width="2"  />
+  <path d="M 480 215 L 473.0717967697245 219.0 L 473.0717967697245 211.0 Z" fill="#00A3E0" />
+  
+  <line x1="640" y1="215" x2="690" y2="215" stroke="#FF9900" stroke-width="2"  />
+  <path d="M 690 215 L 683.0717967697245 219.0 L 683.0717967697245 211.0 Z" fill="#FF9900" />
+  
+
+  <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
+  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Flow Process Description</text>
+  <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A network pipe. A data packet flows inside a secure glowing tunnel (SSL/TLS) between two EC2 training ins...</text>
+  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Ensuring secure endpoints and highly responsive pipelines during the data lifecycle.</text>
+</svg>

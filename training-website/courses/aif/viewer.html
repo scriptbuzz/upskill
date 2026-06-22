@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Interactive Study Guide & Checkpoint Quizzes - AWS Certified AI Practitioner</title>
+  <meta name="description" content="Study and test your AWS Certified AI Practitioner knowledge slide-by-slide with architecture diagrams and module quizzes.">
+  <meta name="keywords" content="AWS, AI Practitioner, AIF-C01, Study Guide, Quiz, Generative AI">
+  <meta name="author" content="4 Corners Academy">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  
+  <link rel="icon" type="image/svg+xml" href="visualizations/aif_m1_s1.svg">
+</head>
+<body id="aif-viewer-body" style="overflow: hidden;">
+
+  <!-- Sticky Navigation -->
+  <header id="main-header">
+    <div class="container nav-wrapper">
+      <a href="../../index.html" class="logo" id="home-logo-link">4 Corners Academy</a>
+      <nav class="nav-links" id="main-nav-menu">
+        <a href="../../index.html" class="active" id="nav-catalog">Catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Interactive Slide and Quiz Presenter Layout -->
+  <div class="viewer-layout" id="aif-viewer-layout">
+    
+    <!-- Sidebar for Outline Navigation -->
+    <aside class="viewer-sidebar" id="viewer-sidebar-aside">
+      <div class="sidebar-header">
+        <h2>Outline & Progress</h2>
+        <button id="close-sidebar-btn" class="btn btn-secondary" style="padding: 4px 8px; font-size: 11px; display: none;">Close</button>
+      </div>
+      <div class="slide-list" id="sidebar-slide-list">
+        <!-- Populated via viewer.js -->
+      </div>
+      <div class="sidebar-footer" style="padding: 16px; border-top: 1px solid var(--border-main); background-color: #0b0f19;">
+        <button id="reset-course-btn" class="btn btn-secondary" style="width: 100%; font-size: 12px; padding: 8px 12px; gap: 6px; justify-content: center;">
+          🗑 Reset Progress
+        </button>
+      </div>
+    </aside>
+
+    <!-- Content Workspace -->
+    <main class="viewer-content" id="viewer-content-panel">
+      
+      <!-- Topbar Header -->
+      <div class="viewer-topbar">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button id="toggle-sidebar-btn" class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;">☰ Outline</button>
+          <span class="viewer-title" id="active-slide-title">Loading Module Outline...</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+            <span class="badge badge-muted" style="padding: 2px 6px; font-size: 10px; text-transform: none;">v0.1 beta</span>
+            <span>Last Modified: 2026-06-22 by mikeb</span>
+          </div>
+          <div id="slide-status-badge">
+            <!-- Populated dynamically (e.g. Completed indicator) -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Viewport -->
+      <div class="slide-viewport" id="active-slide-viewport">
+        
+        <!-- Details Card -->
+        <article class="slide-details-card" id="active-slide-details">
+          <h2 id="slide-detail-heading">Slide Heading</h2>
+          <div class="slide-text-content">
+            <ul class="slide-bullets" id="slide-detail-bullets">
+              <!-- Bullet items injected here -->
+            </ul>
+          </div>
+        </article>
+
+        <!-- Diagram Card -->
+        <div class="slide-diagram-card" id="active-slide-diagram">
+          <!-- Loaded via iframe to enable SVG interactive hover/focus states -->
+          <iframe id="diagram-frame" src="about:blank" title="AWS Architecture Visualizations"></iframe>
+        </div>
+      </div>
+
+      <!-- Quiz Viewport -->
+      <div class="quiz-viewport" id="active-quiz-viewport" style="display: none;">
+        <!-- Dynamically loaded Quiz Form Card -->
+        <div class="quiz-card" id="active-quiz-card">
+          <!-- populated via viewer.js -->
+        </div>
+      </div>
+
+      <!-- Footer Control Panel -->
+      <div class="viewer-controls" id="viewer-controls-nav">
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-secondary" id="first-btn" title="First Slide (Home)">|← First</button>
+          <button class="btn btn-secondary" id="prev-btn" title="Previous Slide (Left Arrow)">← Previous</button>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="viewer-progress-bar"></div>
+          </div>
+          <span class="progress-text" id="viewer-progress-text">Slide 0 of 0</span>
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-primary" id="next-btn" title="Next Slide (Right Arrow)">Next →</button>
+          <button class="btn btn-secondary" id="last-btn" title="Last Slide (End)">Last →|</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Custom Confirmation Modal -->
+  <dialog id="confirm-modal" class="custom-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-icon">⚠️</span>
+        <h3>Reset Progress?</h3>
+      </div>
+      <p>Are you sure you want to reset your training progress? This will delete all completed slide logs and quiz metrics from this device.</p>
+      <div class="modal-actions">
+        <button id="confirm-modal-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="confirm-modal-ok" class="btn btn-primary btn-danger">Reset Everything</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="aif_data.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

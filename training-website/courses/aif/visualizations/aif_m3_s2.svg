@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Tuning Outputs: Inference Parameters</text>
+  <rect x="50" y="100" width="700" height="310" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="70" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Blueprint Layout</text>
+  <text x="70" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">High-fidelity educational diagram placeholder</text>
+
+  <g transform="translate(100, 180)">
+    <!-- Simulated nodes and connectors -->
+    <circle cx="50" cy="50" r="30" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-dasharray="3,3" stroke-width="1.5" />
+    <text x="50" y="55" font-family="Inter" font-size="11" fill="#00A3E0" font-weight="700" text-anchor="middle">NODE A</text>
+    
+    <circle cx="250" cy="50" r="30" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-dasharray="3,3" stroke-width="1.5" />
+    <text x="250" y="55" font-family="Inter" font-size="11" fill="#FF9900" font-weight="700" text-anchor="middle">NODE B</text>
+    
+    <line x1="80" y1="50" x2="220" y2="50" stroke="#94A3B8" stroke-dasharray="4,4" stroke-width="1.5" />
+    <polygon points="220,50 212,45 212,55" fill="#94A3B8" />
+  </g>
+  
+  <g transform="translate(450, 180)">
+    <rect x="0" y="0" width="260" height="200" rx="8" fill="rgba(30,41,59,0.5)" stroke="#1E293B" stroke-width="1" />
+    <text x="15" y="30" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">Proposed Visualization Idea</text>
+    
+    <!-- Word wrap the description -->
+    <text x="15" y="60" font-family="Inter" font-size="11" fill="#94A3B8">A conceptual "word choice tree"</text>
+    <text x="15" y="82" font-family="Inter" font-size="11" fill="#94A3B8">showing how lowering Temperature/Top</text>
+    <text x="15" y="104" font-family="Inter" font-size="11" fill="#94A3B8">P prunes away branches to leave only</text>
+    <text x="15" y="126" font-family="Inter" font-size="11" fill="#94A3B8">a single logical path, while high</text>
+    <text x="15" y="148" font-family="Inter" font-size="11" fill="#94A3B8">settings branch out into multiple</text>
+    <text x="15" y="170" font-family="Inter" font-size="11" fill="#94A3B8">creative alternatives.</text>
+  </g>
+</svg>

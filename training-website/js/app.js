@@ -73,6 +73,71 @@ function initLandingPage() {
       statsContainer.after(progDiv);
     }
   }
+
+  // Check if AIF course progress exists in localStorage
+  const aifProgressSlidesRaw = localStorage.getItem("aif_progress_slides");
+  let aifCompletedSlides = [];
+  try {
+    aifCompletedSlides = aifProgressSlidesRaw ? JSON.parse(aifProgressSlidesRaw) : [];
+  } catch (e) {
+    aifCompletedSlides = [];
+  }
+
+  if (aifCompletedSlides.length > 0) {
+    const aifTotalSlides = 132; // AIF has 132 steps (110 slides + 22 quiz steps)
+    const aifPercent = Math.min(Math.round((aifCompletedSlides.length / aifTotalSlides) * 100), 100);
+    
+    const aifBtn = document.getElementById("start-aif-course-btn");
+    if (aifBtn) {
+      aifBtn.innerText = `Continue Learning (${aifPercent}%)`;
+      aifBtn.style.width = "auto";
+      aifBtn.style.flex = "1";
+      
+      const wrapper = document.createElement("div");
+      wrapper.style.display = "flex";
+      wrapper.style.gap = "8px";
+      wrapper.style.marginTop = "12px";
+      wrapper.style.width = "100%";
+      
+      aifBtn.parentNode.insertBefore(wrapper, aifBtn);
+      wrapper.appendChild(aifBtn);
+      
+      const resetBtn = document.createElement("button");
+      resetBtn.className = "btn btn-secondary";
+      resetBtn.id = "reset-aif-course-btn";
+      resetBtn.title = "Reset Progress";
+      resetBtn.style.padding = "10px 14px";
+      resetBtn.innerHTML = "🗑";
+      wrapper.appendChild(resetBtn);
+      
+      resetBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showCustomConfirm().then((confirmed) => {
+          if (confirmed) {
+            localStorage.removeItem("aif_progress_slides");
+            window.location.reload();
+          }
+        });
+      });
+    }
+    
+    const statsContainer = document.querySelector("#course-card-aif .course-stats");
+    if (statsContainer) {
+      const progDiv = document.createElement("div");
+      progDiv.style.width = "100%";
+      progDiv.style.marginTop = "16px";
+      progDiv.innerHTML = `
+        <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px; color:var(--text-muted);">
+          <span>COURSE PROGRESS</span>
+          <span>${aifPercent}%</span>
+        </div>
+        <div style="width:100%; height:4px; background-color:var(--bg-hover); border-radius:2px; overflow:hidden;">
+          <div style="width:${aifPercent}%; height:100%; background:var(--gradient-blue); border-radius:2px;"></div>
+        </div>
+      `;
+      statsContainer.after(progDiv);
+    }
+  }
 }
 
 function showCustomConfirm() {

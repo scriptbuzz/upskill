@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFC400" />
+    </linearGradient>
+    <linearGradient id="cloud-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="100%" stop-color="#1D70B8" />
+    </linearGradient>
+    <linearGradient id="success-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="alert-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="warning-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="dark-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0F172A" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <!-- Subtle Soft Glows -->
+  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  
+  <!-- Slide Header -->
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Core Capabilities &amp; Business Benefits</text>
+  <rect x="60" y="100" width="310" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 1 - Core</text>
+  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Key foundation element</text>
+<rect x="80" y="165" width="40" height="40" rx="6" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" /><text x="100" y="190" font-family="Inter" font-size="16" fill="#00A3E0" font-weight="700" text-anchor="middle">A</text><text x="135" y="188" font-family="Inter" font-size="12" fill="#94A3B8">Highly scalable and elastic</text>  <rect x="410" y="100" width="310" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="430" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 2 - Advanced</text>
+  <text x="430" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Custom extensions</text>
+<rect x="430" y="165" width="40" height="40" rx="6" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" /><text x="450" y="190" font-family="Inter" font-size="16" fill="#FF9900" font-weight="700" text-anchor="middle">B</text><text x="485" y="188" font-family="Inter" font-size="12" fill="#94A3B8">Domain-adapted layers</text>  <rect x="60" y="250" width="310" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 3 - Integration</text>
+  <text x="80" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Connecting services</text>
+<rect x="80" y="315" width="40" height="40" rx="6" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5" /><text x="100" y="340" font-family="Inter" font-size="16" fill="#10B981" font-weight="700" text-anchor="middle">C</text><text x="135" y="338" font-family="Inter" font-size="12" fill="#94A3B8">Low latency API connectivity</text>  <rect x="410" y="250" width="310" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="430" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 4 - Governance</text>
+  <text x="430" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Security and controls</text>
+<rect x="430" y="315" width="40" height="40" rx="6" fill="rgba(139,92,246,0.15)" stroke="#8B5CF6" stroke-width="1.5" /><text x="450" y="340" font-family="Inter" font-size="16" fill="#8B5CF6" font-weight="700" text-anchor="middle">D</text><text x="485" y="338" font-family="Inter" font-size="12" fill="#94A3B8">Guardrails and safety checks</text></svg>
