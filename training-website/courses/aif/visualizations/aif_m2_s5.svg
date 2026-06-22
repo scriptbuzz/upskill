@@ -56,30 +56,32 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Prompt Engineering Principles</text>
-  <rect x="50" y="100" width="700" height="310" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Blueprint Layout</text>
-  <text x="70" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">High-fidelity educational diagram placeholder</text>
-
-  <g transform="translate(100, 180)">
-    <!-- Simulated nodes and connectors -->
-    <circle cx="50" cy="50" r="30" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="50" y="55" font-family="Inter" font-size="11" fill="#00A3E0" font-weight="700" text-anchor="middle">NODE A</text>
+  <rect x="60" y="100" width="680" height="250" rx="16" fill="rgba(0,163,224,0.01)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">AWS Network Security Boundary</text>
+  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Customer VPC Configuration</text>
+  <rect x="90" y="160" width="300" height="160" rx="12" fill="rgba(148,163,184,0.02)" stroke="#475569" stroke-width="1.5" />
+  <text x="110" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Private Subnet</text>
+  <text x="110" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Inaccessible from Internet</text>
+  <g transform="translate(140,220)">
+    <rect x="0" y="0" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+    <circle cx="4" cy="5" r="1" fill="#FF9900"/>
+    <line x1="8" y1="5" x2="20" y2="5" stroke="#FF9900" stroke-width="1.5"/>
     
-    <circle cx="250" cy="50" r="30" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="250" y="55" font-family="Inter" font-size="11" fill="#FF9900" font-weight="700" text-anchor="middle">NODE B</text>
-    
-    <line x1="80" y1="50" x2="220" y2="50" stroke="#94A3B8" stroke-dasharray="4,4" stroke-width="1.5" />
-    <polygon points="220,50 212,45 212,55" fill="#94A3B8" />
-  </g>
+    <rect x="0" y="12" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+    <circle cx="4" cy="17" r="1" fill="#FF9900"/>
+    <line x1="8" y1="17" x2="20" y2="17" stroke="#FF9900" stroke-width="1.5"/>
+  </g><text x="210" y="240" font-family="Inter" font-size="12" fill="#F8FAFC">SageMaker Node</text><g transform="translate(420, 170)"><rect width="50" height="140" rx="4" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" /><line x1="0" y1="35" x2="50" y2="35" stroke="#F8FAFC" stroke-width="1" /><line x1="0" y1="70" x2="50" y2="70" stroke="#F8FAFC" stroke-width="1" /><line x1="0" y1="105" x2="50" y2="105" stroke="#F8FAFC" stroke-width="1" /><text x="25" y="-12" font-family="Inter" font-size="10.5" fill="#EF4444" font-weight="700" text-anchor="middle">FIREWALL</text></g>  <rect x="500" y="160" width="210" height="160" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="520" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">S3 VPC Endpoint</text>
+  <text x="520" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Private Connectivity</text>
+  <g transform="translate(585,220)">
+    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#10B981" stroke-width="1.5"/>
+  </g>  <line x1="390" y1="240" x2="420" y2="240" stroke="#FF9900" stroke-width="2"  />
+  <path d="M 420 240 L 413.0717967697245 244.0 L 413.0717967697245 236.0 Z" fill="#FF9900" />
   
-  <g transform="translate(450, 180)">
-    <rect x="0" y="0" width="260" height="200" rx="8" fill="rgba(30,41,59,0.5)" stroke="#1E293B" stroke-width="1" />
-    <text x="15" y="30" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">Proposed Visualization Idea</text>
-    
-    <!-- Word wrap the description -->
-    <text x="15" y="60" font-family="Inter" font-size="11" fill="#94A3B8">An annotated prompt box highlighting</text>
-    <text x="15" y="82" font-family="Inter" font-size="11" fill="#94A3B8">the different colored components of</text>
-    <text x="15" y="104" font-family="Inter" font-size="11" fill="#94A3B8">a complete prompt (Role,</text>
-    <text x="15" y="126" font-family="Inter" font-size="11" fill="#94A3B8">Instruction, Data, Constraints).</text>
-  </g>
+  <line x1="470" y1="240" x2="500" y2="240" stroke="#10B981" stroke-width="2"  />
+  <path d="M 500 240 L 493.0717967697245 244.0 L 493.0717967697245 236.0 Z" fill="#10B981" />
+  <text x="485.0" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">PrivateLink</text>
+
+  <rect x="60" y="370" width="680" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
+  <text x="80" y="402" font-family="Inter" font-size="11.5" fill="#94A3B8">An annotated prompt box highlighting the different colored components of a complete prompt (Role, Instruc...</text>
 </svg>

@@ -56,31 +56,36 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Pillars of Responsible AI</text>
-  <rect x="50" y="100" width="700" height="310" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Blueprint Layout</text>
-  <text x="70" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">High-fidelity educational diagram placeholder</text>
-
-  <g transform="translate(100, 180)">
-    <!-- Simulated nodes and connectors -->
-    <circle cx="50" cy="50" r="30" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="50" y="55" font-family="Inter" font-size="11" fill="#00A3E0" font-weight="700" text-anchor="middle">NODE A</text>
-    
-    <circle cx="250" cy="50" r="30" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="250" y="55" font-family="Inter" font-size="11" fill="#FF9900" font-weight="700" text-anchor="middle">NODE B</text>
-    
-    <line x1="80" y1="50" x2="220" y2="50" stroke="#94A3B8" stroke-dasharray="4,4" stroke-width="1.5" />
-    <polygon points="220,50 212,45 212,55" fill="#94A3B8" />
-  </g>
-  
-  <g transform="translate(450, 180)">
-    <rect x="0" y="0" width="260" height="200" rx="8" fill="rgba(30,41,59,0.5)" stroke="#1E293B" stroke-width="1" />
-    <text x="15" y="30" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">Proposed Visualization Idea</text>
-    
-    <!-- Word wrap the description -->
-    <text x="15" y="60" font-family="Inter" font-size="11" fill="#94A3B8">A temple graphic where the roof</text>
-    <text x="15" y="82" font-family="Inter" font-size="11" fill="#94A3B8">("Responsible AI") is supported by</text>
-    <text x="15" y="104" font-family="Inter" font-size="11" fill="#94A3B8">six distinct columns: Fairness,</text>
-    <text x="15" y="126" font-family="Inter" font-size="11" fill="#94A3B8">Explainability, Robustness, Privacy,</text>
-    <text x="15" y="148" font-family="Inter" font-size="11" fill="#94A3B8">Governance, and Transparency.</text>
-  </g>
-</svg>
+<polygon points="60,110 740,110 400,50" fill="url(#aws-orange)" stroke="#FF9900" stroke-width="2"/><text x="400" y="90" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">AWS AI SYSTEM GOVERNANCE</text><rect x="50" y="350" width="700" height="40" rx="4" fill="#1E293B" stroke="#1E293B" stroke-width="2"/><text x="400" y="375" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" text-anchor="middle">WELL-ARCHITECTED TRUST MODEL</text><rect x="80" y="125" width="160" height="215" rx="6" fill="url(#dark-card)" stroke="#1E293B" stroke-width="2"/>  <g transform="translate(148,145)">
+    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#00A3E0" stroke-width="1.5"/>
+  </g><text x="160" y="200" font-family="Inter" font-size="13" font-weight="700" fill="#F8FAFC" text-anchor="middle">GOVERNANCE</text>
+        <g transform="translate(95, 230)">
+          <text x="0" y="15" font-family="Inter" font-size="10.5" fill="#94A3B8">• Access Control</text>
+          <text x="0" y="35" font-family="Inter" font-size="10.5" fill="#94A3B8">• Metrics Audit</text>
+          <text x="0" y="55" font-family="Inter" font-size="10.5" fill="#94A3B8">• Risk Check</text>
+        </g>
+        <rect x="240" y="125" width="160" height="215" rx="6" fill="url(#dark-card)" stroke="#1E293B" stroke-width="2"/>  <g transform="translate(308,145)">
+    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#00A3E0" stroke-width="1.5"/>
+  </g><text x="320" y="200" font-family="Inter" font-size="13" font-weight="700" fill="#F8FAFC" text-anchor="middle">EXPLAINABILITY</text>
+        <g transform="translate(255, 230)">
+          <text x="0" y="15" font-family="Inter" font-size="10.5" fill="#94A3B8">• Access Control</text>
+          <text x="0" y="35" font-family="Inter" font-size="10.5" fill="#94A3B8">• Metrics Audit</text>
+          <text x="0" y="55" font-family="Inter" font-size="10.5" fill="#94A3B8">• Risk Check</text>
+        </g>
+        <rect x="400" y="125" width="160" height="215" rx="6" fill="url(#dark-card)" stroke="#1E293B" stroke-width="2"/>  <g transform="translate(468,145)">
+    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#00A3E0" stroke-width="1.5"/>
+  </g><text x="480" y="200" font-family="Inter" font-size="13" font-weight="700" fill="#F8FAFC" text-anchor="middle">SECURITY</text>
+        <g transform="translate(415, 230)">
+          <text x="0" y="15" font-family="Inter" font-size="10.5" fill="#94A3B8">• Access Control</text>
+          <text x="0" y="35" font-family="Inter" font-size="10.5" fill="#94A3B8">• Metrics Audit</text>
+          <text x="0" y="55" font-family="Inter" font-size="10.5" fill="#94A3B8">• Risk Check</text>
+        </g>
+        <rect x="560" y="125" width="160" height="215" rx="6" fill="url(#dark-card)" stroke="#1E293B" stroke-width="2"/>  <g transform="translate(628,145)">
+    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#00A3E0" stroke-width="1.5"/>
+  </g><text x="640" y="200" font-family="Inter" font-size="13" font-weight="700" fill="#F8FAFC" text-anchor="middle">SAFETY CHECK</text>
+        <g transform="translate(575, 230)">
+          <text x="0" y="15" font-family="Inter" font-size="10.5" fill="#94A3B8">• Access Control</text>
+          <text x="0" y="35" font-family="Inter" font-size="10.5" fill="#94A3B8">• Metrics Audit</text>
+          <text x="0" y="55" font-family="Inter" font-size="10.5" fill="#94A3B8">• Risk Check</text>
+        </g>
+        </svg>

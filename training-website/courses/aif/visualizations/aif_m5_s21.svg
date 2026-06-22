@@ -56,31 +56,41 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Compliance Tools: Artifact &amp; Compliance Center</text>
-  <rect x="50" y="100" width="700" height="310" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Blueprint Layout</text>
-  <text x="70" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">High-fidelity educational diagram placeholder</text>
 
-  <g transform="translate(100, 180)">
-    <!-- Simulated nodes and connectors -->
-    <circle cx="50" cy="50" r="30" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="50" y="55" font-family="Inter" font-size="11" fill="#00A3E0" font-weight="700" text-anchor="middle">NODE A</text>
-    
-    <circle cx="250" cy="50" r="30" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="250" y="55" font-family="Inter" font-size="11" fill="#FF9900" font-weight="700" text-anchor="middle">NODE B</text>
-    
-    <line x1="80" y1="50" x2="220" y2="50" stroke="#94A3B8" stroke-dasharray="4,4" stroke-width="1.5" />
-    <polygon points="220,50 212,45 212,55" fill="#94A3B8" />
+  <!-- Donut Chart -->
+  <g transform="translate(320, 230)">
+    <!-- Segment 1: 35% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#aws-orange)" stroke-width="32" stroke-dasharray="219.8 628" stroke-dashoffset="0" />
+    <!-- Segment 2: 25% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#cloud-blue)" stroke-width="32" stroke-dasharray="157 628" stroke-dashoffset="-219.8" />
+    <!-- Segment 3: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#success-green)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-376.8" />
+    <!-- Segment 4: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#purple-glow)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-502.4" />
+    <circle cx="0" cy="0" r="82" fill="#0F172A" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AIF-C01</text>
+    <text x="0" y="24" font-family="Inter, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">DOMAINS</text>
   </g>
   
-  <g transform="translate(450, 180)">
-    <rect x="0" y="0" width="260" height="200" rx="8" fill="rgba(30,41,59,0.5)" stroke="#1E293B" stroke-width="1" />
-    <text x="15" y="30" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">Proposed Visualization Idea</text>
+  <!-- Legend Panel -->
+  <g transform="translate(520, 110)">
+    <rect x="0" y="0" width="240" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+    <text x="20" y="30" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Breakdown</text>
     
-    <!-- Word wrap the description -->
-    <text x="15" y="60" font-family="Inter" font-size="11" fill="#94A3B8">A briefcase labeled "AWS Artifact".</text>
-    <text x="15" y="82" font-family="Inter" font-size="11" fill="#94A3B8">Clicking it reveals certified</text>
-    <text x="15" y="104" font-family="Inter" font-size="11" fill="#94A3B8">documents (SOC 2, ISO 27001, HIPAA</text>
-    <text x="15" y="126" font-family="Inter" font-size="11" fill="#94A3B8">agreement), ready to be shared with</text>
-    <text x="15" y="148" font-family="Inter" font-size="11" fill="#94A3B8">corporate auditors.</text>
+    <circle cx="30" cy="70" r="6" fill="#FF9900" />
+    <text x="45" y="74" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Generative AI (24%)</text>
+    
+    <circle cx="30" cy="110" r="6" fill="#00A3E0" />
+    <text x="45" y="114" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Applications of FMs (28%)</text>
+    
+    <circle cx="30" cy="150" r="6" fill="#10B981" />
+    <text x="45" y="154" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">AI/ML Fundamentals (20%)</text>
+    
+    <circle cx="30" cy="190" r="6" fill="#8B5CF6" />
+    <text x="45" y="194" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Security &amp; Compliance (28%)</text>
   </g>
+  
+  <!-- Description Subtext -->
+  <rect x="40" y="380" width="720" height="50" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
+  <text x="60" y="410" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A briefcase labeled "AWS Artifact". Clicking it reveals certified documents (SOC 2, ISO 27001, ...</text>
 </svg>

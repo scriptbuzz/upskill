@@ -56,30 +56,16 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Generative AI Security Scoping Matrix</text>
-  <rect x="60" y="160" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Input / Ingest</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Raw Data Stream</text>
-  <rect x="270" y="160" width="160" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="290" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Processing</text>
-  <text x="290" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Model Inference</text>
-  <rect x="480" y="160" width="160" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="500" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Evaluation</text>
-  <text x="500" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Safety Guardrails</text>
-  <rect x="690" y="160" width="80" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="710" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Output</text>
-  <text x="710" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Response</text>
-  <line x1="220" y1="215" x2="270" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
-  <path d="M 270 215 L 263.0717967697245 219.0 L 263.0717967697245 211.0 Z" fill="url(#aws-orange)" />
-  
-  <line x1="430" y1="215" x2="480" y2="215" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 480 215 L 473.0717967697245 219.0 L 473.0717967697245 211.0 Z" fill="#00A3E0" />
-  
-  <line x1="640" y1="215" x2="690" y2="215" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 690 215 L 683.0717967697245 219.0 L 683.0717967697245 211.0 Z" fill="#FF9900" />
-  
-
-  <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Flow Process Description</text>
-  <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A horizontal stairs diagram. 5 steps labeled: Scope 1 (Consumer), Scope 2 (Enterprise SaaS), Scope 3 (Pre...</text>
-  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Ensuring secure endpoints and highly responsive pipelines during the data lifecycle.</text>
-</svg>
+  <rect x="60" y="100" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 1 - Performance</text>
+  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Accuracy &amp; Speed</text>
+<rect x="80" y="165" width="40" height="40" rx="6" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" /><text x="100" y="190" font-family="Inter" font-size="16" fill="#00A3E0" font-weight="700" text-anchor="middle">A</text><text x="135" y="188" font-family="Inter" font-size="11.5" fill="#94A3B8">Maximizing latency throughput</text>  <rect x="400" y="100" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="420" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 2 - Cost</text>
+  <text x="420" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">API consumption billing</text>
+<rect x="420" y="165" width="40" height="40" rx="6" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" /><text x="440" y="190" font-family="Inter" font-size="16" fill="#FF9900" font-weight="700" text-anchor="middle">B</text><text x="475" y="188" font-family="Inter" font-size="11.5" fill="#94A3B8">Reducing inference waste</text>  <rect x="60" y="250" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 3 - Reliability</text>
+  <text x="80" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Failover &amp; Redundancy</text>
+<rect x="80" y="315" width="40" height="40" rx="6" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5" /><text x="100" y="340" font-family="Inter" font-size="16" fill="#10B981" font-weight="700" text-anchor="middle">C</text><text x="135" y="338" font-family="Inter" font-size="11.5" fill="#94A3B8">Multi-AZ database replica</text>  <rect x="400" y="250" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="420" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 4 - Security</text>
+  <text x="420" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Auditing &amp; Guardrails</text>
+<rect x="420" y="315" width="40" height="40" rx="6" fill="rgba(139,92,246,0.15)" stroke="#8B5CF6" stroke-width="1.5" /><text x="440" y="340" font-family="Inter" font-size="16" fill="#8B5CF6" font-weight="700" text-anchor="middle">D</text><text x="475" y="338" font-family="Inter" font-size="11.5" fill="#94A3B8">Strict IAM permissions</text></svg>

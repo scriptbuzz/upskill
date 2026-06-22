@@ -56,39 +56,25 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Prompting Basics: Zero-Shot vs. Few-Shot</text>
-  <rect x="50" y="110" width="320" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Approach A / Left Perspective</text>
-  
+  <rect x="50" y="110" width="330" height="240" rx="12" fill="rgba(239, 68, 68, 0.01)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Traditional IT / Local Hosts</text>
+  <text x="70" y="165" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Self-Managed / Manual Operations</text>
 
   <g transform="translate(70, 180)">
-    <circle cx="15" cy="15" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="19" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">1</text>
-    <text x="35" y="18" font-family="Inter" font-size="12" fill="#F8FAFC">Low operational overhead</text>
-    
-    <circle cx="15" cy="55" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="59" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">2</text>
-    <text x="35" y="58" font-family="Inter" font-size="12" fill="#F8FAFC">Fast configuration time</text>
-    
-    <circle cx="15" cy="95" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="99" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">3</text>
-    <text x="35" y="98" font-family="Inter" font-size="12" fill="#F8FAFC">Standard model capabilities</text>
+    <text x="0" y="20" font-family="Inter" font-size="12.5" fill="#EF4444">✖ Higher latency / bias risk</text>
+    <text x="0" y="55" font-family="Inter" font-size="12.5" fill="#F8FAFC">✖ Complex manual engineering</text>
+    <text x="0" y="90" font-family="Inter" font-size="12.5" fill="#F8FAFC">✖ High overhead infrastructure</text>
+    <text x="0" y="125" font-family="Inter" font-size="12.5" fill="#F8FAFC">✖ Rigid rules / unscalable</text>
   </g>
-  <rect x="430" y="110" width="320" height="240" rx="12" fill="rgba(255,153,0,0.02)" stroke="url(#aws-orange)" stroke-width="1.5" />
-  <text x="450" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Approach B / Right Perspective</text>
-  
+  <rect x="420" y="110" width="330" height="240" rx="12" fill="rgba(16, 185, 129, 0.01)" stroke="#10B981" stroke-width="1.5" />
+  <text x="440" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">AWS Managed AI Services</text>
+  <text x="440" y="165" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Optimized Serverless / Secure</text>
 
-  <g transform="translate(450, 180)">
-    <circle cx="15" cy="15" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="19" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">1</text>
-    <text x="35" y="18" font-family="Inter" font-size="12" fill="#F8FAFC">Highly customized weights</text>
-    
-    <circle cx="15" cy="55" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="59" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">2</text>
-    <text x="35" y="58" font-family="Inter" font-size="12" fill="#F8FAFC">Domain specific training data</text>
-    
-    <circle cx="15" cy="95" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="99" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">3</text>
-    <text x="35" y="98" font-family="Inter" font-size="12" fill="#F8FAFC">Higher compute requirements</text>
+  <g transform="translate(440, 180)">
+    <text x="0" y="20" font-family="Inter" font-size="12.5" fill="#10B981">✔ Reduced risk &amp; automated checks</text>
+    <text x="0" y="55" font-family="Inter" font-size="12.5" fill="#10B981">✔ Native serverless services</text>
+    <text x="0" y="90" font-family="Inter" font-size="12.5" fill="#10B981">✔ Cost efficient pay-as-you-go</text>
+    <text x="0" y="125" font-family="Inter" font-size="12.5" fill="#10B981">✔ Elastic auto-scaling resources</text>
   </g>
 
   <rect x="50" y="370" width="700" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />

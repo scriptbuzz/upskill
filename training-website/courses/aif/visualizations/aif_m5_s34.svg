@@ -56,41 +56,41 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Shared Responsibility: Deep Dive</text>
-  <rect x="50" y="110" width="320" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Approach A / Left Perspective</text>
-  
 
-  <g transform="translate(70, 180)">
-    <circle cx="15" cy="15" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="19" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">1</text>
-    <text x="35" y="18" font-family="Inter" font-size="12" fill="#F8FAFC">Low operational overhead</text>
-    
-    <circle cx="15" cy="55" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="59" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">2</text>
-    <text x="35" y="58" font-family="Inter" font-size="12" fill="#F8FAFC">Fast configuration time</text>
-    
-    <circle cx="15" cy="95" r="10" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" />
-    <text x="15" y="99" font-family="Inter" font-size="10" fill="#00A3E0" font-weight="700" text-anchor="middle">3</text>
-    <text x="35" y="98" font-family="Inter" font-size="12" fill="#F8FAFC">Standard model capabilities</text>
+  <!-- Donut Chart -->
+  <g transform="translate(320, 230)">
+    <!-- Segment 1: 35% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#aws-orange)" stroke-width="32" stroke-dasharray="219.8 628" stroke-dashoffset="0" />
+    <!-- Segment 2: 25% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#cloud-blue)" stroke-width="32" stroke-dasharray="157 628" stroke-dashoffset="-219.8" />
+    <!-- Segment 3: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#success-green)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-376.8" />
+    <!-- Segment 4: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#purple-glow)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-502.4" />
+    <circle cx="0" cy="0" r="82" fill="#0F172A" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AIF-C01</text>
+    <text x="0" y="24" font-family="Inter, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">DOMAINS</text>
   </g>
-  <rect x="430" y="110" width="320" height="240" rx="12" fill="rgba(255,153,0,0.02)" stroke="url(#aws-orange)" stroke-width="1.5" />
-  <text x="450" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Approach B / Right Perspective</text>
   
-
-  <g transform="translate(450, 180)">
-    <circle cx="15" cy="15" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="19" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">1</text>
-    <text x="35" y="18" font-family="Inter" font-size="12" fill="#F8FAFC">Highly customized weights</text>
+  <!-- Legend Panel -->
+  <g transform="translate(520, 110)">
+    <rect x="0" y="0" width="240" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+    <text x="20" y="30" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Breakdown</text>
     
-    <circle cx="15" cy="55" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="59" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">2</text>
-    <text x="35" y="58" font-family="Inter" font-size="12" fill="#F8FAFC">Domain specific training data</text>
+    <circle cx="30" cy="70" r="6" fill="#FF9900" />
+    <text x="45" y="74" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Generative AI (24%)</text>
     
-    <circle cx="15" cy="95" r="10" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" />
-    <text x="15" y="99" font-family="Inter" font-size="10" fill="#FF9900" font-weight="700" text-anchor="middle">3</text>
-    <text x="35" y="98" font-family="Inter" font-size="12" fill="#F8FAFC">Higher compute requirements</text>
+    <circle cx="30" cy="110" r="6" fill="#00A3E0" />
+    <text x="45" y="114" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Applications of FMs (28%)</text>
+    
+    <circle cx="30" cy="150" r="6" fill="#10B981" />
+    <text x="45" y="154" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">AI/ML Fundamentals (20%)</text>
+    
+    <circle cx="30" cy="190" r="6" fill="#8B5CF6" />
+    <text x="45" y="194" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Security &amp; Compliance (28%)</text>
   </g>
-
-  <rect x="50" y="370" width="700" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="70" y="402" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8">A split layout. Left: A padlock lock guarding a server rack in a secure warehouse (AWS). Right: A developer co...</text>
+  
+  <!-- Description Subtext -->
+  <rect x="40" y="380" width="720" height="50" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
+  <text x="60" y="410" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A split layout. Left: A padlock lock guarding a server rack in a secure warehouse (AWS). Right:...</text>
 </svg>

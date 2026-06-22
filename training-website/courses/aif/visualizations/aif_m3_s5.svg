@@ -56,30 +56,32 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Bedrock Knowledge Bases</text>
-  <rect x="60" y="160" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Input / Ingest</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Raw Data Stream</text>
-  <rect x="270" y="160" width="160" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="290" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Processing</text>
-  <text x="290" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Model Inference</text>
-  <rect x="480" y="160" width="160" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="500" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Evaluation</text>
-  <text x="500" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Safety Guardrails</text>
-  <rect x="690" y="160" width="80" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="710" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Output</text>
-  <text x="710" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Response</text>
-  <line x1="220" y1="215" x2="270" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
-  <path d="M 270 215 L 263.0717967697245 219.0 L 263.0717967697245 211.0 Z" fill="url(#aws-orange)" />
+  <rect x="60" y="140" width="160" height="140" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Raw Data Source</text>
+  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">S3 Data Pool</text>
+  <g transform="translate(128,210)">
+    <path d="M 0 6 C 0 1, 20 1, 20 6 C 20 11, 0 11, 0 6 Z" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+    <path d="M 0 6 L 0 12 C 0 17, 20 17, 20 12 L 20 6" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+    <path d="M 0 12 L 0 18 C 0 23, 20 23, 20 18 L 20 12" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+  </g>  <rect x="280" y="140" width="240" height="140" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="300" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Glue DataBrew</text>
+  <text x="300" y="195" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Discovery &amp; Curation</text>
+<line x1="300" y1="210" x2="500" y2="210" stroke="#475569" stroke-width="4" /><circle cx="330" cy="210" r="8" fill="none" stroke="#475569" stroke-width="2" /><circle cx="470" cy="210" r="8" fill="none" stroke="#475569" stroke-width="2" /><text x="400" y="190" font-family="Inter" font-size="10.5" fill="#10B981" font-weight="700" text-anchor="middle">FILTER PII &amp; FORMAT</text>  <rect x="580" y="140" width="160" height="140" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="600" y="175" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Curated Lake</text>
+  <text x="600" y="195" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Lake Formation</text>
+  <g transform="translate(648,210)">
+    <path d="M 0 6 C 0 1, 20 1, 20 6 C 20 11, 0 11, 0 6 Z" fill="none" stroke="#10B981" stroke-width="1.5"/>
+    <path d="M 0 6 L 0 12 C 0 17, 20 17, 20 12 L 20 6" fill="none" stroke="#10B981" stroke-width="1.5"/>
+    <path d="M 0 12 L 0 18 C 0 23, 20 23, 20 18 L 20 12" fill="none" stroke="#10B981" stroke-width="1.5"/>
+  </g>  <line x1="220" y1="210" x2="280" y2="210" stroke="url(#aws-orange)" stroke-width="2"  />
+  <path d="M 280 210 L 273.0717967697245 214.0 L 273.0717967697245 206.0 Z" fill="url(#aws-orange)" />
   
-  <line x1="430" y1="215" x2="480" y2="215" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 480 215 L 473.0717967697245 219.0 L 473.0717967697245 211.0 Z" fill="#00A3E0" />
-  
-  <line x1="640" y1="215" x2="690" y2="215" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 690 215 L 683.0717967697245 219.0 L 683.0717967697245 211.0 Z" fill="#FF9900" />
+  <line x1="520" y1="210" x2="580" y2="210" stroke="url(#aws-orange)" stroke-width="2"  />
+  <path d="M 580 210 L 573.0717967697245 214.0 L 573.0717967697245 206.0 Z" fill="url(#aws-orange)" />
   
 
   <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Flow Process Description</text>
+  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Data Curation Architecture</text>
   <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A data ingestion pipeline. Source files (S3, Salesforce) flow through an embedding model container, which...</text>
-  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Ensuring secure endpoints and highly responsive pipelines during the data lifecycle.</text>
+  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Optimizing analytical workloads with clean partitions and catalog storage mappings.</text>
 </svg>

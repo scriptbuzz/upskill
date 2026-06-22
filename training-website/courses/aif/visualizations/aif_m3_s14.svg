@@ -56,30 +56,41 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Fine-Tuning Execution Steps</text>
-  <rect x="60" y="160" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Input / Ingest</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Raw Data Stream</text>
-  <rect x="270" y="160" width="160" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="290" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Processing</text>
-  <text x="290" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Model Inference</text>
-  <rect x="480" y="160" width="160" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="500" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Evaluation</text>
-  <text x="500" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Safety Guardrails</text>
-  <rect x="690" y="160" width="80" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="710" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Output</text>
-  <text x="710" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Response</text>
-  <line x1="220" y1="215" x2="270" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
-  <path d="M 270 215 L 263.0717967697245 219.0 L 263.0717967697245 211.0 Z" fill="url(#aws-orange)" />
-  
-  <line x1="430" y1="215" x2="480" y2="215" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 480 215 L 473.0717967697245 219.0 L 473.0717967697245 211.0 Z" fill="#00A3E0" />
-  
-  <line x1="640" y1="215" x2="690" y2="215" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 690 215 L 683.0717967697245 219.0 L 683.0717967697245 211.0 Z" fill="#FF9900" />
-  
 
-  <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Flow Process Description</text>
-  <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A cyclic flowchart: 1. Clean Data (JSONL) $\rightarrow$ 2. Ingest Prompts $\rightarrow$ 3. Calculate Loss...</text>
-  <text x="80" y="390" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">Ensuring secure endpoints and highly responsive pipelines during the data lifecycle.</text>
+  <!-- Donut Chart -->
+  <g transform="translate(320, 230)">
+    <!-- Segment 1: 35% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#aws-orange)" stroke-width="32" stroke-dasharray="219.8 628" stroke-dashoffset="0" />
+    <!-- Segment 2: 25% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#cloud-blue)" stroke-width="32" stroke-dasharray="157 628" stroke-dashoffset="-219.8" />
+    <!-- Segment 3: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#success-green)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-376.8" />
+    <!-- Segment 4: 20% -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#purple-glow)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-502.4" />
+    <circle cx="0" cy="0" r="82" fill="#0F172A" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC" text-anchor="middle">AIF-C01</text>
+    <text x="0" y="24" font-family="Inter, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">DOMAINS</text>
+  </g>
+  
+  <!-- Legend Panel -->
+  <g transform="translate(520, 110)">
+    <rect x="0" y="0" width="240" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+    <text x="20" y="30" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Breakdown</text>
+    
+    <circle cx="30" cy="70" r="6" fill="#FF9900" />
+    <text x="45" y="74" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Generative AI (24%)</text>
+    
+    <circle cx="30" cy="110" r="6" fill="#00A3E0" />
+    <text x="45" y="114" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Applications of FMs (28%)</text>
+    
+    <circle cx="30" cy="150" r="6" fill="#10B981" />
+    <text x="45" y="154" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">AI/ML Fundamentals (20%)</text>
+    
+    <circle cx="30" cy="190" r="6" fill="#8B5CF6" />
+    <text x="45" y="194" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Security &amp; Compliance (28%)</text>
+  </g>
+  
+  <!-- Description Subtext -->
+  <rect x="40" y="380" width="720" height="50" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
+  <text x="60" y="410" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A cyclic flowchart: 1. Clean Data (JSONL) $\rightarrow$ 2. Ingest Prompts $\rightarrow$ 3. Calc...</text>
 </svg>

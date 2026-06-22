@@ -56,30 +56,16 @@
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Responsible Model Selection</text>
-  <rect x="50" y="100" width="700" height="310" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="70" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Visual Blueprint Layout</text>
-  <text x="70" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">High-fidelity educational diagram placeholder</text>
-
-  <g transform="translate(100, 180)">
-    <!-- Simulated nodes and connectors -->
-    <circle cx="50" cy="50" r="30" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="50" y="55" font-family="Inter" font-size="11" fill="#00A3E0" font-weight="700" text-anchor="middle">NODE A</text>
-    
-    <circle cx="250" cy="50" r="30" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-dasharray="3,3" stroke-width="1.5" />
-    <text x="250" y="55" font-family="Inter" font-size="11" fill="#FF9900" font-weight="700" text-anchor="middle">NODE B</text>
-    
-    <line x1="80" y1="50" x2="220" y2="50" stroke="#94A3B8" stroke-dasharray="4,4" stroke-width="1.5" />
-    <polygon points="220,50 212,45 212,55" fill="#94A3B8" />
-  </g>
-  
-  <g transform="translate(450, 180)">
-    <rect x="0" y="0" width="260" height="200" rx="8" fill="rgba(30,41,59,0.5)" stroke="#1E293B" stroke-width="1" />
-    <text x="15" y="30" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">Proposed Visualization Idea</text>
-    
-    <!-- Word wrap the description -->
-    <text x="15" y="60" font-family="Inter" font-size="11" fill="#94A3B8">A decision matrix comparing three</text>
-    <text x="15" y="82" font-family="Inter" font-size="11" fill="#94A3B8">models across: Carbon Footprint</text>
-    <text x="15" y="104" font-family="Inter" font-size="11" fill="#94A3B8">(leaf icon), API Cost (dollar icon),</text>
-    <text x="15" y="126" font-family="Inter" font-size="11" fill="#94A3B8">and Safety Audits (check icon).</text>
-  </g>
-</svg>
+  <rect x="60" y="100" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 1 - Performance</text>
+  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Accuracy &amp; Speed</text>
+<rect x="80" y="165" width="40" height="40" rx="6" fill="rgba(0,163,224,0.15)" stroke="#00A3E0" stroke-width="1.5" /><text x="100" y="190" font-family="Inter" font-size="16" fill="#00A3E0" font-weight="700" text-anchor="middle">A</text><text x="135" y="188" font-family="Inter" font-size="11.5" fill="#94A3B8">Maximizing latency throughput</text>  <rect x="400" y="100" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="420" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 2 - Cost</text>
+  <text x="420" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">API consumption billing</text>
+<rect x="420" y="165" width="40" height="40" rx="6" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" /><text x="440" y="190" font-family="Inter" font-size="16" fill="#FF9900" font-weight="700" text-anchor="middle">B</text><text x="475" y="188" font-family="Inter" font-size="11.5" fill="#94A3B8">Reducing inference waste</text>  <rect x="60" y="250" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="80" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 3 - Reliability</text>
+  <text x="80" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Failover &amp; Redundancy</text>
+<rect x="80" y="315" width="40" height="40" rx="6" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5" /><text x="100" y="340" font-family="Inter" font-size="16" fill="#10B981" font-weight="700" text-anchor="middle">C</text><text x="135" y="338" font-family="Inter" font-size="11.5" fill="#94A3B8">Multi-AZ database replica</text>  <rect x="400" y="250" width="320" height="130" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+  <text x="420" y="285" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Quadrant 4 - Security</text>
+  <text x="420" y="305" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Auditing &amp; Guardrails</text>
+<rect x="420" y="315" width="40" height="40" rx="6" fill="rgba(139,92,246,0.15)" stroke="#8B5CF6" stroke-width="1.5" /><text x="440" y="340" font-family="Inter" font-size="16" fill="#8B5CF6" font-weight="700" text-anchor="middle">D</text><text x="475" y="338" font-family="Inter" font-size="11.5" fill="#94A3B8">Strict IAM permissions</text></svg>
