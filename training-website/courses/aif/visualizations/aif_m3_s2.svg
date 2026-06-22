@@ -51,34 +51,17 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Tuning Outputs: Inference Parameters</text>
-  <rect x="60" y="160" width="150" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Ingest Data</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="250" y="160" width="150" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="270" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Process Mod</text>
-  <text x="270" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="440" y="160" width="150" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="460" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Guardrails </text>
-  <text x="460" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="630" y="160" width="110" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="650" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Secure Outp</text>
-  <text x="650" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Secure Exit</text>
-  <line x1="210" y1="215" x2="250" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
-  <path d="M 250 215 L 243.0717967697245 219.0 L 243.0717967697245 211.0 Z" fill="url(#aws-orange)" />
-  
-    <line x1="400" y1="215" x2="440" y2="215" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 440 215 L 433.0717967697245 219.0 L 433.0717967697245 211.0 Z" fill="#00A3E0" />
-  
-    <line x1="590" y1="215" x2="630" y2="215" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 630 215 L 623.0717967697245 219.0 L 623.0717967697245 211.0 Z" fill="#FF9900" />
-  
-  
-  <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Model Pipeline Architecture</text>
-  <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A conceptual "word choice tree" showing how lowering Temperature/Top P prunes away branches to leave only...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Inference Parameters: Temperature, Top-P, &amp; Top-K</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="95" width="680" height="80" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Temperature (Randomness / Creativity)</text>
+  <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Low Temp = Deterministic, High Temp = Creative</text><line x1="100" y1="150" x2="680" y2="150" stroke="#334155" stroke-width="6" stroke-linecap="round" /><circle cx="280" cy="150" r="10" fill="#00A3E0" filter="url(#glow-blue)" /><text x="100" y="168" font-family="Inter" font-size="9" fill="#94A3B8">0.0 (Deterministic)</text><text x="280" y="137" font-family="Inter" font-size="10" font-weight="700" fill="#00A3E0" text-anchor="middle">Active: 0.3</text><text x="680" y="168" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="end">1.0 (Creative)</text><rect x="60" y="190" width="680" height="80" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="80" y="220" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Top-P (Cumulative Probability Threshold)</text>
+  <text x="80" y="240" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Filters out tail tokens based on sum of likelihoods</text><line x1="100" y1="245" x2="680" y2="245" stroke="#334155" stroke-width="6" stroke-linecap="round" /><circle cx="580" cy="245" r="10" fill="#FF9900" filter="url(#glow-orange)" /><text x="100" y="263" font-family="Inter" font-size="9" fill="#94A3B8">0.0 (Top token only)</text><text x="580" y="232" font-family="Inter" font-size="10" font-weight="700" fill="#FF9900" text-anchor="middle">Active: 0.85</text><text x="680" y="263" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="end">1.0 (All tokens)</text><rect x="60" y="285" width="680" height="80" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="80" y="315" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Top-K (Exact Token Count Limit)</text>
+  <text x="80" y="335" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Restricts sample pool to K most likely words</text><line x1="100" y1="340" x2="680" y2="340" stroke="#334155" stroke-width="6" stroke-linecap="round" /><circle cx="340" cy="340" r="10" fill="#10B981" /><text x="100" y="358" font-family="Inter" font-size="9" fill="#94A3B8">K=1</text><text x="340" y="327" font-family="Inter" font-size="10" font-weight="700" fill="#10B981" text-anchor="middle">Active: K=50</text><text x="680" y="358" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="end">K=500</text>
 </svg>

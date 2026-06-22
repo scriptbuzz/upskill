@@ -51,43 +51,22 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Registering for the Exam</text>
-  <rect x="120" y="100" width="560" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="140" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">REGISTERING FOR THE EXAM</text>
-  <text x="140" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Release Documentation &amp; Compliance Audit</text>
-
-  <g transform="translate(150, 175)">
-    <text x="0" y="15" font-family="Inter" font-size="12" fill="#94A3B8">Release Version:</text>
-    <text x="140" y="15" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">v0.3 beta</text>
-    
-    <text x="0" y="45" font-family="Inter" font-size="12" fill="#94A3B8">Verification Status:</text>
-    <text x="140" y="45" font-family="Inter" font-size="12" font-weight="700" fill="#10B981">PASSED (SageMaker / AWS Tools)</text>
-    
-    <text x="0" y="75" font-family="Inter" font-size="12" fill="#94A3B8">Audit Timestamp:</text>
-    <text x="140" y="75" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">2026-06-22</text>
-    
-    <text x="0" y="105" font-family="Inter" font-size="12" fill="#94A3B8">Responsible Scope:</text>
-    <text x="140" y="105" font-family="Inter" font-size="12" font-weight="700" fill="#00A3E0">Least Privilege Access Enabled</text>
-  </g>
-
-  <g transform="translate(480, 175)">
-    <rect x="0" y="5" width="16" height="16" rx="4" fill="none" stroke="#10B981" stroke-width="2" />
-    <text x="5" y="18" font-family="Inter" font-size="12" fill="#10B981" font-weight="700">✓</text>
-    <text x="25" y="18" font-family="Inter" font-size="11.5" fill="#F8FAFC">Audited</text>
-    
-    <rect x="0" y="40" width="16" height="16" rx="4" fill="none" stroke="#10B981" stroke-width="2" />
-    <text x="5" y="53" font-family="Inter" font-size="12" fill="#10B981" font-weight="700">✓</text>
-    <text x="25" y="53" font-family="Inter" font-size="11.5" fill="#F8FAFC">Traceable</text>
-    
-    <rect x="0" y="75" width="16" height="16" rx="4" fill="none" stroke="#10B981" stroke-width="2" />
-    <text x="5" y="88" font-family="Inter" font-size="12" fill="#10B981" font-weight="700">✓</text>
-    <text x="25" y="88" font-family="Inter" font-size="11.5" fill="#F8FAFC">Compliant</text>
-  </g>
-
-  <rect x="120" y="380" width="560" height="45" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="140" y="407" font-family="Inter" font-size="11" fill="#94A3B8">A registration calendar page. A calendar card pointing to the selected exam date with a ch...</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="180" y="100" width="440" height="260" rx="12" fill="url(#dark-card)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="200" y="130" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Pearson VUE Exam Registration</text>
+  <text x="200" y="150" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Schedule certification session</text><rect x="220" y="160" width="360" height="150" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" rx="6" /><rect x="220" y="160" width="360" height="30" fill="url(#aws-orange)" rx="6" /><text x="400" y="180" font-family="Inter" font-size="13" font-weight="700" fill="#000000" text-anchor="middle">June 2026</text>
+    <g transform="translate(240, 220)" font-family="Inter" font-size="12" fill="#F8FAFC">
+      <text x="0" y="0">Mon</text><text x="60" y="0">Tue</text><text x="120" y="0">Wed</text><text x="180" y="0">Thu</text><text x="240" y="0">Fri</text>
+      <text x="0" y="30" fill="#94A3B8">22</text>
+      <text x="60" y="30" fill="#94A3B8">23</text>
+      <text x="120" y="30" fill="#94A3B8">24</text>
+      <text x="180" y="30" fill="#10B981" font-weight="700">25 ✔</text>
+      <text x="240" y="30">26</text>
+    </g>
+    <text x="400" y="385" font-family="Inter" font-size="12" fill="#94A3B8" text-anchor="middle">Register via AWS Training certification accounts portals</text>
 </svg>

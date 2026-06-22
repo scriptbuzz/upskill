@@ -51,41 +51,29 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Compliance Tools: Artifact &amp; Compliance Center</text>
-
-  <!-- Donut Chart -->
-  <g transform="translate(320, 230)">
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#aws-orange)" stroke-width="32" stroke-dasharray="219.8 628" stroke-dashoffset="0" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#cloud-blue)" stroke-width="32" stroke-dasharray="157 628" stroke-dashoffset="-219.8" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#success-green)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-376.8" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#purple-glow)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-502.4" />
-    <circle cx="0" cy="0" r="82" fill="#0F172A" />
-    <text x="0" y="6" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#F8FAFC" text-anchor="middle">DISTRIBUTION</text>
-  </g>
-  
-  <!-- Legend Panel -->
-  <g transform="translate(510, 110)">
-    <rect x="0" y="0" width="250" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-    <text x="20" y="30" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Breakdown</text>
-    
-    <circle cx="30" cy="70" r="6" fill="#FF9900" />
-    <text x="45" y="74" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">AWS Artifact:</text>
-    
-    <circle cx="30" cy="110" r="6" fill="#00A3E0" />
-    <text x="45" y="114" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">AWS Compliance Center:</text>
-    
-    <circle cx="30" cy="150" r="6" fill="#10B981" />
-    <text x="45" y="154" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Purpose:</text>
-    
-    <circle cx="30" cy="190" r="6" fill="#8B5CF6" />
-    <text x="45" y="194" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Key Category</text>
-  </g>
-  
-  <!-- Caption -->
-  <rect x="40" y="380" width="720" height="50" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="60" y="410" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A briefcase labeled "AWS Artifact". Clicking it reveals certified documents (SOC 2, ISO 27001, ...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Compliance Tools: AWS Artifact</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="130" width="240" height="180" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="80" y="160" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">AWS Artifact Briefcase</text>
+  <text x="80" y="180" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Self-service compliance reports portal</text>
+    <g transform="translate(165, 215)">
+      <path d="M 0,0 L 15,-8 L 30,0 L 30,12 Q 30,24 15,28 Q 0,24 0,12 Z" fill="none" stroke="#10B981" stroke-width="1.5" />
+      <path d="M 15,-4 L 25,2 L 25,12 Q 25,20 15,24 Q 5,20 5,12 L 5,2 L 15,-4" fill="#10B981" opacity="0.3" />
+    </g>
+    <line x1="300" y1="220" x2="410" y2="220" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="410" y1="220" x2="403.0717967697245" y2="224.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="410" y1="220" x2="403.0717967697245" y2="216.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="355.0" y="212.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Downloads PDF docs</text><rect x="410" y="110" width="320" height="220" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="430" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Certified Security Audit Documents</text>
+  <text x="430" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Shared directly with corporate auditors</text><rect x="430" y="160" width="280" height="40" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="450" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">SOC 2 Type II Report</text>
+  <text x="450" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">System and Organization controls audit</text><rect x="430" y="215" width="280" height="40" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="450" y="245" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">ISO 27001 Certification</text>
+  <text x="450" y="265" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Global information security management</text><rect x="430" y="270" width="280" height="40" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="450" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">HIPAA Business Associate Addendum (BAA)</text>
+  <text x="450" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Protected health information controls</text>
 </svg>

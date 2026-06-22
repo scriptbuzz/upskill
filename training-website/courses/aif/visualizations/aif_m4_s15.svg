@@ -51,41 +51,27 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Model Openness &amp; Safety</text>
-
-  <!-- Donut Chart -->
-  <g transform="translate(320, 230)">
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#aws-orange)" stroke-width="32" stroke-dasharray="219.8 628" stroke-dashoffset="0" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#cloud-blue)" stroke-width="32" stroke-dasharray="157 628" stroke-dashoffset="-219.8" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#success-green)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-376.8" />
-    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#purple-glow)" stroke-width="32" stroke-dasharray="125.6 628" stroke-dashoffset="-502.4" />
-    <circle cx="0" cy="0" r="82" fill="#0F172A" />
-    <text x="0" y="6" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#F8FAFC" text-anchor="middle">DISTRIBUTION</text>
-  </g>
-  
-  <!-- Legend Panel -->
-  <g transform="translate(510, 110)">
-    <rect x="0" y="0" width="250" height="240" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-    <text x="20" y="30" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Breakdown</text>
-    
-    <circle cx="30" cy="70" r="6" fill="#FF9900" />
-    <text x="45" y="74" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Open Source AI Models:</text>
-    
-    <circle cx="30" cy="110" r="6" fill="#00A3E0" />
-    <text x="45" y="114" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Benefits:</text>
-    
-    <circle cx="30" cy="150" r="6" fill="#10B981" />
-    <text x="45" y="154" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Security Concerns:</text>
-    
-    <circle cx="30" cy="190" r="6" fill="#8B5CF6" />
-    <text x="45" y="194" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Proprietary Models:</text>
-  </g>
-  
-  <!-- Caption -->
-  <rect x="40" y="380" width="720" height="50" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="60" y="410" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A side-by-side comparison. Left: A padlock symbol representing Proprietary Models (API access o...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Proprietary vs. Open-Source Models</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Proprietary Models</text>
+  <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Closed weight foundation models</text><rect x="90" y="150" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="110" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">API Access Only</text>
+  <text x="110" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">No direct access to weights or parameters</text><rect x="90" y="210" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="110" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">High Security Control</text>
+  <text x="110" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Provider hosts and patches model vulnerabilities</text><rect x="90" y="270" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="110" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Examples</text>
+  <text x="110" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Anthropic Claude, Cohere Command</text><rect x="430" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="450" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Open-Source Models</text>
+  <text x="450" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Open weight foundation models</text><rect x="460" y="150" width="250" height="50" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="480" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Full Weights Access</text>
+  <text x="480" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Download and host weights locally/ECR</text><rect x="460" y="210" width="250" height="50" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="480" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Maximum Customizability</text>
+  <text x="480" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Fine-tune deep layers using custom PEFT jobs</text><rect x="460" y="270" width="250" height="50" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="480" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Examples</text>
+  <text x="480" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Meta Llama, Mistral, Jamba</text>
 </svg>

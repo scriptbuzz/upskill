@@ -1095,3 +1095,31 @@ footer {
 .custom-modal[open] {
   animation: modalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Locked/Disabled Course Card Styles */
+.course-card.locked {
+  opacity: 0.65;
+  border-color: rgba(148, 163, 184, 0.15);
+  cursor: not-allowed;
+}
+.course-card.locked:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+.course-card.locked::before {
+  opacity: 0 !important;
+}
+.course-card.locked .btn.btn-disabled {
+  background-color: #1e293b;
+  border: 1px solid var(--border-main);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.badge-locked {
+  background-color: rgba(148, 163, 184, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+

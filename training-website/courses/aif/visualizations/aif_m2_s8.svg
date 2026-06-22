@@ -51,21 +51,19 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Generative AI Performance Metrics</text>
-  <rect x="60" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Generative AI Performanc</text>
-  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Key Indicator</text>
-<circle cx="165" cy="230" r="50" fill="none" stroke="#1E293B" stroke-width="10" /><circle cx="165" cy="230" r="50" fill="none" stroke="#10B981" stroke-width="10" stroke-dasharray="210 314" stroke-dashoffset="-45" /><line x1="165" y1="230" x2="195" y2="200" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round" /><circle cx="165" cy="230" r="6" fill="#F8FAFC" /><text x="165" y="305" font-family="Inter" font-size="11" font-weight="700" fill="#10B981" text-anchor="middle">OPTIMAL STATE</text>  <rect x="295" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="315" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Metric Ranges</text>
-  <text x="315" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Interval Audits</text>
-<rect x="330" y="260" width="22" height="60" rx="2" fill="#EF4444" /><rect x="380" y="180" width="22" height="140" rx="2" fill="#10B981" /><rect x="430" y="220" width="22" height="100" rx="2" fill="#00A3E0" /><line x1="315" y1="320" x2="475" y2="320" stroke="#475569" stroke-width="1.5" />  <rect x="530" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="550" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Process Curve</text>
-  <text x="550" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Trend Over Duration</text>
-<path d="M 560,170 Q 600,230 640,270 T 710,300" fill="none" stroke="#FF9900" stroke-width="3" /><circle cx="560" cy="170" r="4" fill="#FF9900" /><circle cx="710" cy="300" r="4" fill="#FF9900" />
-  <rect x="60" y="380" width="680" height="45" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="407" font-family="Inter" font-size="11" fill="#94A3B8">A KPI dashboard showing four dials: Technical Accuracy, Compute Latency, Token Costs, and Customer Lifeti...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">LLM Performance Trade-offs &amp; Metrics</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="110" width="140" height="260" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="80" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Model Accuracy</text>
+  <text x="80" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Evaluation scores</text><text x="130" y="220" font-family="Inter" font-size="10.5" fill="#10B981">ROUGE: 0.82</text><text x="130" y="240" font-family="Inter" font-size="10.5" fill="#10B981">BLEU: 0.74</text><text x="130" y="280" font-family="Inter" font-size="9" fill="#94A3B8">Higher parameters =</text><text x="130" y="295" font-family="Inter" font-size="9" fill="#94A3B8">Higher accuracy</text><rect x="220" y="110" width="140" height="260" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="240" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Inference Latency</text>
+  <text x="240" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Time to first token</text><rect x="240" y="210" width="80" height="12" rx="2" fill="#EF4444" /><text x="240" y="238" font-family="Inter" font-size="9.5" fill="#EF4444">Large model: 2.1s</text><rect x="240" y="255" width="30" height="12" rx="2" fill="#10B981" /><text x="240" y="282" font-family="Inter" font-size="9.5" fill="#10B981">Small model: 0.4s</text><rect x="380" y="110" width="140" height="260" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="400" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Compute Cost</text>
+  <text x="400" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Tokens per USD pricing</text><text x="450" y="220" font-family="Inter" font-size="11" fill="#F8FAFC">$ / 1M Tokens</text><text x="450" y="250" font-family="Inter" font-size="10" fill="#94A3B8">Infrastructure cost</text><text x="450" y="265" font-family="Inter" font-size="10" fill="#94A3B8">scales with depth</text><rect x="540" y="110" width="200" height="260" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="560" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Context Window Size</text>
+  <text x="560" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Input token buffer limit</text><rect x="560" y="210" width="25" height="25" rx="3" fill="#00A3E0" opacity="0.3" /><rect x="590" y="210" width="25" height="25" rx="3" fill="#00A3E0" opacity="0.3" /><rect x="620" y="210" width="25" height="25" rx="3" fill="#00A3E0" opacity="0.3" /><rect x="650" y="210" width="25" height="25" rx="3" fill="#94A3B8" opacity="0.1" /><text x="640" y="270" font-family="Inter" font-size="11" fill="#F8FAFC" text-anchor="middle">e.g., 200K Tokens buffer</text><text x="640" y="300" font-family="Inter" font-size="9.5" fill="#94A3B8" text-anchor="middle">Governs retrieval density</text>
 </svg>

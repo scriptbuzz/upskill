@@ -51,30 +51,27 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Scoping Matrix Governance Requirements</text>
-  <rect x="50" y="110" width="330" height="240" rx="12" fill="rgba(239, 68, 68, 0.01)" stroke="#EF4444" stroke-width="1.5" />
-  <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Standard / Traditional Model</text>
-  <text x="70" y="165" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Standard Approach</text>
-
-  <g transform="translate(70, 180)">
-    <text x="0" y="20" font-family="Inter" font-size="12" fill="#EF4444">✖ Higher latency &amp; overhead</text>
-    <text x="0" y="55" font-family="Inter" font-size="12" fill="#F8FAFC">✖ Manual policy rules</text>
-    <text x="0" y="90" font-family="Inter" font-size="12" fill="#F8FAFC">✖ Static data parameters</text>
-  </g>
-  <rect x="420" y="110" width="330" height="240" rx="12" fill="rgba(16, 185, 129, 0.01)" stroke="#10B981" stroke-width="1.5" />
-  <text x="440" y="145" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Custom / AWS Model</text>
-  <text x="440" y="165" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">AWS Cloud Benefit</text>
-
-  <g transform="translate(440, 180)">
-    <text x="0" y="20" font-family="Inter" font-size="12" fill="#10B981">✔ Low latency serverless run</text>
-    <text x="0" y="55" font-family="Inter" font-size="12" fill="#10B981">✔ Automated safety checks</text>
-    <text x="0" y="90" font-family="Inter" font-size="12" fill="#10B981">✔ Dynamic learning weights</text>
-  </g>
-
-  <rect x="50" y="370" width="700" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="70" y="402" font-family="Inter" font-size="11.5" fill="#94A3B8">A compliance checklist comparison showing low requirements (Scope 1: Policy docs and basic training) vs. ...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Governance Requirements Checklist Comparison</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Scope 1 (Consumer API) Governance</text>
+  <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Low operational requirements</text><rect x="90" y="160" width="250" height="45" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="110" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">✔ Employee Usage Policy</text>
+  <text x="110" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Drafted and signed by staff</text><rect x="90" y="215" width="250" height="45" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="110" y="245" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">✔ Public Licensing Checks</text>
+  <text x="110" y="265" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Validate data ownership rules</text><rect x="90" y="270" width="250" height="45" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="110" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">✔ Basic Prompt Guidelines</text>
+  <text x="110" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Avoid inputting corporate secrets</text><rect x="430" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="450" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Scope 5 (Self-Trained) Governance</text>
+  <text x="450" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Max security and compliance control</text><rect x="460" y="160" width="250" height="45" rx="12" fill="rgba(239,68,68,0.05)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="480" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">⚠ Full Lineage Tracking</text>
+  <text x="480" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">SageMaker ML Lineage audited</text><rect x="460" y="215" width="250" height="45" rx="12" fill="rgba(239,68,68,0.05)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="480" y="245" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">⚠ Active KMS Key Controls</text>
+  <text x="480" y="265" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">CMK decryption policies applied</text><rect x="460" y="270" width="250" height="45" rx="12" fill="rgba(239,68,68,0.05)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="480" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">⚠ ECR Container Hardening</text>
+  <text x="480" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Scan base image vulnerabilities</text>
 </svg>

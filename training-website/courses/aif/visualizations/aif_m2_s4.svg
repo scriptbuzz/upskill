@@ -51,34 +51,28 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Diffusion Models &amp; Image Generation</text>
-  <rect x="60" y="160" width="150" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Ingest Data</text>
-  <text x="80" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="250" y="160" width="150" height="110" rx="12" fill="rgba(0,163,224,0.02)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="270" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Process Mod</text>
-  <text x="270" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="440" y="160" width="150" height="110" rx="12" fill="rgba(255,153,0,0.02)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="460" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Guardrails </text>
-  <text x="460" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Active Step</text>
-  <rect x="630" y="160" width="110" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="650" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">4. Secure Outp</text>
-  <text x="650" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Secure Exit</text>
-  <line x1="210" y1="215" x2="250" y2="215" stroke="url(#aws-orange)" stroke-width="2"  />
-  <path d="M 250 215 L 243.0717967697245 219.0 L 243.0717967697245 211.0 Z" fill="url(#aws-orange)" />
-  
-    <line x1="400" y1="215" x2="440" y2="215" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 440 215 L 433.0717967697245 219.0 L 433.0717967697245 211.0 Z" fill="#00A3E0" />
-  
-    <line x1="590" y1="215" x2="630" y2="215" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 630 215 L 623.0717967697245 219.0 L 623.0717967697245 211.0 Z" fill="#FF9900" />
-  
-  
-  <rect x="60" y="310" width="680" height="110" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="340" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">Model Pipeline Architecture</text>
-  <text x="80" y="365" font-family="Inter, sans-serif" font-size="11.5" fill="#94A3B8">A timeline showing a clean image of an astronaut gradually degrading into static noise (left to right), a...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Diffusion Models Process Flow</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="40" y="160" width="130" height="100" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. Clear Input</text>
+  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Original training image</text><line x1="170" y1="210" x2="220" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="220" y1="210" x2="213.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="220" y1="210" x2="213.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="195.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">+ Noise</text><rect x="220" y="160" width="130" height="100" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="240" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Add Noise</text>
+  <text x="240" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Gaussian scheduler</text><line x1="350" y1="210" x2="400" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="400" y1="210" x2="393.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="400" y1="210" x2="393.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="375.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Scramble</text><rect x="400" y="160" width="130" height="100" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="420" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">3. Pure Noise</text>
+  <text x="420" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Raw chaotic pixels</text><line x1="530" y1="210" x2="580" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="210" x2="573.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="210" x2="573.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="555.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Denoise</text><rect x="580" y="160" width="160" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="600" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">4. Reconstructed</text>
+  <text x="600" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">New generated sample</text><text x="285" y="115" font-family="Inter" font-size="11" fill="#FF9900" text-anchor="middle">Forward Pass (Destruction of data)</text><path d="M 60,140 L 510,140" fill="none" stroke="#FF9900" stroke-width="1.5" stroke-dasharray="3 3" /><text x="515" y="305" font-family="Inter" font-size="11" fill="#00A3E0" text-anchor="middle">Reverse Pass (Generation via U-Net)</text><path d="M 420,290 L 730,290" fill="none" stroke="#00A3E0" stroke-width="1.5" stroke-dasharray="3 3" />
 </svg>

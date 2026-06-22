@@ -51,21 +51,35 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Data Types in Machine Learning</text>
-  <rect x="60" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Data Types in Machine Le</text>
-  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Key Indicator</text>
-<circle cx="165" cy="230" r="50" fill="none" stroke="#1E293B" stroke-width="10" /><circle cx="165" cy="230" r="50" fill="none" stroke="#10B981" stroke-width="10" stroke-dasharray="210 314" stroke-dashoffset="-45" /><line x1="165" y1="230" x2="195" y2="200" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round" /><circle cx="165" cy="230" r="6" fill="#F8FAFC" /><text x="165" y="305" font-family="Inter" font-size="11" font-weight="700" fill="#10B981" text-anchor="middle">OPTIMAL STATE</text>  <rect x="295" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="315" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Metric Ranges</text>
-  <text x="315" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Interval Audits</text>
-<rect x="330" y="260" width="22" height="60" rx="2" fill="#EF4444" /><rect x="380" y="180" width="22" height="140" rx="2" fill="#10B981" /><rect x="430" y="220" width="22" height="100" rx="2" fill="#00A3E0" /><line x1="315" y1="320" x2="475" y2="320" stroke="#475569" stroke-width="1.5" />  <rect x="530" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="550" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Process Curve</text>
-  <text x="550" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Trend Over Duration</text>
-<path d="M 560,170 Q 600,230 640,270 T 710,300" fill="none" stroke="#FF9900" stroke-width="3" /><circle cx="560" cy="170" r="4" fill="#FF9900" /><circle cx="710" cy="300" r="4" fill="#FF9900" />
-  <rect x="60" y="380" width="680" height="45" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="407" font-family="Inter" font-size="11" fill="#94A3B8">A visual catalog showing Structured (spreadsheet rows), Semi-structured (JSON code snippets), Unstructure...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Data Formats in Machine Learning</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="50" y="95" width="160" height="280" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="70" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Structured Data</text>
+  <text x="70" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Highly organized, tables</text>
+    <g transform="translate(65, 170)" font-family="monospace" font-size="8.5" fill="#94A3B8">
+      <text x="0" y="0" fill="#10B981" font-weight="700">ID   Price  Qty</text>
+      <text x="0" y="15">101  14.99  1</text>
+      <text x="0" y="30">102  3.99   2</text>
+      <text x="0" y="45">103  42.50  1</text>
+    </g>
+    <text x="130" y="340" font-family="Inter" font-size="10" fill="#94A3B8" text-anchor="middle">Easy for traditional ML</text><rect x="225" y="95" width="160" height="280" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="245" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Semi-Structured</text>
+  <text x="245" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Has internal markers</text>
+    <g transform="translate(240, 170)" font-family="monospace" font-size="8.5" fill="#94A3B8">
+      <text x="0" y="0" fill="#00A3E0" font-weight="700">{</text>
+      <text x="10" y="15">"customer": {</text>
+      <text x="20" y="30">"name": "Jane",</text>
+      <text x="20" y="45">"age": 71</text>
+      <text x="10" y="60">}</text>
+      <text x="0" y="75">}</text>
+    </g>
+    <text x="305" y="340" font-family="Inter" font-size="10" fill="#94A3B8" text-anchor="middle">XML / JSON Log files</text><rect x="400" y="95" width="160" height="280" rx="12" fill="url(#dark-card)" stroke="#8B5CF6" stroke-width="1.5" />
+  <text x="420" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Unstructured Data</text>
+  <text x="420" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Requires deep learning</text><rect x="445" y="180" width="30" height="25" rx="2" fill="none" stroke="#8B5CF6" stroke-width="1.5" /><circle cx="455" cy="190" r="3" fill="#8B5CF6" /><path d="M 448,203 L 458,193 L 472,203" fill="none" stroke="#8B5CF6" stroke-width="1.5" /><line x1="495" y1="180" x2="495" y2="205" stroke="#00A3E0" stroke-width="2" /><line x1="500" y1="175" x2="500" y2="210" stroke="#00A3E0" stroke-width="2" /><line x1="505" y1="185" x2="505" y2="200" stroke="#00A3E0" stroke-width="2" /><line x1="510" y1="190" x2="510" y2="195" stroke="#00A3E0" stroke-width="2" /><text x="480" y="250" font-family="Inter" font-size="9" fill="#F8FAFC" text-anchor="middle">PDFs, Images, Audio</text><text x="480" y="340" font-family="Inter" font-size="10" fill="#94A3B8" text-anchor="middle">Complex features</text><rect x="575" y="95" width="160" height="280" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="595" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Time-Series Data</text>
+  <text x="595" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Uniform time intervals</text><path d="M 590,210 L 610,175 L 630,225 L 650,195 L 670,230 L 690,180 L 710,215 L 720,200" fill="none" stroke="#FF9900" stroke-width="2" /><text x="655" y="270" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">CPU %, Stock Tickers</text><text x="655" y="340" font-family="Inter" font-size="10" fill="#94A3B8" text-anchor="middle">Chronological order</text>
 </svg>

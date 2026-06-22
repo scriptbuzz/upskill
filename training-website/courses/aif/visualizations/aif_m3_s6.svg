@@ -51,37 +51,44 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Bedrock Agents</text>
-  <rect x="60" y="100" width="680" height="250" rx="16" fill="rgba(0,163,224,0.01)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Security Control Boundary</text>
-  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">System Permissions</text>
-  <rect x="90" y="160" width="300" height="160" rx="12" fill="rgba(148,163,184,0.02)" stroke="#475569" stroke-width="1.5" />
-  <text x="110" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Resource Layer</text>
-  <text x="110" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Encrypted / Authorized</text>
-  <g transform="translate(140,220)">
-    <rect x="0" y="0" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
-    <circle cx="4" cy="5" r="1" fill="#FF9900"/>
-    <line x1="8" y1="5" x2="20" y2="5" stroke="#FF9900" stroke-width="1.5"/>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Bedrock Agents Architecture</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="40" y="165" width="140" height="90" rx="12" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" />
+  <text x="60" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">User / App</text>
+  <text x="60" y="215" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Asks Agent to run task</text>
+    <g transform="translate(95, 210)">
+      <circle cx="15" cy="10" r="7" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
+      <path d="M 3,24 Q 15,14 27,24" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
+    </g>
+    <line x1="180" y1="210" x2="240" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="240" y1="210" x2="233.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="240" y1="210" x2="233.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="240" y="100" width="260" height="220" rx="12" fill="url(#dark-card)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="260" y="130" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Bedrock Agent Orchestrator</text>
+  <text x="260" y="150" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Reasoning &amp; Plan execution (ReAct)</text><rect x="260" y="150" width="220" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="280" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. Parse User Intent</text>
+  <text x="280" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">LLM understands subtasks</text><rect x="260" y="210" width="220" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="280" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Execute Actions</text>
+  <text x="280" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Calls APIs &amp; queries data</text><rect x="260" y="270" width="220" height="40" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="280" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">3. Final Synthesis</text>
+  <text x="280" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Formats output</text><line x1="500" y1="160" x2="580" y2="130" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="130" x2="574.9174149337185" y2="136.17797127251433" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="130" x2="572.1084274010113" y2="128.68733785196198" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="540.0" y="137.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Call API</text><line x1="500" y1="260" x2="580" y2="290" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="290" x2="572.1084274010113" y2="291.31266214803804" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="580" y1="290" x2="574.9174149337185" y2="283.82202872748564" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="540.0" y="267.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Retrieve</text><rect x="580" y="80" width="160" height="90" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="600" y="110" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Action Group</text>
+  <text x="600" y="130" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">AWS Lambda function</text><rect x="580" y="250" width="160" height="90" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="600" y="280" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Knowledge Base</text>
+  <text x="600" y="300" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Vector index search</text>
+    <g transform="translate(645, 305)">
+      <path d="M 0,5 Q 15,0 30,5 L 30,25 Q 15,30 0,25 Z" fill="none" stroke="#00A3E0" stroke-width="1.5" />
+      <path d="M 0,12 Q 15,17 30,12" fill="none" stroke="#00A3E0" stroke-width="1.5" />
+      <path d="M 0,19 Q 15,24 30,19" fill="none" stroke="#00A3E0" stroke-width="1.5" />
+    </g>
     
-    <rect x="0" y="12" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
-    <circle cx="4" cy="17" r="1" fill="#FF9900"/>
-    <line x1="8" y1="17" x2="20" y2="17" stroke="#FF9900" stroke-width="1.5"/>
-  </g><text x="210" y="240" font-family="Inter" font-size="12" fill="#F8FAFC">IAM Controlled Node</text><g transform="translate(420, 170)"><rect width="50" height="140" rx="4" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" /><line x1="0" y1="35" x2="50" y2="35" stroke="#F8FAFC" stroke-width="1" /><line x1="0" y1="70" x2="50" y2="70" stroke="#F8FAFC" stroke-width="1" /><line x1="0" y1="105" x2="50" y2="105" stroke="#F8FAFC" stroke-width="1" /><text x="25" y="-12" font-family="Inter" font-size="10.5" fill="#EF4444" font-weight="700" text-anchor="middle">FIREWALL</text></g>  <rect x="500" y="160" width="210" height="160" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="520" y="195" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Secure Target</text>
-  <text x="520" y="215" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Verified Endpoint</text>
-  <g transform="translate(585,220)">
-    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#10B981" stroke-width="1.5"/>
-  </g>  <line x1="390" y1="240" x2="420" y2="240" stroke="#FF9900" stroke-width="2"  />
-  <path d="M 420 240 L 413.0717967697245 244.0 L 413.0717967697245 236.0 Z" fill="#FF9900" />
-  
-    <line x1="470" y1="240" x2="500" y2="240" stroke="#10B981" stroke-width="2"  />
-  <path d="M 500 240 L 493.0717967697245 244.0 L 493.0717967697245 236.0 Z" fill="#10B981" />
-  <text x="485.0" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Encrypt Tunnel</text>
-  
-  <rect x="60" y="370" width="680" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="402" font-family="Inter" font-size="11.5" fill="#94A3B8">A circular orchestrator diagram. An agent block sits at the center, receiving queries, generating thought...</text>
 </svg>

@@ -51,21 +51,33 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">What is Artificial Intelligence?</text>
-  <rect x="60" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="80" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">What is Artificial Intel</text>
-  <text x="80" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Key Indicator</text>
-<circle cx="165" cy="230" r="50" fill="none" stroke="#1E293B" stroke-width="10" /><circle cx="165" cy="230" r="50" fill="none" stroke="#10B981" stroke-width="10" stroke-dasharray="210 314" stroke-dashoffset="-45" /><line x1="165" y1="230" x2="195" y2="200" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round" /><circle cx="165" cy="230" r="6" fill="#F8FAFC" /><text x="165" y="305" font-family="Inter" font-size="11" font-weight="700" fill="#10B981" text-anchor="middle">OPTIMAL STATE</text>  <rect x="295" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="315" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Metric Ranges</text>
-  <text x="315" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Interval Audits</text>
-<rect x="330" y="260" width="22" height="60" rx="2" fill="#EF4444" /><rect x="380" y="180" width="22" height="140" rx="2" fill="#10B981" /><rect x="430" y="220" width="22" height="100" rx="2" fill="#00A3E0" /><line x1="315" y1="320" x2="475" y2="320" stroke="#475569" stroke-width="1.5" />  <rect x="530" y="100" width="210" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="550" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">Process Curve</text>
-  <text x="550" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Trend Over Duration</text>
-<path d="M 560,170 Q 600,230 640,270 T 710,300" fill="none" stroke="#FF9900" stroke-width="3" /><circle cx="560" cy="170" r="4" fill="#FF9900" /><circle cx="710" cy="300" r="4" fill="#FF9900" />
-  <rect x="60" y="380" width="680" height="45" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="407" font-family="Inter" font-size="11" fill="#94A3B8">An infographic showing the transition from traditional software (inputs + rigid rules = static output) to...</text>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Traditional Software vs. AI Systems</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="60" y="90" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
+  <text x="80" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Traditional Software Development</text>
+  <text x="80" y="140" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Logic is hardcoded by developers</text><rect x="90" y="160" width="250" height="50" rx="12" fill="rgba(71,85,105,0.2)" stroke="#475569" stroke-width="1.5" />
+  <text x="110" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Inputs (Data)</text>
+  <text x="110" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Numbers, raw parameters</text><rect x="90" y="230" width="250" height="50" rx="12" fill="rgba(71,85,105,0.2)" stroke="#475569" stroke-width="1.5" />
+  <text x="110" y="260" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Rigid Rules (Code Logic)</text>
+  <text x="110" y="280" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., IF/ELSE statements, calculations</text><line x1="215" y1="290" x2="215" y2="320" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <line x1="215" y1="320" x2="211.0" y2="313.0717967697245" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <line x1="215" y1="320" x2="219.0" y2="313.0717967697245" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+  <text x="215.0" y="297.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Compile &amp; Execute</text><rect x="90" y="320" width="250" height="45" rx="12" fill="rgba(239,68,68,0.1)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="110" y="350" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Static Output</text>
+  <text x="110" y="370" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Predefined deterministic results</text><rect x="430" y="90" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="450" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">AI &amp; Machine Learning Systems</text>
+  <text x="450" y="140" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Logic is learned from datasets</text><rect x="460" y="160" width="250" height="50" rx="12" fill="rgba(255,153,0,0.1)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="480" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Historical Data (Inputs)</text>
+  <text x="480" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Transcripts, server records, usage patterns</text><rect x="460" y="230" width="250" height="50" rx="12" fill="rgba(255,153,0,0.1)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="480" y="260" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Known Outcomes (Labels)</text>
+  <text x="480" y="280" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Fraud flags, actual customer ratings</text><line x1="585" y1="290" x2="585" y2="320" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="585" y1="320" x2="581.0" y2="313.0717967697245" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="585" y1="320" x2="589.0" y2="313.0717967697245" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="585.0" y="297.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Model Training</text><rect x="460" y="320" width="250" height="45" rx="12" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="1.5" />
+  <text x="480" y="350" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Learned Model (Logic)</text>
+  <text x="480" y="370" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Capable of generalizing to new inputs</text>
 </svg>

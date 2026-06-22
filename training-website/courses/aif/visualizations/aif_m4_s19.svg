@@ -51,47 +51,36 @@
   <rect width="800" height="450" fill="url(#grid)" />
   
   <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
+  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
+  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
   
   <!-- Slide Header -->
-  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Augmented AI (A2I)</text>
-<circle cx="400" cy="210" r="60" fill="url(#dark-card)" stroke="#8B5CF6" stroke-width="2" />  <g transform="translate(390,180)">
-    <circle cx="10" cy="7" r="5" fill="none" stroke="#8B5CF6" stroke-width="1.5"/>
-    <path d="M 2 19 C 2 14, 18 14, 18 19" fill="none" stroke="#8B5CF6" stroke-width="1.5"/>
-  </g><text x="400" y="255" font-family="Inter" font-size="11.5" font-weight="700" fill="#8B5CF6" text-anchor="middle">AMAZON A2I</text>  <rect x="120" y="155" width="150" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="140" y="190" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">1. Prediction</text>
-  <text x="140" y="210" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Model Run Inference</text>
-  <g transform="translate(180,210)">
-    <rect x="0" y="0" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
-    <circle cx="4" cy="5" r="1" fill="#FF9900"/>
-    <line x1="8" y1="5" x2="20" y2="5" stroke="#FF9900" stroke-width="1.5"/>
+  <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Augmented AI (A2I) Workflow</text>
+  <text x="760" y="40" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">v0.3 beta | Mikeb</text>
+<rect x="40" y="160" width="110" height="100" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
+  <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Document / Image</text>
+  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Inbound stream</text><line x1="150" y1="210" x2="210" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="210" y1="210" x2="203.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="210" y1="210" x2="203.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="210" y="160" width="140" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="230" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Model Inference</text>
+  <text x="230" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Textract parser</text><line x1="350" y1="210" x2="410" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="410" y1="210" x2="403.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="410" y1="210" x2="403.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="410" y="150" width="160" height="120" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="430" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Confidence Check</text>
+  <text x="430" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Threshold = 90%</text><line x1="570" y1="180" x2="640" y2="140" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="640" y1="140" x2="635.9691908114961" y2="146.91032396388712" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="640" y1="140" x2="632.0000793046414" y2="139.96437882689145" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="605.0" y="152.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">&gt; 90%</text><line x1="570" y1="240" x2="640" y2="280" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="640" y1="280" x2="632.0000793046414" y2="280.03562117310855" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <line x1="640" y1="280" x2="635.9691908114961" y2="273.0896760361129" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="605.0" y="252.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">&lt; 90%</text><rect x="640" y="95" width="120" height="75" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="660" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Auto-Approve</text>
+  <text x="660" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Direct to DB</text><rect x="640" y="275" width="120" height="75" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="660" y="305" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Human Review</text>
+  <text x="660" y="325" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">A2I workspace</text>
+    <g transform="translate(685, 310)">
+      <circle cx="15" cy="10" r="7" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
+      <path d="M 3,24 Q 15,14 27,24" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
+    </g>
     
-    <rect x="0" y="12" width="24" height="10" rx="1.5" fill="none" stroke="#FF9900" stroke-width="1.5"/>
-    <circle cx="4" cy="17" r="1" fill="#FF9900"/>
-    <line x1="8" y1="17" x2="20" y2="17" stroke="#FF9900" stroke-width="1.5"/>
-  </g>  <rect x="530" y="90" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="550" y="125" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">2. Routing Logic</text>
-  <text x="550" y="145" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Filter exceptions</text>
-  <g transform="translate(598,140)">
-    <path d="M 0 0 L 10 0 C 10 0, 20 6, 20 14 C 20 20, 10 24, 10 24 C 10 24, 0 20, 0 14 Z" fill="none" stroke="#00A3E0" stroke-width="1.5"/>
-  </g>  <rect x="530" y="220" width="160" height="110" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="550" y="255" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">3. Ground Truth</text>
-  <text x="550" y="275" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Feedback curation</text>
-  <g transform="translate(598,270)">
-    <path d="M 0 6 C 0 1, 20 1, 20 6 C 20 11, 0 11, 0 6 Z" fill="none" stroke="#10B981" stroke-width="1.5"/>
-    <path d="M 0 6 L 0 12 C 0 17, 20 17, 20 12 L 20 6" fill="none" stroke="#10B981" stroke-width="1.5"/>
-    <path d="M 0 12 L 0 18 C 0 23, 20 23, 20 18 L 20 12" fill="none" stroke="#10B981" stroke-width="1.5"/>
-  </g>  <line x1="270" y1="210" x2="340" y2="210" stroke="#00A3E0" stroke-width="2"  />
-  <path d="M 340 210 L 333.0717967697245 214.0 L 333.0717967697245 206.0 Z" fill="#00A3E0" />
-  <text x="305.0" y="202.0" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Inference</text>
-    <line x1="460" y1="180" x2="530" y2="150" stroke="#8B5CF6" stroke-width="2"  />
-  <path d="M 530 150 L 525.2076536282539 156.4057330769563 L 522.0562992396206 149.05257283681183 Z" fill="#8B5CF6" />
-  <text x="495.0" y="157.0" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Audit</text>
-    <line x1="460" y1="240" x2="530" y2="270" stroke="#10B981" stroke-width="2"  />
-  <path d="M 530 270 L 522.0562992396206 270.9474271631882 L 525.2076536282539 263.59426692304373 Z" fill="#10B981" />
-  <text x="495.0" y="247.0" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Train</text>
-  
-  <rect x="60" y="370" width="680" height="55" rx="8" fill="rgba(30,41,59,0.3)" stroke="#1E293B" stroke-width="1" />
-  <text x="80" y="402" font-family="Inter" font-size="11.5" fill="#94A3B8">A routing pipeline. A document goes to a model. If confidence $&gt; 90\%$, output flows to client. If confid...</text>
 </svg>
