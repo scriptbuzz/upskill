@@ -80,22 +80,18 @@ body {
   padding: 0 24px;
 }
 
-/* Demo Disclaimer Banner */
-.demo-banner {
-  background-color: rgba(245, 158, 11, 0.08);
-  border-bottom: 1px solid rgba(245, 158, 11, 0.15);
-  padding: 10px 0;
-  font-size: 13px;
-  position: relative;
-  z-index: 101;
-}
-
-.demo-banner-wrapper {
-  display: flex;
+/* Demo Disclaimer styles */
+.hero-disclaimer {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  background-color: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: -8px auto 24px auto;
+  font-size: 13px;
 }
 
 .demo-badge {
