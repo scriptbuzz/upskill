@@ -307,6 +307,9 @@ function setupEventListeners() {
     nextBtn.addEventListener("click", () => {
       if (currentSlideIndex < allSlides.length - 1) {
         navigateSlide(currentSlideIndex + 1);
+      } else {
+        // Finish course and return home
+        window.location.href = "index.html";
       }
     });
   }
@@ -365,9 +368,12 @@ function setupEventListeners() {
         navigateSlide(currentSlideIndex - 1);
       }
       e.preventDefault();
-    } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+    } else if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " ") {
       if (currentSlideIndex < allSlides.length - 1) {
         navigateSlide(currentSlideIndex + 1);
+      } else {
+        // Finish course and return home
+        window.location.href = "index.html";
       }
       e.preventDefault();
     } else if (e.key === "Home") {
@@ -379,22 +385,43 @@ function setupEventListeners() {
     }
   });
 
-  // Prevent diagram iframe from trapping scroll wheel events
+  // Prevent diagram iframe from trapping scroll wheel and keyboard events
   const iframe = document.getElementById("diagram-frame");
   if (iframe) {
     iframe.addEventListener("load", () => {
       try {
         const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
         if (iframeDoc) {
+          // Forward scroll wheel
           iframeDoc.addEventListener("wheel", (e) => {
             const viewport = document.getElementById("active-slide-viewport");
             if (viewport) {
               viewport.scrollTop += e.deltaY;
             }
           }, { passive: true });
+
+          // Forward keyboard events for navigation
+          iframeDoc.addEventListener("keydown", (e) => {
+            const newEvent = new KeyboardEvent("keydown", {
+              key: e.key,
+              code: e.code,
+              bubbles: true,
+              cancelable: true,
+              view: window,
+              ctrlKey: e.ctrlKey,
+              altKey: e.altKey,
+              shiftKey: e.shiftKey,
+              metaKey: e.metaKey
+            });
+            document.dispatchEvent(newEvent);
+            
+            if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", " "].includes(e.key)) {
+              e.preventDefault();
+            }
+          });
         }
       } catch (err) {
-        console.warn("Could not bind iframe wheel event", err);
+        console.warn("Could not bind iframe events", err);
       }
     });
   }
