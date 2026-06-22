@@ -551,9 +551,17 @@ function navigateSlide(index) {
     });
 
     // Render SVG diagram
-    const iframe = document.getElementById("diagram-frame");
-    if (iframe) {
-      iframe.src = `visualizations/${item.visualization}`;
+    const diagramCard = document.getElementById("active-slide-diagram");
+    if (diagramCard) {
+      if (item.visualization) {
+        diagramCard.style.display = "flex";
+        const iframe = document.getElementById("diagram-frame");
+        if (iframe) {
+          iframe.src = `visualizations/${item.visualization}`;
+        }
+      } else {
+        diagramCard.style.display = "none";
+      }
     }
 
   } else if (item.type === "quiz-question") {

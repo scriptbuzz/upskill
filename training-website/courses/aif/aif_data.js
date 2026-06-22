@@ -45,7 +45,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m1_s1.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s2",
@@ -106,7 +106,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m1_s4.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s5",
@@ -194,7 +194,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m1_s8.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s9",
@@ -221,7 +221,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m1_s9.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s10",
@@ -356,7 +356,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m1_s14.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s15",
@@ -457,7 +457,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m1_s17.svg"
+          "visualization": ""
         },
         {
           "id": "m1-s18",
@@ -562,7 +562,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m1_s20.svg"
+          "visualization": ""
         }
       ],
       "quiz": [
@@ -665,7 +665,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m2_s2.svg"
+          "visualization": ""
         },
         {
           "id": "m2-s3",
@@ -765,7 +765,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m2_s6.svg"
+          "visualization": ""
         },
         {
           "id": "m2-s7",
@@ -784,7 +784,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m2_s7.svg"
+          "visualization": ""
         },
         {
           "id": "m2-s8",
@@ -924,7 +924,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s1.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s2",
@@ -1017,7 +1017,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m3_s4.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s5",
@@ -1040,7 +1040,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s5.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s6",
@@ -1102,7 +1102,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m3_s7.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s8",
@@ -1121,7 +1121,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s8.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s9",
@@ -1198,7 +1198,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s11.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s12",
@@ -1217,7 +1217,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s12.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s13",
@@ -1275,7 +1275,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m3_s14.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s15",
@@ -1306,7 +1306,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m3_s15.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s16",
@@ -1395,7 +1395,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m3_s18.svg"
+          "visualization": ""
         },
         {
           "id": "m3-s19",
@@ -1426,7 +1426,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m3_s19.svg"
+          "visualization": ""
         }
       ],
       "quiz": [
@@ -1533,7 +1533,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m4_s2.svg"
+          "visualization": ""
         },
         {
           "id": "m4-s3",
@@ -1822,7 +1822,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m4_s13.svg"
+          "visualization": ""
         },
         {
           "id": "m4-s14",
@@ -1857,7 +1857,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m4_s14.svg"
+          "visualization": ""
         },
         {
           "id": "m4-s15",
@@ -1899,7 +1899,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m4_s16.svg"
+          "visualization": ""
         },
         {
           "id": "m4-s17",
@@ -1991,7 +1991,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m4_s20.svg"
+          "visualization": ""
         }
       ],
       "quiz": [
@@ -2054,7 +2054,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s1.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s2",
@@ -2073,7 +2073,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s2.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s3",
@@ -2092,7 +2092,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s3.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s4",
@@ -2207,7 +2207,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s8.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s9",
@@ -2357,7 +2357,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m5_s14.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s15",
@@ -2380,7 +2380,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s15.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s16",
@@ -2430,7 +2430,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m5_s17.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s18",
@@ -2461,7 +2461,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s18.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s19",
@@ -2519,7 +2519,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m5_s20.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s21",
@@ -2573,7 +2573,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s22.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s23",
@@ -2897,7 +2897,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m5_s34.svg"
+          "visualization": ""
         },
         {
           "id": "m5-s35",
@@ -2928,7 +2928,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m5_s35.svg"
+          "visualization": ""
         }
       ],
       "quiz": [
@@ -3033,7 +3033,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m6_s2.svg"
+          "visualization": ""
         },
         {
           "id": "m6-s3",
@@ -3106,7 +3106,7 @@ const AIF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "aif_m6_s5.svg"
+          "visualization": ""
         },
         {
           "id": "m6-s6",
@@ -3125,7 +3125,7 @@ const AIF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "aif_m6_s6.svg"
+          "visualization": ""
         }
       ],
       "quiz": []
