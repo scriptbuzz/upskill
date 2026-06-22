@@ -62,7 +62,7 @@
 
   <g transform="translate(150, 175)">
     <text x="0" y="15" font-family="Inter" font-size="12" fill="#94A3B8">Release Version:</text>
-    <text x="140" y="15" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">v0.1 beta</text>
+    <text x="140" y="15" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">v0.3 beta</text>
     
     <text x="0" y="45" font-family="Inter" font-size="12" fill="#94A3B8">Verification Status:</text>
     <text x="140" y="45" font-family="Inter" font-size="12" font-weight="700" fill="#10B981">PASSED (SageMaker / AWS Tools)</text>

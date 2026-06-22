@@ -57,21 +57,21 @@
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Compliance Legislation: Algorithmic Accountability Act</text>
   <rect x="120" y="100" width="560" height="260" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="140" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">COMPLIANCE LEGISLATION: ALGORITHMIC ACCOUNTABILITY ACT</text>
+  <text x="140" y="135" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#F8FAFC">COMPLIANCE LEGISLATION: ALGORITHMIC ACCOUNTAB</text>
   <text x="140" y="155" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Release Documentation &amp; Compliance Audit</text>
 
   <g transform="translate(150, 175)">
     <text x="0" y="15" font-family="Inter" font-size="12" fill="#94A3B8">Release Version:</text>
-    <text x="140" y="15" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">v0.1 beta</text>
+    <text x="140" y="15" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">v0.3 beta</text>
     
     <text x="0" y="45" font-family="Inter" font-size="12" fill="#94A3B8">Verification Status:</text>
-    <text x="140" y="45" font-family="Inter" font-size="12" font-weight="700" fill="#10B981">PASSED (SageMaker / AWS Tools)</text>
+    <text x="140" y="45" font-family="Inter" font-size="12" font-weight="700" fill="#10B981">COMPLIANT (AWS Reports)</text>
     
     <text x="0" y="75" font-family="Inter" font-size="12" fill="#94A3B8">Audit Timestamp:</text>
     <text x="140" y="75" font-family="Inter" font-size="12" font-weight="700" fill="#F8FAFC">2026-06-22</text>
     
     <text x="0" y="105" font-family="Inter" font-size="12" fill="#94A3B8">Responsible Scope:</text>
-    <text x="140" y="105" font-family="Inter" font-size="12" font-weight="700" fill="#00A3E0">Least Privilege Access Enabled</text>
+    <text x="140" y="105" font-family="Inter" font-size="12" font-weight="700" fill="#00A3E0">Regulatory Alignment Verified</text>
   </g>
 
   <g transform="translate(480, 175)">
