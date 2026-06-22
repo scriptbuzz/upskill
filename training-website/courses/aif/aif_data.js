@@ -273,6 +273,10 @@ const AIF_COURSE_DATA = {
             {
               "text": "Amazon Fraud Detector:** Fully managed service that uses machine learning to automatically detect online transaction fraud, fake product reviews, account takeovers, and new account fraud.",
               "indent": 1
+            },
+            {
+              "text": "Amazon QuickSight:** Unified business intelligence (BI) service that uses machine learning (Amazon Q in QuickSight) to let users build interactive dashboards, ask natural language questions of data, and generate business summaries.",
+              "indent": 1
             }
           ],
           "visualization": "aif_m1_s11.svg"
@@ -369,6 +373,10 @@ const AIF_COURSE_DATA = {
             {
               "text": "Amazon SageMaker Automatic Model Tuning:** Runs training jobs inside a loop, tweaking hyperparameters using machine learning (Bayesian optimization) to find the best configuration.",
               "indent": 1
+            },
+            {
+              "text": "AWS Trainium:** Custom-built AWS silicon chip designed specifically to accelerate deep learning model training while reducing energy consumption and costs compared to standard GPUs.",
+              "indent": 1
             }
           ],
           "visualization": "aif_m1_s15.svg"
@@ -400,6 +408,10 @@ const AIF_COURSE_DATA = {
             {
               "text": "Amazon EC2:** Hosting model servers manually on customizable VM instances.",
               "indent": 2
+            },
+            {
+              "text": "AWS Inferentia:** Custom-built AWS silicon chip designed specifically to optimize deep learning model inference (predictions), delivering high throughput and extremely low latency at minimal hosting costs.",
+              "indent": 1
             }
           ],
           "visualization": "aif_m1_s16.svg"
@@ -664,7 +676,7 @@ const AIF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Tokens:** The basic units of text processed by models (can be whole words, syllables, or single characters). Example: *\"A puppy is to dog\"* might be split into 5 tokens.",
+              "text": "Tokenization:** The process of converting raw input text into **Tokens**, which are the basic units of text processed by models (can be whole words, syllables, or single characters). Example: *\"A puppy is to dog\"* might be split into 5 tokens.",
               "indent": 1
             },
             {
@@ -923,11 +935,11 @@ const AIF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Top P (0.0 to 1.0):** Nucleus sampling. Filters candidate words based on their cumulative probability weight (e.g., 0.25 limits options to only the most likely words).",
+              "text": "Top P (Top-P) (0.0 to 1.0):** Nucleus sampling. Filters candidate words based on their cumulative probability weight (e.g., 0.25 limits options to only the most likely words).",
               "indent": 1
             },
             {
-              "text": "Top K (1 to 500):** Limits candidate word selection to the $K$ most probable next tokens.",
+              "text": "Top K (Top-K) (1 to 500):** Limits candidate word selection to the $K$ most probable next tokens.",
               "indent": 1
             },
             {
@@ -943,7 +955,7 @@ const AIF_COURSE_DATA = {
         },
         {
           "id": "m3-s3",
-          "title": "Context Expansion: Retrieval Augmented Generation (RAG)",
+          "title": "Context Expansion: Retrieval-Augmented Generation (RAG)",
           "bullets": [
             {
               "text": "The Knowledge Gap:** Foundation models are frozen in time post-training and lack access to private enterprise data or real-time updates.",
@@ -1012,7 +1024,7 @@ const AIF_COURSE_DATA = {
           "title": "Bedrock Knowledge Bases",
           "bullets": [
             {
-              "text": "Fully Managed RAG:** Automates the complete Retrieval Augmented Generation setup without requiring custom Glue code or orchestrators.",
+              "text": "Fully Managed RAG:** Automates the complete Retrieval-Augmented Generation setup without requiring custom Glue code or orchestrators.",
               "indent": 0
             },
             {
@@ -1157,6 +1169,10 @@ const AIF_COURSE_DATA = {
             {
               "text": "Model Poisoning:** Introducing corrupted or biased data during the training/fine-tuning phase.",
               "indent": 2
+            },
+            {
+              "text": "OWASP Top 10 for GenAI:** Reference framework identifying the top ten security vulnerabilities for LLM applications (including prompt injection, insecure output handling, and training data poisoning).",
+              "indent": 1
             }
           ],
           "visualization": "aif_m3_s10.svg"
@@ -1171,6 +1187,10 @@ const AIF_COURSE_DATA = {
             },
             {
               "text": "Fine-Tuning (Customization):** Supervised training on a small, high-quality, labeled dataset (e.g., 1,000 medical Q&As) to adapt a base model to a specific style or domain.",
+              "indent": 1
+            },
+            {
+              "text": "Transfer Learning:** The overarching ML paradigm where knowledge gained from solving one problem (pretraining a base model on general text) is applied to a different but related problem (fine-tuning on a specific task).",
               "indent": 1
             },
             {
@@ -1412,7 +1432,7 @@ const AIF_COURSE_DATA = {
       "quiz": [
         {
           "id": 1,
-          "question": "A machine learning (ML) engineer wants to implement Retrieval Augmented Generation (RAG) for a foundation model (FM). The ML engineer must select a database service that supports similarity search and can store vector embeddings for RAG implementation.",
+          "question": "A machine learning (ML) engineer wants to implement Retrieval-Augmented Generation (RAG) for a foundation model (FM). The ML engineer must select a database service that supports similarity search and can store vector embeddings for RAG implementation.",
           "options": {
             "A": "Amazon OpenSearch Service",
             "B": "Amazon DynamoDB",
@@ -2511,6 +2531,10 @@ const AIF_COURSE_DATA = {
             },
             {
               "text": "AWS Compliance Center:** Resource hub to find compliance stories, auditor learning paths, and technical whitepapers regarding AWS cloud regulations.",
+              "indent": 1
+            },
+            {
+              "text": "Regulatory Standards:** Includes **GDPR** (General Data Protection Regulation) for data privacy and sovereignty, and **HIPAA** (Health Insurance Portability and Accountability Act) for protecting personal healthcare records in AI applications.",
               "indent": 1
             },
             {

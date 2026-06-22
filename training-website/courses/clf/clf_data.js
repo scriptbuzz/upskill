@@ -1663,6 +1663,10 @@ const CLF_COURSE_DATA = {
             {
               "text": "Private Subnets:** Isolated from the public internet. Used for sensitive backends (databases, application servers). Accesses the internet securely outbound using a **NAT Gateway** (placed in the public subnet).",
               "indent": 2
+            },
+            {
+              "text": "Route Tables:** A set of routing rules (routes) that determine where network traffic from your subnet or gateway is directed.",
+              "indent": 1
             }
           ],
           "visualization": "clf_m3_vpc_subnets.svg"
@@ -2439,7 +2443,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 1)",
           "bullets": [
             {
-              "text": "Basic Support:",
+              "text": "Basic Support Plan (Basic Plan):",
               "indent": 0
             },
             {
@@ -2451,7 +2455,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Developer Support:",
+              "text": "Developer Support Plan (Developer Plan):",
               "indent": 1
             },
             {
@@ -2478,7 +2482,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 2)",
           "bullets": [
             {
-              "text": "Business Support:",
+              "text": "Business Support Plan (Business Plan):",
               "indent": 0
             },
             {
@@ -2494,7 +2498,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Enterprise Support (and Enterprise On-Ramp):",
+              "text": "Enterprise Support Plan (Enterprise Plan) (and Enterprise On-Ramp):",
               "indent": 1
             },
             {
