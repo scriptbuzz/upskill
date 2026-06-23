@@ -3156,7 +3156,7 @@ const AIF_COURSE_DATA = {
           "title": "LAB: Explore Foundation Models and Prompt Engineering",
           "bullets": [
             {
-              "text": "**Lab Overview:** This lab provides hands-on experience to LLMs, testing models with prompts, adjusting model parameters, and exploring foundation models within the Amazon Bedrock platform.",
+              "text": "**Lab Overview:** This lab provides hands-on experience to LLMs, testing models with prompts, adjusting model parameters and exploring within the Amazon Bedrock platform.",
               "indent": 0
             },
             {
@@ -3191,7 +3191,7 @@ const AIF_COURSE_DATA = {
           "title": "LAB: Build Machine Learning Models with Amazon SageMaker",
           "bullets": [
             {
-              "text": "**Lab Overview:** In this lab, learners will use Amazon SageMaker by setting up a development environment and exploring the Studio interface, then build and run a linear regression model using Python and scikit-learn.",
+              "text": "**Lab Overview:** In this lab, learners will use Amazon SageMaker by setting up your development environment and exploring the Studio interface. You then build and run a linear regression model using Python and scikit-learn.",
               "indent": 0
             },
             {
