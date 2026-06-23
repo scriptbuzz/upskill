@@ -1,2 +1,5 @@
 .DS_Store
-training-resources/
+training-resources/**
+!training-resources/**/
+!training-resources/**/*.md
+*project_history.md
