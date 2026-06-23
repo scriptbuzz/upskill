@@ -3105,6 +3105,124 @@ const AIF_COURSE_DATA = {
         }
       ],
       "quiz": []
+    },
+    {
+      "id": "m7",
+      "title": "Module 7 - Skill Builder Labs",
+      "objectives": [
+        "Gain hands-on experience with core AWS AI and ML services.",
+        "Explore the Amazon Bedrock console, adjust foundation model parameters, and test prompts.",
+        "Practice prompt engineering techniques in playground environments.",
+        "Set up a development environment in Amazon SageMaker Studio and run machine learning models."
+      ],
+      "slides": [
+        {
+          "id": "m7-s1",
+          "title": "LAB: Introduction to the Amazon Bedrock Console",
+          "bullets": [
+            {
+              "text": "**Lab Overview:** In this lab, learners gain hands-on experience with enabling access to LLMs, testing models with basic prompts, adjusting model parameters, generating AI images, and exploring provided examples within the Amazon Bedrock console.",
+              "indent": 0
+            },
+            {
+              "text": "**Key Tasks:**",
+              "indent": 1
+            },
+            {
+              "text": "Enable model access for various Foundation Models in Amazon Bedrock.",
+              "indent": 2
+            },
+            {
+              "text": "Use Bedrock playgrounds to test text and image generation models.",
+              "indent": 2
+            },
+            {
+              "text": "Adjust inference parameters such as temperature, Top-P, and max length.",
+              "indent": 2
+            },
+            {
+              "text": "Explore pre-configured prompt examples and templates.",
+              "indent": 2
+            },
+            {
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/CQ9BPN151C/lab--introduction-to-the-amazon-bedrock-console/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        },
+        {
+          "id": "m7-s2",
+          "title": "LAB: Explore Foundation Models and Prompt Engineering",
+          "bullets": [
+            {
+              "text": "**Lab Overview:** This lab provides hands-on experience to LLMs, testing models with prompts, adjusting model parameters, and exploring foundation models within the Amazon Bedrock platform.",
+              "indent": 0
+            },
+            {
+              "text": "**Key Tasks:**",
+              "indent": 1
+            },
+            {
+              "text": "Select appropriate Foundation Models for specific text generation use cases.",
+              "indent": 2
+            },
+            {
+              "text": "Design and run prompt experiments using zero-shot and few-shot learning.",
+              "indent": 2
+            },
+            {
+              "text": "Adjust inference parameters to control model output creativity and randomness.",
+              "indent": 2
+            },
+            {
+              "text": "Analyze response characteristics across different model architectures.",
+              "indent": 2
+            },
+            {
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/AX3ECS7BFW/lab--explore-foundation-models-and-prompt-engineering/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        },
+        {
+          "id": "m7-s3",
+          "title": "LAB: Build Machine Learning Models with Amazon SageMaker",
+          "bullets": [
+            {
+              "text": "**Lab Overview:** In this lab, learners will use Amazon SageMaker by setting up a development environment and exploring the Studio interface, then build and run a linear regression model using Python and scikit-learn.",
+              "indent": 0
+            },
+            {
+              "text": "**Key Tasks:**",
+              "indent": 1
+            },
+            {
+              "text": "Set up a SageMaker Studio domain and user profile.",
+              "indent": 2
+            },
+            {
+              "text": "Create a SageMaker Studio Jupyter Notebook with a CPU instance.",
+              "indent": 2
+            },
+            {
+              "text": "Load and preprocess a dataset for training.",
+              "indent": 2
+            },
+            {
+              "text": "Build, train, and run a linear regression model using Python and scikit-learn.",
+              "indent": 2
+            },
+            {
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/V4N9X9XV6E/lab--build-machine-learning-models-with-amazon-sagemaker/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        }
+      ],
+      "quiz": []
     }
   ]
 };

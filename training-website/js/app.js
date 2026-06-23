@@ -92,7 +92,7 @@ function initLandingPage() {
   }
 
   if (aifCompletedSlides.length > 0) {
-    const aifTotalSlides = 132; // AIF has 132 steps (110 slides + 22 quiz steps)
+    const aifTotalSlides = 135; // AIF has 135 steps (113 slides + 22 quiz steps)
     const aifPercent = Math.min(Math.round((aifCompletedSlides.length / aifTotalSlides) * 100), 100);
     
     const aifBtn = document.getElementById("start-aif-course-btn");
