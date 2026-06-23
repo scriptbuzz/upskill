@@ -532,7 +532,7 @@ const CLF_COURSE_DATA = {
             "D": "Reliability"
           },
           "correct": "C",
-          "explanation": "The Sustainability pillar was added specifically to focus on environmental impacts, maximizing resource utilization, and reducing energy consumption. A (Operational Excellence) is incorrect because it focuses on running and monitoring systems to deliver business value and continually improving processes. B (Performance Efficiency) is incorrect because it focuses on using computing resources efficiently to meet requirements. D (Reliability) is incorrect because it focuses on preventing and quickly recovering from failures to meet customer demand.",
+          "explanation": "The Sustainability pillar was added specifically to focus on environmental impacts, maximizing resource utilization, and reducing energy consumption.",
           "wrongExplanations": {
             "A": "Operational Excellence focuses on running and monitoring systems to deliver business value and continually improving processes.",
             "B": "Performance Efficiency focuses on using computing resources efficiently to meet requirements as demand changes.",
@@ -1180,7 +1180,7 @@ const CLF_COURSE_DATA = {
             "D": "Use AWS Secrets Manager to block access"
           },
           "correct": "C",
-          "explanation": "Service Control Policies (SCPs) in AWS Organizations let you define central permission guardrails across all accounts in an OU. An SCP can block region access globally, which cannot be bypassed even by administrator/root credentials in member accounts. A (Attach an IAM Policy to every developer user) is incorrect because it is not centrally manageable across multiple accounts and can be bypassed/altered by users with administrative privileges. B (Configure an AWS Config rule in each account) is incorrect because AWS Config is a detective/compliance monitoring tool, not a preventative tool. D (Use AWS Secrets Manager to block access) is incorrect because Secrets Manager is designed for storing and managing secrets, not for enforcing network access or permission policies.",
+          "explanation": "Service Control Policies (SCPs) in AWS Organizations let you define central permission guardrails across all accounts in an OU. An SCP can block region access globally, which cannot be bypassed even by administrator/root credentials in member accounts.",
           "wrongExplanations": {
             "A": "Attaching IAM policies to individual users is complex to scale across multiple accounts and can be bypassed by users with local admin credentials.",
             "B": "AWS Config rules only monitor and flag violations after they occur (detective), rather than preventing the actions.",
@@ -1663,10 +1663,6 @@ const CLF_COURSE_DATA = {
             {
               "text": "Private Subnets:** Isolated from the public internet. Used for sensitive backends (databases, application servers). Accesses the internet securely outbound using a **NAT Gateway** (placed in the public subnet).",
               "indent": 2
-            },
-            {
-              "text": "Route Tables:** A set of routing rules (routes) that determine where network traffic from your subnet or gateway is directed.",
-              "indent": 1
             }
           ],
           "visualization": "clf_m3_vpc_subnets.svg"
@@ -2124,7 +2120,7 @@ const CLF_COURSE_DATA = {
       "quiz": [
         {
           "id": 1,
-          "question": "Which aspect of AWS global infrastructure consists of one or more physical data centers mapped to logical codes within a user account, connected via high-speed, redundant dual-fiber paths?",
+          "question": "Which aspect of AWS global infrastructure consists of one or more physical data centers and is connected to other similar clusters via low-latency, redundant fiber networks?",
           "options": {
             "A": "AWS Region",
             "B": "Edge Location",
@@ -2149,7 +2145,7 @@ const CLF_COURSE_DATA = {
             "D": "Storage Optimized (I-family)"
           },
           "correct": "B",
-          "explanation": "Compute Optimized instances (like the C-family) are designed for compute-bound applications that require high performance processors, making them perfect for transcoding batch files. A (General Purpose (T-family)) is incorrect because General Purpose instances are designed for balanced compute, memory, and networking workloads, and are not optimized for heavy CPU-intensive transcoding. C (Memory Optimized (R-family)) is incorrect because Memory Optimized instances are designed for database and in-memory caches that process large datasets in memory. D (Storage Optimized (I-family)) is incorrect because Storage Optimized instances are designed for high, sequential read and write access to very large datasets on local storage.",
+          "explanation": "Compute Optimized instances (like the C-family) are designed for compute-bound applications that require high performance processors, making them perfect for transcoding batch files.",
           "wrongExplanations": {
             "A": "General Purpose (T-family) provides a balanced mix of resources and is not optimized for high-performance CPU-bound tasks like video encoding.",
             "C": "Memory Optimized (R-family) is designed for processing large datasets in memory (e.g. database systems) rather than CPU-bound transcoding.",
@@ -2443,7 +2439,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 1)",
           "bullets": [
             {
-              "text": "Basic Support Plan (Basic Plan):",
+              "text": "Basic Support:",
               "indent": 0
             },
             {
@@ -2455,7 +2451,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Developer Support Plan (Developer Plan):",
+              "text": "Developer Support:",
               "indent": 1
             },
             {
@@ -2482,7 +2478,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 2)",
           "bullets": [
             {
-              "text": "Business Support Plan (Business Plan):",
+              "text": "Business Support:",
               "indent": 0
             },
             {
@@ -2498,7 +2494,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Enterprise Support Plan (Enterprise Plan) (and Enterprise On-Ramp):",
+              "text": "Enterprise Support (and Enterprise On-Ramp):",
               "indent": 1
             },
             {
@@ -2675,7 +2671,7 @@ const CLF_COURSE_DATA = {
             "D": "Reserved Instances"
           },
           "correct": "C",
-          "explanation": "Spot Instances offer the largest discount (up to 90%) but can be interrupted when AWS needs capacity back. Since the workload is a batch processing job that can tolerate interruptions, Spot is the perfect choice to minimize cost. A (On-Demand Instances) is incorrect because it has the highest flexibility but offers no discount compared to other options. B (Savings Plans) is incorrect because it requires a 1-year or 3-year commitment of compute spend, offering less discount than Spot Instances and not fitting dynamic interruptible workloads. D (Reserved Instances) is incorrect because it requires a 1-year or 3-year commitment for a specific instance configuration/class and offers lower discounts than Spot Instances.",
+          "explanation": "Spot Instances offer the largest discount (up to 90%) but can be interrupted when AWS needs capacity back. Since the workload is a batch processing job that can tolerate interruptions, Spot is the perfect choice to minimize cost.",
           "wrongExplanations": {
             "A": "On-Demand Instances offer maximum flexibility with zero commitments, but do not provide any discount.",
             "B": "Savings Plans offer discounts in exchange for a committed hourly spend over 1 or 3 years, but are less cost-effective than Spot instances for dynamic, interruptible batch encoding.",
@@ -2807,6 +2803,160 @@ const CLF_COURSE_DATA = {
             }
           ],
           "visualization": "clf_m5_final_prep.svg"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": 6,
+      "title": "Skill Builder Labs",
+      "objectives": [
+        "Gain hands-on experience with core AWS services using official Skill Builder labs.",
+        "Launch, resize, manage, and monitor an Amazon EC2 instance.",
+        "Create a custom VPC, configure subnets, and define internet routing.",
+        "Create Amazon S3 buckets, manage objects, and understand lifecycle options.",
+        "Manage access permissions, groups, and IAM policies."
+      ],
+      "slides": [
+        {
+          "id": "6.1",
+          "title": "Introduction to Amazon EC2",
+          "bullets": [
+            {
+              "text": "Lab Overview:** This lab provides a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.",
+              "indent": 0
+            },
+            {
+              "text": "Key Tasks:",
+              "indent": 1
+            },
+            {
+              "text": "Launch an EC2 instance with the Amazon Linux AMI.",
+              "indent": 2
+            },
+            {
+              "text": "Select an instance type (t2.micro) and configure network settings.",
+              "indent": 2
+            },
+            {
+              "text": "Resize an active instance and monitor CPU utilization metrics in CloudWatch.",
+              "indent": 2
+            },
+            {
+              "text": "Clean up resources by terminating the instance.",
+              "indent": 2
+            },
+            {
+              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/9VNGAHHAUU/introduction-to-amazon-ec2/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        },
+        {
+          "id": "6.2",
+          "title": "Introduction to Amazon VPC",
+          "bullets": [
+            {
+              "text": "Lab Overview:** This lab introduces you to Amazon Virtual Private Cloud (Amazon VPC). You will use the Amazon VPC wizard to create a VPC, public subnet, and route tables.",
+              "indent": 0
+            },
+            {
+              "text": "Key Tasks:",
+              "indent": 1
+            },
+            {
+              "text": "Create a custom VPC using the VPC Wizard in the console.",
+              "indent": 2
+            },
+            {
+              "text": "Configure public and private subnets with appropriate IP ranges.",
+              "indent": 2
+            },
+            {
+              "text": "Attach an Internet Gateway (IGW) to allow internet connectivity.",
+              "indent": 2
+            },
+            {
+              "text": "Define routing in the route tables to allow flow between subnets and the IGW.",
+              "indent": 2
+            },
+            {
+              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/PH6Z6EVH8Z/introduction-to-amazon-virtual-private-cloud-vpc/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        },
+        {
+          "id": "6.3",
+          "title": "Introduction to Amazon S3",
+          "bullets": [
+            {
+              "text": "Lab Overview:** This lab demonstrates how to use an Amazon S3 bucket and manage files, or objects, that are stored in the bucket.",
+              "indent": 0
+            },
+            {
+              "text": "Key Tasks:",
+              "indent": 1
+            },
+            {
+              "text": "Create a uniquely named S3 bucket in a designated AWS region.",
+              "indent": 2
+            },
+            {
+              "text": "Upload files (objects) into the bucket and configure access permissions.",
+              "indent": 2
+            },
+            {
+              "text": "Move, copy, view, and delete objects in the bucket.",
+              "indent": 2
+            },
+            {
+              "text": "Understand S3 versioning, lifecycle configuration, and clean up S3 buckets.",
+              "indent": 2
+            },
+            {
+              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/R54NZHEX5K/introduction-to-amazon-simple-storage-service-s3/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
+        },
+        {
+          "id": "6.4",
+          "title": "Introduction to AWS IAM",
+          "bullets": [
+            {
+              "text": "Lab Overview:** This lab shows you how to manage access and permissions to your AWS services using AWS Identity and Access Management (IAM).",
+              "indent": 0
+            },
+            {
+              "text": "Key Tasks:",
+              "indent": 1
+            },
+            {
+              "text": "Create IAM users and add them to custom security groups.",
+              "indent": 2
+            },
+            {
+              "text": "Manage user credentials (passwords) and require MFA.",
+              "indent": 2
+            },
+            {
+              "text": "Define and apply IAM policies to restrict user access to specific services.",
+              "indent": 2
+            },
+            {
+              "text": "Log in as an IAM user to verify policy restrictions and permissions.",
+              "indent": 2
+            },
+            {
+              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/XFPX3M7HAQ/introduction-to-aws-identity-and-access-management-iam/)",
+              "indent": 1
+            }
+          ],
+          "visualization": ""
         }
       ],
       "quiz": []
