@@ -1,6 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initCourseHome);
+} else {
   initCourseHome();
-});
+}
 
 function initCourseHome() {
   if (typeof CLF_COURSE_DATA === 'undefined') {
@@ -9,10 +11,11 @@ function initCourseHome() {
   }
 
   // Load progress
-  const progressSlidesRaw = localStorage.getItem("clf_progress_slides");
   let completedSlides = [];
   try {
-    completedSlides = progressSlidesRaw ? JSON.parse(progressSlidesRaw) : [];
+    const progressSlidesRaw = localStorage.getItem("clf_progress_slides");
+    const parsed = progressSlidesRaw ? JSON.parse(progressSlidesRaw) : [];
+    completedSlides = Array.isArray(parsed) ? parsed : [];
   } catch (e) {
     completedSlides = [];
   }
@@ -92,7 +95,11 @@ function initCourseHome() {
         resetBtn.addEventListener("click", () => {
           showCustomConfirm().then((confirmed) => {
             if (confirmed) {
-              localStorage.removeItem("clf_progress_slides");
+              try {
+                localStorage.removeItem("clf_progress_slides");
+              } catch (e) {
+                console.error(e);
+              }
               window.location.reload();
             }
           });

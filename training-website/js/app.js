@@ -1,14 +1,17 @@
 // Core platform JS loader
-document.addEventListener("DOMContentLoaded", () => {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initLandingPage);
+} else {
   initLandingPage();
-});
+}
 
 function initLandingPage() {
   // Check if course progress exists in localStorage
-  const progressSlidesRaw = localStorage.getItem("clf_progress_slides");
   let completedSlides = [];
   try {
-    completedSlides = progressSlidesRaw ? JSON.parse(progressSlidesRaw) : [];
+    const progressSlidesRaw = localStorage.getItem("clf_progress_slides");
+    const parsed = progressSlidesRaw ? JSON.parse(progressSlidesRaw) : [];
+    completedSlides = Array.isArray(parsed) ? parsed : [];
   } catch (e) {
     completedSlides = [];
   }
@@ -48,7 +51,11 @@ function initLandingPage() {
         e.preventDefault();
         showCustomConfirm().then((confirmed) => {
           if (confirmed) {
-            localStorage.removeItem("clf_progress_slides");
+            try {
+              localStorage.removeItem("clf_progress_slides");
+            } catch (err) {
+              console.error(err);
+            }
             window.location.reload();
           }
         });
@@ -75,10 +82,11 @@ function initLandingPage() {
   }
 
   // Check if AIF course progress exists in localStorage
-  const aifProgressSlidesRaw = localStorage.getItem("aif_progress_slides");
   let aifCompletedSlides = [];
   try {
-    aifCompletedSlides = aifProgressSlidesRaw ? JSON.parse(aifProgressSlidesRaw) : [];
+    const aifProgressSlidesRaw = localStorage.getItem("aif_progress_slides");
+    const parsed = aifProgressSlidesRaw ? JSON.parse(aifProgressSlidesRaw) : [];
+    aifCompletedSlides = Array.isArray(parsed) ? parsed : [];
   } catch (e) {
     aifCompletedSlides = [];
   }
@@ -114,7 +122,11 @@ function initLandingPage() {
         e.preventDefault();
         showCustomConfirm().then((confirmed) => {
           if (confirmed) {
-            localStorage.removeItem("aif_progress_slides");
+            try {
+              localStorage.removeItem("aif_progress_slides");
+            } catch (err) {
+              console.error(err);
+            }
             window.location.reload();
           }
         });

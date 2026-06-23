@@ -1,6 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initViewer);
+} else {
   initViewer();
-});
+}
 
 let allSlides = [];
 let currentSlideIndex = 0;
@@ -33,14 +35,19 @@ function initViewer() {
 function loadProgress() {
   try {
     const progressRaw = localStorage.getItem("aif_progress_slides");
-    completedSlides = progressRaw ? JSON.parse(progressRaw) : [];
+    const parsed = progressRaw ? JSON.parse(progressRaw) : [];
+    completedSlides = Array.isArray(parsed) ? parsed : [];
   } catch (e) {
     completedSlides = [];
   }
 }
 
 function saveProgress() {
-  localStorage.setItem("aif_progress_slides", JSON.stringify(completedSlides));
+  try {
+    localStorage.setItem("aif_progress_slides", JSON.stringify(completedSlides));
+  } catch (e) {
+    console.error("Failed to save progress to localStorage:", e);
+  }
 }
 
 function buildSlideList() {
@@ -354,7 +361,11 @@ function setupEventListeners() {
     resetCourseBtn.addEventListener("click", () => {
       showCustomConfirm().then((confirmed) => {
         if (confirmed) {
-          localStorage.removeItem("aif_progress_slides");
+          try {
+            localStorage.removeItem("aif_progress_slides");
+          } catch (e) {
+            console.error(e);
+          }
           window.location.href = "index.html";
         }
       });
