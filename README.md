@@ -1,46 +1,61 @@
 # 4 Corners Academy - Tech & Cloud Certification Prep Platform
 
-Welcome to **4 Corners Academy**, a premium study guide and exam preparation platform designed for professional cloud and technology certifications. This repository hosts interactive study guides, course outlines, and visualization resources for various tech and cloud certification tracks.
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-scriptbuzz.github.io%2Fupskill-00A3E0?style=for-the-badge&logo=githubpages&logoColor=white)](https://scriptbuzz.github.io/upskill/)
+
+![Deploy Status](https://github.com/scriptbuzz/upskill/actions/workflows/deploy.yml/badge.svg)
+![Design](https://img.shields.io/badge/Design-Premium_Slate-0F172A?style=flat-square)
+![Style](https://img.shields.io/badge/Codebase-Vanilla_JS%20%26%20CSS-F7DF1E?style=flat-square)
+
+</div>
+
+Welcome to **4 Corners Academy**, an immersive study guide and exam preparation platform designed for professional cloud and technology certifications. Learn technical architectures using premium vector diagrams, interactive accordion outlines, and slide-by-slide checkpoint quizzes.
 
 ---
 
-## 📂 Directory Structure
+## ⚡ Course Catalog Summary
 
-```
+| Course Tag | Course Name | Status | Modules | Slides | Checkpoint Quizzes | Pricing |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.3 beta` | 6 | 79 | 5 | **Free** |
+| ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.4 beta` | 7 | 135 | 11 | **Requires Subscription** |
+| ![AGY-101](https://img.shields.io/badge/AGY--101-A1A1AA?style=flat-square) | **Agentic AI Essentials** | `Locked` | 6 | 64 | 4 | **Coming Soon** |
+
+---
+
+## 📂 Repository Directory Structure
+
+```text
 .
-├── README.md                        # Project documentation
-├── training-resources/             # Developer blueprints, outlines, and course assets
-│   └── aws/                         # AWS Certification Tracks
-│       ├── aws cloud practitioner/  # CLF-C02 Course resources
-│       │   ├── clf_resources_guide.md
-│       │   ├── clf_training_material_outline.md
-│       │   ├── clf_visualizations_index.md
-│       │   ├── clf_project_history.md
-│       │   └── clf_visualizations/
-│       └── aws ai practitioner/     # AIF-C01 Course resources
-│           ├── aif_resources_guide.md
-│           └── aif_training_material_outline.md
+├── .agents/                        # AI coding assistant workspace configs
+│   └── AGENTS.md                   # Customization rules (copyrights, lab suffixes)
+├── training-resources/             # Developer outlines and course assets
+│   ├── new_course_guide.md         # Course integration blueprints (source of truth)
+│   └── aws/                        # AWS Certification Tracks
+│       ├── aws cloud practitioner/ # CLF-C02 raw outlines & project history
+│       └── aws ai practitioner/    # AIF-C01 raw outlines & project history
 └── training-website/               # Platform web codebase (HTML, CSS, JS)
-    ├── index.html                   # Main Catalog / Course Dashboard
+    ├── index.html                  # Main Catalog / Course Dashboard
     ├── css/
-    │   └── styles.css               # Premium design stylesheets
+    │   └── styles.css              # Premium responsive layout styles
     ├── js/
-    │   └── app.js                   # Landing page progress dashboard loader
-    └── courses/                     # Course contents directory
-        └── [course-id]/             # Specific course module resources (e.g. clf/)
+    │   └── app.js                  # Landing page progress dashboard loader
+    └── courses/                    # Course contents directory
+        ├── clf/                    # CLF Course space (homes, viewers, SVGs)
+        └── aif/                    # AIF Course space (homes, viewers, SVGs)
 ```
 
 ---
 
-## ✨ Features
+## ✨ Features & Architecture
 
-- **Multi-Course Catalog:** A responsive dashboard that lets students track their progress across different certification courses, showing active and upcoming courses.
-- **Responsive Split Presenter:** Side-by-side split screen view with a 320px accordion navigation sidebar (left) and study viewport (right). Collapses smoothly to a top-bottom stacked layout on tablets and mobile screens.
-- **Interactive SVG Architecture Diagrams:** High-quality vector visualizations loaded inside sandboxed `<iframe>` tags to isolate scripting and maintain crisp vectors on scale, responding cleanly to mouse hovers and focus states.
-- **Keyboard Navigation Support:** Move forward or backward using Arrow keys (`Left`/`Right`/`Up`/`Down`) and jump instantly to the first or last slides using `Home`/`End` hotkeys.
-- **Static Checkpoint Quizzes:** Quizzes are integrated directly inside the slide flow as static pairs: a Question Slide (displaying the problem and options) followed by a Solved Slide (featuring answer keys and interactive incorrect option explanations).
-- **Course Progress & Reset:** Training progress is tracked slide-by-slide inside `localStorage`. Users can reset their training logs from scratch via the main catalog cards, course overview page, or slide sidebar.
-- **Layout Shift Safeguards:** Styled with `scrollbar-gutter: stable` to reserve scrollbar offsets and lock screen overflow coordinates, preventing layout adjustments when moving between slides of different text lengths.
+* **🎨 Multi-Course Dashboard:** A responsive catalog listing active and upcoming training paths, reading user progress keys from `localStorage` to render completion stats and neon progress bars dynamically.
+* **📱 Responsive Split Presenter:** A unified layout featuring a 320px accordion navigation sidebar (left) and study viewport (right) that shifts cleanly to a stacked vertical flow on mobile screens.
+* **⚡ Sandboxed SVG Architectures:** Visualizations are loaded inside isolated `<iframe>` elements to keep vectors sharp, prevent double-scrollbar lockups, and forward keyboard/scroll gesture events back to the parent layout.
+* **⌨️ Full Keyboard Navigation:** Navigate linearly through slides and check-point questions using Arrow keys (`Left`/`Right`/`Up`/`Down`) or spacebar, and jump to bookends using `Home`/`End` hotkeys.
+* **📝 Static Checkpoint Quizzes:** Quizzes are integrated directly inside the slide streams as slide-pairs: a Question Slide followed by a Solved Slide featuring styled answer keys and interactive incorrect option explanation cards.
+* **🧹 Promise-Based Custom Dialogs:** System/browser native `confirm()` triggers are replaced with styled HTML `<dialog>` confirmation overlays executing inside asynchronous Promise handlers.
 
 ---
 
