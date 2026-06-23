@@ -2820,7 +2820,7 @@ const CLF_COURSE_DATA = {
       "slides": [
         {
           "id": "6.1",
-          "title": "LAB: Introduction to Amazon EC2",
+          "title": "LAB: Introduction to Amazon EC2 (Free)",
           "bullets": [
             {
               "text": "**Lab Overview:** This lab provides a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.",
@@ -2855,7 +2855,7 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.2",
-          "title": "LAB: Introduction to Amazon VPC",
+          "title": "LAB: Introduction to Amazon VPC (Free)",
           "bullets": [
             {
               "text": "**Lab Overview:** This lab introduces you to Amazon Virtual Private Cloud (Amazon VPC). You will use the Amazon VPC wizard to create a VPC, public subnet, and route tables.",
@@ -2890,7 +2890,7 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.3",
-          "title": "LAB: Introduction to Amazon S3",
+          "title": "LAB: Introduction to Amazon S3 (Free)",
           "bullets": [
             {
               "text": "**Lab Overview:** This lab demonstrates how to use an Amazon S3 bucket and manage files, or objects, that are stored in the bucket.",
@@ -2925,7 +2925,7 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.4",
-          "title": "LAB: Introduction to AWS IAM",
+          "title": "LAB: Introduction to AWS IAM (Free)",
           "bullets": [
             {
               "text": "**Lab Overview:** This lab shows you how to manage access and permissions to your AWS services using AWS Identity and Access Management (IAM).",

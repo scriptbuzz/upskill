@@ -3118,7 +3118,7 @@ const AIF_COURSE_DATA = {
       "slides": [
         {
           "id": "m7-s1",
-          "title": "LAB: Introduction to the Amazon Bedrock Console",
+          "title": "LAB: Introduction to the Amazon Bedrock Console (Requires Subscription)",
           "bullets": [
             {
               "text": "**Lab Overview:** In this lab, learners gain hands-on experience with enabling access to LLMs, testing models with basic prompts, adjusting model parameters, generating AI images, and exploring provided examples within the Amazon Bedrock console.",
@@ -3153,7 +3153,7 @@ const AIF_COURSE_DATA = {
         },
         {
           "id": "m7-s2",
-          "title": "LAB: Explore Foundation Models and Prompt Engineering",
+          "title": "LAB: Explore Foundation Models and Prompt Engineering (Requires Subscription)",
           "bullets": [
             {
               "text": "**Lab Overview:** This lab provides hands-on experience to LLMs, testing models with prompts, adjusting model parameters and exploring within the Amazon Bedrock platform.",
@@ -3188,7 +3188,7 @@ const AIF_COURSE_DATA = {
         },
         {
           "id": "m7-s3",
-          "title": "LAB: Build Machine Learning Models with Amazon SageMaker",
+          "title": "LAB: Build Machine Learning Models with Amazon SageMaker (Requires Subscription)",
           "bullets": [
             {
               "text": "**Lab Overview:** In this lab, learners will use Amazon SageMaker by setting up your development environment and exploring the Studio interface. You then build and run a linear regression model using Python and scikit-learn.",
