@@ -1,6 +1,6 @@
-# 4 Corners Academy - AWS Certification Prep Platform
+# 4 Corners Academy - Tech & Cloud Certification Prep Platform
 
-Welcome to **4 Corners Academy**, a premium study guide and exam preparation platform designed for AWS Certifications. This repository hosts interactive study guides, course outlines, and visualization resources for various AWS Certification tracks.
+Welcome to **4 Corners Academy**, a premium study guide and exam preparation platform designed for professional cloud and technology certifications. This repository hosts interactive study guides, course outlines, and visualization resources for various tech and cloud certification tracks.
 
 ---
 
