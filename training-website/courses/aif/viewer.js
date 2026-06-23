@@ -735,6 +735,7 @@ function formatBulletText(text) {
   let formatted = text;
   formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   formatted = formatted.replace(/\*\*/g, '');
+  formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #FF9900; text-decoration: underline; font-weight: 600;">$1</a>');
   return formatted;
 }
 

@@ -25,19 +25,19 @@ const CLF_COURSE_DATA = {
               "indent": 1
             },
             {
-              "text": "Domain 1: Cloud Concepts** (24% of exam)",
+              "text": "**Domain 1: Cloud Concepts** (24% of exam)",
               "indent": 2
             },
             {
-              "text": "Domain 2: Security & Compliance** (30% of exam)",
+              "text": "**Domain 2: Security & Compliance** (30% of exam)",
               "indent": 2
             },
             {
-              "text": "Domain 3: Technology & Services** (34% of exam)",
+              "text": "**Domain 3: Technology & Services** (34% of exam)",
               "indent": 2
             },
             {
-              "text": "Domain 4: Billing, Pricing & Support** (12% of exam)",
+              "text": "**Domain 4: Billing, Pricing & Support** (12% of exam)",
               "indent": 2
             }
           ],
@@ -48,23 +48,23 @@ const CLF_COURSE_DATA = {
           "title": "What is Cloud Computing?",
           "bullets": [
             {
-              "text": "On-Demand Self-Service:** Provision resources whenever you need them without human intervention.",
+              "text": "**On-Demand Self-Service:** Provision resources whenever you need them without human intervention.",
               "indent": 0
             },
             {
-              "text": "Broad Network Access:** Access services over the internet using standard devices (laptops, phones).",
+              "text": "**Broad Network Access:** Access services over the internet using standard devices (laptops, phones).",
               "indent": 1
             },
             {
-              "text": "Resource Pooling:** Multiple customers share physical hardware securely, dynamically allocating resources.",
+              "text": "**Resource Pooling:** Multiple customers share physical hardware securely, dynamically allocating resources.",
               "indent": 1
             },
             {
-              "text": "Rapid Elasticity:** Automatically scale resources up or down to handle spikes or drops in demand.",
+              "text": "**Rapid Elasticity:** Automatically scale resources up or down to handle spikes or drops in demand.",
               "indent": 1
             },
             {
-              "text": "Pay-As-You-Go Pricing:** Pay only for what you run (metered services, similar to electricity usage).",
+              "text": "**Pay-As-You-Go Pricing:** Pay only for what you run (metered services, similar to electricity usage).",
               "indent": 1
             }
           ],
@@ -75,15 +75,15 @@ const CLF_COURSE_DATA = {
           "title": "Six Key Benefits of the Cloud (Part 1)",
           "bullets": [
             {
-              "text": "Trade Upfront Expenses for Variable Costs:** Avoid massive initial capital expenditures (CapEx) on servers and data centers. Instead, pay operational expenses (OpEx) based on actual usage.",
+              "text": "**Trade Upfront Expenses for Variable Costs:** Avoid massive initial capital expenditures (CapEx) on servers and data centers. Instead, pay operational expenses (OpEx) based on actual usage.",
               "indent": 0
             },
             {
-              "text": "Benefit from Massive Economies of Scale:** AWS has millions of customers. This massive scale allows AWS to purchase hardware at lower costs and pass those savings directly to you.",
+              "text": "**Benefit from Massive Economies of Scale:** AWS has millions of customers. This massive scale allows AWS to purchase hardware at lower costs and pass those savings directly to you.",
               "indent": 1
             },
             {
-              "text": "Stop Guessing Capacity:** Instead of purchasing excess hardware that sits idle, or running out of capacity during a traffic spike, scale resources dynamically as demand dictates.",
+              "text": "**Stop Guessing Capacity:** Instead of purchasing excess hardware that sits idle, or running out of capacity during a traffic spike, scale resources dynamically as demand dictates.",
               "indent": 1
             }
           ],
@@ -94,15 +94,15 @@ const CLF_COURSE_DATA = {
           "title": "Six Key Benefits of the Cloud (Part 2)",
           "bullets": [
             {
-              "text": "Increase Speed and Agility:** Spin up new servers, databases, or test environments in minutes rather than weeks.",
+              "text": "**Increase Speed and Agility:** Spin up new servers, databases, or test environments in minutes rather than weeks.",
               "indent": 0
             },
             {
-              "text": "Focus on Business, Not Data Centers:** Stop spending time and money racking servers, cooling data centers, and managing physical infrastructure. Let AWS handle the physical heavy lifting.",
+              "text": "**Focus on Business, Not Data Centers:** Stop spending time and money racking servers, cooling data centers, and managing physical infrastructure. Let AWS handle the physical heavy lifting.",
               "indent": 1
             },
             {
-              "text": "Go Global in Minutes:** Deploy applications in multiple regions around the world with just a few clicks, reducing latency for global users.",
+              "text": "**Go Global in Minutes:** Deploy applications in multiple regions around the world with just a few clicks, reducing latency for global users.",
               "indent": 1
             }
           ],
@@ -113,15 +113,15 @@ const CLF_COURSE_DATA = {
           "title": "High Availability and Reliability",
           "bullets": [
             {
-              "text": "High Availability (HA):** Systems designed to minimize downtime and remain operational without human intervention.",
+              "text": "**High Availability (HA):** Systems designed to minimize downtime and remain operational without human intervention.",
               "indent": 0
             },
             {
-              "text": "Redundancy:** Avoiding single points of failure by deploying backup systems.",
+              "text": "**Redundancy:** Avoiding single points of failure by deploying backup systems.",
               "indent": 1
             },
             {
-              "text": "Multi-AZ Deployments:** Placing duplicate servers in separate physical locations (Availability Zones). If one location suffers an outage, traffic automatically redirects to the healthy zone.",
+              "text": "**Multi-AZ Deployments:** Placing duplicate servers in separate physical locations (Availability Zones). If one location suffers an outage, traffic automatically redirects to the healthy zone.",
               "indent": 1
             }
           ],
@@ -132,15 +132,15 @@ const CLF_COURSE_DATA = {
           "title": "Scalability vs. Elasticity",
           "bullets": [
             {
-              "text": "Vertical Scaling (Scale Up/Down):** Adding power to an existing server (e.g., upgrading from a 2-core CPU to a 16-core CPU).",
+              "text": "**Vertical Scaling (Scale Up/Down):** Adding power to an existing server (e.g., upgrading from a 2-core CPU to a 16-core CPU).",
               "indent": 0
             },
             {
-              "text": "Horizontal Scaling (Scale Out/In):** Adding more servers of the same size to distribute the workload (e.g., going from 1 server to 5 servers).",
+              "text": "**Horizontal Scaling (Scale Out/In):** Adding more servers of the same size to distribute the workload (e.g., going from 1 server to 5 servers).",
               "indent": 1
             },
             {
-              "text": "Elasticity:** The ability of a system to automatically scale horizontal resources in real-time to match fluctuating demand.",
+              "text": "**Elasticity:** The ability of a system to automatically scale horizontal resources in real-time to match fluctuating demand.",
               "indent": 1
             }
           ],
@@ -155,27 +155,27 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Operational Excellence:** Running and monitoring systems to deliver business value and continuously improve.",
+              "text": "**Operational Excellence:** Running and monitoring systems to deliver business value and continuously improve.",
               "indent": 2
             },
             {
-              "text": "Security:** Protecting data, systems, and assets through risk assessment and mitigation.",
+              "text": "**Security:** Protecting data, systems, and assets through risk assessment and mitigation.",
               "indent": 2
             },
             {
-              "text": "Reliability:** Ensuring workloads perform their intended functions correctly and consistently.",
+              "text": "**Reliability:** Ensuring workloads perform their intended functions correctly and consistently.",
               "indent": 2
             },
             {
-              "text": "Performance Efficiency:** Using IT resources efficiently to meet requirements as technologies evolve.",
+              "text": "**Performance Efficiency:** Using IT resources efficiently to meet requirements as technologies evolve.",
               "indent": 2
             },
             {
-              "text": "Cost Optimization:** Avoiding unnecessary costs and running systems at the lowest possible price point.",
+              "text": "**Cost Optimization:** Avoiding unnecessary costs and running systems at the lowest possible price point.",
               "indent": 2
             },
             {
-              "text": "Sustainability:** Minimizing the environmental impact of running cloud workloads.",
+              "text": "**Sustainability:** Minimizing the environmental impact of running cloud workloads.",
               "indent": 2
             }
           ],
@@ -186,7 +186,7 @@ const CLF_COURSE_DATA = {
           "title": "Deep Dive: Operational Excellence & Security",
           "bullets": [
             {
-              "text": "Operational Excellence Principles:",
+              "text": "**Operational Excellence Principles:**",
               "indent": 0
             },
             {
@@ -202,7 +202,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Security Principles:",
+              "text": "**Security Principles:**",
               "indent": 1
             },
             {
@@ -225,7 +225,7 @@ const CLF_COURSE_DATA = {
           "title": "Deep Dive: Reliability & Performance",
           "bullets": [
             {
-              "text": "Reliability Principles:",
+              "text": "**Reliability Principles:**",
               "indent": 0
             },
             {
@@ -241,7 +241,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Performance Efficiency Principles:",
+              "text": "**Performance Efficiency Principles:**",
               "indent": 1
             },
             {
@@ -264,7 +264,7 @@ const CLF_COURSE_DATA = {
           "title": "Deep Dive: Cost & Sustainability",
           "bullets": [
             {
-              "text": "Cost Optimization Principles:",
+              "text": "**Cost Optimization Principles:**",
               "indent": 0
             },
             {
@@ -280,7 +280,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Sustainability Principles:",
+              "text": "**Sustainability Principles:**",
               "indent": 1
             },
             {
@@ -307,15 +307,15 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Checklists:** Compares your architecture against the 6 pillars through a series of questions.",
+              "text": "**Checklists:** Compares your architecture against the 6 pillars through a series of questions.",
               "indent": 1
             },
             {
-              "text": "Improvement Plans:** Provides a clear action plan to remediate high-risk issues.",
+              "text": "**Improvement Plans:** Provides a clear action plan to remediate high-risk issues.",
               "indent": 1
             },
             {
-              "text": "Governance:** Track milestones and improvements over time, and share custom lenses across accounts.",
+              "text": "**Governance:** Track milestones and improvements over time, and share custom lenses across accounts.",
               "indent": 1
             }
           ],
@@ -334,35 +334,35 @@ const CLF_COURSE_DATA = {
               "indent": 1
             },
             {
-              "text": "Business Perspectives (Focus on value):",
+              "text": "**Business Perspectives (Focus on value):**",
               "indent": 2
             },
             {
-              "text": "Business:** Align IT strategy with business outcomes.",
+              "text": "**Business:** Align IT strategy with business outcomes.",
               "indent": 3
             },
             {
-              "text": "People:** Evolve skills, culture, and leadership.",
+              "text": "**People:** Evolve skills, culture, and leadership.",
               "indent": 3
             },
             {
-              "text": "Governance:** Manage organizational risk and benefits.",
+              "text": "**Governance:** Manage organizational risk and benefits.",
               "indent": 3
             },
             {
-              "text": "Technical Perspectives (Focus on execution):",
+              "text": "**Technical Perspectives (Focus on execution):**",
               "indent": 2
             },
             {
-              "text": "Platform:** Build cloud architectures and patterns.",
+              "text": "**Platform:** Build cloud architectures and patterns.",
               "indent": 3
             },
             {
-              "text": "Security:** Maintain data confidentiality and compliance.",
+              "text": "**Security:** Maintain data confidentiality and compliance.",
               "indent": 3
             },
             {
-              "text": "Operations:** Deliver cloud services at scale securely.",
+              "text": "**Operations:** Deliver cloud services at scale securely.",
               "indent": 3
             }
           ],
@@ -373,31 +373,31 @@ const CLF_COURSE_DATA = {
           "title": "Seven Migration Strategies (The 7 Rs)",
           "bullets": [
             {
-              "text": "Rehost (Lift and Shift):** Move applications to AWS without changes.",
+              "text": "**Rehost (Lift and Shift):** Move applications to AWS without changes.",
               "indent": 0
             },
             {
-              "text": "Relocate:** Move VMware workloads to AWS at the hypervisor level.",
+              "text": "**Relocate:** Move VMware workloads to AWS at the hypervisor level.",
               "indent": 1
             },
             {
-              "text": "Replatform (Lift, Tinker, and Shift):** Make minor optimizations without changing core code (e.g., moving a database to Amazon RDS).",
+              "text": "**Replatform (Lift, Tinker, and Shift):** Make minor optimizations without changing core code (e.g., moving a database to Amazon RDS).",
               "indent": 1
             },
             {
-              "text": "Refactor / Rearchitect:** Rewrite the application to use cloud-native features (e.g., serverless).",
+              "text": "**Refactor / Rearchitect:** Rewrite the application to use cloud-native features (e.g., serverless).",
               "indent": 1
             },
             {
-              "text": "Repurchase:** Move from a perpetual license to a SaaS model (e.g., Salesforce).",
+              "text": "**Repurchase:** Move from a perpetual license to a SaaS model (e.g., Salesforce).",
               "indent": 1
             },
             {
-              "text": "Retain:** Keep applications on-premises for now due to legacy requirements.",
+              "text": "**Retain:** Keep applications on-premises for now due to legacy requirements.",
               "indent": 1
             },
             {
-              "text": "Retire:** Identify and turn off redundant or obsolete systems.",
+              "text": "**Retire:** Identify and turn off redundant or obsolete systems.",
               "indent": 1
             }
           ],
@@ -408,11 +408,11 @@ const CLF_COURSE_DATA = {
           "title": "AWS Migration Services",
           "bullets": [
             {
-              "text": "AWS Application Migration Service (AWS MGN):** Automates the lift-and-shift migration of physical, virtual, or cloud servers directly to AWS with minimal downtime.",
+              "text": "**AWS Application Migration Service (AWS MGN):** Automates the lift-and-shift migration of physical, virtual, or cloud servers directly to AWS with minimal downtime.",
               "indent": 0
             },
             {
-              "text": "AWS Migration Evaluator:** Analyzes your on-premises server inventory, CPU utilization, and memory usage to build a data-driven business case for migrating to AWS.",
+              "text": "**AWS Migration Evaluator:** Analyzes your on-premises server inventory, CPU utilization, and memory usage to build a data-driven business case for migrating to AWS.",
               "indent": 1
             }
           ],
@@ -427,7 +427,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Traditional IT Cost Model (Fixed CapEx):",
+              "text": "**Traditional IT Cost Model (Fixed CapEx):**",
               "indent": 2
             },
             {
@@ -443,7 +443,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Cloud IT Cost Model (Variable OpEx):",
+              "text": "**Cloud IT Cost Model (Variable OpEx):**",
               "indent": 2
             },
             {
@@ -466,7 +466,7 @@ const CLF_COURSE_DATA = {
           "title": "Cost Optimization: Rightsizing",
           "bullets": [
             {
-              "text": "Rightsizing:** The continuous process of matching instance types and sizes to your actual workload performance and capacity requirements.",
+              "text": "**Rightsizing:** The continuous process of matching instance types and sizes to your actual workload performance and capacity requirements.",
               "indent": 0
             },
             {
@@ -489,15 +489,15 @@ const CLF_COURSE_DATA = {
           "title": "Cloud Economics: Licensing Options",
           "bullets": [
             {
-              "text": "Bring Your Own License (BYOL):** Reuse your existing software licenses (e.g., Microsoft SQL Server, Windows Server) on AWS to reduce costs.",
+              "text": "**Bring Your Own License (BYOL):** Reuse your existing software licenses (e.g., Microsoft SQL Server, Windows Server) on AWS to reduce costs.",
               "indent": 0
             },
             {
-              "text": "License Included (LI):** Pay for both the infrastructure and software license in a single, unified bill. No upfront license fees or separate contract management.",
+              "text": "**License Included (LI):** Pay for both the infrastructure and software license in a single, unified bill. No upfront license fees or separate contract management.",
               "indent": 1
             },
             {
-              "text": "AWS License Manager:** A service to centrally track, manage, and enforce software licensing rules across your AWS and on-premises environments.",
+              "text": "**AWS License Manager:** A service to centrally track, manage, and enforce software licensing rules across your AWS and on-premises environments.",
               "indent": 1
             }
           ],
@@ -577,7 +577,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "AWS is responsible for Security \"OF\" the Cloud:",
+              "text": "**AWS is responsible for Security \"OF\" the Cloud:**",
               "indent": 2
             },
             {
@@ -593,7 +593,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "The Customer is responsible for Security \"IN\" the Cloud:",
+              "text": "**The Customer is responsible for Security \"IN\" the Cloud:**",
               "indent": 2
             },
             {
@@ -613,7 +613,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Shared Controls:** Controls where responsibilities overlap (e.g., Patch Management, Configuration Management, Awareness & Training).",
+              "text": "**Shared Controls:** Controls where responsibilities overlap (e.g., Patch Management, Configuration Management, Awareness & Training).",
               "indent": 2
             }
           ],
@@ -628,7 +628,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Infrastructure as a Service (IaaS) (e.g., database on EC2):",
+              "text": "**Infrastructure as a Service (IaaS) (e.g., database on EC2):**",
               "indent": 2
             },
             {
@@ -636,7 +636,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Platform as a Service (PaaS) / Managed Service (e.g., Amazon RDS):",
+              "text": "**Platform as a Service (PaaS) / Managed Service (e.g., Amazon RDS):**",
               "indent": 2
             },
             {
@@ -655,19 +655,19 @@ const CLF_COURSE_DATA = {
           "title": "Centralized Account Governance: AWS Organizations",
           "bullets": [
             {
-              "text": "Centralized Management:** Consolidate multiple AWS accounts into a single organization.",
+              "text": "**Centralized Management:** Consolidate multiple AWS accounts into a single organization.",
               "indent": 0
             },
             {
-              "text": "Organizational Units (OUs):** Group accounts together (e.g., Development, Production) to apply hierarchical rules.",
+              "text": "**Organizational Units (OUs):** Group accounts together (e.g., Development, Production) to apply hierarchical rules.",
               "indent": 1
             },
             {
-              "text": "Service Control Policies (SCPs):** Set maximum permission boundaries across accounts. SCPs restrict what even the root user of a member account can do.",
+              "text": "**Service Control Policies (SCPs):** Set maximum permission boundaries across accounts. SCPs restrict what even the root user of a member account can do.",
               "indent": 1
             },
             {
-              "text": "Consolidated Billing:** Combine usage across all accounts to qualify for volume discounts.",
+              "text": "**Consolidated Billing:** Combine usage across all accounts to qualify for volume discounts.",
               "indent": 1
             }
           ],
@@ -678,7 +678,7 @@ const CLF_COURSE_DATA = {
           "title": "Centralized Resource Sharing: AWS RAM",
           "bullets": [
             {
-              "text": "AWS Resource Access Manager (AWS RAM):",
+              "text": "**AWS Resource Access Manager (AWS RAM):**",
               "indent": 0
             },
             {
@@ -686,11 +686,11 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Operational Efficiency:** Avoid duplicating resources in separate accounts, reducing complexity and costs.",
+              "text": "**Operational Efficiency:** Avoid duplicating resources in separate accounts, reducing complexity and costs.",
               "indent": 2
             },
             {
-              "text": "Governance:** Keep accounts isolated while securely sharing core network infrastructure.",
+              "text": "**Governance:** Keep accounts isolated while securely sharing core network infrastructure.",
               "indent": 2
             }
           ],
@@ -701,7 +701,7 @@ const CLF_COURSE_DATA = {
           "title": "Observability: AWS CloudTrail vs. AWS Config",
           "bullets": [
             {
-              "text": "AWS CloudTrail (The Auditor):",
+              "text": "**AWS CloudTrail (The Auditor):**",
               "indent": 0
             },
             {
@@ -717,7 +717,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Config (The Compliance Officer):",
+              "text": "**AWS Config (The Compliance Officer):**",
               "indent": 1
             },
             {
@@ -740,19 +740,19 @@ const CLF_COURSE_DATA = {
           "title": "Multi-Account Standard Setup: AWS Control Tower",
           "bullets": [
             {
-              "text": "Landing Zone:** Automatically provisions a secure, multi-account AWS environment using best practices.",
+              "text": "**Landing Zone:** Automatically provisions a secure, multi-account AWS environment using best practices.",
               "indent": 0
             },
             {
-              "text": "Guardrails:** Enforces mandatory and recommended governance policies (e.g., enforcing MFA, blocking public S3 buckets) using AWS Organizations SCPs and AWS Config rules.",
+              "text": "**Guardrails:** Enforces mandatory and recommended governance policies (e.g., enforcing MFA, blocking public S3 buckets) using AWS Organizations SCPs and AWS Config rules.",
               "indent": 1
             },
             {
-              "text": "Account Factory:** Automates the creation of new, pre-configured member accounts that align with company compliance.",
+              "text": "**Account Factory:** Automates the creation of new, pre-configured member accounts that align with company compliance.",
               "indent": 1
             },
             {
-              "text": "Centralized Auditing:** Consolidated dashboard for tracking CloudTrail and Config compliance across all accounts.",
+              "text": "**Centralized Auditing:** Consolidated dashboard for tracking CloudTrail and Config compliance across all accounts.",
               "indent": 1
             }
           ],
@@ -763,7 +763,7 @@ const CLF_COURSE_DATA = {
           "title": "Security Audits & Compliance: Artifact & Audit Manager",
           "bullets": [
             {
-              "text": "AWS Artifact (Reports & Agreements):",
+              "text": "**AWS Artifact (Reports & Agreements):**",
               "indent": 0
             },
             {
@@ -779,7 +779,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Audit Manager:",
+              "text": "**AWS Audit Manager:**",
               "indent": 1
             },
             {
@@ -802,7 +802,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Encryption in Transit (Data moving over network):",
+              "text": "**Encryption in Transit (Data moving over network):**",
               "indent": 1
             },
             {
@@ -818,7 +818,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Encryption at Rest (Stored data):",
+              "text": "**Encryption at Rest (Stored data):**",
               "indent": 1
             },
             {
@@ -830,11 +830,11 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Managed Keys:* AWS automatically rotates and manages.",
+              "text": "*AWS Managed Keys:* AWS automatically rotates and manages.",
               "indent": 3
             },
             {
-              "text": "Customer Managed Keys:* Customer controls rotation, access policies, and usage.",
+              "text": "*Customer Managed Keys:* Customer controls rotation, access policies, and usage.",
               "indent": 3
             }
           ],
@@ -845,7 +845,7 @@ const CLF_COURSE_DATA = {
           "title": "Cloud Security Modules: CloudHSM & Macie",
           "bullets": [
             {
-              "text": "AWS CloudHSM:",
+              "text": "**AWS CloudHSM:**",
               "indent": 0
             },
             {
@@ -861,7 +861,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon Macie:",
+              "text": "**Amazon Macie:**",
               "indent": 1
             },
             {
@@ -880,15 +880,15 @@ const CLF_COURSE_DATA = {
           "title": "Access Management: Protecting the Root User",
           "bullets": [
             {
-              "text": "The Root User:** Created when the AWS account is opened. Has complete, absolute access to all billing and technical resources.",
+              "text": "**The Root User:** Created when the AWS account is opened. Has complete, absolute access to all billing and technical resources.",
               "indent": 0
             },
             {
-              "text": "Critical Protection Rules:",
+              "text": "**Critical Protection Rules:**",
               "indent": 1
             },
             {
-              "text": "Never** use the root user for daily administrative tasks.",
+              "text": "**Never** use the root user for daily administrative tasks.",
               "indent": 2
             },
             {
@@ -900,7 +900,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Only use the root user to:",
+              "text": "**Only use the root user to:**",
               "indent": 1
             },
             {
@@ -927,19 +927,19 @@ const CLF_COURSE_DATA = {
           "title": "AWS Identity and Access Management (IAM)",
           "bullets": [
             {
-              "text": "IAM User:** A single identity representing a person or application (credentials: password, access keys: access key ID + secret access key).",
+              "text": "**IAM User:** A single identity representing a person or application (credentials: password, access keys: access key ID + secret access key).",
               "indent": 0
             },
             {
-              "text": "IAM Group (or IAM User Group):** A collection of IAM users. Permissions applied to a group are inherited by all members (e.g., \"Developers Group\").",
+              "text": "**IAM Group (or IAM User Group):** A collection of IAM users. Permissions applied to a group are inherited by all members (e.g., \"Developers Group\").",
               "indent": 1
             },
             {
-              "text": "IAM Role:** A temporary identity assumed by users, applications, or AWS services (uses **AWS STS** to get short-lived **temporary security credentials**).",
+              "text": "**IAM Role:** A temporary identity assumed by users, applications, or AWS services (uses **AWS STS** to get short-lived **temporary security credentials**).",
               "indent": 1
             },
             {
-              "text": "Principle of Least Privilege:** Grant only the exact permissions needed to do a job, and nothing more.",
+              "text": "**Principle of Least Privilege:** Grant only the exact permissions needed to do a job, and nothing more.",
               "indent": 1
             }
           ],
@@ -954,7 +954,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "AWS IAM Identity Center (Single Sign-On):",
+              "text": "**AWS IAM Identity Center (Single Sign-On):**",
               "indent": 2
             },
             {
@@ -962,7 +962,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Amazon Cognito:",
+              "text": "**Amazon Cognito:**",
               "indent": 2
             },
             {
@@ -970,7 +970,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "AWS Directory Service:",
+              "text": "**AWS Directory Service:**",
               "indent": 2
             },
             {
@@ -989,31 +989,31 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Identity-Based Policies:** Attached to IAM users, groups, or roles.",
+              "text": "**Identity-Based Policies:** Attached to IAM users, groups, or roles.",
               "indent": 1
             },
             {
-              "text": "AWS Managed:* Standard templates created by AWS (e.g., ReadOnlyAccess).",
+              "text": "*AWS Managed:* Standard templates created by AWS (e.g., ReadOnlyAccess).",
               "indent": 2
             },
             {
-              "text": "Customer Managed:* Custom policies built by you.",
+              "text": "*Customer Managed:* Custom policies built by you.",
               "indent": 2
             },
             {
-              "text": "Inline Policies:* Embedded directly within a specific single user, group, or role.",
+              "text": "*Inline Policies:* Embedded directly within a specific single user, group, or role.",
               "indent": 2
             },
             {
-              "text": "Cross-Account Policies:* Define a **trust policy** (which account is trusted to assume the role) and a **permissions policy** (what that role can access).",
+              "text": "*Cross-Account Policies:* Define a **trust policy** (which account is trusted to assume the role) and a **permissions policy** (what that role can access).",
               "indent": 2
             },
             {
-              "text": "Resource-Based Policies:** Attached directly to an AWS resource.",
+              "text": "**Resource-Based Policies:** Attached directly to an AWS resource.",
               "indent": 1
             },
             {
-              "text": "Example:* S3 Bucket Policies. These define who (which IAM users or external accounts) has access to that specific bucket.",
+              "text": "*Example:* S3 Bucket Policies. These define who (which IAM users or external accounts) has access to that specific bucket.",
               "indent": 2
             }
           ],
@@ -1024,7 +1024,7 @@ const CLF_COURSE_DATA = {
           "title": "Secrets Management: Parameter Store vs. Secrets Manager",
           "bullets": [
             {
-              "text": "AWS Systems Manager Parameter Store:",
+              "text": "**AWS Systems Manager Parameter Store:**",
               "indent": 0
             },
             {
@@ -1036,7 +1036,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Secrets Manager:",
+              "text": "**AWS Secrets Manager:**",
               "indent": 1
             },
             {
@@ -1044,7 +1044,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Key Difference:** Automatically rotates database credentials, API keys, and OAuth tokens, and integrates directly with RDS.",
+              "text": "**Key Difference:** Automatically rotates database credentials, API keys, and OAuth tokens, and integrates directly with RDS.",
               "indent": 2
             }
           ],
@@ -1055,7 +1055,7 @@ const CLF_COURSE_DATA = {
           "title": "Edge & Web Application Firewalls",
           "bullets": [
             {
-              "text": "AWS Shield:",
+              "text": "**AWS Shield:**",
               "indent": 0
             },
             {
@@ -1063,15 +1063,15 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Shield Standard:* Free, automatically enabled for all customers.",
+              "text": "*Shield Standard:* Free, automatically enabled for all customers.",
               "indent": 2
             },
             {
-              "text": "Shield Advanced:* Paid, includes 24/7 access to DDoS response teams.",
+              "text": "*Shield Advanced:* Paid, includes 24/7 access to DDoS response teams.",
               "indent": 2
             },
             {
-              "text": "AWS WAF (Web Application Firewall):",
+              "text": "**AWS WAF (Web Application Firewall):**",
               "indent": 1
             },
             {
@@ -1079,7 +1079,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Firewall Manager:",
+              "text": "**AWS Firewall Manager:**",
               "indent": 1
             },
             {
@@ -1094,7 +1094,7 @@ const CLF_COURSE_DATA = {
           "title": "Threat Detection: Inspector, GuardDuty, and Detective",
           "bullets": [
             {
-              "text": "Amazon Inspector (Vulnerability Scanner):",
+              "text": "**Amazon Inspector (Vulnerability Scanner):**",
               "indent": 0
             },
             {
@@ -1102,7 +1102,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon GuardDuty (Threat Intelligence):",
+              "text": "**Amazon GuardDuty (Threat Intelligence):**",
               "indent": 1
             },
             {
@@ -1110,7 +1110,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon Detective (Investigation):",
+              "text": "**Amazon Detective (Investigation):**",
               "indent": 1
             },
             {
@@ -1125,7 +1125,7 @@ const CLF_COURSE_DATA = {
           "title": "Security Posture: Security Hub, Trusted Advisor, & CloudWatch",
           "bullets": [
             {
-              "text": "AWS Security Hub:",
+              "text": "**AWS Security Hub:**",
               "indent": 0
             },
             {
@@ -1133,7 +1133,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Trusted Advisor:",
+              "text": "**AWS Trusted Advisor:**",
               "indent": 1
             },
             {
@@ -1141,7 +1141,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon CloudWatch:",
+              "text": "**Amazon CloudWatch:**",
               "indent": 1
             },
             {
@@ -1221,7 +1221,7 @@ const CLF_COURSE_DATA = {
           "title": "Interacting with AWS",
           "bullets": [
             {
-              "text": "AWS Management Console:",
+              "text": "**AWS Management Console:**",
               "indent": 0
             },
             {
@@ -1233,7 +1233,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Command Line Interface (AWS CLI):",
+              "text": "**AWS Command Line Interface (AWS CLI):**",
               "indent": 1
             },
             {
@@ -1245,7 +1245,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Software Development Kits (SDKs):",
+              "text": "**Software Development Kits (SDKs):**",
               "indent": 1
             },
             {
@@ -1268,7 +1268,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "AWS CloudFormation:",
+              "text": "**AWS CloudFormation:**",
               "indent": 2
             },
             {
@@ -1276,7 +1276,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "AWS Cloud Development Kit (AWS CDK):",
+              "text": "**AWS Cloud Development Kit (AWS CDK):**",
               "indent": 2
             },
             {
@@ -1284,7 +1284,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "AWS Service Catalog:",
+              "text": "**AWS Service Catalog:**",
               "indent": 2
             },
             {
@@ -1299,23 +1299,23 @@ const CLF_COURSE_DATA = {
           "title": "Deployment Models: Cloud, Hybrid, and On-Premises",
           "bullets": [
             {
-              "text": "All-In Cloud:** The entire application, databases, and assets run on AWS.",
+              "text": "**All-In Cloud:** The entire application, databases, and assets run on AWS.",
               "indent": 0
             },
             {
-              "text": "Hybrid Cloud:** Integrates on-premises data centers with AWS services:",
+              "text": "**Hybrid Cloud:** Integrates on-premises data centers with AWS services:",
               "indent": 1
             },
             {
-              "text": "AWS Outposts:** Runs physical AWS hardware inside your private data center for low-latency requirements.",
+              "text": "**AWS Outposts:** Runs physical AWS hardware inside your private data center for low-latency requirements.",
               "indent": 2
             },
             {
-              "text": "AWS Storage Gateway:** Connects local server storage to S3 cloud storage.",
+              "text": "**AWS Storage Gateway:** Connects local server storage to S3 cloud storage.",
               "indent": 2
             },
             {
-              "text": "On-Premises / Private Cloud:** Legacy hosting using virtualized local infrastructure.",
+              "text": "**On-Premises / Private Cloud:** Legacy hosting using virtualized local infrastructure.",
               "indent": 1
             }
           ],
@@ -1326,11 +1326,11 @@ const CLF_COURSE_DATA = {
           "title": "AWS Global Infrastructure",
           "bullets": [
             {
-              "text": "AWS Regions:** Geographic locations around the world (e.g., us-east-1). Each Region is isolated and independent.",
+              "text": "**AWS Regions:** Geographic locations around the world (e.g., us-east-1). Each Region is isolated and independent.",
               "indent": 0
             },
             {
-              "text": "Availability Zones (AZs):** Datacenter clusters within a Region.",
+              "text": "**Availability Zones (AZs):** Datacenter clusters within a Region.",
               "indent": 1
             },
             {
@@ -1342,7 +1342,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Edge Locations:** Caching sites distributed globally to deliver content fast to end-users (used by CloudFront CDN, Route 53, WAF, and Global Accelerator).",
+              "text": "**Edge Locations:** Caching sites distributed globally to deliver content fast to end-users (used by CloudFront CDN, Route 53, WAF, and Global Accelerator).",
               "indent": 1
             }
           ],
@@ -1353,35 +1353,35 @@ const CLF_COURSE_DATA = {
           "title": "Compute: Virtual Servers (EC2)",
           "bullets": [
             {
-              "text": "Amazon EC2:** Secure, resizable virtual servers in the cloud (called Instances).",
+              "text": "**Amazon EC2:** Secure, resizable virtual servers in the cloud (called Instances).",
               "indent": 0
             },
             {
-              "text": "EC2 Instance Types (Optimized for workloads):",
+              "text": "**EC2 Instance Types (Optimized for workloads):**",
               "indent": 1
             },
             {
-              "text": "General Purpose (e.g., T4g):** Balanced compute, memory, and networking.",
+              "text": "**General Purpose (e.g., T4g):** Balanced compute, memory, and networking.",
               "indent": 2
             },
             {
-              "text": "Compute Optimized (e.g., C8g):** High-performance CPUs (best for batch processing, video encoding).",
+              "text": "**Compute Optimized (e.g., C8g):** High-performance CPUs (best for batch processing, video encoding).",
               "indent": 2
             },
             {
-              "text": "Memory Optimized (e.g., R8g):** High RAM (best for in-memory databases).",
+              "text": "**Memory Optimized (e.g., R8g):** High RAM (best for in-memory databases).",
               "indent": 2
             },
             {
-              "text": "Accelerated Computing (e.g., G6e):** Uses hardware accelerators (GPUs) (best for AI/ML and graphics).",
+              "text": "**Accelerated Computing (e.g., G6e):** Uses hardware accelerators (GPUs) (best for AI/ML and graphics).",
               "indent": 2
             },
             {
-              "text": "Storage Optimized (e.g., I8g):** Fast local SSD storage (best for cache/data warehouses).",
+              "text": "**Storage Optimized (e.g., I8g):** Fast local SSD storage (best for cache/data warehouses).",
               "indent": 2
             },
             {
-              "text": "HPC Optimized (e.g., Hpc7a):** Built specifically for High Performance Computing workloads.",
+              "text": "**HPC Optimized (e.g., Hpc7a):** Built specifically for High Performance Computing workloads.",
               "indent": 2
             }
           ],
@@ -1392,7 +1392,7 @@ const CLF_COURSE_DATA = {
           "title": "Compute: Management Options",
           "bullets": [
             {
-              "text": "AWS Elastic Beanstalk (PaaS):",
+              "text": "**AWS Elastic Beanstalk (PaaS):**",
               "indent": 0
             },
             {
@@ -1404,7 +1404,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon Lightsail:",
+              "text": "**Amazon Lightsail:**",
               "indent": 1
             },
             {
@@ -1416,7 +1416,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Batch:",
+              "text": "**AWS Batch:**",
               "indent": 1
             },
             {
@@ -1431,7 +1431,7 @@ const CLF_COURSE_DATA = {
           "title": "High Availability Compute: Scaling & Load Balancing",
           "bullets": [
             {
-              "text": "Amazon EC2 Auto Scaling:",
+              "text": "**Amazon EC2 Auto Scaling:**",
               "indent": 0
             },
             {
@@ -1443,7 +1443,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Elastic Load Balancing (ELB):",
+              "text": "**Elastic Load Balancing (ELB):**",
               "indent": 1
             },
             {
@@ -1466,7 +1466,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Amazon ECS (Elastic Container Service):",
+              "text": "**Amazon ECS (Elastic Container Service):**",
               "indent": 1
             },
             {
@@ -1474,7 +1474,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon EKS (Elastic Kubernetes Service):",
+              "text": "**Amazon EKS (Elastic Kubernetes Service):**",
               "indent": 1
             },
             {
@@ -1482,15 +1482,15 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Hosting Models:",
+              "text": "**Hosting Models:**",
               "indent": 1
             },
             {
-              "text": "EC2 Launch Type:* You manage the underlying virtual servers hosting the containers.",
+              "text": "*EC2 Launch Type:* You manage the underlying virtual servers hosting the containers.",
               "indent": 2
             },
             {
-              "text": "AWS Fargate:* Serverless container execution. You pay per container run without managing virtual servers.",
+              "text": "*AWS Fargate:* Serverless container execution. You pay per container run without managing virtual servers.",
               "indent": 2
             }
           ],
@@ -1501,7 +1501,7 @@ const CLF_COURSE_DATA = {
           "title": "Compute: Serverless Code Execution (AWS Lambda)",
           "bullets": [
             {
-              "text": "AWS Lambda:",
+              "text": "**AWS Lambda:**",
               "indent": 0
             },
             {
@@ -1517,7 +1517,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Event-Driven:** Code executes in response to triggers (e.g., file upload to S3, database change, HTTP request).",
+              "text": "**Event-Driven:** Code executes in response to triggers (e.g., file upload to S3, database change, HTTP request).",
               "indent": 1
             }
           ],
@@ -1532,7 +1532,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Amazon RDS (Relational Database Service):",
+              "text": "**Amazon RDS (Relational Database Service):**",
               "indent": 1
             },
             {
@@ -1540,15 +1540,15 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Multi-AZ:* Automatically replicates to a standby instance in another AZ for disaster recovery.",
+              "text": "*Multi-AZ:* Automatically replicates to a standby instance in another AZ for disaster recovery.",
               "indent": 2
             },
             {
-              "text": "Read Replicas:* Offload read traffic to duplicate read-only instances.",
+              "text": "*Read Replicas:* Offload read traffic to duplicate read-only instances.",
               "indent": 2
             },
             {
-              "text": "Amazon Aurora:",
+              "text": "**Amazon Aurora:**",
               "indent": 1
             },
             {
@@ -1567,7 +1567,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Amazon DynamoDB:",
+              "text": "**Amazon DynamoDB:**",
               "indent": 1
             },
             {
@@ -1575,39 +1575,39 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Serverless:** Scales automatically with zero management.",
+              "text": "**Serverless:** Scales automatically with zero management.",
               "indent": 2
             },
             {
-              "text": "Performance:** Single-digit millisecond latency at any scale.",
+              "text": "**Performance:** Single-digit millisecond latency at any scale.",
               "indent": 2
             },
             {
-              "text": "Global Tables:** Automatically replicates data across chosen AWS regions for global low-latency access.",
+              "text": "**Global Tables:** Automatically replicates data across chosen AWS regions for global low-latency access.",
               "indent": 2
             },
             {
-              "text": "Other Database Engines:",
+              "text": "**Other Database Engines:**",
               "indent": 1
             },
             {
-              "text": "Amazon Neptune:* Graph database.",
+              "text": "*Amazon Neptune:* Graph database.",
               "indent": 2
             },
             {
-              "text": "Amazon ElastiCache:* In-memory data store/cache.",
+              "text": "*Amazon ElastiCache:* In-memory data store/cache.",
               "indent": 2
             },
             {
-              "text": "Amazon Redshift:* Data warehouse.",
+              "text": "*Amazon Redshift:* Data warehouse.",
               "indent": 2
             },
             {
-              "text": "Amazon DocumentDB:* MongoDB compatible document store.",
+              "text": "*Amazon DocumentDB:* MongoDB compatible document store.",
               "indent": 2
             },
             {
-              "text": "Amazon Timestream:* Time-series database.",
+              "text": "*Amazon Timestream:* Time-series database.",
               "indent": 2
             }
           ],
@@ -1618,7 +1618,7 @@ const CLF_COURSE_DATA = {
           "title": "Database Migration Service (DMS)",
           "bullets": [
             {
-              "text": "AWS Database Migration Service (AWS DMS):",
+              "text": "**AWS Database Migration Service (AWS DMS):**",
               "indent": 0
             },
             {
@@ -1626,15 +1626,15 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Homogeneous:** Migrating between same database types (e.g., Oracle to Oracle).",
+              "text": "**Homogeneous:** Migrating between same database types (e.g., Oracle to Oracle).",
               "indent": 2
             },
             {
-              "text": "Heterogeneous:** Migrating between different database types (e.g., Oracle to Aurora).",
+              "text": "**Heterogeneous:** Migrating between different database types (e.g., Oracle to Aurora).",
               "indent": 2
             },
             {
-              "text": "AWS Schema Conversion Tool (AWS SCT):",
+              "text": "**AWS Schema Conversion Tool (AWS SCT):**",
               "indent": 1
             },
             {
@@ -1649,19 +1649,19 @@ const CLF_COURSE_DATA = {
           "title": "Network Services: VPC and Subnets",
           "bullets": [
             {
-              "text": "Amazon VPC:** A private, logically isolated virtual network within your AWS account.",
+              "text": "**Amazon VPC:** A private, logically isolated virtual network within your AWS account.",
               "indent": 0
             },
             {
-              "text": "Subnets:** Subsections of a VPC used to organize resources:",
+              "text": "**Subnets:** Subsections of a VPC used to organize resources:",
               "indent": 1
             },
             {
-              "text": "Public Subnets:** Connected to the **Internet Gateway (IGW)**. Resources (like web servers) have public IP addresses and can access/be accessed from the internet.",
+              "text": "**Public Subnets:** Connected to the **Internet Gateway (IGW)**. Resources (like web servers) have public IP addresses and can access/be accessed from the internet.",
               "indent": 2
             },
             {
-              "text": "Private Subnets:** Isolated from the public internet. Used for sensitive backends (databases, application servers). Accesses the internet securely outbound using a **NAT Gateway** (placed in the public subnet).",
+              "text": "**Private Subnets:** Isolated from the public internet. Used for sensitive backends (databases, application servers). Accesses the internet securely outbound using a **NAT Gateway** (placed in the public subnet).",
               "indent": 2
             }
           ],
@@ -1676,7 +1676,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Security Group:",
+              "text": "**Security Group:**",
               "indent": 2
             },
             {
@@ -1688,7 +1688,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Network ACL (Access Control List):",
+              "text": "**Network ACL (Access Control List):**",
               "indent": 2
             },
             {
@@ -1707,7 +1707,7 @@ const CLF_COURSE_DATA = {
           "title": "Hybrid Connectivity: VPN and Direct Connect",
           "bullets": [
             {
-              "text": "AWS Site-to-Site VPN:",
+              "text": "**AWS Site-to-Site VPN:**",
               "indent": 0
             },
             {
@@ -1719,7 +1719,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Direct Connect:",
+              "text": "**AWS Direct Connect:**",
               "indent": 1
             },
             {
@@ -1731,7 +1731,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon Route 53:",
+              "text": "**Amazon Route 53:**",
               "indent": 1
             },
             {
@@ -1739,7 +1739,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "VPC Peering & Transit Gateway:",
+              "text": "**VPC Peering & Transit Gateway:**",
               "indent": 1
             },
             {
@@ -1754,7 +1754,7 @@ const CLF_COURSE_DATA = {
           "title": "Storage Services: Block vs. File vs. Object",
           "bullets": [
             {
-              "text": "Block Storage (Amazon EBS):",
+              "text": "**Block Storage (Amazon EBS):**",
               "indent": 0
             },
             {
@@ -1762,7 +1762,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "File Storage (Amazon EFS):",
+              "text": "**File Storage (Amazon EFS):**",
               "indent": 1
             },
             {
@@ -1770,7 +1770,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Object Storage (Amazon S3):",
+              "text": "**Object Storage (Amazon S3):**",
               "indent": 1
             },
             {
@@ -1778,7 +1778,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon FSx:",
+              "text": "**Amazon FSx:**",
               "indent": 1
             },
             {
@@ -1793,7 +1793,7 @@ const CLF_COURSE_DATA = {
           "title": "Block Storage Lifecycle: EBS vs. Instance Store",
           "bullets": [
             {
-              "text": "Amazon EBS (Elastic Block Store):",
+              "text": "**Amazon EBS (Elastic Block Store):**",
               "indent": 0
             },
             {
@@ -1801,7 +1801,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "EC2 Instance Store:",
+              "text": "**EC2 Instance Store:**",
               "indent": 1
             },
             {
@@ -1809,7 +1809,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Risk:** If the instance is stopped or terminated, all data is permanently lost.",
+              "text": "**Risk:** If the instance is stopped or terminated, all data is permanently lost.",
               "indent": 2
             }
           ],
@@ -1820,35 +1820,35 @@ const CLF_COURSE_DATA = {
           "title": "Object Storage: Amazon S3 Storage Classes",
           "bullets": [
             {
-              "text": "S3 Standard:** Hot data accessed frequently. Fast access, high throughput, highest storage cost.",
+              "text": "**S3 Standard:** Hot data accessed frequently. Fast access, high throughput, highest storage cost.",
               "indent": 0
             },
             {
-              "text": "S3 Standard-IA (Infrequent Access):** Data accessed less often but requires instant access when requested. Lower storage cost, retrieval fee applied.",
+              "text": "**S3 Standard-IA (Infrequent Access):** Data accessed less often but requires instant access when requested. Lower storage cost, retrieval fee applied.",
               "indent": 1
             },
             {
-              "text": "S3 Intelligent-Tiering:** Automatically moves files between hot/cold tiers based on changing access patterns with no retrieval fees.",
+              "text": "**S3 Intelligent-Tiering:** Automatically moves files between hot/cold tiers based on changing access patterns with no retrieval fees.",
               "indent": 1
             },
             {
-              "text": "S3 Glacier Tiers (Archiving):",
+              "text": "**S3 Glacier Tiers (Archiving):**",
               "indent": 1
             },
             {
-              "text": "Glacier Instant Retrieval:* Miliseconds retrieval.",
+              "text": "*Glacier Instant Retrieval:* Miliseconds retrieval.",
               "indent": 2
             },
             {
-              "text": "Glacier Flexible:* Minutes to hours retrieval.",
+              "text": "*Glacier Flexible:* Minutes to hours retrieval.",
               "indent": 2
             },
             {
-              "text": "Glacier Deep Archive:* Cheapest storage tier, takes 12-48 hours to retrieve.",
+              "text": "*Glacier Deep Archive:* Cheapest storage tier, takes 12-48 hours to retrieve.",
               "indent": 2
             },
             {
-              "text": "S3 Express One Zone:** Ultra-fast, single-digit millisecond latency storage inside a single AZ for high-performance computing.",
+              "text": "**S3 Express One Zone:** Ultra-fast, single-digit millisecond latency storage inside a single AZ for high-performance computing.",
               "indent": 1
             }
           ],
@@ -1859,7 +1859,7 @@ const CLF_COURSE_DATA = {
           "title": "Hybrid Storage & Backups",
           "bullets": [
             {
-              "text": "AWS Storage Gateway:",
+              "text": "**AWS Storage Gateway:**",
               "indent": 0
             },
             {
@@ -1871,7 +1871,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Backup:",
+              "text": "**AWS Backup:**",
               "indent": 1
             },
             {
@@ -1890,7 +1890,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Amazon SQS (Simple Queue Service):",
+              "text": "**Amazon SQS (Simple Queue Service):**",
               "indent": 2
             },
             {
@@ -1898,7 +1898,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Amazon SNS (Simple Notification Service):",
+              "text": "**Amazon SNS (Simple Notification Service):**",
               "indent": 2
             },
             {
@@ -1906,7 +1906,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Amazon EventBridge:",
+              "text": "**Amazon EventBridge:**",
               "indent": 2
             },
             {
@@ -1914,7 +1914,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "AWS Step Functions:",
+              "text": "**AWS Step Functions:**",
               "indent": 2
             },
             {
@@ -1929,7 +1929,7 @@ const CLF_COURSE_DATA = {
           "title": "Developer and Application Tools",
           "bullets": [
             {
-              "text": "AWS Amplify:",
+              "text": "**AWS Amplify:**",
               "indent": 0
             },
             {
@@ -1937,7 +1937,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS AppSync:",
+              "text": "**AWS AppSync:**",
               "indent": 1
             },
             {
@@ -1945,19 +1945,19 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Developer CI/CD Tools:",
+              "text": "**AWS Developer CI/CD Tools:**",
               "indent": 1
             },
             {
-              "text": "AWS CodeBuild:** Compiles source code, runs tests, and produces deployable software packages.",
+              "text": "**AWS CodeBuild:** Compiles source code, runs tests, and produces deployable software packages.",
               "indent": 2
             },
             {
-              "text": "AWS CodePipeline:** Automates the software release pipeline from code check-in to production deployment.",
+              "text": "**AWS CodePipeline:** Automates the software release pipeline from code check-in to production deployment.",
               "indent": 2
             },
             {
-              "text": "AWS X-Ray:** Traces user requests through your microservices architecture to identify latency bottlenecks and debug errors.",
+              "text": "**AWS X-Ray:** Traces user requests through your microservices architecture to identify latency bottlenecks and debug errors.",
               "indent": 2
             }
           ],
@@ -1968,43 +1968,43 @@ const CLF_COURSE_DATA = {
           "title": "Analytics Services: Data Pipelines",
           "bullets": [
             {
-              "text": "Ingest & Store:",
+              "text": "**Ingest & Store:**",
               "indent": 0
             },
             {
-              "text": "Amazon Kinesis / Data Firehose:** Ingests large streams of real-time data records (IoT, logs).",
+              "text": "**Amazon Kinesis / Data Firehose:** Ingests large streams of real-time data records (IoT, logs).",
               "indent": 2
             },
             {
-              "text": "Amazon Redshift:** Fast, petabyte-scale data warehouse for complex SQL queries.",
+              "text": "**Amazon Redshift:** Fast, petabyte-scale data warehouse for complex SQL queries.",
               "indent": 2
             },
             {
-              "text": "Catalog & Process:",
+              "text": "**Catalog & Process:**",
               "indent": 1
             },
             {
-              "text": "AWS Glue:** Serverless ETL (Extract, Transform, Load) service that automatically catalogs metadata.",
+              "text": "**AWS Glue:** Serverless ETL (Extract, Transform, Load) service that automatically catalogs metadata.",
               "indent": 2
             },
             {
-              "text": "Amazon EMR:** Managed big data framework (Hadoop, Spark).",
+              "text": "**Amazon EMR:** Managed big data framework (Hadoop, Spark).",
               "indent": 2
             },
             {
-              "text": "Query & Visualize:",
+              "text": "**Query & Visualize:**",
               "indent": 1
             },
             {
-              "text": "Amazon Athena:** Serverless query service to analyze raw data in S3 using standard SQL.",
+              "text": "**Amazon Athena:** Serverless query service to analyze raw data in S3 using standard SQL.",
               "indent": 2
             },
             {
-              "text": "Amazon QuickSight:** Business intelligence (BI) service to build interactive dashboards and visualizations.",
+              "text": "**Amazon QuickSight:** Business intelligence (BI) service to build interactive dashboards and visualizations.",
               "indent": 2
             },
             {
-              "text": "Amazon OpenSearch Service:** Interactive log analytics, keyword search, and real-time visualization dashboards.",
+              "text": "**Amazon OpenSearch Service:** Interactive log analytics, keyword search, and real-time visualization dashboards.",
               "indent": 2
             }
           ],
@@ -2015,63 +2015,63 @@ const CLF_COURSE_DATA = {
           "title": "Artificial Intelligence and Machine Learning (AI/ML)",
           "bullets": [
             {
-              "text": "AI Services (Pre-built models accessed via APIs):",
+              "text": "**AI Services (Pre-built models accessed via APIs):**",
               "indent": 0
             },
             {
-              "text": "Amazon Rekognition:** Image and video analysis (object/face detection).",
+              "text": "**Amazon Rekognition:** Image and video analysis (object/face detection).",
               "indent": 2
             },
             {
-              "text": "Amazon Polly:** Converts text into lifelike speech.",
+              "text": "**Amazon Polly:** Converts text into lifelike speech.",
               "indent": 2
             },
             {
-              "text": "Amazon Transcribe:** Converts spoken audio into text.",
+              "text": "**Amazon Transcribe:** Converts spoken audio into text.",
               "indent": 2
             },
             {
-              "text": "Amazon Translate:** Language translation service.",
+              "text": "**Amazon Translate:** Language translation service.",
               "indent": 2
             },
             {
-              "text": "Amazon Comprehend:** Natural language processing (NLP) and sentiment analysis.",
+              "text": "**Amazon Comprehend:** Natural language processing (NLP) and sentiment analysis.",
               "indent": 2
             },
             {
-              "text": "Amazon Lex:** Build conversational AI chatbots.",
+              "text": "**Amazon Lex:** Build conversational AI chatbots.",
               "indent": 2
             },
             {
-              "text": "Amazon Textract:** Extracts text and data from scanned documents.",
+              "text": "**Amazon Textract:** Extracts text and data from scanned documents.",
               "indent": 2
             },
             {
-              "text": "Amazon Kendra:** Intelligent search service.",
+              "text": "**Amazon Kendra:** Intelligent search service.",
               "indent": 2
             },
             {
-              "text": "Amazon Personalize:** Automated recommendations.",
+              "text": "**Amazon Personalize:** Automated recommendations.",
               "indent": 2
             },
             {
-              "text": "Generative AI Assistants:",
+              "text": "**Generative AI Assistants:**",
               "indent": 1
             },
             {
-              "text": "Amazon Q Developer:** Generates, reviews, and refines code within IDEs.",
+              "text": "**Amazon Q Developer:** Generates, reviews, and refines code within IDEs.",
               "indent": 2
             },
             {
-              "text": "Amazon Q Business:** Connects to company data to answer employee queries.",
+              "text": "**Amazon Q Business:** Connects to company data to answer employee queries.",
               "indent": 2
             },
             {
-              "text": "End-to-End ML Platform:",
+              "text": "**End-to-End ML Platform:**",
               "indent": 1
             },
             {
-              "text": "Amazon SageMaker AI:** Fully managed platform to build, train, tune, and deploy custom machine learning models.",
+              "text": "**Amazon SageMaker AI:** Fully managed platform to build, train, tune, and deploy custom machine learning models.",
               "indent": 2
             }
           ],
@@ -2082,7 +2082,7 @@ const CLF_COURSE_DATA = {
           "title": "Business Apps & End User Computing",
           "bullets": [
             {
-              "text": "Amazon Connect:",
+              "text": "**Amazon Connect:**",
               "indent": 0
             },
             {
@@ -2090,7 +2090,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon SES (Simple Email Service):",
+              "text": "**Amazon SES (Simple Email Service):**",
               "indent": 1
             },
             {
@@ -2098,7 +2098,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon WorkSpaces:",
+              "text": "**Amazon WorkSpaces:**",
               "indent": 1
             },
             {
@@ -2106,7 +2106,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Amazon AppStream 2.0:",
+              "text": "**Amazon AppStream 2.0:**",
               "indent": 1
             },
             {
@@ -2190,15 +2190,15 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Pay-As-You-Go:** No long-term contracts. Pay only for the resources you consume hourly or per-second.",
+              "text": "**Pay-As-You-Go:** No long-term contracts. Pay only for the resources you consume hourly or per-second.",
               "indent": 2
             },
             {
-              "text": "Save When You Commit:** Lock in lower rates by committing to a 1- or 3-year term for compute and databases (Savings Plans/Reserved Instances).",
+              "text": "**Save When You Commit:** Lock in lower rates by committing to a 1- or 3-year term for compute and databases (Savings Plans/Reserved Instances).",
               "indent": 2
             },
             {
-              "text": "Pay Less by Using More:** Volume discounts apply as your data footprint grows (especially in storage and data transfer).",
+              "text": "**Pay Less by Using More:** Volume discounts apply as your data footprint grows (especially in storage and data transfer).",
               "indent": 2
             }
           ],
@@ -2209,7 +2209,7 @@ const CLF_COURSE_DATA = {
           "title": "Compute Purchase Options (Part 1)",
           "bullets": [
             {
-              "text": "On-Demand Instances:",
+              "text": "**On-Demand Instances:**",
               "indent": 0
             },
             {
@@ -2221,7 +2221,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Spot Instances:",
+              "text": "**Spot Instances:**",
               "indent": 1
             },
             {
@@ -2229,7 +2229,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Catch:** AWS can reclaim (terminate) the instance with a 2-minute warning if they need the capacity back.",
+              "text": "**Catch:** AWS can reclaim (terminate) the instance with a 2-minute warning if they need the capacity back.",
               "indent": 2
             },
             {
@@ -2244,7 +2244,7 @@ const CLF_COURSE_DATA = {
           "title": "Compute Purchase Options (Part 2)",
           "bullets": [
             {
-              "text": "Reserved Instances (RIs):",
+              "text": "**Reserved Instances (RIs):**",
               "indent": 0
             },
             {
@@ -2256,11 +2256,11 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Size Flexibility:* Within AWS Organizations, unused RIs automatically apply to smaller or larger instances of the same family (e.g. 1 m5.large covers 2 m5.mediums, and 2 m5.mediums cover 1 m5.large).",
+              "text": "*Size Flexibility:* Within AWS Organizations, unused RIs automatically apply to smaller or larger instances of the same family (e.g. 1 m5.large covers 2 m5.mediums, and 2 m5.mediums cover 1 m5.large).",
               "indent": 2
             },
             {
-              "text": "Savings Plans:",
+              "text": "**Savings Plans:**",
               "indent": 1
             },
             {
@@ -2268,7 +2268,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "More Flexible:** Applies automatically across EC2, Lambda, and Fargate regardless of region or instance size changes.",
+              "text": "**More Flexible:** Applies automatically across EC2, Lambda, and Fargate regardless of region or instance size changes.",
               "indent": 2
             }
           ],
@@ -2283,7 +2283,7 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Dedicated Instances:",
+              "text": "**Dedicated Instances:**",
               "indent": 2
             },
             {
@@ -2291,7 +2291,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Dedicated Hosts:",
+              "text": "**Dedicated Hosts:**",
               "indent": 2
             },
             {
@@ -2307,7 +2307,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             },
             {
-              "text": "Capacity Reservations:",
+              "text": "**Capacity Reservations:**",
               "indent": 2
             },
             {
@@ -2326,31 +2326,31 @@ const CLF_COURSE_DATA = {
               "indent": 0
             },
             {
-              "text": "Inbound Data (Internet into AWS):** Always **Free**.",
+              "text": "**Inbound Data (Internet into AWS):** Always **Free**.",
               "indent": 2
             },
             {
-              "text": "Outbound Data (AWS out to Internet):** **Charged** per GB.",
+              "text": "**Outbound Data (AWS out to Internet):** **Charged** per GB.",
               "indent": 2
             },
             {
-              "text": "Data Transfer within AWS (Same Region):",
+              "text": "**Data Transfer within AWS (Same Region):**",
               "indent": 2
             },
             {
-              "text": "Same Availability Zone (VPC Peering):* **Free**.",
+              "text": "*Same Availability Zone (VPC Peering):* **Free**.",
               "indent": 3
             },
             {
-              "text": "Across different Availability Zones:* **Charged** per GB (both directions, e.g., EC2 to RDS in different AZs).",
+              "text": "*Across different Availability Zones:* **Charged** per GB (both directions, e.g., EC2 to RDS in different AZs).",
               "indent": 3
             },
             {
-              "text": "Inter-Region Transfer (Region to Region):** **Charged** per GB.",
+              "text": "**Inter-Region Transfer (Region to Region):** **Charged** per GB.",
               "indent": 2
             },
             {
-              "text": "Connectivity Tools:** Site-to-Site VPN and Direct Connect charge connection/port fees plus outbound data rates (inbound is free).",
+              "text": "**Connectivity Tools:** Site-to-Site VPN and Direct Connect charge connection/port fees plus outbound data rates (inbound is free).",
               "indent": 2
             }
           ],
@@ -2361,7 +2361,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Cost Management Tools",
           "bullets": [
             {
-              "text": "AWS Billing Dashboard:",
+              "text": "**AWS Billing Dashboard:**",
               "indent": 0
             },
             {
@@ -2369,7 +2369,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Pricing Calculator (Before Deployment):",
+              "text": "**AWS Pricing Calculator (Before Deployment):**",
               "indent": 1
             },
             {
@@ -2377,7 +2377,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Cost Explorer (After Deployment):",
+              "text": "**AWS Cost Explorer (After Deployment):**",
               "indent": 1
             },
             {
@@ -2385,7 +2385,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Budgets (Alerts):",
+              "text": "**AWS Budgets (Alerts):**",
               "indent": 1
             },
             {
@@ -2393,7 +2393,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Cost & Usage Report (CUR):",
+              "text": "**AWS Cost & Usage Report (CUR):**",
               "indent": 1
             },
             {
@@ -2408,11 +2408,11 @@ const CLF_COURSE_DATA = {
           "title": "Cost Allocation: Tagging",
           "bullets": [
             {
-              "text": "Tags:** Key-value metadata labels attached to resources (e.g., Key: `Department`, Value: `Finance`).",
+              "text": "**Tags:** Key-value metadata labels attached to resources (e.g., Key: `Department`, Value: `Finance`).",
               "indent": 0
             },
             {
-              "text": "Cost Allocation Tags:** Activate tags in the billing console to track expenses by tag values.",
+              "text": "**Cost Allocation Tags:** Activate tags in the billing console to track expenses by tag values.",
               "indent": 1
             },
             {
@@ -2439,35 +2439,35 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 1)",
           "bullets": [
             {
-              "text": "Basic Support:",
+              "text": "**Basic Support:**",
               "indent": 0
             },
             {
-              "text": "Cost:** Free for all customers.",
+              "text": "**Cost:** Free for all customers.",
               "indent": 2
             },
             {
-              "text": "Scope:** 24/7 access to billing support, service quota increases, health dashboards, and 7 core Trusted Advisor checks.",
+              "text": "**Scope:** 24/7 access to billing support, service quota increases, health dashboards, and 7 core Trusted Advisor checks.",
               "indent": 2
             },
             {
-              "text": "Developer Support:",
+              "text": "**Developer Support:**",
               "indent": 1
             },
             {
-              "text": "Cost:** Starts at $29/month.",
+              "text": "**Cost:** Starts at $29/month.",
               "indent": 2
             },
             {
-              "text": "Scope:** Adds email access to cloud support associates.",
+              "text": "**Scope:** Adds email access to cloud support associates.",
               "indent": 2
             },
             {
-              "text": "Response Times:** <24 business hours for general questions; <12 business hours for system impaired.",
+              "text": "**Response Times:** <24 business hours for general questions; <12 business hours for system impaired.",
               "indent": 2
             },
             {
-              "text": "Target:** Building blocks/testing environments.",
+              "text": "**Target:** Building blocks/testing environments.",
               "indent": 2
             }
           ],
@@ -2478,35 +2478,35 @@ const CLF_COURSE_DATA = {
           "title": "AWS Support Plans (Part 2)",
           "bullets": [
             {
-              "text": "Business Support:",
+              "text": "**Business Support:**",
               "indent": 0
             },
             {
-              "text": "Cost:** Starts at $100/month.",
+              "text": "**Cost:** Starts at $100/month.",
               "indent": 2
             },
             {
-              "text": "Scope:** 24/7 phone, email, and chat access to cloud support engineers. Help with third-party software integrations. All Trusted Advisor checks.",
+              "text": "**Scope:** 24/7 phone, email, and chat access to cloud support engineers. Help with third-party software integrations. All Trusted Advisor checks.",
               "indent": 2
             },
             {
-              "text": "Response Times:** <1 hour for production systems down.",
+              "text": "**Response Times:** <1 hour for production systems down.",
               "indent": 2
             },
             {
-              "text": "Enterprise Support (and Enterprise On-Ramp):",
+              "text": "**Enterprise Support (and Enterprise On-Ramp):**",
               "indent": 1
             },
             {
-              "text": "Cost:** Starts at $15,000/month (On-Ramp starts at $5,500/month).",
+              "text": "**Cost:** Starts at $15,000/month (On-Ramp starts at $5,500/month).",
               "indent": 2
             },
             {
-              "text": "Scope:** Adds a dedicated **Technical Account Manager (TAM)**, who acts as a personal architectural advocate. Adds Infrastructure Event Management (IEM).",
+              "text": "**Scope:** Adds a dedicated **Technical Account Manager (TAM)**, who acts as a personal architectural advocate. Adds Infrastructure Event Management (IEM).",
               "indent": 2
             },
             {
-              "text": "Response Times:** <15 minutes for critical business outages (<30m for Enterprise On-Ramp).",
+              "text": "**Response Times:** <15 minutes for critical business outages (<30m for Enterprise On-Ramp).",
               "indent": 2
             }
           ],
@@ -2545,7 +2545,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Access:** Basic/Developer support get 7 core checks; Business and above get all 480+ checks.",
+              "text": "**Access:** Basic/Developer support get 7 core checks; Business and above get all 480+ checks.",
               "indent": 1
             }
           ],
@@ -2556,23 +2556,23 @@ const CLF_COURSE_DATA = {
           "title": "Health Monitoring: AWS Health",
           "bullets": [
             {
-              "text": "AWS Health Dashboard:",
+              "text": "**AWS Health Dashboard:**",
               "indent": 0
             },
             {
-              "text": "Public Events:* Service-wide status and regional outages visible to anyone.",
+              "text": "*Public Events:* Service-wide status and regional outages visible to anyone.",
               "indent": 2
             },
             {
-              "text": "Account-Specific Events:* Issues and notifications specifically affecting your AWS resources.",
+              "text": "*Account-Specific Events:* Issues and notifications specifically affecting your AWS resources.",
               "indent": 2
             },
             {
-              "text": "AWS User Notifications:** Instantly aggregates notifications from multiple sources (events, billing, limits) in one place.",
+              "text": "**AWS User Notifications:** Instantly aggregates notifications from multiple sources (events, billing, limits) in one place.",
               "indent": 1
             },
             {
-              "text": "AWS Health API:** Programmatically fetch health and notification data (available for Business Support and above).",
+              "text": "**AWS Health API:** Programmatically fetch health and notification data (available for Business Support and above).",
               "indent": 1
             }
           ],
@@ -2583,15 +2583,15 @@ const CLF_COURSE_DATA = {
           "title": "AWS Trust & Safety",
           "bullets": [
             {
-              "text": "Reporting Abuse:** Direct channel to report any illegal or abusive activity originating from AWS resources (e.g., spam, phishing, DDoS hosting).",
+              "text": "**Reporting Abuse:** Direct channel to report any illegal or abusive activity originating from AWS resources (e.g., spam, phishing, DDoS hosting).",
               "indent": 0
             },
             {
-              "text": "Abuse Notices:** How to respond and remediate issues if AWS notifies you that your resource is acting maliciously.",
+              "text": "**Abuse Notices:** How to respond and remediate issues if AWS notifies you that your resource is acting maliciously.",
               "indent": 1
             },
             {
-              "text": "Protection & Messaging:** Core best practices for secure digital messaging and securing application endpoints.",
+              "text": "**Protection & Messaging:** Core best practices for secure digital messaging and securing application endpoints.",
               "indent": 1
             }
           ],
@@ -2602,7 +2602,7 @@ const CLF_COURSE_DATA = {
           "title": "AWS Business Ecosystem: Partners & Marketplace",
           "bullets": [
             {
-              "text": "AWS Partner Network (APN):",
+              "text": "**AWS Partner Network (APN):**",
               "indent": 0
             },
             {
@@ -2610,7 +2610,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Marketplace:",
+              "text": "**AWS Marketplace:**",
               "indent": 1
             },
             {
@@ -2618,7 +2618,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Key Features:** Pay-as-you-go, BYOL, or subscription pricing with unified billing (charges appear directly on your AWS invoice).",
+              "text": "**Key Features:** Pay-as-you-go, BYOL, or subscription pricing with unified billing (charges appear directly on your AWS invoice).",
               "indent": 2
             }
           ],
@@ -2629,7 +2629,7 @@ const CLF_COURSE_DATA = {
           "title": "Support Resources: Professional Services & Architects",
           "bullets": [
             {
-              "text": "AWS Solutions Architects:",
+              "text": "**AWS Solutions Architects:**",
               "indent": 0
             },
             {
@@ -2637,7 +2637,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "AWS Professional Services:",
+              "text": "**AWS Professional Services:**",
               "indent": 1
             },
             {
@@ -2645,15 +2645,15 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Community Forums:",
+              "text": "**Community Forums:**",
               "indent": 1
             },
             {
-              "text": "AWS re:Post:** A community-driven, expert-reviewed Q&A forum for technical support.",
+              "text": "**AWS re:Post:** A community-driven, expert-reviewed Q&A forum for technical support.",
               "indent": 2
             },
             {
-              "text": "AWS Knowledge Center:** FAQs and guide videos answering common technical issues.",
+              "text": "**AWS Knowledge Center:** FAQs and guide videos answering common technical issues.",
               "indent": 2
             }
           ],
@@ -2728,23 +2728,23 @@ const CLF_COURSE_DATA = {
           "title": "Test-Taking Strategy (Part 1)",
           "bullets": [
             {
-              "text": "Identify Key Qualifiers:** Pay attention to constraint keywords in the questions:",
+              "text": "**Identify Key Qualifiers:** Pay attention to constraint keywords in the questions:",
               "indent": 0
             },
             {
-              "text": "MOST cost-effective* (Look for pricing options like Spot, Serverless, S3 Glacier).",
+              "text": "*MOST cost-effective* (Look for pricing options like Spot, Serverless, S3 Glacier).",
               "indent": 2
             },
             {
-              "text": "MINIMAL operational overhead* (Look for managed services like RDS, Beanstalk, DynamoDB over EC2).",
+              "text": "*MINIMAL operational overhead* (Look for managed services like RDS, Beanstalk, DynamoDB over EC2).",
               "indent": 2
             },
             {
-              "text": "HIGHLY resilient / fault-tolerant* (Look for Multi-AZ, Load Balancers, Auto Scaling).",
+              "text": "*HIGHLY resilient / fault-tolerant* (Look for Multi-AZ, Load Balancers, Auto Scaling).",
               "indent": 2
             },
             {
-              "text": "Read ALL Options:** Do not select the first answer that seems correct. Read all choices, as one may fit the constraint qualifiers better.",
+              "text": "**Read ALL Options:** Do not select the first answer that seems correct. Read all choices, as one may fit the constraint qualifiers better.",
               "indent": 1
             }
           ],
@@ -2755,11 +2755,11 @@ const CLF_COURSE_DATA = {
           "title": "Test-Taking Strategy (Part 2)",
           "bullets": [
             {
-              "text": "Use Elimination:** Cross off obviously incorrect answers first. For example, if a question asks about database migrations, eliminate general compute or storage options.",
+              "text": "**Use Elimination:** Cross off obviously incorrect answers first. For example, if a question asks about database migrations, eliminate general compute or storage options.",
               "indent": 0
             },
             {
-              "text": "Time Management:",
+              "text": "**Time Management:**",
               "indent": 1
             },
             {
@@ -2771,7 +2771,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "No Penalty for Guessing:** Answer every single question. Unanswered questions are marked as incorrect.",
+              "text": "**No Penalty for Guessing:** Answer every single question. Unanswered questions are marked as incorrect.",
               "indent": 1
             }
           ],
@@ -2782,23 +2782,23 @@ const CLF_COURSE_DATA = {
           "title": "Exam Prep Resources",
           "bullets": [
             {
-              "text": "Official AWS Skill Builder Practice Question Set:** Take the free official prep quiz to align with the question style and wording of the exam.",
+              "text": "**Official AWS Skill Builder Practice Question Set:** Take the free official prep quiz to align with the question style and wording of the exam.",
               "indent": 0
             },
             {
-              "text": "Tutorials Dojo (Practice Exams):** Review detailed explanations to understand why answers are correct and incorrect.",
+              "text": "**Tutorials Dojo (Practice Exams):** Review detailed explanations to understand why answers are correct and incorrect.",
               "indent": 1
             },
             {
-              "text": "AWS Whitepapers:** Review the \"AWS Well-Architected Framework\" whitepaper.",
+              "text": "**AWS Whitepapers:** Review the \"AWS Well-Architected Framework\" whitepaper.",
               "indent": 1
             },
             {
-              "text": "AWS Skill Builder Center:** Offers game-based learning (Cloud Quest), self-paced labs, and over 500 digital courses.",
+              "text": "**AWS Skill Builder Center:** Offers game-based learning (Cloud Quest), self-paced labs, and over 500 digital courses.",
               "indent": 1
             },
             {
-              "text": "Register for Your Exam:** Log in to your AWS Certification account. Schedule your exam to be taken at a Pearson VUE testing center or online.",
+              "text": "**Register for Your Exam:** Log in to your AWS Certification account. Schedule your exam to be taken at a Pearson VUE testing center or online.",
               "indent": 1
             }
           ],
@@ -2820,14 +2820,14 @@ const CLF_COURSE_DATA = {
       "slides": [
         {
           "id": "6.1",
-          "title": "Introduction to Amazon EC2",
+          "title": "LAB: Introduction to Amazon EC2",
           "bullets": [
             {
-              "text": "Lab Overview:** This lab provides a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.",
+              "text": "**Lab Overview:** This lab provides a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.",
               "indent": 0
             },
             {
-              "text": "Key Tasks:",
+              "text": "**Key Tasks:**",
               "indent": 1
             },
             {
@@ -2847,7 +2847,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/9VNGAHHAUU/introduction-to-amazon-ec2/)",
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/9VNGAHHAUU/introduction-to-amazon-ec2/)",
               "indent": 1
             }
           ],
@@ -2855,14 +2855,14 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.2",
-          "title": "Introduction to Amazon VPC",
+          "title": "LAB: Introduction to Amazon VPC",
           "bullets": [
             {
-              "text": "Lab Overview:** This lab introduces you to Amazon Virtual Private Cloud (Amazon VPC). You will use the Amazon VPC wizard to create a VPC, public subnet, and route tables.",
+              "text": "**Lab Overview:** This lab introduces you to Amazon Virtual Private Cloud (Amazon VPC). You will use the Amazon VPC wizard to create a VPC, public subnet, and route tables.",
               "indent": 0
             },
             {
-              "text": "Key Tasks:",
+              "text": "**Key Tasks:**",
               "indent": 1
             },
             {
@@ -2882,7 +2882,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/PH6Z6EVH8Z/introduction-to-amazon-virtual-private-cloud-vpc/)",
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/PH6Z6EVH8Z/introduction-to-amazon-virtual-private-cloud-vpc/)",
               "indent": 1
             }
           ],
@@ -2890,14 +2890,14 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.3",
-          "title": "Introduction to Amazon S3",
+          "title": "LAB: Introduction to Amazon S3",
           "bullets": [
             {
-              "text": "Lab Overview:** This lab demonstrates how to use an Amazon S3 bucket and manage files, or objects, that are stored in the bucket.",
+              "text": "**Lab Overview:** This lab demonstrates how to use an Amazon S3 bucket and manage files, or objects, that are stored in the bucket.",
               "indent": 0
             },
             {
-              "text": "Key Tasks:",
+              "text": "**Key Tasks:**",
               "indent": 1
             },
             {
@@ -2917,7 +2917,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/R54NZHEX5K/introduction-to-amazon-simple-storage-service-s3/)",
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/R54NZHEX5K/introduction-to-amazon-simple-storage-service-s3/)",
               "indent": 1
             }
           ],
@@ -2925,14 +2925,14 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "6.4",
-          "title": "Introduction to AWS IAM",
+          "title": "LAB: Introduction to AWS IAM",
           "bullets": [
             {
-              "text": "Lab Overview:** This lab shows you how to manage access and permissions to your AWS services using AWS Identity and Access Management (IAM).",
+              "text": "**Lab Overview:** This lab shows you how to manage access and permissions to your AWS services using AWS Identity and Access Management (IAM).",
               "indent": 0
             },
             {
-              "text": "Key Tasks:",
+              "text": "**Key Tasks:**",
               "indent": 1
             },
             {
@@ -2952,7 +2952,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/XFPX3M7HAQ/introduction-to-aws-identity-and-access-management-iam/)",
+              "text": "**Official Lab Link:** [Launch Lab on AWS Skill Builder](https://skillbuilder.aws/learn/XFPX3M7HAQ/introduction-to-aws-identity-and-access-management-iam/)",
               "indent": 1
             }
           ],
