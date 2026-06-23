@@ -28,6 +28,8 @@
 
   <!-- Interactive Slide and Quiz Presenter Layout -->
   <div class="viewer-layout" id="clf-viewer-layout">
+    <!-- Sidebar Backdrop Overlay -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
     
     <!-- Sidebar for Outline Navigation -->
     <aside class="viewer-sidebar" id="viewer-sidebar-aside">
@@ -51,6 +53,7 @@
       <!-- Topbar Header -->
       <div class="viewer-topbar">
         <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="index.html" class="btn btn-secondary" id="viewer-back-btn" style="padding: 6px 12px; font-size: 13px;">← Course</a>
           <button id="toggle-sidebar-btn" class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;">☰ Outline</button>
           <span class="viewer-title" id="active-slide-title">Loading Module Outline...</span>
         </div>
@@ -59,6 +62,12 @@
             <!-- Populated dynamically (e.g. Completed indicator) -->
           </div>
         </div>
+      </div>
+
+      <!-- Mobile Viewport Tabs Selector -->
+      <div class="mobile-tabs-bar" id="mobile-viewport-tabs" style="display: none;">
+        <button class="mobile-tab-btn active" id="tab-details-btn">Details</button>
+        <button class="mobile-tab-btn" id="tab-diagram-btn">Diagram</button>
       </div>
 
       <!-- Slide Viewport -->

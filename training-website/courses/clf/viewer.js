@@ -234,10 +234,14 @@ function renderSidebar() {
 }
 
 function closeSidebarOnMobile() {
-  if (window.innerWidth <= 768) {
-    document.getElementById("viewer-sidebar-aside").style.display = "none";
-    const toggleBtn = document.getElementById("toggle-sidebar-btn");
-    if (toggleBtn) toggleBtn.innerText = "☰ Outline";
+  const sidebar = document.getElementById("viewer-sidebar-aside");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  const toggleSidebarBtn = document.getElementById("toggle-sidebar-btn");
+  
+  if (window.innerWidth <= 1024) {
+    if (sidebar) sidebar.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("active");
+    if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
   }
 }
 
@@ -333,24 +337,71 @@ function setupEventListeners() {
   }
 
   // Sidebar Toggles
+  const backdrop = document.getElementById("sidebar-backdrop");
   if (toggleSidebarBtn) {
     toggleSidebarBtn.addEventListener("click", () => {
-      if (sidebar.style.display === "none") {
-        sidebar.style.display = "flex";
-        toggleSidebarBtn.innerText = "✕ Outline";
+      const isMobile = window.innerWidth <= 1024;
+      if (isMobile) {
+        sidebar.classList.toggle("open");
+        if (backdrop) {
+          backdrop.classList.toggle("active");
+        }
+        if (sidebar.classList.contains("open")) {
+          toggleSidebarBtn.innerText = "✕ Outline";
+        } else {
+          toggleSidebarBtn.innerText = "☰ Outline";
+        }
       } else {
-        sidebar.style.display = "none";
-        toggleSidebarBtn.innerText = "☰ Outline";
+        sidebar.classList.toggle("collapsed");
+        if (sidebar.classList.contains("collapsed")) {
+          toggleSidebarBtn.innerText = "☰ Outline";
+        } else {
+          toggleSidebarBtn.innerText = "✕ Outline";
+        }
       }
     });
   }
 
   if (closeSidebarBtn) {
     closeSidebarBtn.addEventListener("click", () => {
-      sidebar.style.display = "none";
+      sidebar.classList.remove("open");
+      if (backdrop) {
+        backdrop.classList.remove("active");
+      }
       if (toggleSidebarBtn) {
         toggleSidebarBtn.innerText = "☰ Outline";
       }
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      backdrop.classList.remove("active");
+      if (toggleSidebarBtn) {
+        toggleSidebarBtn.innerText = "☰ Outline";
+      }
+    });
+  }
+
+  // Mobile Viewport Tabs
+  const tabDetailsBtn = document.getElementById("tab-details-btn");
+  const tabDiagramBtn = document.getElementById("tab-diagram-btn");
+  const viewerContent = document.getElementById("viewer-content-panel");
+
+  if (tabDetailsBtn && tabDiagramBtn && viewerContent) {
+    tabDetailsBtn.addEventListener("click", () => {
+      tabDetailsBtn.classList.add("active");
+      tabDiagramBtn.classList.remove("active");
+      viewerContent.classList.add("show-details");
+      viewerContent.classList.remove("show-diagram");
+    });
+
+    tabDiagramBtn.addEventListener("click", () => {
+      tabDiagramBtn.classList.add("active");
+      tabDetailsBtn.classList.remove("active");
+      viewerContent.classList.add("show-diagram");
+      viewerContent.classList.remove("show-details");
     });
   }
 
@@ -446,18 +497,31 @@ function setupEventListeners() {
 function adjustSidebarResponsive() {
   const sidebar = document.getElementById("viewer-sidebar-aside");
   const toggleSidebarBtn = document.getElementById("toggle-sidebar-btn");
-  const closeSidebarBtn = document.getElementById("close-sidebar-btn");
+  const backdrop = document.getElementById("sidebar-backdrop");
 
   if (!sidebar) return;
 
-  if (window.innerWidth <= 768) {
-    sidebar.style.display = "none";
-    if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
-    if (closeSidebarBtn) closeSidebarBtn.style.display = "inline-block";
+  // Clear any inline styles that interfere with CSS responsive rules
+  sidebar.style.display = "";
+
+  const isMobile = window.innerWidth <= 1024;
+  if (isMobile) {
+    if (sidebar.classList.contains("open")) {
+      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "✕ Outline";
+      if (backdrop) backdrop.classList.add("active");
+    } else {
+      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
+      if (backdrop) backdrop.classList.remove("active");
+    }
+    sidebar.classList.remove("collapsed");
   } else {
-    sidebar.style.display = "flex";
-    if (toggleSidebarBtn) toggleSidebarBtn.innerText = "✕ Outline";
-    if (closeSidebarBtn) closeSidebarBtn.style.display = "none";
+    if (sidebar.classList.contains("collapsed")) {
+      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
+    } else {
+      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "✕ Outline";
+    }
+    sidebar.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("active");
   }
 }
 
@@ -499,6 +563,20 @@ function navigateSlide(index) {
   currentSlideIndex = index;
   const item = allSlides[index];
 
+  // Close sidebar drawer on mobile upon navigation
+  const sidebar = document.getElementById("viewer-sidebar-aside");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  const toggleSidebarBtn = document.getElementById("toggle-sidebar-btn");
+  if (sidebar && window.innerWidth <= 1024) {
+    sidebar.classList.remove("open");
+    if (backdrop) {
+      backdrop.classList.remove("active");
+    }
+    if (toggleSidebarBtn) {
+      toggleSidebarBtn.innerText = "☰ Outline";
+    }
+  }
+
   // Highlight in sidebar
   document.querySelectorAll(".slide-item").forEach(el => el.classList.remove("active"));
 
@@ -519,10 +597,32 @@ function navigateSlide(index) {
     updateSidebarProgress();
   }
 
+  // Tab selector visibility and default tab state
+  const tabContainer = document.getElementById("mobile-viewport-tabs");
+  const tabDetails = document.getElementById("tab-details-btn");
+  const tabDiagram = document.getElementById("tab-diagram-btn");
+  const viewerContent = document.getElementById("viewer-content-panel");
+
   if (item.type === "slide") {
     // Show slide viewport, hide quiz
     document.getElementById("active-slide-viewport").style.display = "flex";
     document.getElementById("active-quiz-viewport").style.display = "none";
+
+    if (item.visualization) {
+      if (tabContainer) tabContainer.style.display = "flex";
+      if (tabDetails && tabDiagram && viewerContent) {
+        tabDetails.classList.add("active");
+        tabDiagram.classList.remove("active");
+        viewerContent.classList.add("show-details");
+        viewerContent.classList.remove("show-diagram");
+      }
+    } else {
+      if (tabContainer) tabContainer.style.display = "none";
+      if (viewerContent) {
+        viewerContent.classList.add("show-details");
+        viewerContent.classList.remove("show-diagram");
+      }
+    }
 
     // Highlight sidebar item
     const sidebarItem = document.getElementById(`sidebar-item-${item.id}`);
@@ -574,6 +674,11 @@ function navigateSlide(index) {
   } else if (item.type === "quiz-question") {
     // Show quiz viewport, hide slide viewport
     document.getElementById("active-slide-viewport").style.display = "none";
+    if (tabContainer) tabContainer.style.display = "none";
+    if (viewerContent) {
+      viewerContent.classList.add("show-details");
+      viewerContent.classList.remove("show-diagram");
+    }
     
     const quizViewport = document.getElementById("active-quiz-viewport");
     if (quizViewport) {
