@@ -59,18 +59,18 @@
 <rect x="60" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="80" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">On-Demand Billing</text>
   <text x="80" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Pay-as-you-go serverless model access</text><rect x="90" y="150" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="110" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Input Tokens</text>
-  <text x="110" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">$0.0015 per 1,000 input tokens</text><rect x="90" y="210" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="110" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Output Tokens</text>
-  <text x="110" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">$0.0020 per 1,000 output tokens</text><rect x="90" y="270" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="110" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Ideal Use Case</text>
-  <text x="110" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Intermittent workloads, prototyping, development</text><text x="215" y="355" font-family="Inter" font-size="11.5" fill="#10B981" text-anchor="middle">✔ Low initial cost commitment</text><rect x="430" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="110" y="172.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Input Tokens</text>
+  <text x="110" y="190.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">$0.0015 per 1,000 input tokens</text><rect x="90" y="210" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="110" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Output Tokens</text>
+  <text x="110" y="250.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">$0.0020 per 1,000 output tokens</text><rect x="90" y="270" width="250" height="50" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
+  <text x="110" y="292.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Ideal Use Case</text>
+  <text x="110" y="310.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Intermittent workloads, prototyping, development</text><text x="215" y="355" font-family="Inter" font-size="11.5" fill="#10B981" text-anchor="middle">✔ Low initial cost commitment</text><rect x="430" y="95" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
   <text x="450" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Provisioned Throughput</text>
   <text x="450" y="145" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Dedicated capacity guarantees</text><rect x="460" y="150" width="250" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="480" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Dedicated Model Units (MU)</text>
-  <text x="480" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Reserved throughput rate limit (tokens/min)</text><rect x="460" y="210" width="250" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="480" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Time Commitments</text>
-  <text x="480" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">1-month or 6-month contract terms</text><rect x="460" y="270" width="250" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="480" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Ideal Use Case</text>
-  <text x="480" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Production pipelines, strict SLA latency requirements</text><text x="585" y="355" font-family="Inter" font-size="11.5" fill="#10B981" text-anchor="middle">✔ Guaranteed throughput, no cold starts</text>
+  <text x="480" y="172.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Dedicated Model Units (MU)</text>
+  <text x="480" y="190.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Reserved throughput rate limit (tokens/min)</text><rect x="460" y="210" width="250" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="480" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Time Commitments</text>
+  <text x="480" y="250.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">1-month or 6-month contract terms</text><rect x="460" y="270" width="250" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="480" y="292.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Ideal Use Case</text>
+  <text x="480" y="310.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Production pipelines, strict SLA latency requirements</text><text x="585" y="355" font-family="Inter" font-size="11.5" fill="#10B981" text-anchor="middle">✔ Guaranteed throughput, no cold starts</text>
 </svg>

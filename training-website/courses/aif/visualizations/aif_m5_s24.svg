@@ -66,8 +66,8 @@
   <text x="430" y="160" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Documented evidence of model fairness and bias</text><rect x="430" y="160" width="280" height="45" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
   <text x="450" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Pre-Training Data Bias Scan</text>
   <text x="450" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Verified: 0 class imbalances found</text><rect x="430" y="220" width="280" height="45" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
-  <text x="450" y="250" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Post-Training Model Evaluation</text>
-  <text x="450" y="270" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Verified: 0 demographic disparities found</text><rect x="430" y="280" width="280" height="40" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
-  <text x="450" y="310" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Feature SHAP Attribution</text>
-  <text x="450" y="330" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Explainability mapping compiled in report</text>
+  <text x="450" y="242.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Post-Training Model Evaluation</text>
+  <text x="450" y="260.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Verified: 0 demographic disparities found</text><rect x="430" y="280" width="280" height="40" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
+  <text x="450" y="302.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Feature SHAP Attribution</text>
+  <text x="450" y="320.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Explainability mapping compiled in report</text>
 </svg>

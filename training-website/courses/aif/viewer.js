@@ -625,7 +625,7 @@ function navigateSlide(index) {
         diagramCard.style.display = "flex";
         const iframe = document.getElementById("diagram-frame");
         if (iframe) {
-          iframe.src = `visualizations/${item.visualization}`;
+          iframe.src = `visualizations/${item.visualization}?v=1.4.0`;
         }
       } else {
         diagramCard.style.display = "none";

@@ -71,8 +71,8 @@
   <text x="330" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Customer Managed Keys</text><rect x="330" y="175" width="160" height="45" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="350" y="205" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Key Policy Verification</text>
   <text x="350" y="225" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">IAM roles validation</text><rect x="330" y="235" width="160" height="45" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="350" y="265" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Symmetric CMK</text>
-  <text x="350" y="285" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">AES-256 decryption key</text><line x1="510" y1="210" x2="620" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="350" y="257.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Symmetric CMK</text>
+  <text x="350" y="275.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">AES-256 decryption key</text><line x1="510" y1="210" x2="620" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="620" y1="210" x2="613.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="620" y1="210" x2="613.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="565.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">2. Return Plaintext</text><rect x="620" y="160" width="120" height="100" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />

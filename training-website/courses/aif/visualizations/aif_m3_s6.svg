@@ -70,10 +70,10 @@
   <text x="260" y="150" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Reasoning &amp; Plan execution (ReAct)</text><rect x="260" y="150" width="220" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
   <text x="280" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. Parse User Intent</text>
   <text x="280" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">LLM understands subtasks</text><rect x="260" y="210" width="220" height="50" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="280" y="240" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Execute Actions</text>
-  <text x="280" y="260" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Calls APIs &amp; queries data</text><rect x="260" y="270" width="220" height="40" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="280" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">3. Final Synthesis</text>
-  <text x="280" y="320" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Formats output</text><line x1="500" y1="160" x2="580" y2="130" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="280" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Execute Actions</text>
+  <text x="280" y="250.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Calls APIs &amp; queries data</text><rect x="260" y="270" width="220" height="40" rx="12" fill="rgba(255,153,0,0.05)" stroke="#FF9900" stroke-width="1.5" />
+  <text x="280" y="292.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">3. Final Synthesis</text>
+  <text x="280" y="310.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Formats output</text><line x1="500" y1="160" x2="580" y2="130" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="580" y1="130" x2="574.9174149337185" y2="136.17797127251433" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="580" y1="130" x2="572.1084274010113" y2="128.68733785196198" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="540.0" y="137.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Call API</text><line x1="500" y1="260" x2="580" y2="290" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
