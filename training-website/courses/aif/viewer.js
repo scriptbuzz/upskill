@@ -33,21 +33,11 @@ function initViewer() {
 }
 
 function loadProgress() {
-  try {
-    const progressRaw = localStorage.getItem("aif_progress_slides");
-    const parsed = progressRaw ? JSON.parse(progressRaw) : [];
-    completedSlides = Array.isArray(parsed) ? parsed : [];
-  } catch (e) {
-    completedSlides = [];
-  }
+  completedSlides = window.getCourseProgress("aif");
 }
 
 function saveProgress() {
-  try {
-    localStorage.setItem("aif_progress_slides", JSON.stringify(completedSlides));
-  } catch (e) {
-    console.error("Failed to save progress to localStorage:", e);
-  }
+  window.saveCourseProgress("aif", completedSlides);
 }
 
 function buildSlideList() {
@@ -410,13 +400,9 @@ function setupEventListeners() {
   const resetCourseBtn = document.getElementById("reset-course-btn");
   if (resetCourseBtn) {
     resetCourseBtn.addEventListener("click", () => {
-      showCustomConfirm().then((confirmed) => {
+      window.showCustomConfirm().then((confirmed) => {
         if (confirmed) {
-          try {
-            localStorage.removeItem("aif_progress_slides");
-          } catch (e) {
-            console.error(e);
-          }
+          window.clearCourseProgress("aif");
           window.location.href = "index.html";
         }
       });
@@ -452,36 +438,7 @@ function setupEventListeners() {
   if (iframe) {
     iframe.addEventListener("load", () => {
       try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        if (iframeDoc) {
-          // Forward scroll wheel
-          iframeDoc.addEventListener("wheel", (e) => {
-            const viewport = document.getElementById("active-slide-viewport");
-            if (viewport) {
-              viewport.scrollTop += e.deltaY;
-            }
-          }, { passive: true });
-
-          // Forward keyboard events for navigation
-          iframeDoc.addEventListener("keydown", (e) => {
-            const newEvent = new KeyboardEvent("keydown", {
-              key: e.key,
-              code: e.code,
-              bubbles: true,
-              cancelable: true,
-              view: window,
-              ctrlKey: e.ctrlKey,
-              altKey: e.altKey,
-              shiftKey: e.shiftKey,
-              metaKey: e.metaKey
-            });
-            document.dispatchEvent(newEvent);
-            
-            if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", " "].includes(e.key)) {
-              e.preventDefault();
-            }
-          });
-        }
+        window.setupIframeEventForwarding(iframe, document);
       } catch (err) {
         console.warn("Could not bind iframe events", err);
       }
@@ -855,43 +812,4 @@ function formatBulletText(text) {
   return formatted;
 }
 
-function showCustomConfirm() {
-  return new Promise((resolve) => {
-    const modal = document.getElementById("confirm-modal");
-    const cancelBtn = document.getElementById("confirm-modal-cancel");
-    const okBtn = document.getElementById("confirm-modal-ok");
-    
-    if (!modal) {
-      resolve(confirm("Are you sure you want to reset your training progress? This will delete all completed slide logs and quiz metrics."));
-      return;
-    }
-    
-    const handleCancel = () => {
-      cleanup();
-      resolve(false);
-    };
-    
-    const handleOk = () => {
-      cleanup();
-      resolve(true);
-    };
-    
-    const handleClose = () => {
-      cleanup();
-      resolve(false);
-    };
-    
-    const cleanup = () => {
-      cancelBtn.removeEventListener("click", handleCancel);
-      okBtn.removeEventListener("click", handleOk);
-      modal.removeEventListener("close", handleClose);
-      modal.close();
-    };
-    
-    cancelBtn.addEventListener("click", handleCancel);
-    okBtn.addEventListener("click", handleOk);
-    modal.addEventListener("close", handleClose);
-    
-    modal.showModal();
-  });
-}
+

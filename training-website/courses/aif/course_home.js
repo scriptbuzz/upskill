@@ -11,14 +11,7 @@ function initCourseHome() {
   }
 
   // Load progress
-  let completedSlides = [];
-  try {
-    const progressSlidesRaw = localStorage.getItem("aif_progress_slides");
-    const parsed = progressSlidesRaw ? JSON.parse(progressSlidesRaw) : [];
-    completedSlides = Array.isArray(parsed) ? parsed : [];
-  } catch (e) {
-    completedSlides = [];
-  }
+  let completedSlides = window.getCourseProgress("aif");
 
   // Count total slides (outlines + quiz steps)
   let totalSlides = 0;
@@ -93,13 +86,9 @@ function initCourseHome() {
         btnContainer.appendChild(resetBtn);
         
         resetBtn.addEventListener("click", () => {
-          showCustomConfirm().then((confirmed) => {
+          window.showCustomConfirm().then((confirmed) => {
             if (confirmed) {
-              try {
-                localStorage.removeItem("aif_progress_slides");
-              } catch (e) {
-                console.error(e);
-              }
+              window.clearCourseProgress("aif");
               window.location.reload();
             }
           });
@@ -225,43 +214,3 @@ function initCourseHome() {
   });
 }
 
-function showCustomConfirm() {
-  return new Promise((resolve) => {
-    const modal = document.getElementById("confirm-modal");
-    const cancelBtn = document.getElementById("confirm-modal-cancel");
-    const okBtn = document.getElementById("confirm-modal-ok");
-    
-    if (!modal) {
-      resolve(confirm("Are you sure you want to reset your training progress? This will delete all completed slide logs and quiz metrics."));
-      return;
-    }
-    
-    const handleCancel = () => {
-      cleanup();
-      resolve(false);
-    };
-    
-    const handleOk = () => {
-      cleanup();
-      resolve(true);
-    };
-    
-    const handleClose = () => {
-      cleanup();
-      resolve(false);
-    };
-    
-    const cleanup = () => {
-      cancelBtn.removeEventListener("click", handleCancel);
-      okBtn.removeEventListener("click", handleOk);
-      modal.removeEventListener("close", handleClose);
-      modal.close();
-    };
-    
-    cancelBtn.addEventListener("click", handleCancel);
-    okBtn.addEventListener("click", handleOk);
-    modal.addEventListener("close", handleClose);
-    
-    modal.showModal();
-  });
-}
