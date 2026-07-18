@@ -659,13 +659,16 @@ function navigateSlide(index) {
 
     document.getElementById("active-slide-title").innerText = `Module ${item.moduleId} Checkpoint Quiz — Step ${item.id.replace('q-', '')}`;
 
+    // Helper to see if an option is correct (supports multi-answer keys like "A, D")
+    const correctKeys = window.parseCorrectKeys(item.correct);
+
     // Render options list
     const optionsHtml = Object.entries(item.options).map(([key, val]) => {
       let cardClass = "option-card";
       let cursorStyle = "cursor: default;";
       let isIncorrect = false;
       if (item.solved) {
-        if (key === item.correct) {
+        if (correctKeys.includes(key)) {
           cardClass = "option-card correct";
         } else {
           cardClass = "option-card solved-incorrect";
@@ -677,7 +680,7 @@ function navigateSlide(index) {
       return `
         <div class="option-container" style="display: flex; flex-direction: column; width: 100%;">
           <div class="${cardClass}" style="${cursorStyle}" ${isIncorrect ? `data-option-key="${key}"` : ''}>
-            <span class="option-letter" style="${item.solved && key === item.correct ? 'background-color: var(--success); color: #000;' : ''}">${key}</span>
+            <span class="option-letter" style="${item.solved && correctKeys.includes(key) ? 'background-color: var(--success); color: #000;' : ''}">${key}</span>
             <span class="option-text">${formatBulletText(val)}</span>
           </div>
           <div class="wrong-explanation-box" id="wrong-explain-${key}" style="display: none; margin-top: 8px; padding: 12px; border-left: 3px solid var(--error); background-color: rgba(239, 68, 68, 0.04); border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.45; color: var(--text-main); animation: fadeIn 0.2s ease;">
@@ -794,11 +797,7 @@ function navigateSlide(index) {
 }
 
 function formatBulletText(text) {
-  let formatted = text;
-  formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  formatted = formatted.replace(/\*\*/g, '');
-  formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #FF9900; text-decoration: underline; font-weight: 600;">$1</a>');
-  return formatted;
+  return window.formatInlineText(text);
 }
 
 

@@ -17,6 +17,7 @@ training-website/courses/aif/
 ├── course_home.js       # Homepage logic (last-viewed routing & accordion lists)
 ├── viewer.html          # Interactive Slide & Quiz Viewport
 ├── viewer.js            # Viewer state machine (slide rendering & keyboard hooks)
+├── export.html          # Printable slides export page (Print / Save as PDF)
 ├── aif_data.js          # Course syllabus & quiz datasets
 └── visualizations/      # Course-specific interactive SVG diagrams
     ├── aif_m1_s1.svg
@@ -42,7 +43,14 @@ The overview page must include:
 3. **Overall Course Progress Card:** Shows percentage completion and a progress bar.
 4. **Reset Progress Button:** Triggers confirmation `<dialog id="confirm-modal">` to purge tracking logs from local storage.
 5. **Dynamic Module List Container:** An empty `<div id="modules-list">` where modules are injected by JavaScript.
-6. **Scripts:** Load `[course-id]_data.js` and `course_home.js`.
+6. **Export PDF Button:** An `<a href="export.html" class="btn btn-secondary" id="course-export-btn">⤓ Export PDF</a>` link beside the Start Learning CTA.
+7. **Scripts:** Load `course_shared.js`, `[course-id]_data.js`, and `course_home.js`.
+
+### C. Printable Export (`courses/[course-id]/export.html`)
+Every course must ship a printable export page:
+1. **Thin Shim:** The page contains only an empty `<main id="export-root">`, loads `css/export.css` (light print theme — not `styles.css`), then `course_shared.js`, the course data file, a guarded `window.EXPORT_COURSE_DATA = typeof XXX_COURSE_DATA !== "undefined" ? XXX_COURSE_DATA : null;` assignment, and finally the shared `js/course_export.js` renderer.
+2. **Renderer Behavior:** `course_export.js` builds a cover page, then every module's objectives, slides (bullets + SVG diagrams), and checkpoint quizzes with the correct answers highlighted; a screen-only toolbar offers Diagrams / Quizzes / Answer Key toggles and a Print button that waits for all diagram images to decode before calling `window.print()`.
+3. **PDF Output:** Produced via the browser's native Print → Save as PDF; no libraries.
 
 ### B. Slide Viewer (`courses/[course-id]/viewer.html`)
 The slide viewer must utilize the same split presenter structure:
@@ -228,6 +236,7 @@ To build or update a course, follow these exact sequential phases:
 1. **Data Binding:** Convert the outline and quiz slides into the structured JSON/JS format inside `[courseId]_data.js`.
 2. **Overview Page:** Create the overview page `index.html` referencing the syllabus data, and wire up `course_home.js` to render the module cards and calculate progress states.
 3. **Slide Presenter:** Set up the presenter viewport `viewer.html` and wire up the state machine, sidebar highlights, keyboard inputs, and solved quiz listeners in `viewer.js`.
+4. **Printable Export:** Add the `export.html` shim (see section 3.C) and the `⤓ Export PDF` button on the overview page so the course supports Print / Save as PDF.
 
 ### Phase 5: Verification & Testing
 1. **Local Server Testing:** Run a local Python server to verify that accordion outlines expand, sidebar links scroll active items into view, and slides render diagrams seamlessly.

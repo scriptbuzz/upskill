@@ -666,7 +666,7 @@ function navigateSlide(index) {
     document.getElementById("active-slide-title").innerText = `Module ${cleanModuleNum} Checkpoint Quiz — Step ${item.id.replace('q-', '')}`;
 
     // Helper to see if an option is correct
-    const correctKeys = item.correct.split(',').map(s => s.trim());
+    const correctKeys = window.parseCorrectKeys(item.correct);
 
     // Render options list
     const optionsHtml = Object.entries(item.options).map(([key, val]) => {
@@ -805,11 +805,7 @@ function navigateSlide(index) {
 }
 
 function formatBulletText(text) {
-  let formatted = text;
-  formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  formatted = formatted.replace(/\*\*/g, '');
-  formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #FF9900; text-decoration: underline; font-weight: 600;">$1</a>');
-  return formatted;
+  return window.formatInlineText(text);
 }
 
 

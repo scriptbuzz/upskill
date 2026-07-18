@@ -8,24 +8,22 @@
 (function () {
   const data = window.EXPORT_COURSE_DATA;
   const root = document.getElementById("export-root");
-  if (!data || !root) return;
+  if (!root) return;
+  if (!data) {
+    root.innerHTML = `
+      <div class="export-document" style="text-align: center;">
+        <h1>Export Unavailable</h1>
+        <p>The course data failed to load. Please go back and try again.</p>
+        <p><a href="index.html">← Back to Course</a></p>
+      </div>
+    `;
+    return;
+  }
 
   document.title = `${data.title} — Printable Slides`;
 
-  function escapeHtml(text) {
-    return String(text)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-  }
-
-  function formatText(text) {
-    let formatted = escapeHtml(text);
-    formatted = formatted.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-    formatted = formatted.replace(/\*\*/g, "");
-    formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-    return formatted;
-  }
+  const escapeHtml = window.escapeHtml;
+  const formatText = window.formatInlineText;
 
   // Normalize slide ids for display: "m1-s3" → "1.3", "1.3" stays as-is
   function prettySlideId(id) {
@@ -65,7 +63,16 @@
   toolbar.querySelector("#toggle-answers").addEventListener("change", (e) => {
     document.body.classList.toggle("show-answers", e.target.checked);
   });
-  toolbar.querySelector("#export-print-btn").addEventListener("click", () => {
+  toolbar.querySelector("#export-print-btn").addEventListener("click", async (e) => {
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    btn.textContent = "Preparing diagrams…";
+    // Wait for every diagram to finish loading/decoding so none print blank
+    await Promise.allSettled(
+      Array.from(root.querySelectorAll("img")).map((img) => img.decode())
+    );
+    btn.disabled = false;
+    btn.textContent = "🖨 Print / Save as PDF";
     window.print();
   });
 
@@ -94,13 +101,13 @@
       .map((slide) => {
         const bulletsHtml = (slide.bullets || [])
           .map((bullet) => {
-            const indentClass = bullet.indent === 1 ? "indent-1" : bullet.indent === 2 ? "indent-2" : "";
+            const indentClass = bullet.indent ? `indent-${bullet.indent}` : "";
             return `<li${indentClass ? ` class="${indentClass}"` : ""}>${formatText(bullet.text)}</li>`;
           })
           .join("");
 
         const diagramHtml = slide.visualization
-          ? `<div class="export-diagram"><img src="visualizations/${escapeHtml(slide.visualization)}" alt="${escapeHtml(slide.title)} diagram" loading="lazy"></div>`
+          ? `<div class="export-diagram"><img src="visualizations/${escapeHtml(slide.visualization)}" alt="${escapeHtml(slide.title)} diagram" decoding="async"></div>`
           : "";
 
         return `
@@ -116,7 +123,7 @@
 
     const quizHtml = (module.quiz || [])
       .map((question) => {
-        const correctKeys = String(question.correct).split(",").map((s) => s.trim());
+        const correctKeys = window.parseCorrectKeys(question.correct);
         const optionsHtml = Object.keys(question.options)
           .map((letter) => {
             const isCorrect = correctKeys.includes(letter);
@@ -147,7 +154,7 @@
     parts.push(`
       <section class="export-module">
         <header class="export-module-header">
-          <h2>Module ${escapeHtml(String(prettyModuleId(module.id)))}: ${formatText(module.title)}</h2>
+          <h2>${/^\s*Module\s+\d+/i.test(module.title) ? formatText(module.title) : `Module ${escapeHtml(String(prettyModuleId(module.id)))}: ${formatText(module.title)}`}</h2>
           ${objectivesHtml ? `<ul class="module-objectives">${objectivesHtml}</ul>` : ""}
         </header>
         ${slidesHtml}

@@ -140,7 +140,7 @@ body#course-export-body {
   break-before: page;
 }
 
-.export-module:first-of-type {
+.export-cover + .export-module {
   break-before: auto;
 }
 
@@ -229,7 +229,20 @@ body#course-export-body {
   background-color: var(--export-muted);
 }
 
-.export-slide a {
+.export-slide ul.slide-points li.indent-3 {
+  margin-left: 72px;
+}
+
+.export-slide ul.slide-points li.indent-3::before {
+  width: 6px;
+  height: 6px;
+  top: 8px;
+  background-color: transparent;
+  border: 1px solid var(--export-muted);
+}
+
+.export-slide a,
+a.content-link {
   color: var(--export-blue);
   font-weight: 600;
 }

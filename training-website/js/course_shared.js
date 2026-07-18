@@ -32,6 +32,29 @@ window.clearCourseProgress = function(courseId) {
   }
 };
 
+// Escape HTML special characters, including quotes for attribute contexts
+window.escapeHtml = function(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+};
+
+// Convert inline markdown (**bold**, [text](url)) in course content to HTML
+window.formatInlineText = function(text) {
+  let formatted = window.escapeHtml(text);
+  formatted = formatted.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  formatted = formatted.replace(/\*\*/g, "");
+  formatted = formatted.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="content-link">$1</a>');
+  return formatted;
+};
+
+// Parse a quiz "correct" field ("B" or multi-answer "A, D") into a key array
+window.parseCorrectKeys = function(correct) {
+  return String(correct).split(",").map((s) => s.trim()).filter(Boolean);
+};
+
 // Event forwarding to prevent iframe focus/mouse scrolling capture locks
 window.setupIframeEventForwarding = function(iframe, parentDoc) {
   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
