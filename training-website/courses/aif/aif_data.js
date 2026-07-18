@@ -6,7 +6,7 @@ const AIF_COURSE_DATA = {
   "modules": [
     {
       "id": "m1",
-      "title": "Module 1 - Fundamentals of AI and ML",
+      "title": "Fundamentals of AI and ML",
       "objectives": [
         "Explain basic AI concepts and terminologies.",
         "Identify practical use cases for AI.",
@@ -611,7 +611,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m2",
-      "title": "Module 2 - Fundamentals of Generative AI",
+      "title": "Fundamentals of Generative AI",
       "objectives": [
         "Explain the basic concepts of generative AI.",
         "Describe the capabilities and limitations of generative AI for business problems.",
@@ -884,7 +884,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m3",
-      "title": "Module 3 - Applications of Foundation Models",
+      "title": "Applications of Foundation Models",
       "objectives": [
         "Describe design considerations for applications that use foundation models (FMs).",
         "Choose effective prompt engineering techniques.",
@@ -1450,7 +1450,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m4",
-      "title": "Module 4 - Guidelines for Responsible AI",
+      "title": "Guidelines for Responsible AI",
       "objectives": [
         "Describe the core pillars of responsible AI systems.",
         "Explain the concepts of model transparency, interpretability, and explainability.",
@@ -2014,7 +2014,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m5",
-      "title": "Module 5 - Security, Compliance, and Governance for AI Solutions",
+      "title": "Security, Compliance, and Governance for AI Solutions",
       "objectives": [
         "Apply the AWS Shared Responsibility Model to AI and machine learning services.",
         "Secure training data, pipelines, and endpoints using IAM, encryption, and VPCs.",
@@ -2947,7 +2947,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m6",
-      "title": "Module 6 - Course Review and Wrap-up",
+      "title": "Course Review and Wrap-up",
       "objectives": [
         "Review the five exam domains for the AWS Certified AI Practitioner (AIF-C01) exam.",
         "Understand the test-taking strategies and elimination techniques.",
@@ -3109,7 +3109,7 @@ const AIF_COURSE_DATA = {
     },
     {
       "id": "m7",
-      "title": "Module 7 - Skill Builder Labs",
+      "title": "Skill Builder Labs",
       "objectives": [
         "Gain hands-on experience with core AWS AI and ML services.",
         "Explore the Amazon Bedrock console, adjust foundation model parameters, and test prompts.",

@@ -18,7 +18,7 @@ function initLandingPage() {
 
   // Check if there's any active progress
   if (completedSlides.length > 0) {
-    const totalSlides = 99; // CLF has 99 steps (75 slides + 24 quiz steps)
+    const totalSlides = 103; // CLF has 103 steps (79 slides + 24 quiz steps)
     const percent = Math.min(Math.round((completedSlides.length / totalSlides) * 100), 100);
     
     // Update the button on the CLF course card to support a reset button next to it
