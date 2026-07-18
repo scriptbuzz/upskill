@@ -3,3 +3,6 @@ training-resources/**
 !training-resources/**/
 !training-resources/**/*.md
 *project_history.md
+
+# Local tool settings
+.claude/settings.local.json
