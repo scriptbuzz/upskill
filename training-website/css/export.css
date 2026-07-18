@@ -1,0 +1,372 @@
+/* Printable course export styles (light theme, optimized for Print → Save as PDF) */
+
+:root {
+  --export-ink: #0f172a;
+  --export-muted: #475569;
+  --export-border: #cbd5e1;
+  --export-bg: #e2e8f0;
+  --export-page: #ffffff;
+  --export-orange: #ea8600;
+  --export-blue: #1d70b8;
+  --export-green: #059669;
+  --export-red: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body#course-export-body {
+  margin: 0;
+  background-color: var(--export-bg);
+  color: var(--export-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- Screen-only toolbar ---------- */
+.export-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 24px;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-bottom: 1px solid #334155;
+}
+
+.export-toolbar .toolbar-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: auto;
+}
+
+.export-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.export-toolbar a.toolbar-back {
+  color: #94a3b8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.export-toolbar a.toolbar-back:hover {
+  color: #f1f5f9;
+}
+
+.export-toolbar .toolbar-print-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d70b8, #00a3e0);
+}
+
+.export-toolbar .toolbar-print-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Document body ---------- */
+.export-document {
+  max-width: 880px;
+  margin: 24px auto 80px auto;
+  background-color: var(--export-page);
+  padding: 48px 56px;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(15, 23, 42, 0.15);
+}
+
+/* Cover */
+.export-cover {
+  text-align: center;
+  padding: 48px 0 32px 0;
+  border-bottom: 3px solid var(--export-ink);
+  margin-bottom: 40px;
+}
+
+.export-cover .cover-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--export-muted);
+  margin-bottom: 12px;
+}
+
+.export-cover h1 {
+  font-size: 34px;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.export-cover .cover-description {
+  color: var(--export-muted);
+  font-size: 15px;
+  max-width: 560px;
+  margin: 0 auto 24px auto;
+}
+
+.export-cover .cover-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--export-ink);
+}
+
+.export-cover .cover-stats span strong {
+  display: block;
+  font-size: 22px;
+}
+
+/* Module headers */
+.export-module {
+  break-before: page;
+}
+
+.export-module:first-of-type {
+  break-before: auto;
+}
+
+.export-module-header {
+  border-left: 6px solid var(--export-orange);
+  padding: 8px 0 8px 18px;
+  margin: 32px 0 8px 0;
+}
+
+.export-module-header h2 {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+}
+
+.export-module-header .module-objectives {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--export-muted);
+  font-size: 13px;
+}
+
+/* Slides */
+.export-slide {
+  break-inside: avoid;
+  border: 1px solid var(--export-border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.export-slide .slide-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--export-blue);
+  margin-bottom: 4px;
+}
+
+.export-slide h3 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+}
+
+.export-slide ul.slide-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.export-slide ul.slide-points li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+}
+
+.export-slide ul.slide-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--export-orange);
+  border-radius: 2px;
+}
+
+.export-slide ul.slide-points li.indent-1 {
+  margin-left: 24px;
+}
+
+.export-slide ul.slide-points li.indent-1::before {
+  background-color: var(--export-blue);
+  border-radius: 50%;
+}
+
+.export-slide ul.slide-points li.indent-2 {
+  margin-left: 48px;
+}
+
+.export-slide ul.slide-points li.indent-2::before {
+  width: 6px;
+  height: 6px;
+  top: 8px;
+  background-color: var(--export-muted);
+}
+
+.export-slide a {
+  color: var(--export-blue);
+  font-weight: 600;
+}
+
+/* Diagrams */
+.export-diagram {
+  margin-top: 16px;
+  border: 1px solid var(--export-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0b0f19;
+}
+
+.export-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 450;
+}
+
+/* Quizzes */
+.export-quiz {
+  break-inside: avoid;
+  border: 1px solid var(--export-border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.export-quiz .quiz-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--export-green);
+  margin-bottom: 8px;
+}
+
+.export-quiz .quiz-question {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.export-quiz ol.quiz-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.export-quiz ol.quiz-options li {
+  border: 1px solid var(--export-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.export-quiz ol.quiz-options li .option-letter {
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+body.show-answers .export-quiz ol.quiz-options li.correct-option {
+  border-color: var(--export-green);
+  background-color: #ecfdf5;
+}
+
+body.show-answers .export-quiz ol.quiz-options li.correct-option::after {
+  content: " ✔ Correct Answer";
+  color: var(--export-green);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.export-quiz .quiz-explanation,
+.export-quiz .wrong-explanation {
+  display: none;
+}
+
+body.show-answers .export-quiz .quiz-explanation {
+  display: block;
+  border-left: 4px solid var(--export-green);
+  background-color: #f8fafc;
+  padding: 10px 14px;
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--export-muted);
+  border-radius: 0 8px 8px 0;
+}
+
+body.show-answers .export-quiz .wrong-explanation {
+  display: block;
+  margin-top: 6px;
+  font-size: 11.5px;
+  color: var(--export-red);
+}
+
+/* Toolbar toggles */
+body.hide-diagrams .export-diagram {
+  display: none;
+}
+
+body.hide-quizzes .export-quiz {
+  display: none;
+}
+
+/* ---------- Print rules ---------- */
+@media print {
+  body#course-export-body {
+    background-color: #ffffff;
+  }
+
+  .export-toolbar {
+    display: none;
+  }
+
+  .export-document {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .export-cover {
+    padding-top: 96px;
+    break-after: page;
+    border-bottom: none;
+  }
+
+  .export-slide,
+  .export-quiz {
+    border-color: #94a3b8;
+  }
+}
+
+@page {
+  margin: 14mm;
+}
