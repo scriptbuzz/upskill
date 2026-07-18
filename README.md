@@ -18,8 +18,8 @@ Welcome to **4 Corners Academy**, a study guide and exam preparation platform de
 
 | Course Tag | Course Name | Status | Modules | Slides | Checkpoint Quizzes | Access |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.4 beta` | 6 | 79 | 5 | Free |
-| ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.4 beta` | 7 | 135 | 11 | Requires Subscription |
+| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.5 beta` | 6 | 79 | 5 | Free |
+| ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.5 beta` | 7 | 135 | 11 | Requires Subscription |
 | ![AGY-101](https://img.shields.io/badge/AGY--101-A1A1AA?style=flat-square) | **Agentic AI Essentials** | `Locked` | 6 | 64 | 4 | Locked |
 
 ---
@@ -56,6 +56,7 @@ Welcome to **4 Corners Academy**, a study guide and exam preparation platform de
 * **⌨️ Keyboard Navigation:** Navigate linearly through slides and check-point questions using Arrow keys (`Left`/`Right`/`Up`/`Down`) or spacebar, and jump to bookends using `Home`/`End` hotkeys.
 * **📝 Slide Checkpoint Quizzes:** Quizzes are integrated inside the slide streams as slide-pairs: a Question Slide followed by a Solved Slide featuring answer keys and interactive incorrect option explanation cards.
 * **🧹 Promise-Based Custom Dialogs:** System/browser native `confirm()` triggers are replaced with HTML `<dialog>` confirmation overlays executing inside asynchronous Promise handlers.
+* **🖨 Printable PDF Export:** Every course ships a print-optimized export page rendering all modules, slides, diagrams, and quizzes into a single document, with toggles for diagrams/quizzes/answer key, saved to PDF via the browser's native print dialog.
 
 ---
 
