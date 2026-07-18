@@ -77,6 +77,8 @@ The slide viewer must utilize the same split presenter structure:
 The data file defines the course metadata and a flat hierarchical list of modules. Format the file as a global variable:
 
 ```javascript
+**Important — no embedded numbering in titles:** Module titles must NOT begin with a "Module N" prefix (e.g. write `"Fundamentals of AI and ML"`, not `"Module 1 - Fundamentals of AI and ML"`). The viewer sidebar, course homepage cards, and PDF export all prepend their own module numbering, so embedded prefixes render duplicated headings.
+
 const XXX_COURSE_DATA = { // XXX represents course-id (CLF/AIF)
   "id": "course-id",
   "version": "v1.0 beta", // Keep in sync with the landing page course card badge; shown on the PDF export cover
@@ -246,4 +248,5 @@ To build or update a course, follow these exact sequential phases:
 3. **SVG Mappings Script:** Run a script checking that all image paths in `[courseId]_data.js` exist in `courses/[courseId]/visualizations/`.
 
 ### Phase 6: Commit Tracking & Push
-1. Stage changed files, commit them to the repository, and push to trigger automated deployment.
+1. **Version & Timestamp Bump:** When course content or features change, bump the affected course's version badge and `Last Modified` line on the main landing page card, the `version` field in `[course-id]_data.js`, and the README course catalog table. Keep all three in sync.
+2. Stage changed files, commit them to the repository, and push to trigger automated deployment (deploys run from `main` only).

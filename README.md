@@ -56,6 +56,7 @@ Welcome to **4 Corners Academy**, a study guide and exam preparation platform de
 * **📝 Slide Checkpoint Quizzes:** Quizzes are integrated inside the slide streams as slide-pairs: a Question Slide followed by a Solved Slide featuring answer keys and interactive incorrect option explanation cards.
 * **🧹 Promise-Based Custom Dialogs:** System/browser native `confirm()` triggers are replaced with HTML `<dialog>` confirmation overlays executing inside asynchronous Promise handlers.
 * **🖨 Printable PDF Export:** Every course ships a print-optimized export page rendering all modules, slides, diagrams, and quizzes into a single document, with toggles for diagrams/quizzes/answer key, saved to PDF via the browser's native print dialog.
+* **🔗 Course Share Links:** Each course overview page has a one-click Share button that copies the course URL to the clipboard and displays the copied link.
 
 ---
 
