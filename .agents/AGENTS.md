@@ -191,7 +191,7 @@ When loading the viewer page:
 - If a slide does not require a diagram (e.g., text-only slide), the `"visualization"` attribute in the data JSON must be set to `""` or omitted.
 - The slide viewer state machine must dynamically handle this:
   - If `"visualization"` is set, show the `#active-slide-diagram` card (`display: flex`) and set the `<iframe>` source.
-  - If `"visualization"` is empty or missing, hide the `#active-slide-diagram` card (`display: none`). The left details card (`#active-slide-details`) will automatically expand to take up 100% width of the viewport due to `flex: 1` styling.
+  - If `"visualization"` is empty or missing, hide the `#active-slide-diagram` card (`display: none`) **and reset the iframe to `src="about:blank"`** so the previous slide's diagram can never linger or reappear (e.g. via the mobile Diagram tab). Hide the mobile tab bar on text-only slides and quiz steps via its inline style — mobile CSS must not force it visible with `!important`. The left details card (`#active-slide-details`) will automatically expand to take up 100% width of the viewport due to `flex: 1` styling.
 
 ---
 
