@@ -1048,9 +1048,10 @@ footer {
     overflow: visible !important;
   }
 
-  /* Viewport Tabbing System */
+  /* Viewport Tabbing System (viewer.js toggles inline display per slide:
+     flex when the slide has a diagram, none for text-only slides and quizzes) */
   .mobile-tabs-bar {
-    display: flex !important;
+    display: flex;
     width: 100%;
     border-bottom: 1px solid var(--border-main);
     background-color: #0b0f19;

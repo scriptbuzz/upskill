@@ -621,14 +621,18 @@ function navigateSlide(index) {
     // Render SVG diagram
     const diagramCard = document.getElementById("active-slide-diagram");
     if (diagramCard) {
+      const iframe = document.getElementById("diagram-frame");
       if (item.visualization) {
         diagramCard.style.display = "flex";
-        const iframe = document.getElementById("diagram-frame");
         if (iframe) {
           iframe.src = `visualizations/${item.visualization}?v=1.4.0`;
         }
       } else {
         diagramCard.style.display = "none";
+        // Clear the stale diagram so it can never flash or reappear on text-only slides
+        if (iframe) {
+          iframe.src = "about:blank";
+        }
       }
     }
 
