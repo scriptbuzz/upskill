@@ -1325,3 +1325,11 @@ a.content-link {
   text-decoration: underline;
   font-weight: 600;
 }
+
+/* The Details/Diagram viewport tabs are mobile-only; viewer.js toggles their
+   inline display per slide, so force them off above the mobile breakpoint */
+@media (min-width: 1025px) {
+  .mobile-tabs-bar {
+    display: none !important;
+  }
+}
