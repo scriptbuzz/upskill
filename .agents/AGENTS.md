@@ -44,7 +44,8 @@ The overview page must include:
 4. **Reset Progress Button:** Triggers confirmation `<dialog id="confirm-modal">` to purge tracking logs from local storage.
 5. **Dynamic Module List Container:** An empty `<div id="modules-list">` where modules are injected by JavaScript.
 6. **Export PDF Button:** An `<a href="export.html" class="btn btn-secondary" id="course-export-btn">⤓ Export PDF</a>` link beside the Start Learning CTA.
-7. **Scripts:** Load `course_shared.js`, `[course-id]_data.js`, and `course_home.js`.
+7. **Share Button:** A `<button class="btn btn-secondary" id="course-share-btn">🔗 Share</button>` beside the Export PDF button, plus a hidden `<div id="share-link-output">` below the progress bar; `course_home.js` wires it via `window.initCourseShareButton("course-share-btn", "share-link-output")`, which copies the course page URL to the clipboard and displays it.
+8. **Scripts:** Load `course_shared.js`, `[course-id]_data.js`, and `course_home.js`.
 
 ### C. Printable Export (`courses/[course-id]/export.html`)
 Every course must ship a printable export page:
@@ -78,6 +79,7 @@ The data file defines the course metadata and a flat hierarchical list of module
 ```javascript
 const XXX_COURSE_DATA = { // XXX represents course-id (CLF/AIF)
   "id": "course-id",
+  "version": "v1.0 beta", // Keep in sync with the landing page course card badge; shown on the PDF export cover
   "title": "Course Title",
   "description": "Course description...",
   "modules": [

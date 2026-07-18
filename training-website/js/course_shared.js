@@ -55,6 +55,40 @@ window.parseCorrectKeys = function(correct) {
   return String(correct).split(",").map((s) => s.trim()).filter(Boolean);
 };
 
+// Wire up a Share button that copies the course page link and shows it
+window.initCourseShareButton = function(buttonId, outputId) {
+  const btn = document.getElementById(buttonId);
+  const output = document.getElementById(outputId);
+  if (!btn) return;
+
+  btn.addEventListener("click", async () => {
+    const link = window.location.origin + window.location.pathname;
+    let copied = false;
+    try {
+      await navigator.clipboard.writeText(link);
+      copied = true;
+    } catch (e) {
+      // Fallback for browsers without clipboard API access
+      const helper = document.createElement("textarea");
+      helper.value = link;
+      helper.style.position = "fixed";
+      helper.style.opacity = "0";
+      document.body.appendChild(helper);
+      helper.select();
+      try {
+        copied = document.execCommand("copy");
+      } catch (err) {
+        copied = false;
+      }
+      helper.remove();
+    }
+    if (output) {
+      output.style.display = "block";
+      output.textContent = copied ? `✓ Link copied to clipboard: ${link}` : `Copy this link: ${link}`;
+    }
+  });
+};
+
 // Event forwarding to prevent iframe focus/mouse scrolling capture locks
 window.setupIframeEventForwarding = function(iframe, parentDoc) {
   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;

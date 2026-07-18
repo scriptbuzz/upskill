@@ -1,5 +1,6 @@
 const CLF_COURSE_DATA = {
   "id": "clf",
+  "version": "v1.5 beta",
   "title": "AWS Certified Cloud Practitioner (CLF-C02)",
   "description": "Master the foundations of the AWS Cloud and prepare to pass your CLF certification exam.",
   "modules": [

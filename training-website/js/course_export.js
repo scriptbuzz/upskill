@@ -83,6 +83,7 @@
     <section class="export-cover">
       <div class="cover-kicker">4 Corners Academy — Study Guide</div>
       <h1>${escapeHtml(data.title)}</h1>
+      ${data.version ? `<div class="cover-version">${escapeHtml(data.version)}</div>` : ""}
       <p class="cover-description">${escapeHtml(data.description)}</p>
       <div class="cover-stats">
         <span><strong>${data.modules.length}</strong> Modules</span>

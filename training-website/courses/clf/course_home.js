@@ -10,6 +10,8 @@ function initCourseHome() {
     return;
   }
 
+  window.initCourseShareButton("course-share-btn", "share-link-output");
+
   // Load progress
   let completedSlides = window.getCourseProgress("clf");
 
