@@ -50,28 +50,24 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">S3 Lifecycle Configurations Conveyor Belt</text>
 <rect x="40" y="160" width="125" height="100" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">S3 Standard</text>
-  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Active workspace creation</text><line x1="165" y1="210" x2="220" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Active workspace<tspan x="60" dy="15">creation</tspan></text><line x1="165" y1="210" x2="220" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="220" y1="210" x2="213.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="220" y1="210" x2="213.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="192.5" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">30 Days</text><rect x="220" y="160" width="125" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="240" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">S3 Standard-IA</text>
-  <text x="240" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Infrequently accessed files</text><line x1="345" y1="210" x2="400" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="240" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Infrequently<tspan x="240" dy="15">accessed files</tspan></text><line x1="345" y1="210" x2="400" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="400" y1="210" x2="393.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="400" y1="210" x2="393.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="372.5" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">90 Days</text><rect x="400" y="160" width="125" height="100" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="420" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">S3 Glacier Archive</text>
-  <text x="420" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Cold low-cost storage tape</text><line x1="525" y1="210" x2="580" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="420" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="100" lengthAdjust="spacingAndGlyphs">S3 Glacier Archive</text>
+  <text x="420" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Cold low-cost<tspan x="420" dy="15">storage tape</tspan></text><line x1="525" y1="210" x2="580" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="580" y1="210" x2="573.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="580" y1="210" x2="573.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="552.5" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">365 Days</text><rect x="580" y="160" width="180" height="100" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
   <text x="600" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Permanent Deletion</text>
-  <text x="600" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Securely shredded, audit clean</text>
+  <text x="600" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Securely shredded,<tspan x="600" dy="15">audit clean</tspan></text>
 </svg>

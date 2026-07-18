@@ -50,15 +50,11 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Logging API Calls with AWS CloudTrail</text>
 <rect x="60" y="160" width="140" height="100" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
   <text x="80" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">User API Request</text>
-  <text x="80" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., DeleteModelInstance</text>
+  <text x="80" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="115" lengthAdjust="spacingAndGlyphs">e.g., DeleteModelInstance</text>
     <g transform="translate(115, 215)">
       <circle cx="15" cy="10" r="7" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
       <path d="M 3,24 Q 15,14 27,24" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
@@ -72,8 +68,8 @@
   <line x1="590" y1="210" x2="583.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="590" y1="210" x2="583.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="535.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Save to</text><rect x="590" y="160" width="150" height="100" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
-  <text x="610" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Encrypted S3 Log Bucket</text>
-  <text x="610" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Immutable audit trail records</text>
+  <text x="610" y="184" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Encrypted S3<tspan x="610" dy="15">Log Bucket</tspan></text>
+  <text x="610" y="222" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Immutable audit<tspan x="610" dy="14">trail records</tspan></text>
     <g transform="translate(650, 215)">
       <path d="M 0,5 Q 15,0 30,5 L 30,25 Q 15,30 0,25 Z" fill="none" stroke="#10B981" stroke-width="1.5" />
       <path d="M 0,12 Q 15,17 30,12" fill="none" stroke="#10B981" stroke-width="1.5" />

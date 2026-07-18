@@ -46,16 +46,12 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS RAM Central Resource Sharing</text>
   <rect x="320" y="100" width="160" height="90" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
-  <text x="340" y="135" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Central Net Account</text>
+  <text x="340" y="135" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC" textLength="135" lengthAdjust="spacingAndGlyphs">Central Net Account</text>
   <text x="340" y="155" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Owns Transit Gateway</text>
-<rect x="360" y="130" width="80" height="40" rx="4" fill="#00A3E0" /><text x="400" y="155" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0F172A" text-anchor="middle">Gateway</text>  <rect x="60" y="280" width="220" height="90" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
+<rect x="360" y="162" width="80" height="24" rx="4" fill="#00A3E0" /><text x="400" y="178" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0F172A" text-anchor="middle">Gateway</text>  <rect x="60" y="280" width="220" height="90" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
   <text x="80" y="315" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Developer Account</text>
   <text x="80" y="335" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Accesses shared gateway</text>
   <rect x="520" y="280" width="220" height="90" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />

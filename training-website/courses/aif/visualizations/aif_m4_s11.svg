@@ -50,10 +50,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon Bedrock Guardrails Filtering Gate</text>
 <rect x="40" y="160" width="120" height="100" rx="12" fill="url(#dark-card)" stroke="#334155" stroke-width="1.5" />
@@ -71,7 +67,7 @@
   <line x1="380" y1="210" x2="373.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="380" y1="210" x2="373.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="380" y="130" width="130" height="160" rx="12" fill="rgba(245,158,11,0.05)" stroke="#F59E0B" stroke-width="1.5" />
   <text x="400" y="160" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Topic Filter</text>
-  <text x="400" y="180" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Denied business scopes</text><line x1="510" y1="210" x2="550" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
+  <text x="400" y="180" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="105" lengthAdjust="spacingAndGlyphs">Denied business scopes</text><line x1="510" y1="210" x2="550" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="550" y1="210" x2="543.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="550" y1="210" x2="543.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="550" y="130" width="130" height="160" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10B981" stroke-width="1.5" />
   <text x="570" y="160" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">PII Masking</text>
@@ -79,5 +75,5 @@
   <line x1="720" y1="210" x2="713.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="720" y1="210" x2="713.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" /><rect x="720" y="160" width="60" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="740" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">LLM</text>
-  <text x="740" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Clean Output</text>
+  <text x="750" y="277" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" text-anchor="middle">Clean Output</text>
 </svg>

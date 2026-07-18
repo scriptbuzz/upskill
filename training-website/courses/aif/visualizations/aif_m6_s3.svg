@@ -50,10 +50,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Validating Exam Readiness score targets</text>
 <circle cx="400" cy="240" r="140" fill="none" stroke="#EF4444" stroke-width="25" /><circle cx="400" cy="240" r="105" fill="none" stroke="#FF9900" stroke-width="25" /><circle cx="400" cy="240" r="70" fill="none" stroke="#10B981" stroke-width="25" /><circle cx="400" cy="240" r="35" fill="none" stroke="#00A3E0" stroke-width="25" /><circle cx="400" cy="240" r="10" fill="#F8FAFC" /><text x="560" y="150" font-family="Inter" font-size="12" font-weight="700" fill="#EF4444">Needs study (&lt; 60%)</text><text x="560" y="210" font-family="Inter" font-size="12" font-weight="700" fill="#FF9900">Reviewing (60% - 74%)</text><text x="560" y="270" font-family="Inter" font-size="12" font-weight="700" fill="#10B981">Ready (75%+)</text><line x1="280" y1="120" x2="390" y2="230" stroke="#F8FAFC" stroke-width="4" stroke-linecap="round" /><polygon points="380,230 390,230 390,220" fill="#F8FAFC" /><text x="260" y="115" font-family="Inter" font-size="13" font-weight="700" fill="#F8FAFC">Passed target score 700</text>

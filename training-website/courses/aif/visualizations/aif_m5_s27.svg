@@ -50,21 +50,17 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Trusted Advisor Five Categories Dashboard</text>
 <rect x="50" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
-  <text x="70" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Cost Optimization</text>
-  <text x="70" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Scan idle DB instances</text><circle cx="115" cy="290" r="15" fill="#10B981" /><path d="M 108,290 L 113,295 L 122,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="190" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="70" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="105" lengthAdjust="spacingAndGlyphs">Cost Optimization</text>
+  <text x="70" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="105" lengthAdjust="spacingAndGlyphs">Scan idle DB instances</text><circle cx="115" cy="290" r="15" fill="#10B981" /><path d="M 108,290 L 113,295 L 122,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="190" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="210" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Performance</text>
-  <text x="210" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Monitor connection limits</text><circle cx="255" cy="290" r="15" fill="#10B981" /><path d="M 248,290 L 253,295 L 262,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="330" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
-  <text x="350" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Security Warnings</text>
-  <text x="350" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">MFA checks &amp; open ports</text><circle cx="395" cy="290" r="15" fill="#EF4444" filter="url(#glow-orange)" /><text x="395" y="294" font-family="Inter" font-size="12" font-weight="700" fill="#000000" text-anchor="middle">!</text><rect x="470" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="210" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Monitor<tspan x="210" dy="15">connection limits</tspan></text><circle cx="255" cy="290" r="15" fill="#10B981" /><path d="M 248,290 L 253,295 L 262,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="330" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="350" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="105" lengthAdjust="spacingAndGlyphs">Security Warnings</text>
+  <text x="350" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">MFA checks<tspan x="350" dy="15">&amp; open ports</tspan></text><circle cx="395" cy="290" r="15" fill="#EF4444" filter="url(#glow-orange)" /><text x="395" y="294" font-family="Inter" font-size="12" font-weight="700" fill="#000000" text-anchor="middle">!</text><rect x="470" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="490" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Fault Tolerance</text>
-  <text x="490" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Verify S3 backup configs</text><circle cx="535" cy="290" r="15" fill="#10B981" /><path d="M 528,290 L 533,295 L 542,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="610" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
+  <text x="490" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Verify S3<tspan x="490" dy="15">backup configs</tspan></text><circle cx="535" cy="290" r="15" fill="#10B981" /><path d="M 528,290 L 533,295 L 542,285" fill="none" stroke="#000000" stroke-width="2.5" /><rect x="610" y="150" width="130" height="180" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="630" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Service Limits</text>
-  <text x="630" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Track resources quota limits</text><circle cx="675" cy="290" r="15" fill="#10B981" /><path d="M 668,290 L 673,295 L 682,285" fill="none" stroke="#000000" stroke-width="2.5" />
+  <text x="630" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Track resources<tspan x="630" dy="15">quota limits</tspan></text><circle cx="675" cy="290" r="15" fill="#10B981" /><path d="M 668,290 L 673,295 L 682,285" fill="none" stroke="#000000" stroke-width="2.5" />
 </svg>

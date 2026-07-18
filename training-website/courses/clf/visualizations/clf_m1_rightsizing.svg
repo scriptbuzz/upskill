@@ -46,10 +46,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Rightsizing Compute</text>
   <line x1="60" y1="360" x2="740" y2="360" stroke="#F8FAFC" stroke-width="2"  />
@@ -58,4 +54,4 @@
   <line x1="60" y1="360" x2="60" y2="80" stroke="#F8FAFC" stroke-width="2"  />
   <path d="M 60 80 L 64.0 86.92820323027551 L 56.0 86.92820323027551 Z" fill="#F8FAFC" />
   <text x="60.0" y="212.0" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Compute Capacity ↑</text>
-<line x1="60" y1="120" x2="720" y2="120" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8,8" /><text x="730" y="125" font-family="Inter, sans-serif" font-size="12" fill="#EF4444" font-weight="600">Over-provisioned</text><line x1="60" y1="280" x2="720" y2="280" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8,8" /><text x="730" y="285" font-family="Inter, sans-serif" font-size="12" fill="#EF4444" font-weight="600">Under-provisioned</text><path d="M 60 220 Q 150 160, 240 220 T 420 220 T 600 220 T 720 220" fill="none" stroke="#00A3E0" stroke-width="3" /><text x="650" y="195" font-family="Inter, sans-serif" font-size="12" fill="#00A3E0" font-weight="600">Actual Demand</text><path d="M 60 210 L 150 150 L 240 210 L 335 150 L 420 210 L 510 150 L 600 210 L 720 210" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="4,4" /><text x="650" y="145" font-family="Inter, sans-serif" font-size="12" fill="#10B981" font-weight="600">Rightsized Capacity</text></svg>
+<line x1="60" y1="120" x2="720" y2="120" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8,8" /><text x="715" y="112" font-family="Inter, sans-serif" font-size="12" fill="#EF4444" font-weight="600" text-anchor="end">Over-provisioned</text><line x1="60" y1="280" x2="720" y2="280" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8,8" /><text x="715" y="300" font-family="Inter, sans-serif" font-size="12" fill="#EF4444" font-weight="600" text-anchor="end">Under-provisioned</text><path d="M 60 220 Q 150 160, 240 220 T 420 220 T 600 220 T 720 220" fill="none" stroke="#00A3E0" stroke-width="3" /><text x="650" y="195" font-family="Inter, sans-serif" font-size="12" fill="#00A3E0" font-weight="600">Actual Demand</text><path d="M 60 210 L 150 150 L 240 210 L 335 150 L 420 210 L 510 150 L 600 210 L 720 210" fill="none" stroke="#10B981" stroke-width="2" stroke-dasharray="4,4" /><text x="650" y="145" font-family="Inter, sans-serif" font-size="12" fill="#10B981" font-weight="600">Rightsized Capacity</text></svg>

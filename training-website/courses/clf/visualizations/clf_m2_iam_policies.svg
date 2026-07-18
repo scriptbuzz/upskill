@@ -46,10 +46,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Identity-Based vs. Resource-Based Policies</text>
   <rect x="60" y="100" width="320" height="280" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
@@ -68,8 +64,8 @@
 
   <g transform="translate(440, 170)">
     <text x="0" y="15" font-family="Inter, sans-serif" font-size="13" fill="#00A3E0">✔ Attached directly to the resource (e.g. S3 Bucket)</text>
-    <text x="0" y="45" font-family="Inter, sans-serif" font-size="13" fill="#00A3E0">✔ Defines: Who has permission to access this resource?</text>
+    <text x="0" y="45" font-family="Inter, sans-serif" font-size="13" fill="#00A3E0" textLength="268" lengthAdjust="spacingAndGlyphs">✔ Defines: Who has permission to access this resource?</text>
     <text x="0" y="75" font-family="Inter, sans-serif" font-size="13" fill="#00A3E0">✔ Evaluated as inline resource control settings</text>
-    <text x="0" y="115" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8">Example: S3 Bucket Policy allowing logs writes from Account B</text>
+    <text x="0" y="115" font-family="Inter, sans-serif" font-size="11" fill="#94A3B8" textLength="295" lengthAdjust="spacingAndGlyphs">Example: S3 Bucket Policy allowing logs writes from Account B</text>
   </g>
 </svg>

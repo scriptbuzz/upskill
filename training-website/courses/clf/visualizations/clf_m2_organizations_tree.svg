@@ -46,10 +46,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">AWS Organizations Account Tree</text>
   <rect x="320" y="80" width="160" height="60" rx="12" fill="rgba(255, 153, 0, 0.05)" stroke="#FF9900" stroke-width="1.5" />
@@ -61,7 +57,7 @@
   <rect x="480" y="200" width="160" height="70" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
   <text x="500" y="235" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">Production OU</text>
   <text x="500" y="255" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Strict SCP Lockout</text>
-  <g transform="translate(610,220)">
+  <g transform="translate(616,228)">
     <rect x="0" y="10" width="20" height="15" rx="3" fill="none" stroke="url(#alert-red)" stroke-width="2"/>
     <path d="M 4 10 L 4 6 A 6 6 0 0 1 16 6 L 16 10" fill="none" stroke="url(#alert-red)" stroke-width="2"/>
   </g>  <rect x="160" y="320" width="160" height="50" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />

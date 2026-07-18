@@ -50,10 +50,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Amazon SageMaker Role Manager Wizard</text>
 <rect x="60" y="95" width="240" height="280" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
@@ -63,7 +59,7 @@
   <text x="100" y="200" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Notebooks access</text><rect x="80" y="210" width="200" height="45" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="100" y="232.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">MLOps Engineer</text>
   <text x="100" y="250.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Pipeline deployment</text><rect x="80" y="270" width="200" height="45" rx="12" fill="rgba(0,163,224,0.05)" stroke="#00A3E0" stroke-width="1.5" />
-  <text x="100" y="292.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">SageMaker Compute Instance</text>
+  <text x="100" y="292.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="175" lengthAdjust="spacingAndGlyphs">SageMaker Compute Instance</text>
   <text x="100" y="310.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Executes model training</text><line x1="300" y1="235" x2="440" y2="235" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="440" y1="235" x2="433.0717967697245" y2="239.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="440" y1="235" x2="433.0717967697245" y2="231.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />

@@ -1,6 +1,6 @@
 const AIF_COURSE_DATA = {
   "id": "aif",
-  "version": "v0.5 beta",
+  "version": "v0.6 beta",
   "title": "AWS Certified AI Practitioner (AIF-C01)",
   "description": "Ditch boring text guides. Learn cloud architecture using premium vector diagrams, slide-by-slide outlines, and interactive review quizzes designed for maximum retention.",
   "modules": [

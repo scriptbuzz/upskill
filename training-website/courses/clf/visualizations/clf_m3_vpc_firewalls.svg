@@ -46,10 +46,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">VPC Security: Security Groups vs. NACLs</text>
   <rect x="60" y="130" width="310" height="220" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
@@ -68,6 +64,6 @@
   <g transform="translate(450, 195)">
     <text x="0" y="15" font-family="Inter, sans-serif" font-size="13" fill="#FF9900">✔ Operates at the Subnet boundary level</text>
     <text x="0" y="45" font-family="Inter, sans-serif" font-size="13" fill="#FF9900">✔ Stateless: Must define both inbound &amp; outbound</text>
-    <text x="0" y="75" font-family="Inter, sans-serif" font-size="13" fill="#FF9900">✔ Evaluates rules using ALLOW and DENY settings</text>
+    <text x="0" y="75" font-family="Inter, sans-serif" font-size="13" fill="#FF9900" textLength="285" lengthAdjust="spacingAndGlyphs">✔ Evaluates rules using ALLOW and DENY settings</text>
   </g>
 </svg>

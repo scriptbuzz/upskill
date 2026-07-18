@@ -46,10 +46,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Scaling Dimensions: Vertical, Horizontal &amp; Elastic</text>
   <rect x="40" y="100" width="220" height="280" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
@@ -65,7 +61,7 @@
     <line x1="12" y1="22" x2="25" y2="22" stroke="url(#cloud-blue)" stroke-width="2"/>
   </g>  <line x1="120" y1="250" x2="180" y2="250" stroke="url(#aws-orange)" stroke-width="2"  />
   <path d="M 180 250 L 173.0717967697245 254.0 L 173.0717967697245 246.0 Z" fill="url(#aws-orange)" />
-  <text x="150.0" y="242.0" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Increase CPU/RAM</text>
+  <text x="150.0" y="272.0" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Increase CPU/RAM</text>
   <g transform="translate(200,200)">
     <rect x="0" y="0" width="30" height="12" rx="2" fill="none" stroke="url(#cloud-blue)" stroke-width="2"/>
     <circle cx="5" cy="6" r="1.5" fill="url(#cloud-blue)"/>

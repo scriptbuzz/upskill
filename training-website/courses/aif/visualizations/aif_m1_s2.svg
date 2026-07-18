@@ -50,10 +50,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Traditional Software vs. AI Systems</text>
 <rect x="60" y="90" width="310" height="290" rx="12" fill="url(#dark-card)" stroke="#475569" stroke-width="1.5" />
@@ -71,7 +67,7 @@
   <text x="450" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">AI &amp; Machine Learning Systems</text>
   <text x="450" y="140" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Logic is learned from datasets</text><rect x="460" y="160" width="250" height="50" rx="12" fill="rgba(255,153,0,0.1)" stroke="url(#aws-orange)" stroke-width="1.5" />
   <text x="480" y="182.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Historical Data (Inputs)</text>
-  <text x="480" y="200.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Transcripts, server records, usage patterns</text><rect x="460" y="230" width="250" height="50" rx="12" fill="rgba(255,153,0,0.1)" stroke="url(#aws-orange)" stroke-width="1.5" />
+  <text x="480" y="200.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="225" lengthAdjust="spacingAndGlyphs">e.g., Transcripts, server records, usage patterns</text><rect x="460" y="230" width="250" height="50" rx="12" fill="rgba(255,153,0,0.1)" stroke="url(#aws-orange)" stroke-width="1.5" />
   <text x="480" y="252.0" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Known Outcomes (Labels)</text>
   <text x="480" y="270.0" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">e.g., Fraud flags, actual customer ratings</text><line x1="585" y1="290" x2="585" y2="320" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="585" y1="320" x2="581.0" y2="313.0717967697245" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />

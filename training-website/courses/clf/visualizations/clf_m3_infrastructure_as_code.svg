@@ -46,22 +46,18 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80.0" cy="90.0" r="240.0" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720.0" cy="360.0" r="240.0" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header (If provided) -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Infrastructure as Code (IaC)</text>
   <rect x="60" y="150" width="180" height="150" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
   <text x="80" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">YAML/JSON Template</text>
-  <text x="80" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Infrastructure Defined as Text</text>
+  <text x="80" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8" textLength="155" lengthAdjust="spacingAndGlyphs">Infrastructure Defined as Text</text>
 <text x="80" y="240" font-family="monospace" font-size="11" fill="#94A3B8">Type: AWS::EC2::Instance</text>  <rect x="290" y="150" width="200" height="150" rx="12" fill="url(#dark-card)" stroke="#1E293B" stroke-width="1.5" />
   <text x="310" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">AWS CloudFormation</text>
   <text x="310" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">Automated Provisioning Engine</text>
   <g transform="translate(370,220)">
     <path d="M 5 15 A 8 8 0 0 1 18 8 A 10 10 0 0 1 36 12 A 7 7 0 0 1 38 22 L 8 22 A 6 6 0 0 1 5 15 Z" fill="none" stroke="url(#cloud-blue)" stroke-width="2"/>
   </g>  <rect x="550" y="150" width="190" height="150" rx="12" fill="rgba(16,185,129,0.02)" stroke="#10B981" stroke-width="1.5" />
-  <text x="570" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC">AWS Resources Created</text>
+  <text x="570" y="185" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#F8FAFC" textLength="165" lengthAdjust="spacingAndGlyphs">AWS Resources Created</text>
   <text x="570" y="205" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">VPC, EC2, S3 buckets</text>
   <g transform="translate(580,230)">
     <rect x="0" y="0" width="30" height="12" rx="2" fill="none" stroke="#10B981" stroke-width="2"/>

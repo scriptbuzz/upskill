@@ -50,10 +50,6 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Model Customization &amp; Adaptation Spectrum</text>
 <line x1="80" y1="280" x2="720" y2="280" stroke="#334155" stroke-width="8" stroke-linecap="round" /><line x1="80" y1="280" x2="380" y2="280" stroke="#00A3E0" stroke-width="8" stroke-linecap="round" /><line x1="380" y1="280" x2="580" y2="280" stroke="#FF9900" stroke-width="8" stroke-linecap="round" /><line x1="580" y1="280" x2="720" y2="280" stroke="#EF4444" stroke-width="8" stroke-linecap="round" /><rect x="60" y="120" width="130" height="90" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
@@ -62,7 +58,7 @@
   <text x="240" y="150" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">RAG Setup</text>
   <text x="240" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Vector database links</text><circle cx="285" cy="280" r="10" fill="#00A3E0" /><rect x="380" y="120" width="150" height="90" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
   <text x="400" y="150" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Fine-Tuning (PEFT)</text>
-  <text x="400" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Updates weights on private labels</text><circle cx="455" cy="280" r="10" fill="#FF9900" /><rect x="560" y="120" width="180" height="90" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
+  <text x="400" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Updates weights<tspan x="400" dy="15">on private labels</tspan></text><circle cx="455" cy="280" r="10" fill="#FF9900" /><rect x="560" y="120" width="180" height="90" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
   <text x="580" y="150" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">Pretraining</text>
-  <text x="580" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Massive supercomputer resources</text><circle cx="650" cy="280" r="10" fill="#EF4444" /><text x="125" y="340" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Customer Data: Low</text><text x="125" y="358" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Compute Cost: Low</text><text x="650" y="340" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Customer Data: High</text><text x="650" y="358" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Compute Cost: High</text>
+  <text x="580" y="170" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="155" lengthAdjust="spacingAndGlyphs">Massive supercomputer resources</text><circle cx="650" cy="280" r="10" fill="#EF4444" /><text x="125" y="340" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Customer Data: Low</text><text x="125" y="358" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Compute Cost: Low</text><text x="650" y="340" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Customer Data: High</text><text x="650" y="358" font-family="Inter" font-size="11" fill="#94A3B8" text-anchor="middle">Compute Cost: High</text>
 </svg>

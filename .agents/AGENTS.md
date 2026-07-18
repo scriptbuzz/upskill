@@ -209,7 +209,15 @@ When loading the viewer page:
   ```
 - **Scrollbar Gutter Settings:** Set `scrollbar-gutter: stable;` on scrollable panels (`.slide-text-content`, `.slide-viewport`, and `.slide-list`) to reserve layout width for the scrollbars. This guarantees that margins and text line wraps remain identical during transitions.
 
-### B. Text Styling
+### B. Visualization Quality Standards
+All course SVGs are 800×450 (`viewBox="0 0 800 450"`). Before committing any diagram, enforce:
+1. **No clipped or spilling text:** Every `<text>` must fit inside the canvas and inside its container box with ≥8px inner padding. Wrap long labels into `<tspan>` lines or enlarge the box; use `textLength` compression only for overflows under ~10%.
+2. **No overlaps:** Text must never overlap other text, icons, badges, or box borders. Place decorative icons *below* or *beside* subtitle text, never on top of it.
+3. **Real icons only:** Icons must be recognizable geometric glyphs (server racks, clouds, locks, envelopes). No amorphous placeholder paths and no empty outline circles.
+4. **Recessive decoration:** Background is the dark fill + subtle grid only — no oversized glow circles or blobs behind content.
+5. **Verify by rendering:** Screenshot each new/edited SVG at 800×450 and inspect it; a headless-browser pass measuring text bounding boxes against container rects must report zero clip/overlap/spill issues.
+
+### C. Text Styling
 - **Glowing Vector Markers:**
   - Standard items (`li` in `.slide-bullets`) use glowing orange rects as bullets.
   - Nested items (`li.indent-1`) use glowing blue circles as bullets.

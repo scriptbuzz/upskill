@@ -50,14 +50,10 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">The Machine Learning Lifecycle</text>
 <rect x="40" y="160" width="125" height="95" rx="12" fill="url(#dark-card)" stroke="#8B5CF6" stroke-width="1.5" />
-  <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. Define Problem</text>
+  <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="100" lengthAdjust="spacingAndGlyphs">1. Define Problem</text>
   <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Establish metrics</text><rect x="190" y="160" width="125" height="95" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="210" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Prep Data</text>
   <text x="210" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Clean &amp; label</text><rect x="340" y="160" width="125" height="95" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
@@ -65,7 +61,7 @@
   <text x="360" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Tuning weights</text><rect x="490" y="160" width="125" height="95" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="510" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">4. Deploy Model</text>
   <text x="510" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Real-time API</text><rect x="640" y="160" width="120" height="95" rx="12" fill="url(#dark-card)" stroke="#EF4444" stroke-width="1.5" />
-  <text x="660" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">5. Monitor Quality</text>
+  <text x="660" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="95" lengthAdjust="spacingAndGlyphs">5. Monitor Quality</text>
   <text x="660" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Detect drift</text><line x1="165" y1="210" x2="190" y2="210" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" />
   <line x1="190" y1="210" x2="183.0717967697245" y2="214.0" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" />
   <line x1="190" y1="210" x2="183.0717967697245" y2="206.0" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" /><line x1="315" y1="210" x2="340" y2="210" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />

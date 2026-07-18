@@ -50,15 +50,11 @@
   <rect width="800" height="450" fill="#0F172A" />
   <rect width="800" height="450" fill="url(#grid)" />
   
-  <!-- Subtle Soft Glows -->
-  <circle cx="80" cy="90" r="240" fill="rgba(0, 163, 224, 0.05)" filter="url(#glow-blue)" />
-  <circle cx="720" cy="360" r="240" fill="rgba(255, 153, 0, 0.04)" filter="url(#glow-orange)" />
-  
   <!-- Slide Header -->
   <text x="40" y="45" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Retrieval-Augmented Generation (RAG) Flow</text>
 <rect x="40" y="160" width="120" height="100" rx="12" fill="url(#dark-card)" stroke="#00A3E0" stroke-width="1.5" />
   <text x="60" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">1. User Query</text>
-  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Client prompts model</text>
+  <text x="60" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="95" lengthAdjust="spacingAndGlyphs">Client prompts model</text>
     <g transform="translate(85, 215)">
       <circle cx="15" cy="10" r="7" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
       <path d="M 3,24 Q 15,14 27,24" fill="none" stroke="#F8FAFC" stroke-width="1.5" />
@@ -67,8 +63,8 @@
   <line x1="220" y1="210" x2="213.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="220" y1="210" x2="213.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="190.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Search</text><rect x="220" y="160" width="130" height="100" rx="12" fill="url(#dark-card)" stroke="#FF9900" stroke-width="1.5" />
-  <text x="240" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">2. Vector Database</text>
-  <text x="240" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Semantic search lookup</text>
+  <text x="240" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="105" lengthAdjust="spacingAndGlyphs">2. Vector Database</text>
+  <text x="240" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="105" lengthAdjust="spacingAndGlyphs">Semantic search lookup</text>
     <g transform="translate(270, 215)">
       <path d="M 0,5 Q 15,0 30,5 L 30,25 Q 15,30 0,25 Z" fill="none" stroke="#FF9900" stroke-width="1.5" />
       <path d="M 0,12 Q 15,17 30,12" fill="none" stroke="#FF9900" stroke-width="1.5" />
@@ -77,12 +73,12 @@
     <line x1="350" y1="210" x2="410" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="410" y1="210" x2="403.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="410" y1="210" x2="403.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
-  <text x="380.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Contextual data</text><rect x="410" y="160" width="140" height="100" rx="12" fill="url(#dark-card)" stroke="#8B5CF6" stroke-width="1.5" />
-  <text x="430" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">3. Combined Prompt</text>
+  <text x="380.0" y="188.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Contextual data</text><rect x="410" y="160" width="140" height="100" rx="12" fill="url(#dark-card)" stroke="#8B5CF6" stroke-width="1.5" />
+  <text x="430" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" textLength="115" lengthAdjust="spacingAndGlyphs">3. Combined Prompt</text>
   <text x="430" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Query + Context doc</text><text x="480" y="242" font-family="monospace" font-size="8.5" fill="#8B5CF6" text-anchor="middle">[Prompt Template]</text><line x1="550" y1="210" x2="610" y2="210" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="610" y1="210" x2="603.0717967697245" y2="214.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <line x1="610" y1="210" x2="603.0717967697245" y2="206.0" stroke="url(#aws-orange)" stroke-width="2" stroke-linecap="round" />
   <text x="580.0" y="202.0" font-family="Inter" font-size="9" fill="#94A3B8" text-anchor="middle">Feed model</text><rect x="610" y="160" width="150" height="100" rx="12" fill="url(#dark-card)" stroke="#10B981" stroke-width="1.5" />
   <text x="630" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#F8FAFC">4. Foundation Model</text>
-  <text x="630" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8">Generates de-biased output</text><text x="685" y="222" font-family="Inter" font-size="11.5" font-weight="700" fill="#10B981" text-anchor="middle">Bedrock API</text>
+  <text x="630" y="210" font-family="Inter, system-ui, sans-serif" font-size="10.5" fill="#94A3B8" textLength="125" lengthAdjust="spacingAndGlyphs">Generates de-biased output</text><text x="685" y="222" font-family="Inter" font-size="11.5" font-weight="700" fill="#10B981" text-anchor="middle">Bedrock API</text>
 </svg>
