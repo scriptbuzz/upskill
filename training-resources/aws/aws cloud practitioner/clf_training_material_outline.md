@@ -503,6 +503,22 @@ A company wants to migrate an on-premises database to Amazon RDS without modifyi
 
 ---
 
+### Slide 2.18: Data Protection: Data Classification
+* **Title:** Data Classification Tiers
+* **Content:**
+  * **Data Classification:** Categorizing data by sensitivity level so the right protection controls can be applied to each category.
+  * **Common Classification Tiers:**
+    * **Public:** Safe to disclose (marketing pages, documentation).
+    * **Internal:** Business data with limited distribution (reports, wikis).
+    * **Confidential:** Customer PII and financial records. Requires encryption and tight access control.
+    * **Restricted:** Highly regulated secrets (credentials, health records). Strongest encryption, monitoring, and least-privilege access.
+  * **Matching Controls to Tiers:**
+    * Use resource tags to label data sensitivity, encrypt confidential tiers with AWS KMS, and let Amazon Macie automatically discover and classify sensitive data stored in S3.
+* **Visualization:**
+  * Four tier cards (Public/Internal/Confidential/Restricted) in escalating severity colors with tier icons, an "increasing sensitivity" arrow, and a Tags/KMS/Macie controls caption.
+
+---
+
 ## Module 2 Review Checkpoint
 
 #### Question 1

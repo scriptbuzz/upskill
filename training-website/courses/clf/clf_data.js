@@ -1,6 +1,6 @@
 const CLF_COURSE_DATA = {
   "id": "clf",
-  "version": "v1.6 beta",
+  "version": "v1.7 beta",
   "title": "AWS Certified Cloud Practitioner (CLF-C02)",
   "description": "Master the foundations of the AWS Cloud and prepare to pass your CLF certification exam.",
   "modules": [
@@ -1151,6 +1151,45 @@ const CLF_COURSE_DATA = {
             }
           ],
           "visualization": "clf_m2_security_hub.svg"
+        },
+        {
+          "id": "2.18",
+          "title": "Data Protection: Data Classification",
+          "bullets": [
+            {
+              "text": "**Data Classification:** Categorizing data by sensitivity level so the right protection controls can be applied to each category.",
+              "indent": 0
+            },
+            {
+              "text": "**Common Classification Tiers:**",
+              "indent": 1
+            },
+            {
+              "text": "**Public:** Safe to disclose (marketing pages, documentation).",
+              "indent": 2
+            },
+            {
+              "text": "**Internal:** Business data with limited distribution (reports, wikis).",
+              "indent": 2
+            },
+            {
+              "text": "**Confidential:** Customer PII and financial records. Requires encryption and tight access control.",
+              "indent": 2
+            },
+            {
+              "text": "**Restricted:** Highly regulated secrets (credentials, health records). Strongest encryption, monitoring, and least-privilege access.",
+              "indent": 2
+            },
+            {
+              "text": "**Matching Controls to Tiers:**",
+              "indent": 1
+            },
+            {
+              "text": "Use resource tags to label data sensitivity, encrypt confidential tiers with **AWS KMS**, and let **Amazon Macie** automatically discover and classify sensitive data stored in S3.",
+              "indent": 2
+            }
+          ],
+          "visualization": "clf_m2_data_classification.svg"
         }
       ],
       "quiz": [
@@ -1588,7 +1627,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             },
             {
-              "text": "**Other Database Engines:**",
+              "text": "**Purpose-Built Databases:** Specialized engines matched to specific workloads:",
               "indent": 1
             },
             {
@@ -1705,7 +1744,7 @@ const CLF_COURSE_DATA = {
         },
         {
           "id": "3.15",
-          "title": "Hybrid Connectivity: VPN and Direct Connect",
+          "title": "Hybrid Connectivity: VPN, Direct Connect & PrivateLink",
           "bullets": [
             {
               "text": "**AWS Site-to-Site VPN:**",
@@ -1745,6 +1784,14 @@ const CLF_COURSE_DATA = {
             },
             {
               "text": "Connect VPCs directly (Peering) or hub-and-spoke via a central router (Transit Gateway).",
+              "indent": 2
+            },
+            {
+              "text": "**AWS PrivateLink:**",
+              "indent": 1
+            },
+            {
+              "text": "Provides private connectivity to AWS services through VPC interface endpoints \u2014 traffic never traverses the public internet.",
               "indent": 2
             }
           ],
@@ -1920,6 +1967,14 @@ const CLF_COURSE_DATA = {
             },
             {
               "text": "Orchestrates multiple AWS services into visual, multi-step workflows.",
+              "indent": 3
+            },
+            {
+              "text": "**Amazon API Gateway:**",
+              "indent": 2
+            },
+            {
+              "text": "The 'front door' for APIs: create, publish, secure, and monitor REST/HTTP APIs at any scale (commonly paired with Lambda).",
               "indent": 3
             }
           ],
@@ -2200,6 +2255,14 @@ const CLF_COURSE_DATA = {
             },
             {
               "text": "**Pay Less by Using More:** Volume discounts apply as your data footprint grows (especially in storage and data transfer).",
+              "indent": 2
+            },
+            {
+              "text": "**Storage Pricing Dimensions:**",
+              "indent": 1
+            },
+            {
+              "text": "Billed per **GB-month** stored, plus request and retrieval fees that vary by storage class, and lifecycle transitions that automatically move data to cheaper tiers.",
               "indent": 2
             }
           ],

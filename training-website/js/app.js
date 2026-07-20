@@ -18,7 +18,7 @@ function initLandingPage() {
 
   // Check if there's any active progress
   if (completedSlides.length > 0) {
-    const totalSlides = 103; // CLF has 103 steps (79 slides + 24 quiz steps)
+    const totalSlides = 104; // CLF has 104 steps (80 slides + 24 quiz steps)
     const percent = Math.min(Math.round((completedSlides.length / totalSlides) * 100), 100);
     
     // Update the button on the CLF course card to support a reset button next to it
@@ -92,7 +92,7 @@ function initLandingPage() {
   }
 
   if (aifCompletedSlides.length > 0) {
-    const aifTotalSlides = 135; // AIF has 135 steps (113 slides + 22 quiz steps)
+    const aifTotalSlides = 137; // AIF has 137 steps (115 slides + 22 quiz steps)
     const aifPercent = Math.min(Math.round((aifCompletedSlides.length / aifTotalSlides) * 100), 100);
     
     const aifBtn = document.getElementById("start-aif-course-btn");

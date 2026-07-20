@@ -18,8 +18,8 @@ Welcome to **4 Corners Academy**, a study guide and exam preparation platform de
 
 | Course Tag | Course Name | Status | Modules | Slides | Checkpoint Quizzes | Access |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.6 beta` | 6 | 79 | 12 | Free |
-| ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.6 beta` | 7 | 113 | 11 | Requires Subscription |
+| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.7 beta` | 6 | 80 | 12 | Free |
+| ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.7 beta` | 7 | 115 | 11 | Requires Subscription |
 | ![AGY-101](https://img.shields.io/badge/AGY--101-A1A1AA?style=flat-square) | **Agentic AI Essentials** | `Locked` | 6 | 64 | 4 | Locked |
 
 ---

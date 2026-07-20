@@ -398,6 +398,21 @@ This document outlines the structured training slides for the AWS Certified AI P
 
 ---
 
+### Slide 2.11: ML Frameworks & Transfer Learning
+* **Title:** ML Frameworks & Transfer Learning
+* **Content:**
+  * **ML Frameworks:** Open-source libraries that provide the building blocks for authoring and training models.
+    * Popular options include TensorFlow, PyTorch, scikit-learn, and Hugging Face Transformers.
+    * Amazon SageMaker provides managed containers for all major frameworks.
+  * **Transfer Learning:**
+    * Reusing a model pretrained on a large general dataset and adapting it to a new, related task using a small amount of task-specific data.
+    * Dramatically cheaper and faster than training from scratch — the foundation of modern fine-tuning.
+    * Amazon SageMaker JumpStart offers pretrained open-source models to deploy or adapt in a few clicks.
+* **Visualization:**
+  * A frameworks card (TensorFlow/PyTorch/scikit-learn/Hugging Face chips) beside a transfer-learning flow: Pretrained Model → Adapt → Fine-Tuned Model, with a SageMaker JumpStart callout.
+
+---
+
 # Module 2 Checkpoint Quizzes
 
 ### Slide 2.11: Checkpoint Quiz - Question 1 (Unsolved)
@@ -1336,6 +1351,22 @@ This document outlines the structured training slides for the AWS Certified AI P
   * **Best Practice:** Use IAM Identity Center for human user login, and use IAM roles for application and machine learning workload access.
 * **Visualization:**
   * None (Text-only slide in source PPTX deck)
+
+---
+
+### Slide 5.36: Protecting the Root User & Account Security
+* **Title:** Protecting the AWS Root User
+* **Content:**
+  * **The Root User:** The identity created with the AWS account. It has unrestricted access to every resource and cannot be limited by IAM policies.
+  * **Root Account Best Practices:**
+    * Never use the root user for daily work or ML workload tasks — create IAM identities instead.
+    * Enable strong Multi-Factor Authentication (MFA) on the root user immediately.
+    * Delete or deactivate root access keys so the root identity cannot be used programmatically.
+    * Reserve root strictly for the few tasks that require it (account closure, certain billing settings).
+  * **Why It Matters for AI Workloads:**
+    * A compromised root user exposes every training dataset, model artifact, and inference endpoint in the account.
+* **Visualization:**
+  * A red root-user card ("use rarely, guard heavily") pointing to a green best-practices checklist: enable MFA, delete access keys, create IAM identities, reserve root for rare tasks.
 
 ---
 

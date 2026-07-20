@@ -1,6 +1,6 @@
 const AIF_COURSE_DATA = {
   "id": "aif",
-  "version": "v0.6 beta",
+  "version": "v0.7 beta",
   "title": "AWS Certified AI Practitioner (AIF-C01)",
   "description": "Ditch boring text guides. Learn cloud architecture using premium vector diagrams, slide-by-slide outlines, and interactive review quizzes designed for maximum retention.",
   "modules": [
@@ -514,6 +514,22 @@ const AIF_COURSE_DATA = {
             {
               "text": "F1 Score = 2 * (Precision * Recall) / (Precision + Recall)",
               "indent": 2
+            },
+            {
+              "text": "**Additional Rates from the Confusion Matrix:**",
+              "indent": 1
+            },
+            {
+              "text": "**Specificity (TNR):** TN / (TN + FP) \u2014 the ability to correctly rule out negatives.",
+              "indent": 2
+            },
+            {
+              "text": "**False Positive Rate:** FP / (FP + TN) \u2014 how often negatives are wrongly flagged.",
+              "indent": 2
+            },
+            {
+              "text": "**AUC (Area Under the ROC Curve):** A single 0\u20131 score summarizing classifier quality across all thresholds (0.5 = random, 1.0 = perfect).",
+              "indent": 2
             }
           ],
           "visualization": "aif_m1_s19.svg"
@@ -843,6 +859,41 @@ const AIF_COURSE_DATA = {
             }
           ],
           "visualization": "aif_m2_s10.svg"
+        },
+        {
+          "id": "m2-s11",
+          "title": "ML Frameworks & Transfer Learning",
+          "bullets": [
+            {
+              "text": "**ML Frameworks:** Open-source libraries that provide the building blocks for authoring and training models.",
+              "indent": 0
+            },
+            {
+              "text": "Popular options include *TensorFlow*, *PyTorch*, *scikit-learn*, and *Hugging Face Transformers*.",
+              "indent": 2
+            },
+            {
+              "text": "Amazon SageMaker provides managed containers for all major frameworks, so you can run framework code without managing servers.",
+              "indent": 2
+            },
+            {
+              "text": "**Transfer Learning:**",
+              "indent": 1
+            },
+            {
+              "text": "Reusing a model pretrained on a large general dataset and adapting it to a new, related task using a small amount of task-specific data.",
+              "indent": 2
+            },
+            {
+              "text": "Dramatically cheaper and faster than training from scratch \u2014 it is the foundation of modern fine-tuning.",
+              "indent": 2
+            },
+            {
+              "text": "**Amazon SageMaker JumpStart** offers pretrained open-source models you can deploy or adapt via transfer learning in a few clicks.",
+              "indent": 2
+            }
+          ],
+          "visualization": "aif_m2_s11.svg"
         }
       ],
       "quiz": [
@@ -2471,6 +2522,10 @@ const AIF_COURSE_DATA = {
             {
               "text": "**Auditing:** Easily trace back exactly which dataset was used to train a model deployed on a specific endpoint.",
               "indent": 1
+            },
+            {
+              "text": "**Feature Lineage:** Tracks how individual features were created and transformed in SageMaker Feature Store, extending traceability down to feature-level history.",
+              "indent": 1
             }
           ],
           "visualization": "aif_m5_s19.svg"
@@ -2906,6 +2961,45 @@ const AIF_COURSE_DATA = {
             }
           ],
           "visualization": ""
+        },
+        {
+          "id": "m5-s36",
+          "title": "Protecting the Root User & Account Security",
+          "bullets": [
+            {
+              "text": "**The Root User:** The identity created with the AWS account. It has unrestricted access to every resource and cannot be limited by IAM policies.",
+              "indent": 0
+            },
+            {
+              "text": "**Root Account Best Practices:**",
+              "indent": 1
+            },
+            {
+              "text": "Never use the root user for daily work or ML workload tasks \u2014 create IAM identities instead.",
+              "indent": 2
+            },
+            {
+              "text": "Enable strong **Multi-Factor Authentication (MFA)** on the root user immediately.",
+              "indent": 2
+            },
+            {
+              "text": "Delete or deactivate root access keys so the root identity cannot be used programmatically.",
+              "indent": 2
+            },
+            {
+              "text": "Reserve root strictly for the few tasks that require it (account closure, certain billing settings).",
+              "indent": 2
+            },
+            {
+              "text": "**Why It Matters for AI Workloads:**",
+              "indent": 1
+            },
+            {
+              "text": "A compromised root user exposes every training dataset, model artifact, and inference endpoint in the account.",
+              "indent": 2
+            }
+          ],
+          "visualization": "aif_m5_s36.svg"
         }
       ],
       "quiz": [
