@@ -21,31 +21,19 @@ function initLandingPage() {
     const totalSlides = 104; // CLF has 104 steps (80 slides + 24 quiz steps)
     const percent = Math.min(Math.round((completedSlides.length / totalSlides) * 100), 100);
     
-    // Update the button on the CLF course card to support a reset button next to it
+    // Update the button on the CLF course card and add a reset button next to it
     const clfBtn = document.getElementById("start-clf-course-btn");
     if (clfBtn) {
       clfBtn.innerText = `Continue Learning (${percent}%)`;
-      clfBtn.style.width = "auto";
-      clfBtn.style.flex = "1";
-      
-      // Create a wrapper to hold the buttons
-      const wrapper = document.createElement("div");
-      wrapper.style.display = "flex";
-      wrapper.style.gap = "8px";
-      wrapper.style.marginTop = "12px";
-      wrapper.style.width = "100%";
-      
-      clfBtn.parentNode.insertBefore(wrapper, clfBtn);
-      wrapper.appendChild(clfBtn);
-      
-      // Create the Reset button
+
+      // Insert the Reset button into the card's static actions row
       const resetBtn = document.createElement("button");
       resetBtn.className = "btn btn-secondary";
       resetBtn.id = "reset-clf-course-btn";
       resetBtn.title = "Reset Progress";
       resetBtn.style.padding = "10px 14px";
       resetBtn.innerHTML = "🗑";
-      wrapper.appendChild(resetBtn);
+      clfBtn.after(resetBtn);
       
       resetBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -98,25 +86,14 @@ function initLandingPage() {
     const aifBtn = document.getElementById("start-aif-course-btn");
     if (aifBtn) {
       aifBtn.innerText = `Continue Learning (${aifPercent}%)`;
-      aifBtn.style.width = "auto";
-      aifBtn.style.flex = "1";
-      
-      const wrapper = document.createElement("div");
-      wrapper.style.display = "flex";
-      wrapper.style.gap = "8px";
-      wrapper.style.marginTop = "12px";
-      wrapper.style.width = "100%";
-      
-      aifBtn.parentNode.insertBefore(wrapper, aifBtn);
-      wrapper.appendChild(aifBtn);
-      
+
       const resetBtn = document.createElement("button");
       resetBtn.className = "btn btn-secondary";
       resetBtn.id = "reset-aif-course-btn";
       resetBtn.title = "Reset Progress";
       resetBtn.style.padding = "10px 14px";
       resetBtn.innerHTML = "🗑";
-      wrapper.appendChild(resetBtn);
+      aifBtn.after(resetBtn);
       
       resetBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -149,6 +126,13 @@ function initLandingPage() {
       `;
       statsContainer.after(progDiv);
     }
+  }
+
+  // Wire the per-course Share buttons (helper from course_shared.js)
+  if (window.initCourseShareButton) {
+    window.initCourseShareButton("share-clf-course-btn", null, new URL("courses/clf/index.html", window.location.href).href);
+    window.initCourseShareButton("share-aif-course-btn", null, new URL("courses/aif/index.html", window.location.href).href);
+    window.initCourseShareButton("share-agy-course-btn", null, new URL("#course-card-agy", window.location.href).href);
   }
 }
 

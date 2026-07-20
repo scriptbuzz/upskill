@@ -55,14 +55,16 @@ window.parseCorrectKeys = function(correct) {
   return String(correct).split(",").map((s) => s.trim()).filter(Boolean);
 };
 
-// Wire up a Share button that copies the course page link and shows it
-window.initCourseShareButton = function(buttonId, outputId) {
+// Wire up a Share button that copies the course page link and shows it.
+// `shareLink` is optional and defaults to the current page URL; without an
+// output element the button itself flashes a copied state instead.
+window.initCourseShareButton = function(buttonId, outputId, shareLink) {
   const btn = document.getElementById(buttonId);
-  const output = document.getElementById(outputId);
+  const output = outputId ? document.getElementById(outputId) : null;
   if (!btn) return;
 
   btn.addEventListener("click", async () => {
-    const link = window.location.origin + window.location.pathname;
+    const link = shareLink || (window.location.origin + window.location.pathname);
     let copied = false;
     try {
       await navigator.clipboard.writeText(link);
@@ -85,6 +87,17 @@ window.initCourseShareButton = function(buttonId, outputId) {
     if (output) {
       output.style.display = "block";
       output.textContent = copied ? `✓ Link copied to clipboard: ${link}` : `Copy this link: ${link}`;
+    } else if (!btn.dataset.shareFlash) {
+      btn.dataset.shareFlash = "1";
+      const originalHtml = btn.innerHTML;
+      const originalTitle = btn.title;
+      btn.innerHTML = copied ? "✓" : "🔗";
+      btn.title = copied ? "Link copied to clipboard" : `Copy this link: ${link}`;
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        btn.title = originalTitle;
+        delete btn.dataset.shareFlash;
+      }, 1500);
     }
   });
 };
