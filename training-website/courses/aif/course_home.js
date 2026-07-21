@@ -81,10 +81,10 @@ function initCourseHome() {
         btnContainer.style.gap = "8px";
         
         const resetBtn = document.createElement("button");
-        resetBtn.className = "btn btn-secondary";
+        resetBtn.className = "btn btn-secondary btn-uniform";
         resetBtn.id = "course-reset-btn";
         resetBtn.title = "Reset Progress";
-        resetBtn.innerHTML = "🗑 Reset";
+        resetBtn.innerHTML = "↺ Reset";
         // Keep Reset directly beside the Continue button, ahead of the Export PDF link
         ctaBtn.insertAdjacentElement("afterend", resetBtn);
         

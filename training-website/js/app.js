@@ -28,11 +28,10 @@ function initLandingPage() {
 
       // Insert the Reset button into the card's static actions row
       const resetBtn = document.createElement("button");
-      resetBtn.className = "btn btn-secondary";
+      resetBtn.className = "btn btn-secondary btn-icon";
       resetBtn.id = "reset-clf-course-btn";
       resetBtn.title = "Reset Progress";
-      resetBtn.style.padding = "10px 14px";
-      resetBtn.innerHTML = "🗑";
+      resetBtn.innerHTML = "↺";
       clfBtn.after(resetBtn);
       
       resetBtn.addEventListener("click", (e) => {
@@ -54,8 +53,7 @@ function initLandingPage() {
     const statsContainer = document.querySelector("#course-card-clf .course-stats");
     if (statsContainer) {
       const progDiv = document.createElement("div");
-      progDiv.style.width = "100%";
-      progDiv.style.marginTop = "16px";
+      progDiv.className = "card-progress";
       progDiv.innerHTML = `
         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px; color:var(--text-muted);">
           <span>COURSE PROGRESS</span>
@@ -88,11 +86,10 @@ function initLandingPage() {
       aifBtn.innerText = `Continue Learning (${aifPercent}%)`;
 
       const resetBtn = document.createElement("button");
-      resetBtn.className = "btn btn-secondary";
+      resetBtn.className = "btn btn-secondary btn-icon";
       resetBtn.id = "reset-aif-course-btn";
       resetBtn.title = "Reset Progress";
-      resetBtn.style.padding = "10px 14px";
-      resetBtn.innerHTML = "🗑";
+      resetBtn.innerHTML = "↺";
       aifBtn.after(resetBtn);
       
       resetBtn.addEventListener("click", (e) => {
@@ -113,8 +110,7 @@ function initLandingPage() {
     const statsContainer = document.querySelector("#course-card-aif .course-stats");
     if (statsContainer) {
       const progDiv = document.createElement("div");
-      progDiv.style.width = "100%";
-      progDiv.style.marginTop = "16px";
+      progDiv.className = "card-progress";
       progDiv.innerHTML = `
         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px; color:var(--text-muted);">
           <span>COURSE PROGRESS</span>

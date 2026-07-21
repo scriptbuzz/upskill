@@ -214,6 +214,25 @@ header {
   border-color: var(--text-muted);
 }
 
+/* Compact icon-only action buttons (share/reset on course cards) — equal fixed size */
+.btn-icon {
+  width: 44px;
+  min-width: 44px;
+  padding: 10px 0;
+  flex: 0 0 auto;
+}
+
+/* Labeled action buttons that must match each other's width (share/reset on course pages) */
+.btn-uniform {
+  min-width: 112px;
+}
+
+/* Injected per-card progress bar wrapper — breathing room above and below */
+.card-progress {
+  width: 100%;
+  margin: 16px 0;
+}
+
 /* Badges */
 .badge {
   display: inline-flex;
