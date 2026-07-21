@@ -18,7 +18,8 @@ function initLandingPage() {
 
   // Check if there's any active progress
   if (completedSlides.length > 0) {
-    const totalSlides = 104; // CLF has 104 steps (80 slides + 24 quiz steps)
+    // Course pages persist their real step total; fall back to the last known count
+    const totalSlides = window.getCourseTotal("clf") || 104;
     const percent = Math.min(Math.round((completedSlides.length / totalSlides) * 100), 100);
     
     // Update the button on the CLF course card and add a reset button next to it
@@ -31,6 +32,7 @@ function initLandingPage() {
       resetBtn.className = "btn btn-secondary btn-icon";
       resetBtn.id = "reset-clf-course-btn";
       resetBtn.title = "Reset Progress";
+      resetBtn.setAttribute("aria-label", "Reset Cloud Practitioner course progress");
       resetBtn.innerHTML = "↺";
       clfBtn.after(resetBtn);
       
@@ -59,7 +61,7 @@ function initLandingPage() {
           <span>COURSE PROGRESS</span>
           <span>${percent}%</span>
         </div>
-        <div style="width:100%; height:4px; background-color:var(--bg-hover); border-radius:2px; overflow:hidden;">
+        <div role="progressbar" aria-label="Cloud Practitioner course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percent}" style="width:100%; height:4px; background-color:var(--bg-hover); border-radius:2px; overflow:hidden;">
           <div style="width:${percent}%; height:100%; background:var(--gradient-blue); border-radius:2px;"></div>
         </div>
       `;
@@ -78,7 +80,7 @@ function initLandingPage() {
   }
 
   if (aifCompletedSlides.length > 0) {
-    const aifTotalSlides = 137; // AIF has 137 steps (115 slides + 22 quiz steps)
+    const aifTotalSlides = window.getCourseTotal("aif") || 137;
     const aifPercent = Math.min(Math.round((aifCompletedSlides.length / aifTotalSlides) * 100), 100);
     
     const aifBtn = document.getElementById("start-aif-course-btn");
@@ -89,6 +91,7 @@ function initLandingPage() {
       resetBtn.className = "btn btn-secondary btn-icon";
       resetBtn.id = "reset-aif-course-btn";
       resetBtn.title = "Reset Progress";
+      resetBtn.setAttribute("aria-label", "Reset AI Practitioner course progress");
       resetBtn.innerHTML = "↺";
       aifBtn.after(resetBtn);
       
@@ -116,7 +119,7 @@ function initLandingPage() {
           <span>COURSE PROGRESS</span>
           <span>${aifPercent}%</span>
         </div>
-        <div style="width:100%; height:4px; background-color:var(--bg-hover); border-radius:2px; overflow:hidden;">
+        <div role="progressbar" aria-label="AI Practitioner course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${aifPercent}" style="width:100%; height:4px; background-color:var(--bg-hover); border-radius:2px; overflow:hidden;">
           <div style="width:${aifPercent}%; height:100%; background:var(--gradient-blue); border-radius:2px;"></div>
         </div>
       `;
@@ -126,9 +129,9 @@ function initLandingPage() {
 
   // Wire the per-course Share buttons (helper from course_shared.js)
   if (window.initCourseShareButton) {
-    window.initCourseShareButton("share-clf-course-btn", null, new URL("courses/clf/index.html", window.location.href).href);
-    window.initCourseShareButton("share-aif-course-btn", null, new URL("courses/aif/index.html", window.location.href).href);
-    window.initCourseShareButton("share-agy-course-btn", null, new URL("#course-card-agy", window.location.href).href);
+    window.initCourseShareButton("share-clf-course-btn", new URL("courses/clf/index.html", window.location.href).href);
+    window.initCourseShareButton("share-aif-course-btn", new URL("courses/aif/index.html", window.location.href).href);
+    window.initCourseShareButton("share-agy-course-btn", new URL("#course-card-agy", window.location.href).href);
   }
 }
 

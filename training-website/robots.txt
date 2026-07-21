@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /courses/aif/export.html
+Disallow: /courses/clf/export.html

@@ -1,25 +1,35 @@
+// Shared course home page controller.
+// Each course page defines window.COURSE_CONFIG = { courseId, data } before loading this file.
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initCourseHome);
 } else {
   initCourseHome();
 }
 
+// Display number for module/slide ids across both id schemes ("m1-s2" -> "1.2", "1.2" -> "1.2")
+function displayNum(id) {
+  return String(id).replace(/^m/, "").replace("-s", ".");
+}
+
 function initCourseHome() {
-  if (typeof AIF_COURSE_DATA === 'undefined') {
-    console.error("AIF_COURSE_DATA not loaded!");
+  if (!window.COURSE_CONFIG || !window.COURSE_CONFIG.data) {
+    console.error("COURSE_CONFIG not loaded!");
     return;
   }
+  const courseId = window.COURSE_CONFIG.courseId;
+  const courseData = window.COURSE_CONFIG.data;
 
-  window.initCourseShareButton("course-share-btn", "share-link-output");
+  window.initCourseShareButton("course-share-btn");
 
   // Load progress
-  let completedSlides = window.getCourseProgress("aif");
+  let completedSlides = window.getCourseProgress(courseId);
 
   // Count total slides (outlines + quiz steps)
   let totalSlides = 0;
   let completedCount = 0;
 
-  AIF_COURSE_DATA.modules.forEach(module => {
+  courseData.modules.forEach(module => {
     totalSlides += module.slides.length + (module.quiz ? module.quiz.length * 2 : 0);
     module.slides.forEach(slide => {
       if (completedSlides.includes(slide.id)) {
@@ -38,6 +48,9 @@ function initCourseHome() {
     }
   });
 
+  // Keep the landing page's step total in sync with the real course data
+  window.saveCourseTotal(courseId, totalSlides);
+
   // Calculate overall percentage
   const percent = totalSlides > 0 ? Math.min(Math.round((completedCount / totalSlides) * 100), 100) : 0;
 
@@ -51,13 +64,21 @@ function initCourseHome() {
   }
   if (progressBar) {
     progressBar.style.width = `${percent}%`;
+    const barBg = progressBar.parentElement;
+    if (barBg) {
+      barBg.setAttribute("role", "progressbar");
+      barBg.setAttribute("aria-label", "Overall course progress");
+      barBg.setAttribute("aria-valuemin", "0");
+      barBg.setAttribute("aria-valuemax", "100");
+      barBg.setAttribute("aria-valuenow", String(percent));
+    }
   }
   if (ctaBtn) {
     if (completedCount > 0) {
       ctaBtn.innerText = "Continue Learning";
       // Find the first uncompleted slide to navigate to
       let targetSlideId = null;
-      for (const module of AIF_COURSE_DATA.modules) {
+      for (const module of courseData.modules) {
         for (const slide of module.slides) {
           if (!completedSlides.includes(slide.id)) {
             targetSlideId = slide.id;
@@ -67,31 +88,32 @@ function initCourseHome() {
         if (targetSlideId) break;
       }
       // If all completed, start from slide 1.1
-      if (!targetSlideId && AIF_COURSE_DATA.modules[0] && AIF_COURSE_DATA.modules[0].slides[0]) {
-        targetSlideId = AIF_COURSE_DATA.modules[0].slides[0].id;
+      if (!targetSlideId && courseData.modules[0] && courseData.modules[0].slides[0]) {
+        targetSlideId = courseData.modules[0].slides[0].id;
       }
       if (targetSlideId) {
         ctaBtn.href = `viewer.html?slide=${targetSlideId}`;
       }
-      
+
       // Inject Reset button next to the Continue button
       if (!document.getElementById("course-reset-btn")) {
         const btnContainer = ctaBtn.parentNode;
         btnContainer.style.display = "flex";
         btnContainer.style.gap = "8px";
-        
+
         const resetBtn = document.createElement("button");
         resetBtn.className = "btn btn-secondary btn-uniform";
         resetBtn.id = "course-reset-btn";
         resetBtn.title = "Reset Progress";
+        resetBtn.setAttribute("aria-label", "Reset course progress");
         resetBtn.innerHTML = "↺ Reset";
         // Keep Reset directly beside the Continue button, ahead of the Export PDF link
         ctaBtn.insertAdjacentElement("afterend", resetBtn);
-        
+
         resetBtn.addEventListener("click", () => {
           window.showCustomConfirm().then((confirmed) => {
             if (confirmed) {
-              window.clearCourseProgress("aif");
+              window.clearCourseProgress(courseId);
               window.location.reload();
             }
           });
@@ -99,8 +121,8 @@ function initCourseHome() {
       }
     } else {
       ctaBtn.innerText = "Start Course";
-      if (AIF_COURSE_DATA.modules[0] && AIF_COURSE_DATA.modules[0].slides[0]) {
-        ctaBtn.href = `viewer.html?slide=${AIF_COURSE_DATA.modules[0].slides[0].id}`;
+      if (courseData.modules[0] && courseData.modules[0].slides[0]) {
+        ctaBtn.href = `viewer.html?slide=${courseData.modules[0].slides[0].id}`;
       }
       // Remove reset button if it exists (in case progress goes to 0)
       const resetBtn = document.getElementById("course-reset-btn");
@@ -116,7 +138,7 @@ function initCourseHome() {
 
   modulesListContainer.innerHTML = "";
 
-  AIF_COURSE_DATA.modules.forEach(module => {
+  courseData.modules.forEach(module => {
     // Count module slides progress (outlines + quiz steps)
     const moduleTotal = module.slides.length + (module.quiz ? module.quiz.length * 2 : 0);
     let moduleCompleted = 0;
@@ -148,7 +170,7 @@ function initCourseHome() {
             ${module.objectives.map(obj => `
               <li style="position: relative; padding-left: 20px; line-height: 1.4;">
                 <span style="position: absolute; left: 0; color: var(--brand-blue);">✔</span>
-                ${obj}
+                ${window.formatInlineText(obj)}
               </li>
             `).join('')}
           </ul>
@@ -185,8 +207,8 @@ function initCourseHome() {
     card.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
         <div>
-          <span class="badge badge-muted" style="margin-bottom: 8px;">Module ${module.id.replace('m', '')}</span>
-          <h3 style="margin-bottom: 4px; font-size: 22px;">${module.title}</h3>
+          <span class="badge badge-muted" style="margin-bottom: 8px;">Module ${displayNum(module.id)}</span>
+          <h3 style="margin-bottom: 4px; font-size: 22px;">${window.escapeHtml(module.title)}</h3>
         </div>
         <div style="text-align: right;">
           <span style="font-size: 13px; color: var(--text-muted); font-weight: 600;">
@@ -195,7 +217,7 @@ function initCourseHome() {
         </div>
       </div>
 
-      <div style="width: 100%; height: 4px; background-color: var(--bg-hover); border-radius: 2px; overflow: hidden;">
+      <div role="progressbar" aria-label="Module ${displayNum(module.id)} progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${modulePercent}" style="width: 100%; height: 4px; background-color: var(--bg-hover); border-radius: 2px; overflow: hidden;">
         <div style="width: ${modulePercent}%; height: 100%; background: var(--gradient-orange); border-radius: 2px;"></div>
       </div>
 
@@ -206,7 +228,7 @@ function initCourseHome() {
           View Slides
         </a>
         ${module.quiz && module.quiz.length > 0 ? `
-          <a href="viewer.html?quiz=${module.id.replace('m', '')}" class="btn btn-secondary" style="font-size: 13px; padding: 8px 16px; border-color: rgba(16, 185, 129, 0.3); color: var(--success); background-color: rgba(16, 185, 129, 0.03);">
+          <a href="viewer.html?quiz=${displayNum(module.id)}" class="btn btn-secondary" style="font-size: 13px; padding: 8px 16px; border-color: rgba(16, 185, 129, 0.3); color: var(--success); background-color: rgba(16, 185, 129, 0.03);">
             Take Checkpoint Quiz
           </a>
         ` : ''}
@@ -216,4 +238,3 @@ function initCourseHome() {
     modulesListContainer.appendChild(card);
   });
 }
-

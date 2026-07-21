@@ -32,6 +32,38 @@ window.clearCourseProgress = function(courseId) {
   }
 };
 
+// Persist the course's true step total so the landing page never relies on
+// stale hard-coded counts (it only shows progress after a course was visited)
+window.saveCourseTotal = function(courseId, total) {
+  try {
+    localStorage.setItem(`${courseId}_total_steps`, String(total));
+  } catch (e) {
+    // Non-critical; landing page falls back to its default constant
+  }
+};
+
+window.getCourseTotal = function(courseId) {
+  try {
+    const raw = localStorage.getItem(`${courseId}_total_steps`);
+    const total = parseInt(raw, 10);
+    return Number.isFinite(total) && total > 0 ? total : null;
+  } catch (e) {
+    return null;
+  }
+};
+
+// Make a non-button element keyboard-operable (Enter/Space trigger its click)
+window.makeActionable = function(el) {
+  el.setAttribute("tabindex", "0");
+  el.setAttribute("role", "button");
+  el.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      el.click();
+    }
+  });
+};
+
 // Escape HTML special characters, including quotes for attribute contexts
 window.escapeHtml = function(text) {
   return String(text)
@@ -55,12 +87,79 @@ window.parseCorrectKeys = function(correct) {
   return String(correct).split(",").map((s) => s.trim()).filter(Boolean);
 };
 
-// Wire up a Share button that copies the course page link and shows it.
-// `shareLink` is optional and defaults to the current page URL; without an
-// output element the button itself flashes a copied state instead.
-window.initCourseShareButton = function(buttonId, outputId, shareLink) {
+// Toast confirming a share link was copied, with an option to reveal the link.
+// If the copy failed, the link is revealed immediately so the user can copy it by hand.
+let shareToastTimer = null;
+window.showShareToast = function(link, copied) {
+  const existing = document.getElementById("share-toast");
+  if (existing) existing.remove();
+  if (shareToastTimer) {
+    clearTimeout(shareToastTimer);
+    shareToastTimer = null;
+  }
+
+  const toast = document.createElement("div");
+  toast.id = "share-toast";
+  toast.className = "share-toast";
+  toast.setAttribute("role", "status");
+
+  const msg = document.createElement("span");
+  msg.className = "share-toast-msg" + (copied ? "" : " share-toast-msg-warn");
+  msg.textContent = copied ? "✓ Link copied to clipboard" : "Couldn't copy automatically — copy the link below";
+  toast.appendChild(msg);
+
+  const linkBox = document.createElement("div");
+  linkBox.className = "share-toast-link";
+  linkBox.textContent = link;
+  linkBox.hidden = true;
+
+  const dismiss = () => {
+    toast.remove();
+    if (shareToastTimer) {
+      clearTimeout(shareToastTimer);
+      shareToastTimer = null;
+    }
+  };
+
+  if (copied) {
+    const showBtn = document.createElement("button");
+    showBtn.type = "button";
+    showBtn.className = "share-toast-show";
+    showBtn.textContent = "Show link";
+    showBtn.addEventListener("click", () => {
+      linkBox.hidden = false;
+      showBtn.remove();
+      // Keep the toast up while the user reads/copies the revealed link
+      if (shareToastTimer) {
+        clearTimeout(shareToastTimer);
+        shareToastTimer = null;
+      }
+    });
+    toast.appendChild(showBtn);
+  } else {
+    linkBox.hidden = false;
+  }
+
+  const closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "share-toast-close";
+  closeBtn.setAttribute("aria-label", "Dismiss notification");
+  closeBtn.textContent = "✕";
+  closeBtn.addEventListener("click", dismiss);
+  toast.appendChild(closeBtn);
+
+  toast.appendChild(linkBox);
+  document.body.appendChild(toast);
+
+  if (copied) {
+    shareToastTimer = setTimeout(dismiss, 6000);
+  }
+};
+
+// Wire up a Share button that copies the page link and confirms via toast.
+// `shareLink` is optional and defaults to the current page URL.
+window.initCourseShareButton = function(buttonId, shareLink) {
   const btn = document.getElementById(buttonId);
-  const output = outputId ? document.getElementById(outputId) : null;
   if (!btn) return;
 
   btn.addEventListener("click", async () => {
@@ -84,21 +183,7 @@ window.initCourseShareButton = function(buttonId, outputId, shareLink) {
       }
       helper.remove();
     }
-    if (output) {
-      output.style.display = "block";
-      output.textContent = copied ? `✓ Link copied to clipboard: ${link}` : `Copy this link: ${link}`;
-    } else if (!btn.dataset.shareFlash) {
-      btn.dataset.shareFlash = "1";
-      const originalHtml = btn.innerHTML;
-      const originalTitle = btn.title;
-      btn.innerHTML = copied ? "✓" : "🔗";
-      btn.title = copied ? "Link copied to clipboard" : `Copy this link: ${link}`;
-      setTimeout(() => {
-        btn.innerHTML = originalHtml;
-        btn.title = originalTitle;
-        delete btn.dataset.shareFlash;
-      }, 1500);
-    }
+    window.showShareToast(link, copied);
   });
 };
 

@@ -7,24 +7,38 @@
   <!-- SEO Meta Tags -->
   <title>Interactive Study Guide & Checkpoint Quizzes - AWS Cloud Practitioner</title>
   <meta name="description" content="Study and test your AWS Cloud Practitioner knowledge slide-by-slide with architecture diagrams and module quizzes.">
-  <meta name="keywords" content="AWS, Cloud Practitioner, CLF-C02, Study Guide, Quiz">
   <meta name="author" content="4 Corners Academy">
-  
+
+  <!-- Social sharing cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="4 Corners Academy">
+  <meta property="og:title" content="Interactive Study Guide & Checkpoint Quizzes - AWS Cloud Practitioner">
+  <meta property="og:description" content="Study and test your AWS Cloud Practitioner knowledge slide-by-slide with architecture diagrams and module quizzes.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../../css/styles.css">
-  
-  <link rel="icon" type="image/svg+xml" href="visualizations/clf_m1_domain_weights.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 </head>
 <body id="clf-viewer-body" style="overflow: hidden;">
+  <a class="skip-link" href="#viewer-content-panel">Skip to slide content</a>
 
   <!-- Sticky Navigation -->
   <header id="main-header">
     <div class="container nav-wrapper">
       <a href="../../index.html" class="logo" id="home-logo-link">4 Corners Academy</a>
-      <nav class="nav-links" id="main-nav-menu">
-      </nav>
     </div>
   </header>
+
+  <noscript>
+    <p style="max-width: 900px; margin: 24px auto; padding: 0 24px;">The slide viewer requires JavaScript. Please enable JavaScript.</p>
+  </noscript>
 
   <!-- Interactive Slide and Quiz Presenter Layout -->
   <div class="viewer-layout" id="clf-viewer-layout">
@@ -38,11 +52,11 @@
         <button id="close-sidebar-btn" class="btn btn-secondary" style="padding: 4px 8px; font-size: 11px; display: none;">Close</button>
       </div>
       <div class="slide-list" id="sidebar-slide-list">
-        <!-- Populated via viewer.js -->
+        <!-- Populated via course_viewer.js -->
       </div>
       <div class="sidebar-footer" style="padding: 16px; border-top: 1px solid var(--border-main); background-color: #0b0f19;">
         <button id="reset-course-btn" class="btn btn-secondary" style="width: 100%; font-size: 12px; padding: 8px 12px; gap: 6px; justify-content: center;">
-          🗑 Reset Progress
+          ↺ Reset Progress
         </button>
       </div>
     </aside>
@@ -55,7 +69,7 @@
         <div style="display: flex; align-items: center; gap: 12px;">
           <a href="index.html" class="btn btn-secondary" id="viewer-back-btn" style="padding: 6px 12px; font-size: 13px;">← Course</a>
           <button id="toggle-sidebar-btn" class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;">☰ Outline</button>
-          <span class="viewer-title" id="active-slide-title">Loading Module Outline...</span>
+          <span class="viewer-title" id="active-slide-title" aria-live="polite">Loading Module Outline...</span>
         </div>
         <div style="display: flex; align-items: center; gap: 16px;">
           <div id="slide-status-badge">
@@ -94,7 +108,7 @@
       <div class="quiz-viewport" id="active-quiz-viewport" style="display: none;">
         <!-- Dynamically loaded Quiz Form Card -->
         <div class="quiz-card" id="active-quiz-card">
-          <!-- populated via viewer.js -->
+          <!-- populated via course_viewer.js -->
         </div>
       </div>
 
@@ -139,6 +153,7 @@
   <!-- Scripts -->
   <script src="../../js/course_shared.js"></script>
   <script src="clf_data.js"></script>
-  <script src="viewer.js"></script>
+  <script>window.COURSE_CONFIG = { courseId: "clf", data: typeof CLF_COURSE_DATA !== "undefined" ? CLF_COURSE_DATA : null };</script>
+  <script src="../../js/course_viewer.js"></script>
 </body>
 </html>

@@ -1,26 +1,46 @@
+// Shared slide/quiz viewer controller.
+// Each course viewer page defines window.COURSE_CONFIG = { courseId, data } before loading this file.
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initViewer);
 } else {
   initViewer();
 }
 
+let courseId = null;
+let courseData = null;
 let allSlides = [];
 let currentSlideIndex = 0;
 
 // Progress State
 let completedSlides = [];
 
+// Display number for module/slide ids across both id schemes ("m1-s2" -> "1.2", "1.2" -> "1.2")
+function displayNum(id) {
+  return String(id).replace(/^m/, "").replace("-s", ".");
+}
+
+// DOM-safe element id fragment (dots are invalid in query selectors without escaping)
+function domSafe(id) {
+  return String(id).replace(/\./g, "_");
+}
+
 function initViewer() {
-  if (typeof CLF_COURSE_DATA === 'undefined') {
-    console.error("CLF_COURSE_DATA not loaded!");
+  if (!window.COURSE_CONFIG || !window.COURSE_CONFIG.data) {
+    console.error("COURSE_CONFIG not loaded!");
     return;
   }
+  courseId = window.COURSE_CONFIG.courseId;
+  courseData = window.COURSE_CONFIG.data;
 
   // Load progress
   loadProgress();
 
   // Build flat list of slides and insert quizzes
   buildSlideList();
+
+  // Keep the landing page's step total in sync with the real course data
+  window.saveCourseTotal(courseId, allSlides.length);
 
   // Render Sidebar
   renderSidebar();
@@ -33,16 +53,16 @@ function initViewer() {
 }
 
 function loadProgress() {
-  completedSlides = window.getCourseProgress("clf");
+  completedSlides = window.getCourseProgress(courseId);
 }
 
 function saveProgress() {
-  window.saveCourseProgress("clf", completedSlides);
+  window.saveCourseProgress(courseId, completedSlides);
 }
 
 function buildSlideList() {
   allSlides = [];
-  CLF_COURSE_DATA.modules.forEach(module => {
+  courseData.modules.forEach(module => {
     // Add slides of this module
     module.slides.forEach(slide => {
       allSlides.push({
@@ -62,6 +82,7 @@ function buildSlideList() {
         allSlides.push({
           type: "quiz-question",
           id: `q-${module.id}.${question.id}`,
+          questionId: question.id,
           title: `Quiz Checkpoint — Question ${question.id}`,
           question: question.question,
           options: question.options,
@@ -76,6 +97,7 @@ function buildSlideList() {
         allSlides.push({
           type: "quiz-question",
           id: `q-${module.id}.${question.id}-solved`,
+          questionId: question.id,
           title: `Quiz Checkpoint — Question ${question.id} (Solved)`,
           question: question.question,
           options: question.options,
@@ -96,16 +118,16 @@ function renderSidebar() {
 
   sidebarContainer.innerHTML = "";
 
-  CLF_COURSE_DATA.modules.forEach(module => {
+  courseData.modules.forEach(module => {
     // Module Header
     const modHeader = document.createElement("div");
     modHeader.className = "module-header";
     modHeader.setAttribute("data-module-id", module.id);
-    
+
     // Count module progress (slides + quiz question steps)
     const modSlidesCount = module.slides.length + (module.quiz ? module.quiz.length * 2 : 0);
     let completedInMod = 0;
-    
+
     module.slides.forEach(s => {
       if (completedSlides.includes(s.id)) completedInMod++;
     });
@@ -115,31 +137,34 @@ function renderSidebar() {
         if (completedSlides.includes(`q-${module.id}.${q.id}-solved`)) completedInMod++;
       });
     }
-    
+
     modHeader.innerHTML = `
-      <span>Module ${module.id}: ${module.title}</span>
+      <span>Module ${displayNum(module.id)}: ${window.escapeHtml(module.title)}</span>
       <span class="mod-progress-indicator" style="font-size: 10px; opacity: 0.8;">${completedInMod}/${modSlidesCount}</span>
     `;
+    window.makeActionable(modHeader);
+    modHeader.setAttribute("aria-expanded", "true");
     sidebarContainer.appendChild(modHeader);
 
     // Module Slides container (ul)
     const slidesList = document.createElement("ul");
     slidesList.className = "module-slides";
-    slidesList.id = `module-slides-${module.id}`;
+    slidesList.id = `module-slides-${domSafe(module.id)}`;
     slidesList.style.display = "block"; // Start expanded
 
     // Slides
     module.slides.forEach(slide => {
       const slideLi = document.createElement("li");
       slideLi.className = "slide-item";
-      slideLi.id = `sidebar-item-${slide.id}`;
+      slideLi.id = `sidebar-item-${domSafe(slide.id)}`;
       slideLi.setAttribute("data-slide-id", slide.id);
-      
+
       const isCompleted = completedSlides.includes(slide.id);
       slideLi.innerHTML = `
-        <span class="slide-title-text">${slide.id} ${slide.title}</span>
+        <span class="slide-title-text">${displayNum(slide.id)} ${window.escapeHtml(slide.title)}</span>
         <span class="slide-bullet-check" style="${isCompleted ? 'display: inline;' : 'display: none;'}">✓</span>
       `;
+      window.makeActionable(slideLi);
 
       slideLi.addEventListener("click", () => {
         const idx = allSlides.findIndex(s => s.type === "slide" && s.id === slide.id);
@@ -171,13 +196,14 @@ function renderSidebar() {
         // Unsolved question
         const qLi = document.createElement("li");
         qLi.className = "slide-item";
-        qLi.id = `sidebar-item-q-${module.id}.${question.id}`;
-        
+        qLi.id = `sidebar-item-${domSafe(`q-${module.id}.${question.id}`)}`;
+
         const isCompleted = completedSlides.includes(`q-${module.id}.${question.id}`);
         qLi.innerHTML = `
           <span class="slide-title-text" style="color: var(--text-muted);">❓ Q${question.id}: Checkpoint</span>
           <span class="slide-bullet-check" style="${isCompleted ? 'display: inline;' : 'display: none;'}">✓</span>
         `;
+        window.makeActionable(qLi);
 
         qLi.addEventListener("click", () => {
           const idx = allSlides.findIndex(s => s.type === "quiz-question" && s.id === `q-${module.id}.${question.id}`);
@@ -191,13 +217,14 @@ function renderSidebar() {
         // Solved question
         const qSolvedLi = document.createElement("li");
         qSolvedLi.className = "slide-item";
-        qSolvedLi.id = `sidebar-item-q-${module.id}.${question.id}-solved`;
-        
+        qSolvedLi.id = `sidebar-item-${domSafe(`q-${module.id}.${question.id}-solved`)}`;
+
         const isSolvedCompleted = completedSlides.includes(`q-${module.id}.${question.id}-solved`);
         qSolvedLi.innerHTML = `
           <span class="slide-title-text" style="color: var(--success); font-weight: 500;">✅ Q${question.id} Solved: Answer</span>
           <span class="slide-bullet-check" style="${isSolvedCompleted ? 'display: inline;' : 'display: none;'}">✓</span>
         `;
+        window.makeActionable(qSolvedLi);
 
         qSolvedLi.addEventListener("click", () => {
           const idx = allSlides.findIndex(s => s.type === "quiz-question" && s.id === `q-${module.id}.${question.id}-solved`);
@@ -216,8 +243,10 @@ function renderSidebar() {
     modHeader.addEventListener("click", () => {
       if (slidesList.style.display === "none") {
         slidesList.style.display = "block";
+        modHeader.setAttribute("aria-expanded", "true");
       } else {
         slidesList.style.display = "none";
+        modHeader.setAttribute("aria-expanded", "false");
       }
     });
   });
@@ -227,20 +256,25 @@ function closeSidebarOnMobile() {
   const sidebar = document.getElementById("viewer-sidebar-aside");
   const backdrop = document.getElementById("sidebar-backdrop");
   const toggleSidebarBtn = document.getElementById("toggle-sidebar-btn");
-  
+
   if (window.innerWidth <= 1024) {
     if (sidebar) sidebar.classList.remove("open");
     if (backdrop) backdrop.classList.remove("active");
-    if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
+    if (toggleSidebarBtn) setSidebarToggleState(toggleSidebarBtn, false);
   }
 }
 
+function setSidebarToggleState(btn, isOpen) {
+  btn.innerText = isOpen ? "✕ Outline" : "☰ Outline";
+  btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+}
+
 function updateSidebarProgress() {
-  CLF_COURSE_DATA.modules.forEach(module => {
+  courseData.modules.forEach(module => {
     // Update progress numbers
     const modSlidesCount = module.slides.length + (module.quiz ? module.quiz.length * 2 : 0);
     let completedInMod = 0;
-    
+
     module.slides.forEach(s => {
       if (completedSlides.includes(s.id)) completedInMod++;
     });
@@ -258,7 +292,7 @@ function updateSidebarProgress() {
 
     // Update individual checkmarks for slides
     module.slides.forEach(slide => {
-      const check = document.querySelector(`#sidebar-item-${slide.id.replace('.', '\\.')} .slide-bullet-check`);
+      const check = document.querySelector(`#sidebar-item-${domSafe(slide.id)} .slide-bullet-check`);
       if (check) {
         const isCompleted = completedSlides.includes(slide.id);
         check.style.display = isCompleted ? "inline" : "none";
@@ -269,13 +303,13 @@ function updateSidebarProgress() {
     if (module.quiz) {
       module.quiz.forEach(q => {
         // Unsolved question
-        const checkQ = document.querySelector(`#sidebar-item-q-${module.id}\\.${q.id} .slide-bullet-check`);
+        const checkQ = document.querySelector(`#sidebar-item-${domSafe(`q-${module.id}.${q.id}`)} .slide-bullet-check`);
         if (checkQ) {
           const isCompleted = completedSlides.includes(`q-${module.id}.${q.id}`);
           checkQ.style.display = isCompleted ? "inline" : "none";
         }
         // Solved question
-        const checkQS = document.querySelector(`#sidebar-item-q-${module.id}\\.${q.id}-solved .slide-bullet-check`);
+        const checkQS = document.querySelector(`#sidebar-item-${domSafe(`q-${module.id}.${q.id}-solved`)} .slide-bullet-check`);
         if (checkQS) {
           const isCompleted = completedSlides.includes(`q-${module.id}.${q.id}-solved`);
           checkQS.style.display = isCompleted ? "inline" : "none";
@@ -329,6 +363,7 @@ function setupEventListeners() {
   // Sidebar Toggles
   const backdrop = document.getElementById("sidebar-backdrop");
   if (toggleSidebarBtn) {
+    toggleSidebarBtn.setAttribute("aria-controls", "viewer-sidebar-aside");
     toggleSidebarBtn.addEventListener("click", () => {
       const isMobile = window.innerWidth <= 1024;
       if (isMobile) {
@@ -336,18 +371,10 @@ function setupEventListeners() {
         if (backdrop) {
           backdrop.classList.toggle("active");
         }
-        if (sidebar.classList.contains("open")) {
-          toggleSidebarBtn.innerText = "✕ Outline";
-        } else {
-          toggleSidebarBtn.innerText = "☰ Outline";
-        }
+        setSidebarToggleState(toggleSidebarBtn, sidebar.classList.contains("open"));
       } else {
         sidebar.classList.toggle("collapsed");
-        if (sidebar.classList.contains("collapsed")) {
-          toggleSidebarBtn.innerText = "☰ Outline";
-        } else {
-          toggleSidebarBtn.innerText = "✕ Outline";
-        }
+        setSidebarToggleState(toggleSidebarBtn, !sidebar.classList.contains("collapsed"));
       }
     });
   }
@@ -359,7 +386,7 @@ function setupEventListeners() {
         backdrop.classList.remove("active");
       }
       if (toggleSidebarBtn) {
-        toggleSidebarBtn.innerText = "☰ Outline";
+        setSidebarToggleState(toggleSidebarBtn, false);
       }
     });
   }
@@ -369,7 +396,7 @@ function setupEventListeners() {
       sidebar.classList.remove("open");
       backdrop.classList.remove("active");
       if (toggleSidebarBtn) {
-        toggleSidebarBtn.innerText = "☰ Outline";
+        setSidebarToggleState(toggleSidebarBtn, false);
       }
     });
   }
@@ -401,7 +428,7 @@ function setupEventListeners() {
     resetCourseBtn.addEventListener("click", () => {
       window.showCustomConfirm().then((confirmed) => {
         if (confirmed) {
-          window.clearCourseProgress("clf");
+          window.clearCourseProgress(courseId);
           window.location.href = "index.html";
         }
       });
@@ -416,6 +443,10 @@ function setupEventListeners() {
       }
       e.preventDefault();
     } else if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " ") {
+      // Never hijack Space/arrows while an interactive element has focus
+      if (e.key === " " && document.activeElement && document.activeElement !== document.body) {
+        return;
+      }
       if (currentSlideIndex < allSlides.length - 1) {
         navigateSlide(currentSlideIndex + 1);
       } else {
@@ -444,6 +475,15 @@ function setupEventListeners() {
     });
   }
 
+  // Bottom progress bar semantics
+  const progressBarBg = document.querySelector(".viewer-controls .progress-bar-bg");
+  if (progressBarBg) {
+    progressBarBg.setAttribute("role", "progressbar");
+    progressBarBg.setAttribute("aria-label", "Course position");
+    progressBarBg.setAttribute("aria-valuemin", "0");
+    progressBarBg.setAttribute("aria-valuemax", "100");
+  }
+
   // Responsive initialization
   window.addEventListener("resize", () => {
     adjustSidebarResponsive();
@@ -464,19 +504,15 @@ function adjustSidebarResponsive() {
   const isMobile = window.innerWidth <= 1024;
   if (isMobile) {
     if (sidebar.classList.contains("open")) {
-      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "✕ Outline";
+      if (toggleSidebarBtn) setSidebarToggleState(toggleSidebarBtn, true);
       if (backdrop) backdrop.classList.add("active");
     } else {
-      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
+      if (toggleSidebarBtn) setSidebarToggleState(toggleSidebarBtn, false);
       if (backdrop) backdrop.classList.remove("active");
     }
     sidebar.classList.remove("collapsed");
   } else {
-    if (sidebar.classList.contains("collapsed")) {
-      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "☰ Outline";
-    } else {
-      if (toggleSidebarBtn) toggleSidebarBtn.innerText = "✕ Outline";
-    }
+    if (toggleSidebarBtn) setSidebarToggleState(toggleSidebarBtn, !sidebar.classList.contains("collapsed"));
     sidebar.classList.remove("open");
     if (backdrop) backdrop.classList.remove("active");
   }
@@ -494,9 +530,9 @@ function loadInitialContent() {
       return;
     }
   } else if (quizParam) {
-    const modId = parseInt(quizParam);
-    // Find the first quiz question of this module
-    const idx = allSlides.findIndex(s => s.type === "quiz-question" && s.moduleId === modId);
+    // Accept both "1" and "m1" regardless of the course's module id scheme
+    const wanted = displayNum(quizParam);
+    const idx = allSlides.findIndex(s => s.type === "quiz-question" && displayNum(s.moduleId) === wanted);
     if (idx !== -1) {
       navigateSlide(idx);
       return;
@@ -530,7 +566,7 @@ function navigateSlide(index) {
       backdrop.classList.remove("active");
     }
     if (toggleSidebarBtn) {
-      toggleSidebarBtn.innerText = "☰ Outline";
+      setSidebarToggleState(toggleSidebarBtn, false);
     }
   }
 
@@ -582,30 +618,30 @@ function navigateSlide(index) {
     }
 
     // Highlight sidebar item
-    const sidebarItem = document.getElementById(`sidebar-item-${item.id}`);
+    const sidebarItem = document.getElementById(`sidebar-item-${domSafe(item.id)}`);
     if (sidebarItem) {
       sidebarItem.classList.add("active");
-      
+
       // Auto expand parent module slides if collapsed
-      const parentList = document.getElementById(`module-slides-${item.moduleId}`);
+      const parentList = document.getElementById(`module-slides-${domSafe(item.moduleId)}`);
       if (parentList && parentList.style.display === "none") {
         parentList.style.display = "block";
       }
-      
+
       // Scroll sidebar item into view
       sidebarItem.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
     // Render slide details
-    document.getElementById("active-slide-title").innerText = `Module ${item.moduleId} Outline — Slide ${item.id}`;
+    document.getElementById("active-slide-title").innerText = `Module ${displayNum(item.moduleId)} Outline — Slide ${displayNum(item.id)}`;
     document.getElementById("slide-detail-heading").innerText = item.title;
-    
+
     // Render Bullets
     const bulletsContainer = document.getElementById("slide-detail-bullets");
     bulletsContainer.innerHTML = "";
     item.bullets.forEach(bullet => {
       const li = document.createElement("li");
-      li.innerHTML = formatBulletText(bullet.text);
+      li.innerHTML = window.formatInlineText(bullet.text);
       if (bullet.indent === 1) {
         li.className = "indent-1";
       } else if (bullet.indent === 2) {
@@ -640,7 +676,7 @@ function navigateSlide(index) {
       viewerContent.classList.add("show-details");
       viewerContent.classList.remove("show-diagram");
     }
-    
+
     const quizViewport = document.getElementById("active-quiz-viewport");
     if (quizViewport) {
       quizViewport.style.display = "flex";
@@ -648,20 +684,21 @@ function navigateSlide(index) {
     }
 
     // Highlight sidebar quiz item
-    const sidebarQuiz = document.getElementById(`sidebar-item-${item.id}`);
+    const sidebarQuiz = document.getElementById(`sidebar-item-${domSafe(item.id)}`);
     if (sidebarQuiz) {
       sidebarQuiz.classList.add("active");
-      
+
       // Auto expand parent module if collapsed
-      const parentList = document.getElementById(`module-slides-${item.moduleId}`);
+      const parentList = document.getElementById(`module-slides-${domSafe(item.moduleId)}`);
       if (parentList && parentList.style.display === "none") {
         parentList.style.display = "block";
       }
-      
+
       sidebarQuiz.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
-    document.getElementById("active-slide-title").innerText = `Module ${item.moduleId} Checkpoint Quiz — Step ${item.id.replace('q-', '')}`;
+    document.getElementById("active-slide-title").innerText =
+      `Module ${displayNum(item.moduleId)} Checkpoint Quiz — Question ${item.questionId}${item.solved ? " (Answer)" : ""}`;
 
     // Helper to see if an option is correct (supports multi-answer keys like "A, D")
     const correctKeys = window.parseCorrectKeys(item.correct);
@@ -671,8 +708,10 @@ function navigateSlide(index) {
       let cardClass = "option-card";
       let cursorStyle = "cursor: default;";
       let isIncorrect = false;
+      const isCorrectKey = correctKeys.includes(key);
+
       if (item.solved) {
-        if (correctKeys.includes(key)) {
+        if (isCorrectKey) {
           cardClass = "option-card correct";
         } else {
           cardClass = "option-card solved-incorrect";
@@ -680,16 +719,16 @@ function navigateSlide(index) {
           isIncorrect = true;
         }
       }
-      
+
       return `
         <div class="option-container" style="display: flex; flex-direction: column; width: 100%;">
           <div class="${cardClass}" style="${cursorStyle}" ${isIncorrect ? `data-option-key="${key}"` : ''}>
-            <span class="option-letter" style="${item.solved && correctKeys.includes(key) ? 'background-color: var(--success); color: #000;' : ''}">${key}</span>
-            <span class="option-text">${formatBulletText(val)}</span>
+            <span class="option-letter" style="${item.solved && isCorrectKey ? 'background-color: var(--success); color: #000;' : ''}">${key}</span>
+            <span class="option-text">${window.formatInlineText(val)}</span>
           </div>
           <div class="wrong-explanation-box" id="wrong-explain-${key}" style="display: none; margin-top: 8px; padding: 12px; border-left: 3px solid var(--error); background-color: rgba(239, 68, 68, 0.04); border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.45; color: var(--text-main); animation: fadeIn 0.2s ease;">
             <strong style="color: var(--error);">Why Option ${key} is incorrect:</strong>
-            <p style="margin-top: 4px; margin-bottom: 0;">${item.wrongExplanations && item.wrongExplanations[key] ? item.wrongExplanations[key] : 'This option is incorrect. Refer to the overall explanation below.'}</p>
+            <p style="margin-top: 4px; margin-bottom: 0;">${item.wrongExplanations && item.wrongExplanations[key] ? window.formatInlineText(item.wrongExplanations[key]) : 'This option is incorrect. Refer to the overall explanation below.'}</p>
           </div>
         </div>
       `;
@@ -701,9 +740,9 @@ function navigateSlide(index) {
       explanationHtml = `
         <div class="explanation-card animate-fade" style="margin-top: 24px;">
           <div class="explanation-title" style="color: var(--success);">
-            ✓ Correct Answer is ${item.correct}
+            ✓ Correct Answer is ${window.escapeHtml(item.correct)}
           </div>
-          <p style="margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--text-main);">${item.explanation}</p>
+          <p style="margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--text-main);">${window.formatInlineText(item.explanation)}</p>
           <p style="margin-top: 12px; font-size: 11px; color: var(--text-muted); font-style: italic;">Tip: Click on the incorrect options above to see why they are wrong.</p>
         </div>
       `;
@@ -714,18 +753,18 @@ function navigateSlide(index) {
       card.className = "quiz-card animate-fade";
       card.innerHTML = `
         <div class="quiz-card-header">
-          <span class="quiz-title">${item.title}</span>
+          <span class="quiz-title">${window.escapeHtml(item.title)}</span>
           <span class="quiz-progress" style="color: var(--brand-blue); font-weight: 700;">
             ${item.solved ? 'Answer Key' : 'Question Slide'}
           </span>
         </div>
-        
-        <div class="quiz-question" style="font-size: 17.5px; margin-bottom: 24px; color: var(--text-main); font-weight: 600; line-height: 1.45;">${item.question}</div>
-        
+
+        <div class="quiz-question" style="font-size: 17.5px; margin-bottom: 24px; color: var(--text-main); font-weight: 600; line-height: 1.45;">${window.formatInlineText(item.question)}</div>
+
         <div class="quiz-options" style="display: flex; flex-direction: column; gap: 12px;">
           ${optionsHtml}
         </div>
-        
+
         ${explanationHtml}
       `;
 
@@ -733,6 +772,8 @@ function navigateSlide(index) {
       if (item.solved) {
         const cards = card.querySelectorAll(".option-card.solved-incorrect");
         cards.forEach(c => {
+          window.makeActionable(c);
+          c.setAttribute("aria-expanded", "false");
           c.addEventListener("click", () => {
             const key = c.getAttribute("data-option-key");
             const expBox = card.querySelector(`#wrong-explain-${key}`);
@@ -740,9 +781,11 @@ function navigateSlide(index) {
               const isActive = c.classList.contains("active");
               if (isActive) {
                 c.classList.remove("active");
+                c.setAttribute("aria-expanded", "false");
                 expBox.style.display = "none";
               } else {
                 c.classList.add("active");
+                c.setAttribute("aria-expanded", "true");
                 expBox.style.display = "block";
               }
             }
@@ -757,7 +800,7 @@ function navigateSlide(index) {
   const nextBtn = document.getElementById("next-btn");
   const firstBtn = document.getElementById("first-btn");
   const lastBtn = document.getElementById("last-btn");
-  
+
   if (prevBtn) {
     prevBtn.disabled = (index === 0);
     prevBtn.style.opacity = (index === 0) ? "0.5" : "1";
@@ -766,7 +809,7 @@ function navigateSlide(index) {
   if (nextBtn) {
     nextBtn.disabled = false;
     nextBtn.style.opacity = "1";
-    
+
     if (index === allSlides.length - 1) {
       nextBtn.innerText = "Finish Course";
     } else if (allSlides[index + 1].type === "quiz-question" && !allSlides[index + 1].solved) {
@@ -798,10 +841,8 @@ function navigateSlide(index) {
   const progressPercent = Math.round((index + 1) / allSlides.length * 100);
   document.getElementById("viewer-progress-bar").style.width = `${progressPercent}%`;
   document.getElementById("viewer-progress-text").innerText = `Slide ${index + 1} of ${allSlides.length}`;
+  const progressBarBg = document.querySelector(".viewer-controls .progress-bar-bg");
+  if (progressBarBg) {
+    progressBarBg.setAttribute("aria-valuenow", String(progressPercent));
+  }
 }
-
-function formatBulletText(text) {
-  return window.formatInlineText(text);
-}
-
-
