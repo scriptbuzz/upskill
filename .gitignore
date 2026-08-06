@@ -3,6 +3,7 @@ training-resources/**
 !training-resources/**/
 !training-resources/**/*.md
 *project_history.md
+training-resources/aws/aws cloud practitioner/clf_visualizations_old/
 
 # Local tool settings
 .claude/
