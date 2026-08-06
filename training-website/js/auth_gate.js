@@ -4,7 +4,7 @@
   "use strict";
 
   var STORAGE_KEY = "4ca_authed";
-  var VALID_USER = "sudent";
+  var VALID_USER = "student";
   var VALID_PASS = "workshop";
 
   if (localStorage.getItem(STORAGE_KEY) === "true") {
