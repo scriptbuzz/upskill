@@ -10,7 +10,7 @@
 
 </div>
 
-Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exam preparation platform designed for cloud and technology certifications. The platform displays course outlines, SVG architecture diagrams, and slide-by-slide checkpoint quizzes.
+Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exam preparation platform designed for cloud and technology certifications. The platform displays course outlines, architecture diagrams, and slide-by-slide checkpoint quizzes. Access is gated behind a simple login screen (see [Access](#-access) below).
 
 ---
 
@@ -18,7 +18,7 @@ Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exa
 
 | Course Tag | Course Name | Status | Modules | Slides | Checkpoint Quizzes | Access |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.7 beta` | 6 | 80 | 12 | Free |
+| ![AWS CLF-C02](https://img.shields.io/badge/AWS_CLF--C02-FF9900?style=flat-square) | **AWS Certified Cloud Practitioner** | `v1.8 beta` | 6 | 80 | 12 | Free |
 | ![AWS AIF-C01](https://img.shields.io/badge/AWS_AIF--C01-8B5CF6?style=flat-square) | **AWS Certified AI Practitioner** | `v0.7 beta` | 7 | 115 | 11 | Requires Subscription |
 | ![AGY-101](https://img.shields.io/badge/AGY--101-A1A1AA?style=flat-square) | **Agentic AI Essentials** | `Locked` | 6 | 64 | 4 | Locked |
 
@@ -41,8 +41,8 @@ Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exa
     ├── js/
     │   └── app.js                  # Landing page progress dashboard loader
     └── courses/                    # Course contents directory
-        ├── clf/                    # CLF Course space (homes, viewers, SVGs)
-        └── aif/                    # AIF Course space (homes, viewers, SVGs)
+        ├── clf/                    # CLF Course space (homes, viewers, raster PNG diagrams)
+        └── aif/                    # AIF Course space (homes, viewers, vector SVG diagrams)
 ```
 
 ---
@@ -51,12 +51,25 @@ Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exa
 
 * **🎨 Multi-Course Dashboard:** A responsive catalog listing active and upcoming training paths, reading user progress keys from `localStorage` to render completion stats and progress indicators.
 * **📱 Responsive Split Presenter:** A layout featuring a 320px accordion navigation sidebar (left) and study viewport (right) that collapses to a vertical flow on mobile screens.
-* **⚡ Sandboxed SVG Architectures:** Visualizations are loaded inside isolated `<iframe>` elements to prevent style collisions, avoid double scrollbars, and forward keyboard/scroll events back to the parent layout.
+* **⚡ Sandboxed Diagram Architectures:** Visualizations are loaded inside isolated `<iframe>` elements to prevent style collisions, avoid double scrollbars, and forward keyboard/scroll events back to the parent layout. SVG diagrams (AIF) scale natively; raster PNG diagrams (CLF) are wrapped in a small responsive page so they scale to fit instead of cropping.
+* **🔒 Login Gate:** A lightweight client-side login screen (see [Access](#-access)) blocks the landing page and both course pages until the workshop credentials are entered; the session persists via `localStorage`.
 * **⌨️ Keyboard Navigation:** Navigate linearly through slides and check-point questions using Arrow keys (`Left`/`Right`/`Up`/`Down`) or spacebar, and jump to bookends using `Home`/`End` hotkeys.
 * **📝 Slide Checkpoint Quizzes:** Quizzes are integrated inside the slide streams as slide-pairs: a Question Slide followed by a Solved Slide featuring answer keys and interactive incorrect option explanation cards.
 * **🧹 Promise-Based Custom Dialogs:** System/browser native `confirm()` triggers are replaced with HTML `<dialog>` confirmation overlays executing inside asynchronous Promise handlers.
 * **🖨 Printable PDF Export:** Every course ships a print-optimized export page rendering all modules, slides, diagrams, and quizzes into a single document, with toggles for diagrams/quizzes/answer key, saved to PDF via the browser's native print dialog.
 * **🔗 Course Share Links:** Each course overview page has a one-click Share button that copies the course URL to the clipboard and displays the copied link.
+
+---
+
+## 🔒 Access
+
+The site (landing page + both course viewers) is gated behind a simple login dialog implemented in `training-website/js/auth_gate.js`. It is **not** a real auth system — credentials are checked client-side and are not meant to keep out a motivated visitor, just to keep the site from being casually browsed:
+
+| Username | Password |
+| :--- | :--- |
+| `student` | `workshop` |
+
+A successful login sets a `localStorage` flag (`4ca_authed`) so the dialog won't reappear on that browser. `export.html` (the printable PDF pages) is intentionally left ungated since it's only reached by clicking through from an already-gated page.
 
 ---
 
