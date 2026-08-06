@@ -42,7 +42,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m1_domain_weights.svg"
+          "visualization": "clf_m1_domain_weights.png"
         },
         {
           "id": "1.2",
@@ -69,7 +69,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_cloud_basics.svg"
+          "visualization": "clf_m1_cloud_basics.png"
         },
         {
           "id": "1.3",
@@ -88,7 +88,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_traditional_vs_cloud.svg"
+          "visualization": "clf_m1_traditional_vs_cloud.png"
         },
         {
           "id": "1.4",
@@ -107,7 +107,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_global_reach.svg"
+          "visualization": "clf_m1_global_reach.png"
         },
         {
           "id": "1.5",
@@ -126,7 +126,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_high_availability.svg"
+          "visualization": "clf_m1_high_availability.png"
         },
         {
           "id": "1.6",
@@ -145,7 +145,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_scaling_dimensions.svg"
+          "visualization": "clf_m1_scaling_dimensions.png"
         },
         {
           "id": "1.7",
@@ -180,7 +180,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m1_well_architected_pillars.svg"
+          "visualization": "clf_m1_well_architected_pillars.png"
         },
         {
           "id": "1.8",
@@ -219,7 +219,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m1_operations_security.svg"
+          "visualization": "clf_m1_operations_security.png"
         },
         {
           "id": "1.9",
@@ -258,7 +258,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m1_reliability_performance.svg"
+          "visualization": ""
         },
         {
           "id": "1.10",
@@ -297,7 +297,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m1_cost_sustainability.svg"
+          "visualization": "clf_m1_cost_sustainability.png"
         },
         {
           "id": "1.11",
@@ -320,7 +320,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_well_architected_tool.svg"
+          "visualization": "clf_m1_well_architected_tool.png"
         },
         {
           "id": "1.12",
@@ -367,7 +367,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m1_caf_honeycomb.svg"
+          "visualization": "clf_m1_caf_honeycomb.png"
         },
         {
           "id": "1.13",
@@ -402,7 +402,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_migration_7rs.svg"
+          "visualization": "clf_m1_migration_7rs.png"
         },
         {
           "id": "1.14",
@@ -417,7 +417,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_migration_workflow.svg"
+          "visualization": "clf_m1_migration_workflow.png"
         },
         {
           "id": "1.15",
@@ -460,7 +460,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m1_cost_economics.svg"
+          "visualization": ""
         },
         {
           "id": "1.16",
@@ -483,7 +483,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_rightsizing.svg"
+          "visualization": ""
         },
         {
           "id": "1.17",
@@ -502,7 +502,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m1_licensing_byol.svg"
+          "visualization": "clf_m1_licensing_byol.png"
         }
       ],
       "quiz": [
@@ -618,7 +618,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_shared_responsibility.svg"
+          "visualization": "clf_m2_shared_responsibility.png"
         },
         {
           "id": "2.2",
@@ -649,7 +649,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m2_responsibility_shifts.svg"
+          "visualization": "clf_m2_responsibility_shifts.png"
         },
         {
           "id": "2.3",
@@ -672,7 +672,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m2_organizations_tree.svg"
+          "visualization": "clf_m2_organizations_tree.png"
         },
         {
           "id": "2.4",
@@ -695,7 +695,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_resource_sharing.svg"
+          "visualization": "clf_m2_resource_sharing.png"
         },
         {
           "id": "2.5",
@@ -734,7 +734,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_cloudtrail_vs_config.svg"
+          "visualization": "clf_m2_cloudtrail_vs_config.png"
         },
         {
           "id": "2.6",
@@ -757,7 +757,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m2_control_tower.svg"
+          "visualization": "clf_m2_control_tower.png"
         },
         {
           "id": "2.7",
@@ -792,7 +792,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_compliance_documentation.svg"
+          "visualization": "clf_m2_compliance_documentation.png"
         },
         {
           "id": "2.8",
@@ -839,7 +839,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m2_encryption_types.svg"
+          "visualization": "clf_m2_encryption_types.png"
         },
         {
           "id": "2.9",
@@ -874,7 +874,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_cloudhsm_macie.svg"
+          "visualization": "clf_m2_cloudhsm_macie.png"
         },
         {
           "id": "2.10",
@@ -921,7 +921,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_root_protection.svg"
+          "visualization": "clf_m2_root_protection.png"
         },
         {
           "id": "2.11",
@@ -944,7 +944,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m2_iam_entities.svg"
+          "visualization": "clf_m2_iam_entities.png"
         },
         {
           "id": "2.12",
@@ -979,7 +979,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m2_federated_access.svg"
+          "visualization": "clf_m2_federated_access.png"
         },
         {
           "id": "2.13",
@@ -1018,7 +1018,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_iam_policies.svg"
+          "visualization": "clf_m2_iam_policies.png"
         },
         {
           "id": "2.14",
@@ -1049,7 +1049,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_secrets_management.svg"
+          "visualization": "clf_m2_secrets_management.png"
         },
         {
           "id": "2.15",
@@ -1088,7 +1088,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_network_defense.svg"
+          "visualization": "clf_m2_network_defense.png"
         },
         {
           "id": "2.16",
@@ -1119,7 +1119,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_threat_detection.svg"
+          "visualization": "clf_m2_threat_detection.png"
         },
         {
           "id": "2.17",
@@ -1150,7 +1150,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_security_hub.svg"
+          "visualization": "clf_m2_security_hub.png"
         },
         {
           "id": "2.18",
@@ -1189,7 +1189,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m2_data_classification.svg"
+          "visualization": "clf_m2_data_classification.png"
         }
       ],
       "quiz": [
@@ -1297,7 +1297,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_aws_interaction.svg"
+          "visualization": "clf_m3_aws_interaction.png"
         },
         {
           "id": "3.2",
@@ -1332,7 +1332,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m3_infrastructure_as_code.svg"
+          "visualization": "clf_m3_infrastructure_as_code.png"
         },
         {
           "id": "3.3",
@@ -1359,7 +1359,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m3_deployment_models.svg"
+          "visualization": "clf_m3_deployment_models.png"
         },
         {
           "id": "3.4",
@@ -1386,7 +1386,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m3_global_infrastructure.svg"
+          "visualization": "clf_m3_global_infrastructure.png"
         },
         {
           "id": "3.5",
@@ -1425,7 +1425,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_compute_toolbox.svg"
+          "visualization": "clf_m3_compute_toolbox.png"
         },
         {
           "id": "3.6",
@@ -1464,7 +1464,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_compute_management.svg"
+          "visualization": "clf_m3_compute_management.png"
         },
         {
           "id": "3.7",
@@ -1495,7 +1495,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_autoscaling_loadbalancing.svg"
+          "visualization": "clf_m3_autoscaling_loadbalancing.png"
         },
         {
           "id": "3.8",
@@ -1534,7 +1534,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_container_orchestration.svg"
+          "visualization": "clf_m3_container_orchestration.png"
         },
         {
           "id": "3.9",
@@ -1561,7 +1561,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m3_lambda_event_driven.svg"
+          "visualization": "clf_m3_lambda_event_driven.png"
         },
         {
           "id": "3.10",
@@ -1596,7 +1596,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_relational_databases.svg"
+          "visualization": "clf_m3_relational_databases.png"
         },
         {
           "id": "3.11",
@@ -1651,7 +1651,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_nosql_dynamodb.svg"
+          "visualization": "clf_m3_nosql_dynamodb.png"
         },
         {
           "id": "3.12",
@@ -1682,7 +1682,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_database_migration.svg"
+          "visualization": "clf_m3_database_migration.png"
         },
         {
           "id": "3.13",
@@ -1705,7 +1705,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_vpc_subnets.svg"
+          "visualization": "clf_m3_vpc_subnets.png"
         },
         {
           "id": "3.14",
@@ -1740,7 +1740,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m3_vpc_firewalls.svg"
+          "visualization": "clf_m3_vpc_firewalls.png"
         },
         {
           "id": "3.15",
@@ -1795,7 +1795,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_hybrid_connectivity.svg"
+          "visualization": "clf_m3_hybrid_connectivity.png"
         },
         {
           "id": "3.16",
@@ -1834,7 +1834,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_storage_comparison.svg"
+          "visualization": "clf_m3_storage_comparison.png"
         },
         {
           "id": "3.17",
@@ -1861,7 +1861,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_block_lifecycle.svg"
+          "visualization": "clf_m3_block_lifecycle.png"
         },
         {
           "id": "3.18",
@@ -1900,7 +1900,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m3_s3_storage_tiers.svg"
+          "visualization": "clf_m3_s3_storage_tiers.png"
         },
         {
           "id": "3.19",
@@ -1927,7 +1927,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_hybrid_storage.svg"
+          "visualization": "clf_m3_hybrid_storage.png"
         },
         {
           "id": "3.20",
@@ -1978,7 +1978,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m3_application_integration.svg"
+          "visualization": "clf_m3_application_integration.png"
         },
         {
           "id": "3.21",
@@ -2017,7 +2017,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_developer_cicd.svg"
+          "visualization": "clf_m3_developer_cicd.png"
         },
         {
           "id": "3.22",
@@ -2064,7 +2064,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_analytics_pipeline.svg"
+          "visualization": "clf_m3_analytics_pipeline.png"
         },
         {
           "id": "3.23",
@@ -2131,7 +2131,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_ai_ml_services.svg"
+          "visualization": "clf_m3_ai_ml_services.png"
         },
         {
           "id": "3.24",
@@ -2170,7 +2170,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m3_user_productivity.svg"
+          "visualization": "clf_m3_user_productivity.png"
         }
       ],
       "quiz": [
@@ -2266,7 +2266,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_pricing_principles.svg"
+          "visualization": "clf_m4_pricing_principles.png"
         },
         {
           "id": "4.2",
@@ -2301,7 +2301,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_compute_pricing_1.svg"
+          "visualization": "clf_m4_compute_pricing_1.png"
         },
         {
           "id": "4.3",
@@ -2336,7 +2336,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_compute_pricing_2.svg"
+          "visualization": "clf_m4_compute_pricing_2.png"
         },
         {
           "id": "4.4",
@@ -2379,7 +2379,7 @@ const CLF_COURSE_DATA = {
               "indent": 3
             }
           ],
-          "visualization": "clf_m4_dedicated_infrastructure.svg"
+          "visualization": "clf_m4_dedicated_infrastructure.png"
         },
         {
           "id": "4.5",
@@ -2418,7 +2418,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_data_transfer_costs.svg"
+          "visualization": "clf_m4_data_transfer_costs.png"
         },
         {
           "id": "4.6",
@@ -2465,7 +2465,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_cost_management_tools.svg"
+          "visualization": "clf_m4_cost_management_tools.png"
         },
         {
           "id": "4.7",
@@ -2496,7 +2496,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_cost_tagging.svg"
+          "visualization": "clf_m4_cost_tagging.png"
         },
         {
           "id": "4.8",
@@ -2535,7 +2535,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_support_plans_1.svg"
+          "visualization": "clf_m4_support_plans_1.png"
         },
         {
           "id": "4.9",
@@ -2574,7 +2574,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_support_plans_2.svg"
+          "visualization": "clf_m4_support_plans_2.png"
         },
         {
           "id": "4.10",
@@ -2613,7 +2613,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m4_trusted_advisor.svg"
+          "visualization": "clf_m4_trusted_advisor.png"
         },
         {
           "id": "4.11",
@@ -2640,7 +2640,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m4_aws_health.svg"
+          "visualization": "clf_m4_aws_health.png"
         },
         {
           "id": "4.12",
@@ -2659,7 +2659,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m4_trust_safety.svg"
+          "visualization": "clf_m4_trust_safety.png"
         },
         {
           "id": "4.13",
@@ -2686,7 +2686,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_partner_marketplace.svg"
+          "visualization": "clf_m4_partner_marketplace.png"
         },
         {
           "id": "4.14",
@@ -2721,7 +2721,7 @@ const CLF_COURSE_DATA = {
               "indent": 2
             }
           ],
-          "visualization": "clf_m4_support_experts.svg"
+          "visualization": "clf_m4_support_experts.png"
         }
       ],
       "quiz": [
@@ -2812,7 +2812,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m5_exam_keywords.svg"
+          "visualization": "clf_m5_exam_keywords.png"
         },
         {
           "id": "5.2",
@@ -2839,7 +2839,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m5_time_management.svg"
+          "visualization": "clf_m5_time_management.png"
         },
         {
           "id": "5.3",
@@ -2866,7 +2866,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": "clf_m5_final_prep.svg"
+          "visualization": "clf_m5_final_prep.png"
         }
       ],
       "quiz": []
@@ -2915,7 +2915,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": ""
+          "visualization": "clf_m6_ec2_lab.png"
         },
         {
           "id": "6.2",
@@ -2950,7 +2950,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": ""
+          "visualization": "clf_m6_vpc_lab.png"
         },
         {
           "id": "6.3",
@@ -2985,7 +2985,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": ""
+          "visualization": "clf_m6_s3_lab.png"
         },
         {
           "id": "6.4",
@@ -3020,7 +3020,7 @@ const CLF_COURSE_DATA = {
               "indent": 1
             }
           ],
-          "visualization": ""
+          "visualization": "clf_m6_iam_lab.png"
         }
       ],
       "quiz": []

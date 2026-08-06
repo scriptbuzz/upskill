@@ -650,19 +650,27 @@ function navigateSlide(index) {
       bulletsContainer.appendChild(li);
     });
 
-    // Render SVG diagram
+    // Render diagram (SVG documents scale themselves to the iframe; raster
+    // images don't, so they're wrapped in a tiny responsive srcdoc page)
     const diagramCard = document.getElementById("active-slide-diagram");
     if (diagramCard) {
       const iframe = document.getElementById("diagram-frame");
       if (item.visualization) {
         diagramCard.style.display = "flex";
         if (iframe) {
-          iframe.src = `visualizations/${item.visualization}?v=1.4.0`;
+          if (item.visualization.toLowerCase().endsWith(".svg")) {
+            iframe.removeAttribute("srcdoc");
+            iframe.src = `visualizations/${item.visualization}?v=1.4.0`;
+          } else {
+            const imgSrc = `visualizations/${item.visualization}?v=1.4.0`;
+            iframe.srcdoc = `<!doctype html><html><head><style>html,body{margin:0;height:100%;background:#fff;}img{width:100%;height:100%;object-fit:contain;display:block;}</style></head><body><img src="${window.escapeHtml(imgSrc)}" alt=""></body></html>`;
+          }
         }
       } else {
         diagramCard.style.display = "none";
         // Clear the stale diagram so it can never flash or reappear on text-only slides
         if (iframe) {
+          iframe.removeAttribute("srcdoc");
           iframe.src = "about:blank";
         }
       }
