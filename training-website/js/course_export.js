@@ -83,7 +83,12 @@
     <section class="export-cover">
       <div class="cover-kicker">Four Points Technology (Internal Use Only) — Study Guide</div>
       <h1>${escapeHtml(data.title)}</h1>
-      ${data.version ? `<div class="cover-version">${escapeHtml(data.version)}</div>` : ""}
+      ${data.version || data.lastModified ? `
+        <div class="cover-version-row">
+          ${data.version ? `<span class="cover-version">${escapeHtml(data.version)}</span>` : ""}
+          ${data.lastModified ? `<span class="cover-last-modified">Last Modified: ${escapeHtml(data.lastModified)}</span>` : ""}
+        </div>
+      ` : ""}
       <p class="cover-description">${escapeHtml(data.description)}</p>
       <div class="cover-stats">
         <span><strong>${data.modules.length}</strong> Modules</span>

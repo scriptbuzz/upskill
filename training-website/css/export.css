@@ -114,6 +114,14 @@ body#course-export-body {
   line-height: 1.2;
 }
 
+.export-cover .cover-version-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
 .export-cover .cover-version {
   display: inline-block;
   border: 1px solid var(--export-border);
@@ -122,7 +130,11 @@ body#course-export-body {
   font-size: 12px;
   font-weight: 700;
   color: var(--export-muted);
-  margin-bottom: 20px;
+}
+
+.export-cover .cover-last-modified {
+  font-size: 12px;
+  color: var(--export-muted);
 }
 
 .export-cover .cover-description {
