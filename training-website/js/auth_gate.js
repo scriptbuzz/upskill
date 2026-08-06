@@ -19,7 +19,7 @@
       '<form method="dialog" class="modal-content" id="login-form">' +
         '<div class="modal-header">' +
           '<span class="modal-icon">🔒</span>' +
-          '<h3>Welcome to 4 Corners Academy</h3>' +
+          '<h3>Welcome to Four Points Technology (Internal Use Only)</h3>' +
         "</div>" +
         '<p>Sign in with your workshop credentials to continue.</p>' +
         '<div class="login-field">' +

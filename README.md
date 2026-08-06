@@ -1,4 +1,4 @@
-# 4 Corners Academy - Tech & Cloud Certification Prep Platform
+# Four Points Technology (Internal Use Only) - Tech & Cloud Certification Prep Platform
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-Welcome to **4 Corners Academy**, a study guide and exam preparation platform designed for cloud and technology certifications. The platform displays course outlines, SVG architecture diagrams, and slide-by-slide checkpoint quizzes.
+Welcome to **Four Points Technology (Internal Use Only)**, a study guide and exam preparation platform designed for cloud and technology certifications. The platform displays course outlines, SVG architecture diagrams, and slide-by-slide checkpoint quizzes.
 
 ---
 

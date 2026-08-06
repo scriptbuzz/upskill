@@ -1,5 +1,5 @@
 /**
- * Printable course export renderer for 4 Corners Academy.
+ * Printable course export renderer for Four Points Technology (Internal Use Only).
  * Reads the course dataset from window.EXPORT_COURSE_DATA and renders every
  * module, slide, diagram, and checkpoint quiz into a single print-friendly
  * document. PDF output is produced via the browser's Print → Save as PDF.
@@ -81,7 +81,7 @@
 
   parts.push(`
     <section class="export-cover">
-      <div class="cover-kicker">4 Corners Academy — Study Guide</div>
+      <div class="cover-kicker">Four Points Technology (Internal Use Only) — Study Guide</div>
       <h1>${escapeHtml(data.title)}</h1>
       ${data.version ? `<div class="cover-version">${escapeHtml(data.version)}</div>` : ""}
       <p class="cover-description">${escapeHtml(data.description)}</p>

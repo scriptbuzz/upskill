@@ -1,5 +1,5 @@
 /**
- * Shared utility functions for 4 Corners Academy course presentation modules.
+ * Shared utility functions for Four Points Technology (Internal Use Only) course presentation modules.
  */
 
 // Safe wrapper to fetch completed slide arrays from localStorage
