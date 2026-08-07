@@ -73,6 +73,22 @@ A successful login sets a `localStorage` flag (`4ca_authed`) so the dialog won't
 
 ---
 
+## 🏷️ Company Name
+
+The company name (`Four Points Technology (Internal Use Only)`) has one source of truth for JS-rendered text: `training-website/js/site_config.js` (`window.SITE_NAME`), used by the login modal and the PDF export cover.
+
+It's duplicated as literal text in each page's `<title>`, `<meta name="author">`, `og:site_name`, `og:title`, and header logo link, because those are read by search crawlers and social-share scrapers that never execute JS — templating them from `SITE_NAME` at runtime would silently break page titles and link previews. There's no build step in this project to template them at deploy time instead.
+
+To rename the company: update `SITE_NAME` in `site_config.js`, then update the literal occurrences listed above in each HTML file, then run:
+
+```bash
+node training-website/scripts/check-brand.js
+```
+
+It fails with the mismatched file/tag if anything was missed.
+
+---
+
 ## 🚀 Running Locally
 
 The platform is built using standard Web APIs (HTML5, Vanilla CSS, and Client-Side Javascript) and can be run using any standard static file server.

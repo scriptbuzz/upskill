@@ -81,7 +81,7 @@
 
   parts.push(`
     <section class="export-cover">
-      <div class="cover-kicker">Four Points Technology (Internal Use Only) — Study Guide</div>
+      <div class="cover-kicker">${escapeHtml(window.SITE_NAME)} — Study Guide</div>
       <h1>${escapeHtml(data.title)}</h1>
       ${data.version || data.lastModified ? `
         <div class="cover-version-row">
