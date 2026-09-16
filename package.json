@@ -1,0 +1,13 @@
+{
+  "name": "training-platform-checks",
+  "private": true,
+  "scripts": {
+    "test": "node --test training-website/scripts/*.test.js",
+    "test:navigation": "node training-website/scripts/check-navigation.js",
+    "test:features": "node training-website/scripts/check-features.js",
+    "test:smoke": "node training-website/scripts/check-smoke.js"
+  },
+  "devDependencies": {
+    "playwright": "1.60.0"
+  }
+}

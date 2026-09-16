@@ -1,0 +1,10 @@
+{
+  "sourcePage": "https://github.com/google/fonts/tree/main/ofl/robotocondensed",
+  "download": "https://raw.githubusercontent.com/google/fonts/main/ofl/robotocondensed/RobotoCondensed%5Bwght%5D.ttf",
+  "license": "SIL Open Font License 1.1; see OFL.txt",
+  "preparation": "Instantiated weights 500 and 700 with fontTools, subset to diagram characters, serialized as WOFF. metrics.json stores normalized advance widths used by the builder.",
+  "files": {
+    "roboto-condensed-700.woff": "72db594cafa257fcda551d86e1ea23b9b497e7e17e5bd30e9ffb901870e66a4e",
+    "roboto-condensed-500.woff": "7dccc28f7d5aa78fb85836a9c28238776f2ae28b3c421cacf7d80dbc39d2b570"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "download": "https://d1.awsstatic.com/onedam/marketing-channels/website/public/shared/architecture-icon-release/Icon-package_07312026.5846e92413caa21490223536cc97f1269e44fa92.zip",
+  "sourcePage": "https://aws.amazon.com/architecture/icons/",
+  "release": "2026-07-31",
+  "assets": {
+    "bedrock": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Bedrock_64.svg",
+      "sha256": "80fa4190bb55bde5c3004ed8d2f16bf25db28d230cf46760813f2171636ea105"
+    },
+    "sagemaker": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-SageMaker-AI_64.svg",
+      "sha256": "0f20b8580a9caee9e15be0f866112e29c44c73900869e76df3cd197eaf778684"
+    },
+    "agentcore": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Bedrock-AgentCore_64.svg",
+      "sha256": "09596bda3e7cd42288deec94d3b4647bcc951c3b8855236e8a88d31e1766636f"
+    },
+    "s3": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Storage/64/Arch_Amazon-Simple-Storage-Service_64.svg",
+      "sha256": "b92c5101cc6565dd12df37655802279f8fba0c719279f62f93106d26750b36c6"
+    },
+    "kms": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_AWS-Key-Management-Service_64.svg",
+      "sha256": "5b3ed298ae380707f77ca21c2f417d0a7a36e70e59bfe9a5d8f281b8447ae750"
+    },
+    "iam": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_AWS-Identity-and-Access-Management_64.svg",
+      "sha256": "3135793557c065d0481a3985ccc0574b36278d56a2e2c5d59107d0d28f51b827"
+    },
+    "cloudtrail": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Management-Tools/64/Arch_AWS-CloudTrail_64.svg",
+      "sha256": "3c033073892a1a8d0fdc4fccfafa17c03939353f047ed596b08bf63e6521a9db"
+    },
+    "config": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Management-Tools/64/Arch_AWS-Config_64.svg",
+      "sha256": "6e6ee0b691d7ef2f71d81b508daa21dd154512a4e101ecc8113e161870bdb9a4"
+    },
+    "cloudwatch": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Management-Tools/64/Arch_Amazon-CloudWatch_64.svg",
+      "sha256": "a84b5b88172ab39170eaa6154345332d755758a37cda6a5580981cf679e01c0b"
+    },
+    "glue": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Analytics/64/Arch_AWS-Glue_64.svg",
+      "sha256": "ca70fd98e901b5f1862d1e3183f45fff8ea37003e7ec39358c2d65544a729fbc"
+    },
+    "databrew": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Analytics/64/Arch_AWS-Glue-DataBrew_64.svg",
+      "sha256": "8f52713f5d895414cd0b69de6d862f98df73ba50c99c8351a84df0de0c0c1ec1"
+    },
+    "macie": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_Amazon-Macie_64.svg",
+      "sha256": "b035c742e944ccf9b38733cbfa388ac87165dc6c9970093570a6db65534ea5ca"
+    },
+    "auditmanager": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_AWS-Audit-Manager_64.svg",
+      "sha256": "35faca8acd84ae91b51f823fe01ef187557f9aa470123989be2e663b9f6e3954"
+    },
+    "artifact": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_AWS-Artifact_64.svg",
+      "sha256": "72c92291cf4fcd5b275cbd5ab199187ce6f4cdb6b149733b474441835ec90679"
+    },
+    "inspector": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_Amazon-Inspector_64.svg",
+      "sha256": "c437d91e4883323b5208b1598499849015fad03e4f97fa4fe3c5b05c9fbbaa22"
+    },
+    "trustedadvisor": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Management-Tools/64/Arch_AWS-Trusted-Advisor_64.svg",
+      "sha256": "ebd28e05fa43fc6ee7697021cc98901f718f3fa2ac971dab6a4f3f328b4bb097"
+    },
+    "lakeformation": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Analytics/64/Arch_AWS-Lake-Formation_64.svg",
+      "sha256": "c91be3ace19037185acbcd7780e65c6e6fe85fba507d2fdf8a2585047ee36363"
+    },
+    "privatelink": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Networking-Content-Delivery/64/Arch_AWS-PrivateLink_64.svg",
+      "sha256": "a9946f7cac68f7937f2509fdb3bebdd4bcfd70e845819a09f11fe67d7b01c0b5"
+    },
+    "vpc": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Networking-Content-Delivery/64/Arch_Amazon-Virtual-Private-Cloud_64.svg",
+      "sha256": "4a2c292527ce28a95d9038ab7e6be818751ffef0a91aabb5de2e61045150a98d"
+    },
+    "rekognition": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Rekognition_64.svg",
+      "sha256": "1f60c9174f2e4bf06e873a43fa28ef7f7a1881fc310950102b07feb965d07000"
+    },
+    "textract": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Textract_64.svg",
+      "sha256": "a300b851c0db0d265ccb68d37961337d44e184fd188940af62a2679a4846704c"
+    },
+    "transcribe": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Transcribe_64.svg",
+      "sha256": "406e94584cfc1c614b6f5cdee9c2f50e0c428edf1d86c6b43840c11a613f6c56"
+    },
+    "polly": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Polly_64.svg",
+      "sha256": "0efa49fac923477f5b556f7c543d44b58b3f10f311c6fd12e2b731f81fb4ff57"
+    },
+    "translate": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Translate_64.svg",
+      "sha256": "48436fefc936ede680e74d5490003fffc0219da8329459df6164727ab59e295c"
+    },
+    "comprehend": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Comprehend_64.svg",
+      "sha256": "02aff6d774b745bd1083e27322854cf515464398e468fe5a21edca709f058325"
+    },
+    "lex": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Lex_64.svg",
+      "sha256": "5859008cc2d8ff377f8f0f1a94e639234c8c67dde41269b84fae37db0b13b198"
+    },
+    "personalize": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Personalize_64.svg",
+      "sha256": "7a49c99dd97e64d7da9df8c0fb553f2ebf96ccd29e46d895489ab2ab58b11a7d"
+    },
+    "a2i": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Artificial-Intelligence/64/Arch_Amazon-Augmented-AI-A2I_64.svg",
+      "sha256": "f3487721b551a7484daf86debfcf280f53e018cd3220d83ced5c8682b1f056eb"
+    },
+    "quick": {
+      "archivePath": "Architecture-Service-Icons_07312026/Arch_Business-Applications/64/Arch_Amazon-Quick_64.svg",
+      "sha256": "789e8514804facfa1fb2194ee55e4181c4e48210ccd44ae35deacc9829b5e408"
+    },
+    "doc": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Document_48_Light.svg",
+      "sha256": "d515ca5c5d982055afa4066c73156b345cf0d88da2b078562110d5b530554c61"
+    },
+    "docs": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Documents_48_Light.svg",
+      "sha256": "facca61dc882d12a9c83ac7b4759f4f6331adf7081c4b5084e63c30b92f934b4"
+    },
+    "db": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Database_48_Light.svg",
+      "sha256": "c18bb92be55c5d8c6ce4630bdc70179fb438e078b215210e7b5fb523ed2303da"
+    },
+    "person": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_User_48_Light.svg",
+      "sha256": "82cad1b559b84252e86f17ee9707ff9228e6c92816f207e4fde5daadaa346d38"
+    },
+    "people": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Users_48_Light.svg",
+      "sha256": "70a2a73c69e9f21a46133b60a3a07e45b23f35c3f141d572e61a43945cbb4682"
+    },
+    "server": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Server_48_Light.svg",
+      "sha256": "ae8d259b4fcb30a8f2e2e25ec1026ee27e87e2579b66f67f3b893898c2d8b4b0"
+    },
+    "code": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Source-Code_48_Light.svg",
+      "sha256": "d1d1ca285fc6f89677e8504c6cfe2c0436d56b16d5e79250d2feaca2e5359333"
+    },
+    "app": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Generic-Application_48_Light.svg",
+      "sha256": "adbea176db7aa41aeee5fc2faddb0adef71bd9be8b6dbeb7a199170051838da7"
+    },
+    "lock": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_SSL-padlock_48_Light.svg",
+      "sha256": "a18790b43bd9942fdd5883737da1249cb4d123bfc205d1d24141a680dad29f20"
+    },
+    "key": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Credentials_48_Light.svg",
+      "sha256": "37dc0bf9d61ad4b8c336d8c894b5fa3d114f763e41a0371de4b33ed84f90bac0"
+    },
+    "check": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Shield_48_Light.svg",
+      "sha256": "fadb5337a76b09e6ae93609714e0d02323093b1e20a31c14f79e2cf6d993e89e"
+    },
+    "shield": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Shield_48_Light.svg",
+      "sha256": "fadb5337a76b09e6ae93609714e0d02323093b1e20a31c14f79e2cf6d993e89e"
+    },
+    "search": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Magnifying-Glass_48_Light.svg",
+      "sha256": "36c323e5c4b2027bbe38631bd323fc3dfb46a2429905987c273ee294cdb345d7"
+    },
+    "gear": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Gear_48_Light.svg",
+      "sha256": "15dd5e8ad8128dd3a53768dbc9fcf3432fc7551bb096745dcbf727a4392831f1"
+    },
+    "chart": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Metrics_48_Light.svg",
+      "sha256": "c91f114e433355aab22ce05234c6efb49a8ad239f13af577cf973c6250b27ba2"
+    },
+    "globe": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Globe_48_Light.svg",
+      "sha256": "78fb746095387d43e6e1fdc51e10bdc82d946d948eff6f67ee509b46c94801f6"
+    },
+    "speech": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Chat_48_Light.svg",
+      "sha256": "3a2a1b1cedac66514d1613bce49dcb2b67db07078bc5f92c3ab89e7a25ff4a22"
+    },
+    "mail": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Email_48_Light.svg",
+      "sha256": "0e48dca08c59dedaf6988b7da6340c3561848b80f2fe92f6f3afe87fed1a1220"
+    },
+    "table": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Data-Table_48_Light.svg",
+      "sha256": "358602f85af5276d005b1c64a230b3ed4ced6db4ebb30395b6c9643f2e16c3a4"
+    },
+    "json": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_JSON-Script_48_Light.svg",
+      "sha256": "b0dfe91629cf994092ab9745eccce6610abbd6f421c6a05ca93510eae70dee6b"
+    },
+    "photo": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Camera_48_Light.svg",
+      "sha256": "e4eb53feeb5c23f8f8627356a1348630f4aa7f3606b67cbced6fc10bd5f86ba2"
+    },
+    "logs": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Logs_48_Light.svg",
+      "sha256": "bac70d5fd0629ab8b27888ec20103d62868be43cf9746284a4f0b8621af7b268"
+    },
+    "alert": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Alert_48_Light.svg",
+      "sha256": "5d54b2534be8139f5813075b7b483da1458890015a0bd4fde8b7753d41db2d0c"
+    },
+    "tools": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Toolkit_48_Light.svg",
+      "sha256": "837058a4abe00e9c908cf402d432854d0025be18e71f7666238016a700cb391c"
+    },
+    "sdk": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_SDK_48_Light.svg",
+      "sha256": "af2221a1a5d4560e5fa28acb2dfb76767a3027447225846ce627ed063f0aa1ca"
+    },
+    "internet": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Internet_48_Light.svg",
+      "sha256": "37ca1da361e1eecc1d28ff5476e973023f1111fb7132094428ec3d0e4136b7bf"
+    },
+    "client": {
+      "archivePath": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Client_48_Light.svg",
+      "sha256": "5c0eb210ca9cca0f53c136eb524273ce5ad90e40545752aeadb129bdcb2af0f3"
+    },
+    "endpoint": {
+      "archivePath": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Amazon-VPC_Endpoints_48.svg",
+      "sha256": "08ca5b0393a5df5a5342d0d9612ff27df86b413087ed15222530c3add811fbf6"
+    },
+    "router": {
+      "archivePath": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Amazon-VPC_Router_48.svg",
+      "sha256": "627043d21c01e14cc60120f66f0c6ada1f9b5857d52c8c7647559786cd48ec4b"
+    },
+    "model": {
+      "archivePath": "Resource-Icons_07312026/Res_Artificial-Intelligence/Res_Amazon-SageMaker-AI_Model_48.svg",
+      "sha256": "7636d8ac74a8bc84bec92ec7beaa471a7f4a8f0c65474f4ea190ba89c3147b7d"
+    },
+    "train": {
+      "archivePath": "Resource-Icons_07312026/Res_Artificial-Intelligence/Res_Amazon-SageMaker-AI_Train_48.svg",
+      "sha256": "17ee2731c163d78a53c6548178b88fe13389c6a7a7604849f398be81598b0431"
+    }
+  }
+}

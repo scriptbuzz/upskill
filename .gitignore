@@ -1,0 +1,28 @@
+.DS_Store
+/node_modules/
+training-resources/**
+!training-resources/**/
+!training-resources/**/*.md
+*project_history.md
+
+# Editable AIF diagrams, official AWS icon sources, and licensed embedded fonts.
+!training-resources/aws/aws ai practitioner/diagram-authoring/*.py
+!training-resources/aws/aws ai practitioner/diagram-authoring/*.cjs
+!training-resources/aws/aws ai practitioner/diagram-authoring/aws-icons/*.svg
+!training-resources/aws/aws ai practitioner/diagram-authoring/aws-icons/SOURCE.json
+!training-resources/aws/aws ai practitioner/diagram-authoring/fonts/*.woff
+!training-resources/aws/aws ai practitioner/diagram-authoring/fonts/*.json
+!training-resources/aws/aws ai practitioner/diagram-authoring/fonts/OFL.txt
+
+# Local tool settings
+.claude/
+.agents/
+
+# Local session records, historical review material, and disposable references.
+/SESSION_HANDOFF.md
+/design-review/
+/generated-docs/
+
+# Only the root readme is public; every other Markdown file stays local.
+*.md
+!/README.md

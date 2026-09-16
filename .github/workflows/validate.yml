@@ -1,0 +1,27 @@
+name: Validate training content
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  navigation:
+    # Main pushes receive browser checks in deployment; branch pushes get fast validation.
+    if: github.event_name != 'push'
+    uses: ./.github/workflows/navigation.yml
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node training-website/scripts/check-brand.js
+      - run: node training-website/scripts/check-courses.js
+      - run: node training-website/scripts/sync-catalog.js --check
+      - run: node --test training-website/scripts/*.test.js

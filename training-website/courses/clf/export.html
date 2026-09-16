@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Printable Slides Export - AWS Cloud Practitioner (CLF-C02)</title>
+  <meta name="description" content="Export the full AWS Certified Cloud Practitioner lessons and checkpoint quizzes to PDF using your browser's print dialog.">
+  <meta name="keywords" content="AWS, Cloud Practitioner, CLF-C02, PDF Export, Study Guide">
+  <meta name="author" content="Four Points Technology Training Website (Internal Use Only)">
+  <meta name="robots" content="noindex">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/export.css">
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+</head>
+<body id="course-export-body">
+
+  <!-- Printable document rendered here by course_export.js -->
+  <main id="export-root"></main>
+
+  <!-- Scripts -->
+  <script src="../../js/course_shared.js"></script>
+  <script src="clf_data.js"></script>
+  <script>window.EXPORT_COURSE_DATA = typeof CLF_COURSE_DATA !== "undefined" ? CLF_COURSE_DATA : null;</script>
+  <script src="../../js/site_config.js"></script>
+  <script src="../../js/course_export.js"></script>
+</body>
+</html>

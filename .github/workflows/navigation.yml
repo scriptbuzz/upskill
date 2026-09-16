@@ -1,0 +1,88 @@
+name: Check affected workshop features
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    outputs:
+      browser_required: ${{ steps.checks.outputs.browser_required }}
+      smoke: ${{ steps.checks.outputs.smoke }}
+      navigation: ${{ steps.checks.outputs.navigation }}
+      features: ${{ steps.checks.outputs.features }}
+      courses: ${{ steps.checks.outputs.courses }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Find the last successful deployment
+        id: deployed
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if last=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/runs?branch=main&status=success&per_page=1" --jq '.workflow_runs[0].head_sha // empty'); then
+            echo "sha=$last" >> "$GITHUB_OUTPUT"
+          else
+            echo "No verified deployment base is available; full checks will run."
+          fi
+      - name: Select relevant checks
+        id: checks
+        run: node training-website/scripts/select-checks.js
+        env:
+          LAST_DEPLOYED_SHA: ${{ steps.deployed.outputs.sha }}
+  navigation:
+    needs: select
+    if: needs.select.outputs.browser_required == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install test browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Check wording and branding layouts
+        if: needs.select.outputs.smoke == 'true'
+        run: npm run test:smoke
+        env:
+          NAVIGATION_BROWSERS: ${{ matrix.browser }}
+          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          SMOKE_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots/layout
+      - name: Check navigation, login and saved answers
+        if: needs.select.outputs.navigation == 'true'
+        run: npm run test:navigation
+        env:
+          NAVIGATION_BROWSERS: ${{ matrix.browser }}
+          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          NAVIGATION_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots
+      - name: Check exports, sharing and progress recovery
+        if: needs.select.outputs.features == 'true'
+        run: npm run test:features
+        env:
+          NAVIGATION_BROWSERS: ${{ matrix.browser }}
+          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          FEATURE_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots/features
+      - name: Save browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: navigation-${{ matrix.browser }}
+          path: ${{ runner.temp }}/navigation-screenshots
+          if-no-files-found: ignore
+          retention-days: 7

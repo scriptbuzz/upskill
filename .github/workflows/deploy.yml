@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  navigation:
+    uses: ./.github/workflows/navigation.yml
+  deploy:
+    needs: navigation
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate before publishing
+        run: |
+          node training-website/scripts/check-brand.js
+          node training-website/scripts/check-courses.js
+          node training-website/scripts/sync-catalog.js --check
+          node --test training-website/scripts/*.test.js
+      - name: Prepare website
+        run: node training-website/scripts/prepare-pages.js "$RUNNER_TEMP/training-pages"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '${{ runner.temp }}/training-pages'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
