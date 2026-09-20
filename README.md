@@ -1,6 +1,6 @@
 # Four Points Technology Training Website (Internal Use Only) — Certification Workshops
 
-_Last modified: 2026-09-16 07:51 EDT_
+_Last modified: 2026-09-20 14:37 EDT_
 
 Build your understanding of cloud computing and artificial intelligence with self-paced workshops that support preparation for AWS certification exams.
 

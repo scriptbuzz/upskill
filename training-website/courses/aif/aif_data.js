@@ -1,8 +1,8 @@
 // Original course explanations and scenarios; see the AIF exam alignment map.
 const AIF_COURSE_DATA = {
   "id": "aif",
-  "version": "v0.16 beta",
-  "lastModified": "2026-09-16",
+  "version": "v0.17 beta",
+  "lastModified": "2026-09-20",
   "title": "AWS Certified AI Practitioner (AIF-C01)",
   "description": "Build foundational AI judgment through original explanations, diagrams, and scenario checkpoints aligned to the AIF-C01 exam guide.",
   "catalog": {
