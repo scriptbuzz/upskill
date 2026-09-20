@@ -1,7 +1,7 @@
 /**
  * Printable course export renderer for Four Points Technology Training Website (Internal Use Only).
  * Reads the course dataset from window.EXPORT_COURSE_DATA and renders every
- * module, slide, diagram, and checkpoint quiz into a single print-friendly
+ * module, slide, and diagram into a single print-friendly
  * document. PDF output is produced via the browser's Print → Save as PDF.
  */
 
@@ -37,7 +37,6 @@
   }
 
   const totalSlides = data.modules.reduce((sum, m) => sum + m.slides.length, 0);
-  const totalQuestions = data.modules.reduce((sum, m) => sum + (m.quiz ? m.quiz.length : 0), 0);
 
   // ---------- Toolbar (screen only) ----------
   const toolbar = document.createElement("div");
@@ -45,23 +44,13 @@
   toolbar.innerHTML = `
     <span class="toolbar-title">Printable Export — ${escapeHtml(data.title)}</span>
     <label><input type="checkbox" id="toggle-diagrams" checked> Diagrams</label>
-    <label><input type="checkbox" id="toggle-quizzes" checked> Quizzes</label>
-    <label><input type="checkbox" id="toggle-answers" checked> Answer Key</label>
     <a href="${escapeHtml(window.courseAssetUrl("index.html"))}" class="toolbar-back">← Back to Course</a>
     <button class="toolbar-print-btn" id="export-print-btn">🖨 Print / Save as PDF</button>
   `;
   document.body.insertBefore(toolbar, root);
 
-  document.body.classList.add("show-answers");
-
   toolbar.querySelector("#toggle-diagrams").addEventListener("change", (e) => {
     document.body.classList.toggle("hide-diagrams", !e.target.checked);
-  });
-  toolbar.querySelector("#toggle-quizzes").addEventListener("change", (e) => {
-    document.body.classList.toggle("hide-quizzes", !e.target.checked);
-  });
-  toolbar.querySelector("#toggle-answers").addEventListener("change", (e) => {
-    document.body.classList.toggle("show-answers", e.target.checked);
   });
   toolbar.querySelector("#export-print-btn").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
@@ -93,7 +82,6 @@
       <div class="cover-stats">
         <span><strong>${data.modules.length}</strong> Modules</span>
         <span><strong>${totalSlides}</strong> Slides</span>
-        <span><strong>${totalQuestions}</strong> Quiz Questions</span>
       </div>
     </section>
   `);
@@ -127,36 +115,6 @@
       })
       .join("");
 
-    const quizHtml = (module.quiz || [])
-      .map((question) => {
-        const correctKeys = window.parseCorrectKeys(question.correct);
-        const optionsHtml = Object.keys(question.options)
-          .map((letter) => {
-            const isCorrect = question.type !== "ordering" && correctKeys.includes(letter);
-            const wrongExplanation =
-              question.type !== "ordering" && !isCorrect && question.wrongExplanations && question.wrongExplanations[letter]
-                ? `<div class="wrong-explanation">✘ ${formatText(question.wrongExplanations[letter])}</div>`
-                : "";
-            return `
-              <li class="${isCorrect ? "correct-option" : ""}">
-                <span class="option-letter">${escapeHtml(letter)}.</span>${formatText(question.options[letter])}
-                ${wrongExplanation}
-              </li>
-            `;
-          })
-          .join("");
-
-        return `
-          <article class="export-quiz">
-            <div class="quiz-label">Module ${escapeHtml(String(prettyModuleId(module.id)))} Checkpoint Quiz — Question ${question.id}</div>
-            <p class="quiz-question">${formatText(question.question)}</p>
-            <ol class="quiz-options">${optionsHtml}</ol>
-            <div class="quiz-explanation">${question.type === "ordering" ? `<strong>Correct order: ${escapeHtml(correctKeys.join(" → "))}</strong><ol>${correctKeys.map(key => `<li>${escapeHtml(key)}. ${formatText(question.options[key])}</li>`).join("")}</ol>` : ""}<strong>Explanation:</strong> ${formatText(question.explanation)}</div>
-          </article>
-        `;
-      })
-      .join("");
-
     parts.push(`
       <section class="export-module">
         <header class="export-module-header">
@@ -164,7 +122,6 @@
           ${objectivesHtml ? `<ul class="module-objectives">${objectivesHtml}</ul>` : ""}
         </header>
         ${slidesHtml}
-        ${quizHtml}
       </section>
     `);
   });

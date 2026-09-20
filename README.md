@@ -30,7 +30,7 @@ Explore the foundations of artificial intelligence and machine learning, includi
 - Follow the slides and diagrams to build your understanding step by step.
 - Use the quizzes to check what you have learned, then review the answer explanations.
 - Resume your learning with progress saved in the browser you use.
-- Review printable study materials, with the option to include diagrams, quizzes, and answers.
+- Review printable lessons, with the option to include diagrams. Quizzes and answer keys are excluded from exports.
 - Explore optional practice labs through AWS Skill Builder. Some labs require separate access.
 
 ## Access

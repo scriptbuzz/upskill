@@ -37,7 +37,7 @@ async function checkExport(page, base, courseId, data, label) {
   assert.equal(await page.locator(".cover-version").innerText(), data.version);
   assert.equal(await page.locator(".cover-last-modified").innerText(), `Last Modified: ${data.lastModified}`);
   assert.equal(await page.locator(".export-cover h1").innerText(), data.title);
-  assert.deepEqual(await page.locator(".cover-stats strong").allTextContents(), [data.modules.length, data.modules.flatMap(module => module.slides).length, data.modules.flatMap(module => module.quiz || []).length].map(String));
+  assert.deepEqual(await page.locator(".cover-stats strong").allTextContents(), [data.modules.length, data.modules.flatMap(module => module.slides).length].map(String));
   const actual = await page.locator(".export-module").evaluateAll(modules => {
     const text = el => el.textContent.replace(/\s+/g, " ").trim();
     return modules.map(module => ({
@@ -48,20 +48,6 @@ async function checkExport(page, base, courseId, data, label) {
         bullets: [...slide.querySelectorAll(".slide-points li")].map(text),
         indents: [...slide.querySelectorAll(".slide-points li")].map(li => Number(li.className.replace("indent-", "")) || 0),
         diagram: slide.querySelector("img")?.getAttribute("src") || null,
-      })),
-      quizzes: [...module.querySelectorAll(".export-quiz")].map(quiz => ({
-        question: text(quiz.querySelector(".quiz-question")),
-        options: [...quiz.querySelectorAll(".quiz-options > li")].map(option => {
-          const copy = option.cloneNode(true);
-          const letter = text(copy.querySelector(".option-letter")).replace(".", "");
-          const wrong = copy.querySelector(".wrong-explanation");
-          const explanation = wrong ? text(wrong).replace(/^✘\s*/, "") : null;
-          wrong?.remove();
-          copy.querySelector(".option-letter").remove();
-          return { letter, text: text(copy), correct: option.classList.contains("correct-option"), explanation };
-        }),
-        answer: text(quiz.querySelector(".quiz-explanation")),
-        order: [...quiz.querySelectorAll(".quiz-explanation ol li")].map(text),
       })),
     }));
   });
@@ -75,18 +61,6 @@ async function checkExport(page, base, courseId, data, label) {
       indents: slide.bullets.map(bullet => bullet.indent),
       diagram: slide.visualization ? `visualizations/${slide.visualization}` : null,
     })), `${label}: every slide must match its source data`);
-    assert.equal(rendered.quizzes.length, (module.quiz || []).length);
-    for (const [j, quiz] of (module.quiz || []).entries()) {
-      const renderedQuiz = rendered.quizzes[j];
-      const keys = quiz.correct.split(",").map(key => key.trim());
-      assert.equal(renderedQuiz.question, plain(quiz.question));
-      assert.deepEqual(renderedQuiz.options, Object.entries(quiz.options).map(([letter, text]) => ({
-        letter, text: plain(text), correct: quiz.type !== "ordering" && keys.includes(letter),
-        explanation: quiz.type !== "ordering" && !keys.includes(letter) && quiz.wrongExplanations?.[letter] ? plain(quiz.wrongExplanations[letter]) : null,
-      })));
-      assert(renderedQuiz.answer.endsWith(`Explanation: ${plain(quiz.explanation)}`));
-      assert.deepEqual(renderedQuiz.order, quiz.type === "ordering" ? keys.map(key => `${key}. ${plain(quiz.options[key])}`) : []);
-    }
   }
   const broken = await page.locator(".export-diagram img").evaluateAll(async images => {
     await Promise.allSettled(images.map(img => img.decode()));
@@ -96,17 +70,20 @@ async function checkExport(page, base, courseId, data, label) {
   await page.screenshot({ path: path.join(output, `${label}-export.png`) });
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${label}: export overflows horizontally`);
 
-  // Toggle both screen and print styles; hiding answers must also hide correctness markers.
+  // Exports contain lessons only in both screen and print modes.
   for (const media of ["screen", "print"]) {
     await page.emulateMedia({ media });
-    if (media === "print") await page.locator(".export-quiz").first().screenshot({ path: path.join(output, `${label}-print-quiz.png`) });
-    for (const [toggle, selector] of [["diagrams", ".export-diagram"], ["quizzes", ".export-quiz"], ["answers", ".quiz-explanation, .wrong-explanation"]]) {
-      await page.locator(`#toggle-${toggle}`).evaluate(el => { el.checked = false; el.dispatchEvent(new Event("change")); });
-      assert.equal(await page.locator(selector.split(", ").map(part => `${part}:visible`).join(", ")).count(), 0, `${toggle} must be hidden in ${media}`);
-      if (toggle === "answers") assert(await page.locator(".correct-option").evaluateAll(options => options.every(el => ["none", "normal", '""'].includes(getComputedStyle(el, "::after").content))));
-      await page.locator(`#toggle-${toggle}`).evaluate(el => { el.checked = true; el.dispatchEvent(new Event("change")); });
-      assert(await page.locator(selector).first().isVisible());
+    assert.equal(await page.locator(".export-quiz, .quiz-question, .quiz-options, .quiz-explanation, .wrong-explanation, .correct-option").count(), 0, `Quiz questions and answers must be absent in ${media}`);
+    assert.equal(await page.locator("#toggle-quizzes, #toggle-answers").count(), 0, "Exports must not offer quiz or answer controls");
+    const exportedText = await page.locator("#export-root").textContent();
+    for (const quiz of data.modules.flatMap(module => module.quiz || [])) {
+      assert(!plain(exportedText).includes(plain(quiz.question)), "Quiz question text must not appear in exports");
+      assert(!plain(exportedText).includes(plain(quiz.explanation)), "Quiz answer explanations must not appear in exports");
     }
+    await page.locator("#toggle-diagrams").evaluate(el => { el.checked = false; el.dispatchEvent(new Event("change")); });
+    assert.equal(await page.locator(".export-diagram:visible").count(), 0, `Diagrams must be hidden in ${media}`);
+    await page.locator("#toggle-diagrams").evaluate(el => { el.checked = true; el.dispatchEvent(new Event("change")); });
+    assert(await page.locator(".export-diagram").first().isVisible());
     assert.equal(await page.locator(".export-toolbar").isVisible(), media === "screen");
   }
   await page.emulateMedia({ media: "screen" });
