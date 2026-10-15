@@ -557,6 +557,36 @@ footer {
   opacity: 1;
 }
 
+/* Task-statement heading inside a module's outline (not a navigation stop) */
+.section-heading {
+  list-style: none;
+  padding: 12px 20px 4px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--brand-blue);
+  border-top: 1px solid var(--border-main);
+  margin-top: 4px;
+}
+
+.module-sections h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.module-sections ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .slide-bullet-check {
   font-size: 10px;
   color: var(--success);

@@ -5,14 +5,16 @@ const http = require("node:http");
 const os = require("node:os");
 const path = require("node:path");
 const playwright = require(process.env.PLAYWRIGHT_MODULE || "playwright");
-const { courseSteps } = require("./course-tools.js");
+const { courseSteps, loadCourses, isListed } = require("./course-tools.js");
 const { preparePages } = require("./prepare-pages.js");
 
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), "navigation-site-"));
 const root = path.join(scratch, "site");
 preparePages(path.resolve(__dirname, ".."), root);
-const courseIds = (process.env.NAVIGATION_COURSES || "clf,aif").split(",");
-assert(courseIds.every(id => ["clf", "aif"].includes(id)), "Select clf or aif with NAVIGATION_COURSES");
+const knownCourses = loadCourses();
+const courseIds = (process.env.NAVIGATION_COURSES || knownCourses.map(course => course.id).join(",")).split(",");
+assert(courseIds.length && courseIds.every(id => knownCourses.some(course => course.id === id)), `Select from ${knownCourses.map(course => course.id).join(", ")} with NAVIGATION_COURSES`);
+const listed = id => isListed(knownCourses.find(course => course.id === id));
 const sizes = (process.env.NAVIGATION_SIZES || "desktop,tablet,mobile").split(",");
 assert(sizes.every(size => ["desktop", "tablet", "mobile"].includes(size)), "Select desktop, tablet or mobile with NAVIGATION_SIZES");
 const output = process.env.NAVIGATION_SCREENSHOTS || fs.mkdtempSync(path.join(os.tmpdir(), "navigation-"));
@@ -104,12 +106,29 @@ async function checkBrowser(browserName, base) {
         await page.locator("#login-modal").waitFor({ state: "detached" });
         await page.reload();
         assert.equal(await page.locator("#login-modal").count(), 0);
-        await page.locator(`#start-${courseId}-course-btn`).click();
-        await page.waitForURL(courseUrl);
+        if (listed(courseId)) {
+          await page.locator(`#start-${courseId}-course-btn`).click();
+          await page.waitForURL(courseUrl);
+        } else {
+          // Unlisted workshops are reachable only by direct link.
+          assert.equal(await page.locator(`#course-card-${courseId}, a[href*="courses/${courseId}/"]`).count(), 0, `${courseId} must not be linked from the catalog`);
+          await page.goto(courseUrl);
+        }
         assert.equal(page.url(), courseUrl);
         await capture("overview");
+        // Task-statement headings appear in the overview and outline only for sectioned workshops.
+        const sectioned = data.modules.filter(module => module.sections);
+        assert.equal(await page.locator(".module-sections a").count(), sectioned.reduce((sum, module) => sum + module.sections.length, 0));
+        for (const module of sectioned) {
+          for (const section of module.sections) {
+            const first = module.slides.find(slide => slide.section === section.id);
+            assert.equal(await page.locator(`.module-sections a[href="viewer.html?slide=${first.id}"]`).count(), 1, `${courseId} ${section.id} overview link`);
+          }
+        }
         await page.locator("#course-cta-btn").click();
         await expectStep(steps[0]);
+        assert.equal(await page.locator("#sidebar-slide-list .section-heading").count(), sectioned.reduce((sum, module) => sum + module.sections.length, 0));
+        assert.equal(await page.locator("#sidebar-slide-list .section-heading[tabindex], #sidebar-slide-list .section-heading.slide-item").count(), 0, "Section headings must not be navigation stops");
         await page.locator("#viewer-back-btn").click();
         await page.locator('#modules-list a[href*="quiz="]').first().click();
         await expectStep(quizId);

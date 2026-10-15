@@ -5,6 +5,8 @@ const os = require("node:os");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { classifyChanges, selectRange, eventPlan } = require("./select-checks.js");
+const { loadCourses } = require("./course-tools.js");
+const everyCourse = loadCourses().map(course => course.id);
 const change = (path, before = "before", after = "after") => ({ path, before, after });
 
 test("documentation skips browser checks while wording keeps a layout check", () => {
@@ -42,7 +44,7 @@ test("course-specific content uses its workshop while shared behavior uses both"
   assert.equal(plan.navigation && plan.features, true);
   assert.deepEqual(plan.courses, ["clf"]);
   for (const file of ["training-website/js/course_shared.js", "training-website/css/styles.css", ".github/workflows/navigation.yml", "package-lock.json", "unknown.file"]) {
-    assert.deepEqual(classifyChanges([change(file)]).courses, ["clf", "aif"]);
+    assert.deepEqual(classifyChanges([change(file)]).courses, everyCourse);
     assert.equal(classifyChanges([change(file)]).navigation, true);
   }
 });

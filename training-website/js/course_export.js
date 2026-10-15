@@ -91,8 +91,15 @@
       .map((obj) => `<li>${formatText(obj)}</li>`)
       .join("");
 
+    let lastSection = null;
     const slidesHtml = module.slides
       .map((slide) => {
+        let sectionHtml = "";
+        if (slide.section && slide.section !== lastSection) {
+          lastSection = slide.section;
+          const section = (module.sections || []).find((item) => item.id === slide.section);
+          if (section) sectionHtml = `<h3 class="export-section">Task Statement ${escapeHtml(section.id)}: ${formatText(section.title)}</h3>`;
+        }
         const bulletsHtml = (slide.bullets || [])
           .map((bullet) => {
             const indentClass = bullet.indent ? `indent-${bullet.indent}` : "";
@@ -104,7 +111,7 @@
           ? `<div class="export-diagram"><img src="${escapeHtml(window.courseAssetUrl(`visualizations/${slide.visualization}`))}" alt="${escapeHtml(slide.title)} diagram" decoding="async"></div>`
           : "";
 
-        return `
+        return `${sectionHtml}
           <article class="export-slide">
             <div class="slide-label">Slide ${escapeHtml(prettySlideId(slide.id))}</div>
             <h3>${formatText(slide.title)}</h3>

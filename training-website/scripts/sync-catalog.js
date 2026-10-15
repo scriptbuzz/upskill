@@ -1,7 +1,7 @@
 // Update checked-in static catalog metadata, or fail CI if it has drifted.
 const fs = require("node:fs");
 const path = require("node:path");
-const { ROOT, loadCourses, courseCounts, courseSteps, validateCourse } = require("./course-tools.js");
+const { ROOT, loadCourses, courseCounts, courseSteps, validateCourse, isListed } = require("./course-tools.js");
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 const markdown = value => String(value).replace(/\|/g, "&#124;").replace(/[\r\n]/g, " ");
 
@@ -48,9 +48,10 @@ function replaceSection(file, content, indent = "") {
 }
 
 try {
-  const courses = loadCourses();
-  const errors = courses.flatMap(course => validateCourse(course));
+  const allCourses = loadCourses();
+  const errors = allCourses.flatMap(course => validateCourse(course));
   if (errors.length) throw new Error(errors.join("\n"));
+  const courses = allCourses.filter(isListed);
   replaceSection(path.join(ROOT, "index.html"), courses.map(renderCard).join("\n\n"), "      ");
   const rows = courses.map(course => {
     const counts = courseCounts(course);

@@ -1,6 +1,6 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { validateCourse, courseCounts, courseSteps } = require("./course-tools.js");
+const { validateCourse, courseCounts, courseSteps, isListed } = require("./course-tools.js");
 
 function fixture() {
   return {
@@ -20,6 +20,40 @@ test("counts content and preserves both quiz steps with either course ID format"
   course.modules[0].id = 1;
   course.modules[0].slides[0].id = "1.1";
   assert.deepEqual(courseSteps(course), ["1.1", "q-1.1", "q-1.1-solved"]);
+});
+
+test("unlisted courses are validated but kept out of the catalog", () => {
+  const course = fixture();
+  assert.equal(isListed(course), true);
+  course.catalog.listed = false;
+  assert.equal(isListed(course), false);
+  assert.deepEqual(validateCourse(course, () => true), []);
+  course.catalog.listed = "no";
+  assert.match(validateCourse(course, () => true).join("\n"), /catalog\.listed must be true or false/);
+});
+
+test("task-statement sections must be declared, used in order, and never empty", () => {
+  const course = fixture();
+  const module = course.modules[0];
+  module.slides = [
+    { id: "m1-s1", title: "Divider", bullets: [{ text: "Start", indent: 0 }], visualization: "", section: "1.1" },
+    { id: "m1-s2", title: "Lesson", bullets: [{ text: "Teach", indent: 0 }], visualization: "", section: "1.1" },
+    { id: "m1-s3", title: "Next", bullets: [{ text: "Teach", indent: 0 }], visualization: "", section: "1.2" },
+  ];
+  module.sections = [{ id: "1.1", title: "First task" }, { id: "1.2", title: "Second task" }];
+  assert.deepEqual(validateCourse(course, () => true), []);
+  module.slides[2].section = "1.1";
+  assert.match(validateCourse(course, () => true).join("\n"), /every section must contain at least one slide/);
+  module.slides[2].section = "1.2";
+  module.slides[1].section = "1.2";
+  module.slides[2].section = "1.1";
+  assert.match(validateCourse(course, () => true).join("\n"), /follow the section order/);
+  module.slides[2].section = "9.9";
+  assert.match(validateCourse(course, () => true).join("\n"), /every slide must name one of the module's sections/);
+  delete module.sections;
+  assert.match(validateCourse(course, () => true).join("\n"), /slides name a section but the module lists none/);
+  module.sections = [{ id: "1", title: "" }];
+  assert.match(validateCourse(course, () => true).join("\n"), /each section needs an id such as 1\.1 and a title/);
 });
 
 test("reports missing assets, unsafe paths, and malformed bullets", () => {

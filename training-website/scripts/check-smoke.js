@@ -6,12 +6,14 @@ const os = require("node:os");
 const path = require("node:path");
 const playwright = require(process.env.PLAYWRIGHT_MODULE || "playwright");
 const { preparePages } = require("./prepare-pages.js");
+const { loadCourses } = require("./course-tools.js");
 
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), "workshop-layout-"));
 const root = path.join(scratch, "site");
 const output = process.env.SMOKE_SCREENSHOTS || path.join(scratch, "screenshots");
-const courseIds = (process.env.NAVIGATION_COURSES || "clf,aif").split(",");
-assert(courseIds.length && courseIds.every(id => ["clf", "aif"].includes(id)), "Select clf or aif with NAVIGATION_COURSES");
+const knownCourses = loadCourses();
+const courseIds = (process.env.NAVIGATION_COURSES || knownCourses.map(course => course.id).join(",")).split(",");
+assert(courseIds.length && courseIds.every(id => knownCourses.some(course => course.id === id)), `Select from ${knownCourses.map(course => course.id).join(", ")} with NAVIGATION_COURSES`);
 preparePages(path.resolve(__dirname, ".."), root);
 fs.mkdirSync(output, { recursive: true });
 const brand = fs.readFileSync(path.join(root, "js/site_config.js"), "utf8").match(/window\.SITE_NAME\s*=\s*"([^"]+)"/)[1];

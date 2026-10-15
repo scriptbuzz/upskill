@@ -2,7 +2,8 @@
 const fs = require("node:fs");
 const { execFileSync } = require("node:child_process");
 
-const allCourses = ["clf", "aif"];
+const { loadCourses } = require("./course-tools.js");
+const allCourses = loadCourses().map(course => course.id);
 const fullPlan = reason => ({ smoke: false, navigation: true, features: true, courses: allCourses, reasons: [reason] });
 
 function htmlStructure(source) {
@@ -25,7 +26,7 @@ function classifyChanges(changes) {
   for (const { path, before, after } of changes) {
     if (/\.md$/i.test(path) || path === ".gitignore" || /^LICENSE(?:\.|$)/.test(path)) continue;
     if (before == null || after == null) return fullPlan("A runtime file was added or removed.");
-    const course = path.match(/^training-website\/courses\/(clf|aif)\//)?.[1];
+    const course = path.match(/^training-website\/courses\/([a-z][a-z0-9-]*)\//)?.[1];
     const affected = course ? [course] : allCourses;
     if (["training-website/js/course_shared.js", "training-website/js/course_export.js"].includes(path)) {
       const withoutHeader = text => text.replace(/^\/\*[\s\S]*?\*\/\s*/, "");
@@ -41,7 +42,7 @@ function classifyChanges(changes) {
       plan.smoke = true;
       addCourses(affected);
       plan.reasons.push("Page wording or descriptive metadata changed.");
-    } else if (path === "training-website/js/course_export.js" || path === "training-website/css/export.css" || /\/export\.html$/.test(path) || /^training-website\/courses\/(clf|aif)\/visualizations\//.test(path)) {
+    } else if (path === "training-website/js/course_export.js" || path === "training-website/css/export.css" || /\/export\.html$/.test(path) || /^training-website\/courses\/[a-z][a-z0-9-]*\/visualizations\//.test(path)) {
       plan.features = true;
       addCourses(affected);
       plan.reasons.push("Exports or workshop diagrams changed.");

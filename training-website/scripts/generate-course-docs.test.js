@@ -36,7 +36,9 @@ test("generated catalogs link to existing portable assets and keep text-only sli
   const outputDir = fs.mkdtempSync(path.join(os.tmpdir(), "course docs "));
   try {
     const names = generateDocs(outputDir);
-    assert.equal(names.length, 5);
+    // Each course has an outline and diagram index; courses with exam objectives add an objective map.
+    const expected = loadCourses().reduce((sum, course) => sum + 2 + (course.modules.some(module => module.slides.some(slide => slide.examObjectives?.length)) ? 1 : 0), 0);
+    assert.equal(names.length, expected);
     for (const name of names.filter(name => !name.endsWith("_outline.md"))) {
       const content = fs.readFileSync(path.join(outputDir, name), "utf8");
       assert(!content.includes("file://"));

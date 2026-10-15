@@ -179,6 +179,22 @@ function initCourseHome() {
       `;
     }
 
+    // Task-statement links for workshops whose modules declare sections
+    let sectionsHtml = "";
+    if (Array.isArray(module.sections) && module.sections.length > 0) {
+      const links = module.sections.map(section => {
+        const first = module.slides.find(slide => slide.section === section.id);
+        if (!first) return "";
+        return `<li><a href="${window.escapeHtml(window.courseAssetUrl(`viewer.html?slide=${first.id}`))}" class="content-link">Task Statement ${window.escapeHtml(section.id)}: ${window.formatInlineText(section.title)}</a></li>`;
+      }).join("");
+      sectionsHtml = `
+        <div class="module-sections">
+          <h4>Task Statements</h4>
+          <ul>${links}</ul>
+        </div>
+      `;
+    }
+
     const firstSlideId = module.slides[0] ? module.slides[0].id : "";
 
     // Determine last viewed slide in this module
@@ -223,6 +239,7 @@ function initCourseHome() {
       </div>
 
       ${objectivesHtml}
+      ${sectionsHtml}
 
       <div style="display: flex; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-main); padding-top: 16px; flex-wrap: wrap;">
         <a href="${window.escapeHtml(window.courseAssetUrl(`viewer.html?slide=${targetSlideId}`))}" class="btn btn-secondary" style="font-size: 13px; padding: 8px 16px;">

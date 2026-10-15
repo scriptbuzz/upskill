@@ -26,13 +26,14 @@ const SITE_NAME = match[1];
 // 'titlePrefix' and/or 'ogTitlePrefix' (must start with SITE_NAME), 'logo' (exact match)
 const FILES = {
   "index.html": ["author", "ogSiteName", "titlePrefix", "ogTitlePrefix", "logo"],
-  "courses/clf/index.html": ["author", "ogSiteName", "logo"],
-  "courses/clf/viewer.html": ["author", "ogSiteName", "logo"],
-  "courses/clf/export.html": ["author"],
-  "courses/aif/index.html": ["author", "ogSiteName", "logo"],
-  "courses/aif/viewer.html": ["author", "ogSiteName", "logo"],
-  "courses/aif/export.html": ["author"],
 };
+// Every course folder, listed or not, carries the same literal brand tags.
+for (const entry of fs.readdirSync(path.join(ROOT, "courses"), { withFileTypes: true })) {
+  if (!entry.isDirectory()) continue;
+  FILES[`courses/${entry.name}/index.html`] = ["author", "ogSiteName", "logo"];
+  FILES[`courses/${entry.name}/viewer.html`] = ["author", "ogSiteName", "logo"];
+  FILES[`courses/${entry.name}/export.html`] = ["author"];
+}
 
 const CHECKS = {
   author: {

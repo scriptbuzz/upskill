@@ -22,6 +22,12 @@ function displayNum(id) {
   return String(id).replace(/^m/, "").replace("-s", ".");
 }
 
+// Task-statement label for workshops whose modules declare sections
+function sectionLabel(module, sectionId) {
+  const section = (module.sections || []).find(item => item.id === sectionId);
+  return section ? `Task Statement ${section.id}: ${section.title}` : "";
+}
+
 // DOM-safe element id fragment (dots are invalid in query selectors without escaping)
 function domSafe(id) {
   return String(id).replace(/\./g, "_");
@@ -70,6 +76,7 @@ function buildSlideList() {
         title: slide.title,
         bullets: slide.bullets,
         visualization: slide.visualization,
+        sectionId: slide.section || "",
         moduleId: module.id
       });
     });
@@ -153,8 +160,16 @@ function renderSidebar() {
     slidesList.id = `module-slides-${domSafe(module.id)}`;
     slidesList.style.display = "block"; // Start expanded
 
-    // Slides
+    // Slides, with a heading before the first slide of each task statement
+    let lastSection = null;
     module.slides.forEach(slide => {
+      if (slide.section && slide.section !== lastSection) {
+        lastSection = slide.section;
+        const sectionHeading = document.createElement("li");
+        sectionHeading.className = "section-heading";
+        sectionHeading.textContent = sectionLabel(module, slide.section);
+        slidesList.appendChild(sectionHeading);
+      }
       const slideLi = document.createElement("li");
       slideLi.className = "slide-item";
       slideLi.id = `sidebar-item-${domSafe(slide.id)}`;
@@ -651,7 +666,10 @@ function navigateSlide(index) {
     }
 
     // Render slide details
-    document.getElementById("active-slide-title").innerText = `Module ${displayNum(item.moduleId)} Outline — Slide ${displayNum(item.id)}`;
+    const itemModule = courseData.modules.find(module => module.id === item.moduleId);
+    const itemSection = item.sectionId ? ` · Task Statement ${item.sectionId}` : "";
+    document.getElementById("active-slide-title").innerText = `Module ${displayNum(item.moduleId)} Outline — Slide ${displayNum(item.id)}${itemSection}`;
+    document.getElementById("active-slide-title").title = item.sectionId ? sectionLabel(itemModule, item.sectionId) : "";
     document.getElementById("slide-detail-heading").innerText = item.title;
 
     // Render Bullets

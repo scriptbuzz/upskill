@@ -5,14 +5,16 @@ const http = require("node:http");
 const os = require("node:os");
 const path = require("node:path");
 const playwright = require(process.env.PLAYWRIGHT_MODULE || "playwright");
-const { courseSteps } = require("./course-tools.js");
+const { courseSteps, loadCourses, isListed } = require("./course-tools.js");
 const { preparePages } = require("./prepare-pages.js");
 
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), "course-features-"));
 const root = path.join(scratch, "site");
 const output = process.env.FEATURE_SCREENSHOTS || path.join(scratch, "screenshots");
-const courseIds = (process.env.NAVIGATION_COURSES || "clf,aif").split(",");
-assert(courseIds.length && courseIds.every(id => ["clf", "aif"].includes(id)), "Select clf or aif with NAVIGATION_COURSES");
+const knownCourses = loadCourses();
+const courseIds = (process.env.NAVIGATION_COURSES || knownCourses.map(course => course.id).join(",")).split(",");
+assert(courseIds.length && courseIds.every(id => knownCourses.some(course => course.id === id)), `Select from ${knownCourses.map(course => course.id).join(", ")} with NAVIGATION_COURSES`);
+const listed = id => isListed(knownCourses.find(course => course.id === id));
 preparePages(path.resolve(__dirname, ".."), root);
 fs.mkdirSync(output, { recursive: true });
 const plain = text => String(text).replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
@@ -49,6 +51,7 @@ async function checkExport(page, base, courseId, data, label) {
         indents: [...slide.querySelectorAll(".slide-points li")].map(li => Number(li.className.replace("indent-", "")) || 0),
         diagram: slide.querySelector("img")?.getAttribute("src") || null,
       })),
+      sections: [...module.querySelectorAll(".export-section")].map(text),
     }));
   });
   assert.equal(actual.length, data.modules.length);
@@ -56,6 +59,7 @@ async function checkExport(page, base, courseId, data, label) {
     const rendered = actual[i];
     assert.equal(rendered.title, `Module ${String(module.id).replace(/^m/, "")}: ${plain(module.title)}`);
     assert.deepEqual(rendered.objectives, module.objectives.map(plain));
+    assert.deepEqual(rendered.sections, (module.sections || []).map(section => `Task Statement ${section.id}: ${plain(section.title)}`), `${label}: task-statement headings must match the data`);
     assert.deepEqual(rendered.slides, module.slides.map(slide => ({
       title: plain(slide.title), bullets: slide.bullets.map(bullet => plain(bullet.text)),
       indents: slide.bullets.map(bullet => bullet.indent),
@@ -136,6 +140,7 @@ async function checkSharing(page, button, expected, captureName) {
 
 async function checkProgress(page, base, courseId, data) {
   const steps = courseSteps(data);
+  if (!listed(courseId)) return checkUnlistedProgress(page, base, courseId, data, steps);
   const cases = [
     ["broken json", []], ["null", []], ['{"old":true}', []],
     [JSON.stringify([steps[0], steps[0], "removed-slide", null, 7, {}, steps[2]]), [steps[0], steps[2]]],
@@ -178,6 +183,34 @@ async function checkProgress(page, base, courseId, data) {
   ], { courseId, other }), [null, null, '["keep"]', '{"keep":["B"]}']);
 }
 
+// Unlisted workshops have no catalog card, so progress is checked on their overview page.
+async function checkUnlistedProgress(page, base, courseId, data, steps) {
+  const courseUrl = `${base}/courses/${courseId}/index.html`;
+  const cases = [["broken json", []], [JSON.stringify([steps[0], "removed-slide", steps[0], steps[2]]), [steps[0], steps[2]]], [JSON.stringify(steps), steps]];
+  for (const [stored, completed] of cases) {
+    await page.evaluate(({ courseId, stored }) => localStorage.setItem(`${courseId}_progress_slides`, stored), { courseId, stored });
+    await page.goto(courseUrl);
+    const percent = Math.round(completed.length / steps.length * 100);
+    assert.equal(await page.locator("#overall-progress-text").innerText(), `${percent}% Completed (${completed.length}/${steps.length} Slides)`);
+    const target = steps.find(id => !completed.includes(id)) || steps[0];
+    assert.equal(new URL(await page.locator("#course-cta-btn").getAttribute("href"), page.url()).searchParams.get("slide"), target);
+  }
+  const other = knownCourses.find(course => course.id !== courseId).id;
+  await page.evaluate(({ courseId, other }) => {
+    localStorage.setItem(`${courseId}_quiz_responses`, '{"test":["A"]}');
+    localStorage.setItem(`${other}_progress_slides`, '["keep"]');
+    localStorage.setItem(`${other}_quiz_responses`, '{"keep":["B"]}');
+  }, { courseId, other });
+  await page.goto(courseUrl);
+  await page.locator("#course-reset-btn").click();
+  await page.locator("#confirm-modal-ok").click();
+  await page.locator("#course-reset-btn").waitFor({ state: "detached" });
+  assert.deepEqual(await page.evaluate(({ courseId, other }) => [
+    localStorage.getItem(`${courseId}_progress_slides`), localStorage.getItem(`${courseId}_quiz_responses`),
+    localStorage.getItem(`${other}_progress_slides`), localStorage.getItem(`${other}_quiz_responses`),
+  ], { courseId, other }), [null, null, '["keep"]', '{"keep":["B"]}']);
+}
+
 async function main() {
   await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
   const base = `http://127.0.0.1:${server.address().port}`;
@@ -198,12 +231,19 @@ async function main() {
           try {
             await checkExport(page, base, courseId, data, label);
             await page.evaluate(() => localStorage.setItem("4ca_authed", "true"));
-            await page.goto(`${base}/index.html?v=old-bookmark#course-card-${courseId}`);
-            assert.equal(page.url(), `${base}/index.html#course-card-${courseId}`);
-            await checkSharing(page, `#share-${courseId}-course-btn`, `${base}/courses/${courseId}/index.html`, `${label}-catalog-share`);
-            if (courseId === "clf") await checkSharing(page, "#share-agy-course-btn", `${base}/index.html#course-card-agy`);
-            await page.locator(`#start-${courseId}-course-btn`).click();
-            await page.waitForURL(`${base}/courses/${courseId}/index.html`);
+            if (listed(courseId)) {
+              await page.goto(`${base}/index.html?v=old-bookmark#course-card-${courseId}`);
+              assert.equal(page.url(), `${base}/index.html#course-card-${courseId}`);
+              await checkSharing(page, `#share-${courseId}-course-btn`, `${base}/courses/${courseId}/index.html`, `${label}-catalog-share`);
+              if (courseId === "clf") await checkSharing(page, "#share-agy-course-btn", `${base}/index.html#course-card-agy`);
+              await page.locator(`#start-${courseId}-course-btn`).click();
+              await page.waitForURL(`${base}/courses/${courseId}/index.html`);
+            } else {
+              await page.goto(`${base}/index.html`);
+              assert.equal(await page.locator(`#course-card-${courseId}, a[href*="courses/${courseId}/"]`).count(), 0, `${courseId} must not be linked from the catalog`);
+              await page.goto(`${base}/courses/${courseId}/index.html?v=old-bookmark`);
+              assert.equal(page.url(), `${base}/courses/${courseId}/index.html`);
+            }
             await checkSharing(page, "#course-share-btn", `${base}/courses/${courseId}/index.html`, `${label}-overview-share`);
             await page.locator("#course-export-btn").click();
             await page.waitForURL(`${base}/courses/${courseId}/export.html`);

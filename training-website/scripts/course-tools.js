@@ -16,6 +16,11 @@ function loadCourses() {
     .sort((a, b) => a.catalog.order - b.catalog.order);
 }
 
+// Unlisted courses stay off the home page and README but remain fully validated.
+function isListed(course) {
+  return course.catalog?.listed !== false;
+}
+
 function courseSteps(course) {
   return course.modules.flatMap(module => [
     ...module.slides.map(slide => slide.id),
@@ -47,6 +52,7 @@ function validateCourse(course, assetExists = fs.existsSync) {
   for (const key of ["tag", "description", "labAccess"]) check(hasText(catalog[key]), `catalog.${key} must be nonempty text`);
   check(["orange", "purple", "blue"].includes(catalog.theme), "unsupported catalog theme");
   check(Number.isInteger(catalog.order), "catalog.order must be an integer");
+  check(catalog.listed === undefined || typeof catalog.listed === "boolean", "catalog.listed must be true or false");
   check(Array.isArray(course.modules) && course.modules.length > 0, "modules must be a nonempty array");
   const moduleIds = new Set();
   const stepIds = new Set();
@@ -64,6 +70,23 @@ function validateCourse(course, assetExists = fs.existsSync) {
     check(hasText(module.title) && !/^Module\s+\d/i.test(module.title), `${label}: title must be nonempty and omit the Module N prefix`);
     check(Array.isArray(module.objectives) && module.objectives.length > 0 && module.objectives.every(hasText), `${label}: objectives must contain text`);
     check(Array.isArray(module.slides) && module.slides.length > 0, `${label}: slides must be a nonempty array`);
+    // Optional task-statement sections: listed once, used in order, each by at least one slide.
+    const sections = module.sections;
+    check(sections === undefined || (Array.isArray(sections) && sections.length > 0), `${label}: sections must be a nonempty array`);
+    const sectionIds = Array.isArray(sections) ? sections.map(section => section?.id) : [];
+    if (Array.isArray(sections)) {
+      for (const section of sections) {
+        check(section && /^\d+\.\d+$/.test(String(section.id)) && hasText(section.title), `${label}: each section needs an id such as 1.1 and a title`);
+      }
+      check(new Set(sectionIds).size === sectionIds.length, `${label}: duplicate section id`);
+      const used = (Array.isArray(module.slides) ? module.slides : []).map(slide => slide.section);
+      check(used.every(id => sectionIds.includes(id)), `${label}: every slide must name one of the module's sections`);
+      const order = used.map(id => sectionIds.indexOf(id));
+      check(order.every((value, i) => i === 0 || value >= order[i - 1]), `${label}: slides must follow the section order without returning to an earlier section`);
+      check(sectionIds.every(id => used.includes(id)), `${label}: every section must contain at least one slide`);
+    } else {
+      check((Array.isArray(module.slides) ? module.slides : []).every(slide => slide.section === undefined), `${label}: slides name a section but the module lists none`);
+    }
     for (const slide of Array.isArray(module.slides) ? module.slides : []) {
       const location = `${label}, slide ${slide.id}`;
       addStep(slide.id, location);
@@ -109,4 +132,4 @@ function validateCourse(course, assetExists = fs.existsSync) {
   return errors;
 }
 
-module.exports = { ROOT, loadCourses, courseSteps, courseCounts, validateCourse };
+module.exports = { ROOT, loadCourses, courseSteps, courseCounts, validateCourse, isListed };

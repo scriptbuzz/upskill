@@ -183,6 +183,16 @@ body#course-export-body {
   font-size: 13px;
 }
 
+/* Task-statement headings */
+.export-section {
+  break-after: avoid;
+  font-size: 17px;
+  color: var(--export-blue);
+  border-bottom: 2px solid var(--export-border);
+  padding-bottom: 6px;
+  margin: 28px 0 0 0;
+}
+
 /* Slides */
 .export-slide {
   break-inside: avoid;
