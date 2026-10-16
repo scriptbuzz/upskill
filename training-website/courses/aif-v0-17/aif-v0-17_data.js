@@ -1,6 +1,6 @@
 // Original course explanations and scenarios; see the AIF exam alignment map.
-const AIF_COURSE_DATA = {
-  "id": "aif",
+const AIF_V0_17_COURSE_DATA = {
+  "id": "aif-v0-17",
   "version": "v0.17 beta",
   "lastModified": "2026-09-20",
   "title": "AWS Certified AI Practitioner (AIF-C01)",
@@ -3955,4 +3955,4 @@ const AIF_COURSE_DATA = {
   ]
 };
 
-if (typeof module !== "undefined" && module.exports) module.exports = AIF_COURSE_DATA;
+if (typeof module !== "undefined" && module.exports) module.exports = AIF_V0_17_COURSE_DATA;

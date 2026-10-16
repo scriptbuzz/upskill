@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '../../../..');
 const destination = process.env.AIF_REVIEW_DIR || '/tmp/aif-art-review';
-const course = require(path.join(root, 'training-website/courses/aif/aif_data.js'));
+const course = require(path.join(root, 'training-website/courses/aif-v0-17/aif-v0-17_data.js'));
 const slides = course.modules.flatMap(m => m.slides).filter(s => s.visualization);
 
 async function geometry(page) {
@@ -63,7 +63,7 @@ async function geometry(page) {
     const page=await browser.newPage({viewport:{width:800,height:450}});
     const failures=[];
     for(const slide of slides) {
-      await page.goto('file://'+path.join(root,'training-website/courses/aif/visualizations',slide.visualization));
+      await page.goto('file://'+path.join(root,'training-website/courses/aif-v0-17/visualizations',slide.visualization));
       await page.evaluate(()=>document.fonts.ready);
       const errors=await geometry(page);
       if(errors.length) failures.push({slide:slide.id,errors});
@@ -72,7 +72,7 @@ async function geometry(page) {
     // Eight diagrams per sheet, retained at their full 800×450 display size.
     await page.setViewportSize({width:1600,height:1800});
     for(let i=0;i<slides.length;i+=8) {
-      const html='<body style="margin:0;background:white;display:grid;grid-template-columns:repeat(2,800px)">'+slides.slice(i,i+8).map(s=>`<img width="800" height="450" src="file://${path.join(root,'training-website/courses/aif/visualizations',s.visualization)}">`).join('')+'</body>';
+      const html='<body style="margin:0;background:white;display:grid;grid-template-columns:repeat(2,800px)">'+slides.slice(i,i+8).map(s=>`<img width="800" height="450" src="file://${path.join(root,'training-website/courses/aif-v0-17/visualizations',s.visualization)}">`).join('')+'</body>';
       fs.writeFileSync(path.join(destination,'sheet.html'),html);
       await page.goto('file://'+path.join(destination,'sheet.html'));
       await page.evaluate(async()=>Promise.all([...document.images].map(i=>i.decode())));

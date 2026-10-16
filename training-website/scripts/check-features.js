@@ -164,7 +164,7 @@ async function checkProgress(page, base, courseId, data) {
     const target = steps.find(id => !completed.includes(id)) || steps[0];
     assert.equal(new URL(await page.locator("#course-cta-btn").getAttribute("href"), page.url()).searchParams.get("slide"), target);
   }
-  const other = courseId === "clf" ? "aif" : "clf";
+  const other = knownCourses.find(course => course.id !== courseId).id;
   await page.evaluate(({ courseId, other }) => {
     localStorage.setItem(`${courseId}_quiz_responses`, '{"test":["A"]}');
     localStorage.setItem(`${other}_progress_slides`, '["keep"]');

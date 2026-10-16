@@ -135,7 +135,7 @@ test("quiz teaching references must identify earlier slides in the same workshop
 });
 
 test("AIF alignment preserves slide, quiz, diagram, and progress distributions", () => {
-  const course = require("../courses/aif/aif_data.js");
+  const course = require("../courses/aif-v0-17/aif-v0-17_data.js");
   const slideCounts = [38, 15, 22, 24, 41, 7, 3];
   const quizCounts = [3, 2, 2, 2, 2, 0, 0];
   assert.deepEqual(course.modules.map(module => module.slides.length), slideCounts);

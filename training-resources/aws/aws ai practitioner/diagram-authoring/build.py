@@ -6,8 +6,8 @@ import canvas, plates, details, systems, concepts
 from specs import D
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[3]
-COURSE=ROOT/'training-website/courses/aif'
-data=json.loads(subprocess.check_output(['node','-e','process.stdout.write(JSON.stringify(require(process.argv[1])))',str(COURSE/'aif_data.js')],text=True))
+COURSE=ROOT/'training-website/courses/aif-v0-17'
+data=json.loads(subprocess.check_output(['node','-e','process.stdout.write(JSON.stringify(require(process.argv[1])))',str(COURSE/'aif-v0-17_data.js')],text=True))
 rows=[]
 for m in data['modules']:
  for slide in m['slides']:
