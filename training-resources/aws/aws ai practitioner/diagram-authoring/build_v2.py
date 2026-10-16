@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate the AI Practitioner rebuild SVGs from specs_v2.py and the compositions in v2.py.
 
-Set AIF_V2_COURSE to the version folder to build (default: the newest, aif-v1-5).
+Set AIF_V2_COURSE to the version folder to build (default: the newest, aif-v1-6).
 Never point it at an older version folder: published versions are not rewritten."""
 import json, os, subprocess, sys
 from pathlib import Path
@@ -10,7 +10,7 @@ from specs_v2 import D
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-COURSE_ID = os.environ.get('AIF_V2_COURSE', 'aif-v1-5')
+COURSE_ID = os.environ.get('AIF_V2_COURSE', 'aif-v1-6')
 COURSE = ROOT / 'training-website/courses' / COURSE_ID
 data = json.loads(subprocess.check_output(['node', '-e', 'process.stdout.write(JSON.stringify(require(process.argv[1])))', str(COURSE / f'{COURSE_ID}_data.js')], text=True))
 only = set(sys.argv[1:])

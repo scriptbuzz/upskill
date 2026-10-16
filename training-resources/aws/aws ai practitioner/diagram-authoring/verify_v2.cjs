@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '../../../..');
 const destination = process.env.AIF_V2_REVIEW_DIR || '/tmp/aif-v2-art-review';
-const courseId = process.env.AIF_V2_COURSE || 'aif-v1-5'; // newest version folder; older versions are never rebuilt
+const courseId = process.env.AIF_V2_COURSE || 'aif-v1-6'; // newest version folder; older versions are never rebuilt
 const course = require(path.join(root, 'training-website/courses', courseId, courseId + '_data.js'));
 const slides = course.modules.flatMap(m => m.slides).filter(s => s.visualization);
 

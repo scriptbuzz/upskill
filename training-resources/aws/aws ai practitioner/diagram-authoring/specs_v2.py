@@ -1036,3 +1036,46 @@ add('m5-s60', 'quad', 'Governance reviews, transparency standards, and training'
     'Four governance processes: review strategies, review cadence, transparency standards, and team training requirements.',
     items=[('search', 'Review strategies', ['Technical, risk, and independent', 'Again after major changes']), ('calendar', 'Review cadence', ['Scheduled, such as quarterly', 'Triggered by incidents or new rules']),
            ('doc', 'Transparency standards', ['Model cards and AI disclosures', 'Known limitations documented']), ('people', 'Team training', ['Policies, responsible AI, security', 'Before access is granted'])])
+
+# ================================================================== Module 6: Course Review and Wrap-up
+add('m6-s1', 'hbars', 'The five exam domains',
+    'Horizontal bars of the five exam domains by share of scored content, with Domain 3 the largest at 28 percent.',
+    heading='SHARE OF SCORED CONTENT',
+    rows=[('1', 'Fundamentals of AI and ML', 20), ('2', 'Fundamentals of GenAI', 24), ('3', 'Applications of Foundation Models', 28),
+          ('4', 'Guidelines for Responsible AI', 14), ('5', 'Security, Compliance, and Governance', 14)],
+    note='Study every domain: the exam is passed on the overall score, not domain by domain.')
+add('m6-s2', 'quad', 'Exam format and scoring',
+    'Four facts about the exam: question types, scored and unscored questions, no penalty for guessing, and scaled results with a passing score of 700.',
+    items=[('check', 'Question types', ['Multiple choice, multiple response', 'Ordering and matching']), ('doc', '50 scored + 15 unscored', ['Unscored items are not identified']),
+           ('flag', 'No guessing penalty', ['Unanswered counts as wrong', 'Answer every question']), ('chart', 'Scaled score', ['100 to 1,000; pass at 700', 'Pass overall, not per domain'])])
+add('m6-s3', 'chain', 'Test-taking tips',
+    'Five steps for each question: read the question, find key words, eliminate options, compare the rest, and choose or flag.',
+    heading='FIVE STEPS FOR EACH QUESTION',
+    steps=[('doc', 'Read first', 'The question before the options'), ('search', 'Key words', 'Qualifiers and constraints'), ('filter', 'Eliminate', 'Options that miss a requirement'),
+           ('scale', 'Compare', 'Remaining options vs. key words'), ('flag', 'Choose or flag', 'Return to hard ones later')],
+    accent=[4])
+add('m6-s4', 'chain', 'Using a practice exam',
+    'Take an official practice exam, review results by domain, study the explanations, practice new scenarios, and repeat.',
+    heading='PRACTICE WITH A PURPOSE',
+    steps=[('docs', 'Practice exam', 'Official, exam-style scoring'), ('chart', 'Results by domain', 'Where points were lost'), ('book', 'Explanations', 'Why wrong options are wrong'), ('search', 'New scenarios', 'Target each gap')],
+    loop='Repeat until every domain is solid', loop_from=3, loop_to=0, loop_y=296, loop_start=240, loop_end=240)
+add('m6-s5', 'chain', 'Registering for the exam',
+    'Open the official exam page, choose a test center or online proctoring, check identification and system requirements, and schedule the date.',
+    heading='FROM READY TO REGISTERED',
+    steps=[('globe', 'Exam page', 'Current guide and scheduling'), ('client', 'Choose delivery', 'Test center or online proctor'), ('check', 'Requirements', 'ID, system, check-in'), ('calendar', 'Schedule', 'After practice shows readiness')],
+    accent=[3])
+add('m6-s6', 'quad', 'AWS Skill Builder',
+    'Four kinds of learning in AWS Skill Builder: digital courses, game-based learning and challenges, self-paced labs, and exam preparation.',
+    items=[('book', 'Digital courses', ['Courses and learning plans', 'Many at no charge']), ('flag', 'Games and challenges', ['Solve realistic problems', 'Interactive formats']),
+           ('code', 'Self-paced labs', ['Real AWS environments', 'Some need a subscription']), ('check', 'Exam preparation', ['Official practice questions', 'Practice exams'])])
+add('m6-s7', 'cols', 'Continuing your learning',
+    'Three ways to keep learning: no-charge digital training, classroom training, and AWS Certification.',
+    heading='KEEP BUILDING YOUR SKILLS',
+    items=[('book', 'Digital training', ['Self-paced', 'No charge for many courses']), ('people', 'Classroom training', ['Led by an instructor', 'Guided hands-on practice']), ('flag', 'AWS Certification', ['Industry-recognized', 'Validates your skills'])],
+    note='Send workshop feedback to the organizer with the slide ID.')
+add('m6-s8', 'levels', 'AWS Certification levels',
+    'Foundational, Associate, and Professional certifications rise in depth and experience; Specialty certifications cover specific areas.',
+    heading='AWS CERTIFICATION LEVELS',
+    steps=[('book', 'Foundational', 'Knowledge-based; no prior AWS experience'), ('person', 'Associate', 'Role-based; some AWS or IT experience'), ('people', 'Professional', 'Advanced; about two years on AWS')],
+    side=('search', 'Specialty', 'Focused on one technical area; experience varies by exam'),
+    foot='AI Practitioner and Cloud Practitioner are Foundational certifications.')

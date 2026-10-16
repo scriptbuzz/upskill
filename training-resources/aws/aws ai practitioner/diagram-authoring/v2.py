@@ -1583,4 +1583,36 @@ def scoping(d):
     s += block(400, 412, d['disciplines'], 724, 16, N, False, 'middle', max_lines=1)
     return s
 
+
+# ------------------------------------------------------------------ Module 6 compositions
+
+def hbars(d):
+    """Labelled horizontal bars with percentages, such as exam domain weights."""
+    s = heading(d['heading'])
+    rows = d['rows']; mx = max(v for _, _, v in rows)
+    for i, (num, name, v) in enumerate(rows):
+        y = 64 + i * 64
+        s += circle(44, y + 22, 18, P, B, 2.4) + text(44, y + 28, num, 17, B, True, 'middle')
+        s += block(76, y + 28, name, 250, 17, N, True, max_lines=2) if len(_wrap(name, 250, 17, True)) == 1 else block(76, y + 18, name, 250, 17, N, True, max_lines=2)
+        w = 360 * v / mx
+        s += rect(340, y + 6, w, 32, O if v == mx else B, 'none', 4) + text(350 + w, y + 29, f'{v}%', 18, O if v == mx else N, True)
+    if d.get('note'):
+        s += rect(24, 392, 752, 40, P, L, 6, container=True) + block(400, 418, d['note'], 724, 17, N, False, 'middle', max_lines=1)
+    return s
+
+def levels(d):
+    """Three ascending certification levels with a separate specialty track."""
+    s = heading(d['heading'])
+    for i, (key, name, sub) in enumerate(d['steps']):
+        x = 24 + i * 168; y = 212 - i * 80; h = 400 - y
+        s += rect(x, y, 156, h, P if i % 2 == 0 else 'white', B, 8, container=True)
+        s += art(key, x + 50, y + 14, 56) + block(x + 78, y + 100, name, 136, 18, B, True, 'middle', True, max_lines=1)
+        s += block(x + 78, y + 126, sub, 136, 16, N, False, 'middle', max_lines=3)
+    key, name, sub = d['side']
+    s += rect(560, 120, 216, 280, W, O, 8, container=True)
+    s += art(key, 640, 140, 56, O) + block(668, 226, name, 190, 18, O, True, 'middle', True, max_lines=1)
+    s += block(668, 254, sub, 190, 16, N, False, 'middle', max_lines=4)
+    s += note(d['foot'], 430)
+    return s
+
 KINDS = {name: fn for name, fn in globals().items() if callable(fn) and not name.startswith('_')}
