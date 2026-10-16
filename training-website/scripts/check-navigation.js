@@ -70,6 +70,8 @@ async function checkBrowser(browserName, base) {
         const expectStep = async id => {
           try {
             await page.waitForFunction(expected => new URL(location.href).searchParams.get("slide") === expected, id);
+            // The address changes before the sidebar re-renders; wait for the highlighted item too.
+            await page.locator(`#sidebar-item-${id.replace(/\./g, "_")}.slide-item.active`).waitFor({ state: "attached" });
           } catch (error) {
             await capture("failure").catch(() => {});
             throw new Error(`${browserName} ${courseId} ${size}: expected step ${id}, got ${currentStep()}; page errors: ${errors.join(", ")}`, { cause: error });
