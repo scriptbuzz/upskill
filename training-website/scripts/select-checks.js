@@ -85,7 +85,9 @@ if (require.main === module) {
   const plan = process.argv[2] ? selectRange(process.argv[2], process.argv[3]) : eventPlan(process.env.GITHUB_EVENT_NAME, event, process.env.LAST_DEPLOYED_SHA, process.env.GITHUB_SHA);
   console.log(JSON.stringify(plan, null, 2));
   if (process.env.GITHUB_OUTPUT) {
-    const outputs = { smoke: plan.smoke, navigation: plan.navigation, features: plan.features, browser_required: plan.smoke || plan.navigation || plan.features, courses: plan.courses.join(",") };
+    const outputs = { smoke: plan.smoke, navigation: plan.navigation, features: plan.features, browser_required: plan.smoke || plan.navigation || plan.features, courses: plan.courses.join(","),
+      // One browser job runs per selected workshop; with none selected, every workshop is checked.
+      course_matrix: JSON.stringify(plan.courses.length ? plan.courses : allCourses) };
     fs.appendFileSync(process.env.GITHUB_OUTPUT, Object.entries(outputs).map(([key, value]) => `${key}=${value}\n`).join(""));
   }
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `## Selected browser checks\n\n${plan.reasons.map(reason => `- ${reason}`).join("\n")}\n\nLayout: ${plan.smoke}; navigation: ${plan.navigation}; features: ${plan.features}; workshops: ${plan.courses.join(", ") || "none"}.\n`);

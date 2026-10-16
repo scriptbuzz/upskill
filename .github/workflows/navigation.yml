@@ -16,6 +16,7 @@ jobs:
       navigation: ${{ steps.checks.outputs.navigation }}
       features: ${{ steps.checks.outputs.features }}
       courses: ${{ steps.checks.outputs.courses }}
+      course_matrix: ${{ steps.checks.outputs.course_matrix }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,11 +44,13 @@ jobs:
     needs: select
     if: needs.select.outputs.browser_required == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Each workshop runs in its own job per browser, so deploy time stays flat as versions are added.
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
         browser: [chromium, webkit]
+        course: ${{ fromJSON(needs.select.outputs.course_matrix) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -62,27 +65,27 @@ jobs:
         run: npm run test:smoke
         env:
           NAVIGATION_BROWSERS: ${{ matrix.browser }}
-          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          NAVIGATION_COURSES: ${{ matrix.course }}
           SMOKE_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots/layout
       - name: Check navigation, login and saved answers
         if: needs.select.outputs.navigation == 'true'
         run: npm run test:navigation
         env:
           NAVIGATION_BROWSERS: ${{ matrix.browser }}
-          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          NAVIGATION_COURSES: ${{ matrix.course }}
           NAVIGATION_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots
       - name: Check exports, sharing and progress recovery
         if: needs.select.outputs.features == 'true'
         run: npm run test:features
         env:
           NAVIGATION_BROWSERS: ${{ matrix.browser }}
-          NAVIGATION_COURSES: ${{ needs.select.outputs.courses }}
+          NAVIGATION_COURSES: ${{ matrix.course }}
           FEATURE_SCREENSHOTS: ${{ runner.temp }}/navigation-screenshots/features
       - name: Save browser screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: navigation-${{ matrix.browser }}
+          name: navigation-${{ matrix.browser }}-${{ matrix.course }}
           path: ${{ runner.temp }}/navigation-screenshots
           if-no-files-found: ignore
           retention-days: 7
