@@ -14,7 +14,7 @@ const output = process.env.FEATURE_SCREENSHOTS || path.join(scratch, "screenshot
 const knownCourses = loadCourses();
 const courseIds = (process.env.NAVIGATION_COURSES || knownCourses.map(course => course.id).join(",")).split(",");
 assert(courseIds.length && courseIds.every(id => knownCourses.some(course => course.id === id)), `Select from ${knownCourses.map(course => course.id).join(", ")} with NAVIGATION_COURSES`);
-const listed = id => isListed(knownCourses.find(course => course.id === id));
+const listed = id => isListed(knownCourses.find(course => course.id === id), knownCourses);
 preparePages(path.resolve(__dirname, ".."), root);
 fs.mkdirSync(output, { recursive: true });
 const plain = text => String(text).replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();

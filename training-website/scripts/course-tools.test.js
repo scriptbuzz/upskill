@@ -1,6 +1,6 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { validateCourse, courseCounts, courseSteps, isListed } = require("./course-tools.js");
+const { validateCourse, courseCounts, courseSteps, isListed, listedIds } = require("./course-tools.js");
 
 function fixture() {
   return {
@@ -24,12 +24,20 @@ test("counts content and preserves both quiz steps with either course ID format"
 
 test("unlisted courses are validated but kept out of the catalog", () => {
   const course = fixture();
-  assert.equal(isListed(course), true);
+  assert.equal(isListed(course, [course], null), true);
   course.catalog.listed = false;
-  assert.equal(isListed(course), false);
+  assert.equal(isListed(course, [course], null), false);
   assert.deepEqual(validateCourse(course, () => true), []);
   course.catalog.listed = "no";
   assert.match(validateCourse(course, () => true).join("\n"), /catalog\.listed must be true or false/);
+});
+
+test("the home catalog lists named courses and the newest version of each series", () => {
+  const ids = ["clf", "aif", "aif-v2", "aif-v1-9", "aif-v1-10"].map(id => ({ id, catalog: { listed: false } }));
+  const config = { courses: ["clf"], newest: ["aif-v"] };
+  assert.deepEqual([...listedIds(ids, config)].sort(), ["aif-v1-10", "clf"]);
+  assert.equal(isListed(ids[1], ids, config), false);
+  assert.deepEqual([...listedIds(ids, { courses: ["aif"] })], ["aif"]);
 });
 
 test("task-statement sections must be declared, used in order, and never empty", () => {

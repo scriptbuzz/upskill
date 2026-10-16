@@ -16,9 +16,35 @@ function loadCourses() {
     .sort((a, b) => a.catalog.order - b.catalog.order);
 }
 
-// Unlisted courses stay off the home page and README but remain fully validated.
-function isListed(course) {
-  return course.catalog?.listed !== false;
+// The home page decides which workshops it shows (scripts/home-catalog.json), so workshop
+// folders are never edited to change the catalog. "courses" names workshops by id; each
+// "newest" prefix shows only the highest version folder in that series, such as aif-v1-5
+// for the prefix "aif-v". Without the file, each course's own catalog.listed flag decides.
+// Courses left off the home page stay fully validated and reachable by direct link.
+const HOME_CATALOG = path.join(__dirname, "home-catalog.json");
+
+function loadHomeCatalog() {
+  return fs.existsSync(HOME_CATALOG) ? JSON.parse(fs.readFileSync(HOME_CATALOG, "utf8")) : null;
+}
+
+function seriesVersion(id, prefix) {
+  const match = id.startsWith(prefix) && id.slice(prefix.length).match(/^(\d+)-(\d+)$/);
+  return match ? [Number(match[1]), Number(match[2])] : null;
+}
+
+function listedIds(courses, config = loadHomeCatalog()) {
+  if (!config) return new Set(courses.filter(course => course.catalog?.listed !== false).map(course => course.id));
+  const ids = new Set(config.courses || []);
+  for (const prefix of config.newest || []) {
+    const versions = courses.map(course => [course.id, seriesVersion(course.id, prefix)]).filter(([, version]) => version)
+      .sort(([, a], [, b]) => b[0] - a[0] || b[1] - a[1]);
+    if (versions.length) ids.add(versions[0][0]);
+  }
+  return ids;
+}
+
+function isListed(course, courses = [course], config = loadHomeCatalog()) {
+  return listedIds(courses, config).has(course.id);
 }
 
 function courseSteps(course) {
@@ -132,4 +158,4 @@ function validateCourse(course, assetExists = fs.existsSync) {
   return errors;
 }
 
-module.exports = { ROOT, loadCourses, courseSteps, courseCounts, validateCourse, isListed };
+module.exports = { ROOT, loadCourses, courseSteps, courseCounts, validateCourse, isListed, listedIds, loadHomeCatalog };

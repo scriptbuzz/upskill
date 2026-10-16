@@ -1,0 +1,11 @@
+{
+  "courses": [
+    "clf"
+  ],
+  "newest": [
+    "aif-v"
+  ],
+  "descriptions": {
+    "aif-v": "Learn AI, machine learning, and generative AI on AWS, organized by the AIF-C01 exam guide's domains and task statements, with original diagrams and checkpoint quizzes. Beta: more modules are on the way."
+  }
+}

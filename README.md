@@ -1,6 +1,6 @@
 # Four Points Technology Training Website (Internal Use Only) — Certification Workshops
 
-_Last modified: 2026-09-20 14:37 EDT_
+_Last modified: 2026-10-16 10:10 EDT_
 
 Build your understanding of cloud computing and artificial intelligence with self-paced workshops that support preparation for AWS certification exams.
 
@@ -14,7 +14,7 @@ Each workshop combines guided slides, diagrams, practical examples, and short qu
 | Workshop | Modules | Slides | Quizzes |
 | :--- | ---: | ---: | ---: |
 | **AWS Certified Cloud Practitioner (CLF-C02)** | 6 | 98 | 12 |
-| **AWS Certified AI Practitioner (AIF-C01)** | 7 | 150 | 11 |
+| **AWS Certified AI Practitioner (AIF-C01)** | 5 | 235 | 11 |
 <!-- END GENERATED COURSES -->
 
 ### AWS Certified Cloud Practitioner

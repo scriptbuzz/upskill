@@ -1,11 +1,19 @@
 // Update checked-in static catalog metadata, or fail CI if it has drifted.
 const fs = require("node:fs");
 const path = require("node:path");
-const { ROOT, loadCourses, courseCounts, courseSteps, validateCourse, isListed } = require("./course-tools.js");
+const { ROOT, loadCourses, courseCounts, courseSteps, validateCourse, listedIds, loadHomeCatalog } = require("./course-tools.js");
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 const markdown = value => String(value).replace(/\|/g, "&#124;").replace(/[\r\n]/g, " ");
 
-function renderCard(course) {
+// home-catalog.json may give a card its own description, keyed by course id or series prefix,
+// so the home page wording can change without editing a workshop version.
+function cardDescription(course, config) {
+  const overrides = config?.descriptions || {};
+  const key = Object.keys(overrides).filter(prefix => course.id.startsWith(prefix)).sort((a, b) => b.length - a.length)[0];
+  return key ? overrides[key] : course.catalog.description;
+}
+
+function renderCard(course, config) {
   const { id, title, version, lastModified, catalog } = course;
   const counts = courseCounts(course);
   const name = title.replace(` (${catalog.tag})`, "");
@@ -19,7 +27,7 @@ function renderCard(course) {
           <span class="badge badge-muted">${escapeHtml(version)}</span>
           <span>Last Modified: ${escapeHtml(lastModified)}</span>
         </div>
-        <p>${escapeHtml(catalog.description)}</p>
+        <p>${escapeHtml(cardDescription(course, config))}</p>
         <div class="course-stats">
 ${Object.entries(counts).map(([label, count]) => `          <div class="stat-item">
             <span class="stat-label">${label[0].toUpperCase() + label.slice(1)}</span>
@@ -51,8 +59,10 @@ try {
   const allCourses = loadCourses();
   const errors = allCourses.flatMap(course => validateCourse(course));
   if (errors.length) throw new Error(errors.join("\n"));
-  const courses = allCourses.filter(isListed);
-  replaceSection(path.join(ROOT, "index.html"), courses.map(renderCard).join("\n\n"), "      ");
+  const listed = listedIds(allCourses);
+  const courses = allCourses.filter(course => listed.has(course.id));
+  const config = loadHomeCatalog();
+  replaceSection(path.join(ROOT, "index.html"), courses.map(course => renderCard(course, config)).join("\n\n"), "      ");
   const rows = courses.map(course => {
     const counts = courseCounts(course);
     return `| **${markdown(course.title)}** | ${counts.modules} | ${counts.slides} | ${counts.quizzes} |`;

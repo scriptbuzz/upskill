@@ -14,7 +14,7 @@ preparePages(path.resolve(__dirname, ".."), root);
 const knownCourses = loadCourses();
 const courseIds = (process.env.NAVIGATION_COURSES || knownCourses.map(course => course.id).join(",")).split(",");
 assert(courseIds.length && courseIds.every(id => knownCourses.some(course => course.id === id)), `Select from ${knownCourses.map(course => course.id).join(", ")} with NAVIGATION_COURSES`);
-const listed = id => isListed(knownCourses.find(course => course.id === id));
+const listed = id => isListed(knownCourses.find(course => course.id === id), knownCourses);
 const sizes = (process.env.NAVIGATION_SIZES || "desktop,tablet,mobile").split(",");
 assert(sizes.every(size => ["desktop", "tablet", "mobile"].includes(size)), "Select desktop, tablet or mobile with NAVIGATION_SIZES");
 const output = process.env.NAVIGATION_SCREENSHOTS || fs.mkdtempSync(path.join(os.tmpdir(), "navigation-"));
